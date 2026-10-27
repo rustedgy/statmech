@@ -1,5 +1,5 @@
 site_name: Statistical Mechanics — Lecture Notes
-site_description: Books and lecture notes maintained in Markdown
+site_description: Searchable lecture notes for statistical mechanics
 site_url: https://rustedgy.github.io/statmech/
 docs_dir: .mkdocs-docs
 site_dir: /tmp/statmech-site
@@ -12,8 +12,8 @@ nav:
   - Leonard Susskind:
       - Overview: leonard_susskind/index.md
       - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
-      - Lecture 2: leonard_susskind/statistical_mechanics_lecture_2_notes.md
-      - Lecture 2 (transcript-based): leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
+      - Lecture 2 — topic-based: leonard_susskind/statistical_mechanics_lecture_2_notes.md
+      - Lecture 2 — transcript-based: leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
       - Lecture 3: leonard_susskind/statistical_mechanics_lecture_3_notes.md
       - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
 
@@ -22,6 +22,8 @@ theme:
   features:
     - navigation.sections
     - navigation.indexes
+    - navigation.top
+    - toc.follow
     - content.code.copy
 
 plugins:
