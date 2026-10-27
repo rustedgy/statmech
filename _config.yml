@@ -1,0 +1,9 @@
+title: Statistical Mechanics Lecture Notes
+description: Lecture notes and study materials for Leonard Susskind's statistical mechanics course.
+baseurl: ""
+url: "https://rustedgy.github.io/statmech"
+markdown: kramdown
+permalink: pretty
+theme: minima
+plugins:
+  - jekyll-feed
