@@ -17,7 +17,7 @@ Study notes for statistical mechanics lecture series, with one directory per lec
 - [John Preskill lecture notes](john_preskill/README.md)
 - [Leonard Susskind lecture notes](leonard_susskind/README.md)
 
-Each book README documents its sources, credits, contents, and known caveats. The existing Jekyll-related files are retained and are not used by the MkDocs publishing workflow.
+Each book README documents its sources, credits, contents, and known caveats. The published homepage links directly to each available lecture. Lecture pages include previous/next links, and alternate versions of a lecture are linked together.
 
 ## Contributing
 
