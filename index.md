@@ -8,10 +8,10 @@ This site is a lightweight, book-like landing page for the lecture notes in this
 
 ## Start here
 
-- [Lecture Notes Overview](./overview.html)
-- [Lecture 1 Notes](./lecture-1.html)
-- [Lecture 2 Notes](./lecture-2.html)
-- [Lecture 2 Transcript Notes](./lecture-2-transcript.html)
+- [Lecture Notes Overview](./overview/)
+- [Lecture 1 Notes](./lecture-1/)
+- [Lecture 2 Notes](./lecture-2/)
+- [Lecture 2 Transcript Notes](./lecture-2-transcript/)
 
 ## About the notes
 
@@ -19,10 +19,10 @@ These notes are study materials for the Leonard Susskind statistical mechanics l
 
 ## Contents
 
-1. [Overview](./overview.html)
-2. [Lecture 1](./lecture-1.html)
-3. [Lecture 2](./lecture-2.html)
-4. [Lecture 2 Transcript Notes](./lecture-2-transcript.html)
+1. [Overview](./overview/)
+2. [Lecture 1](./lecture-1/)
+3. [Lecture 2](./lecture-2/)
+4. [Lecture 2 Transcript Notes](./lecture-2-transcript/)
 
 ## Source repository
 
