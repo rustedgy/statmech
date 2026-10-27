@@ -68,6 +68,7 @@
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true
       },
+      startup: { typeset: false },
       svg: { fontCache: 'global' }
     };
   </script>
@@ -88,18 +89,14 @@
         return r.text();
       })
       .then(md => {
-        const normalized = md
-          .replace(/\$\$([\s\S]*?)\$\$/g, '\\[ $1 \\]')
-          .replace(/\$([^\n$]+?)\$/g, '\\($1\\)');
-
-        document.getElementById('content').innerHTML = marked.parse(normalized, {
+        document.getElementById('content').innerHTML = marked.parse(md, {
           gfm: true,
           breaks: false,
           headerIds: false
         });
 
-        if (window.MathJax && MathJax.typesetPromise) {
-          MathJax.typesetPromise();
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise().catch(() => {});
         }
       })
       .catch(() => {
