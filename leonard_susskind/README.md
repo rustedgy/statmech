@@ -12,7 +12,6 @@ The notes are based on the original [Statistical Mechanics by Leonard Susskind a
 
 ## Contents
 
-- [Temperature — a statistical-mechanical viewpoint](chapter_temperature_statistical_mechanics.md) — an original supplementary chapter deriving temperature from entropy, energy exchange, and the canonical distribution. This is not part of the lecture transcript notes.
 - [Lecture 1 notes](statistical_mechanics_lecture_1_notes.md) — topic-based study notes on microstates, macrostates, multiplicity, probability, entropy, and equilibrium.
 - [Lecture 2 — topic-based notes](statistical_mechanics_lecture_2_notes.md) — a topic-organized overview of the second lecture.
 - [Lecture 2 — transcript-based notes](statistical_mechanics_lecture_2_transcript_based_notes.md) — a separate version based on the supplied transcript, with more transcript-specific coverage of temperature, energy units, Boltzmann's constant, equilibrium distributions, and heat transfer.
