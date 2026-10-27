@@ -43,7 +43,7 @@ def normalize_inline_math(folder: Path) -> None:
             if in_fence or re.fullmatch(r"\$\$.+?\$\$", stripped):
                 output.append(line)
                 continue
-            output.append(INLINE_DOLLAR_MATH.sub(lambda match: r"\\(" + match.group(1) + r"\\)", line))
+            output.append(INLINE_DOLLAR_MATH.sub(lambda match: r"\(" + match.group(1) + r"\)", line))
         updated = "".join(output)
         if updated != original:
             markdown.write_text(updated, encoding="utf-8")
@@ -109,7 +109,7 @@ def main() -> None:
         "[Browse the Markdown source on GitHub](https://github.com/rustedgy/statmech).",
         "",
     ])
-    (DOCS / "index.md").write_text("\\n".join(lines), encoding="utf-8")
+    (DOCS / "index.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":
