@@ -30,6 +30,12 @@ The notes are based on the following original YouTube lectures:
     Lagrange multipliers. These are based on a caption-based transcript
     obtained from a third-party page and have not been checked against
     the video line by line.
+-   [`statistical_mechanics_lecture_4_notes.md`](statistical_mechanics_lecture_4_notes.md)
+    --- notes on the Boltzmann distribution from entropy maximization,
+    the partition function, the identification of $\beta$ with inverse
+    temperature, and the ideal gas (with and without gravity). These are
+    based on a caption-based transcript obtained from a third-party page
+    and have not been checked against the video line by line.
 
 ## Formatting
 
