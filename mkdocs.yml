@@ -12,6 +12,8 @@ nav:
   - Miscellaneous Topics:
       - Overview: miscellaneous_topics/index.md
       - Temperature — statistical mechanics: miscellaneous_topics/temperature_from_statistical_mechanics.md
+      - Bose–Einstein statistics — derivation: miscellaneous_topics/bose_einstein_statistics_derivation.md
+      - Fermi–Dirac statistics — derivation: miscellaneous_topics/fermi_dirac_statistics_derivation.md
   - Leonard Susskind:
       - Overview: leonard_susskind/index.md
       - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
