@@ -34,7 +34,7 @@ Many different microstates can correspond to the same macrostate.
 
 ### Multiplicity
 
-The **multiplicity** (\Omega) of a macrostate is the number of microstates compatible with it.
+The **multiplicity** \(\Omega\) of a macrostate is the number of microstates compatible with it.
 
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
@@ -44,12 +44,12 @@ This is the basic counting idea behind statistical explanations of macroscopic b
 
 ## 3. A simple counting example: coins
 
-Imagine tossing (N) fair coins.
+Imagine tossing \(N\) fair coins.
 
 * A microstate is one particular sequence of heads and tails.
-* A macrostate can be described by the total number (n) of heads.
-* There are (2^N) possible sequences in total.
-* The number of sequences with exactly (n) heads is
+* A macrostate can be described by the total number \(n\) of heads.
+* There are \(2^N\) possible sequences in total.
+* The number of sequences with exactly \(n\) heads is
 
 $$\Omega(n)=\binom{N}{n}=\frac{N!}{n!(N-n)!}.$$
 
@@ -57,7 +57,7 @@ For a fair-coin model, all individual sequences are equally likely. Therefore,
 
 $$P(n\text{ heads})=\frac{\binom{N}{n}}{2^N}.$$
 
-For large (N), counts near (N/2) have far more possible sequences than counts near 0 or (N). Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
+For large \(N\), counts near \(N/2\) have far more possible sequences than counts near 0 or \(N\). Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
 
 **Physical lesson:** a common macroscopic outcome need not be enforced by a special force or rule. It may arise because vastly more microstates correspond to it.
 
@@ -81,11 +81,11 @@ $$S = k_{\mathrm B}\ln \Omega,$$
 
 where:
 
-* (S) is the Boltzmann entropy of the macrostate;
-* (k\_{\mathrm B}) is Boltzmann's constant;
-* (\Omega) is the number of compatible microstates.
+* \(S\) is the Boltzmann entropy of the macrostate;
+* \(k_{\mathrm B}\) is Boltzmann's constant;
+* \(\Omega\) is the number of compatible microstates.
 
-The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If (\Omega\_{AB}=\Omega\_A\Omega\_B), then
+The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If \(\Omega_{AB}=\Omega_A\Omega_B\), then
 
 $$$
 =S_A+S_B.$$
