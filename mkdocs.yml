@@ -11,6 +11,7 @@ nav:
       - Lecture 1: john_preskill/statistical_mechanics_lecture_1_notes.md
   - Leonard Susskind:
       - Overview: leonard_susskind/index.md
+      - Temperature — statistical mechanics: leonard_susskind/chapter_temperature_statistical_mechanics.md
       - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
       - Lecture 2 — topic-based: leonard_susskind/statistical_mechanics_lecture_2_notes.md
       - Lecture 2 — transcript-based: leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
