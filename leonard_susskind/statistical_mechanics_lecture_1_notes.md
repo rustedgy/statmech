@@ -3,7 +3,7 @@
 
 **Lecturer:** Leonard Susskind  
 **Course:** Stanford University — Statistical Mechanics  
-**Video:** https://www.youtube.com/watch?v=D1RzvXDXyqA
+**Video:** [https://www.youtube.com/watch?v=D1RzvXDXyqA](https://www.youtube.com/watch?v=D1RzvXDXyqA)
 
 > **Scope note:** These are topic-based study notes for the identified first lecture, not a transcript-verified, timestamp-by-timestamp summary. The video page could not be retrieved in full to check every example and emphasis. Use the linked lecture as the authority for the exact sequence of discussion.
 
