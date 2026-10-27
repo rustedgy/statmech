@@ -24,6 +24,12 @@ The notes are based on the following original YouTube lectures:
     covering temperature and energy units, Boltzmann's constant,
     statistical entropy, equilibrium distributions, and the direction of
     heat transfer.
+-   [`statistical_mechanics_lecture_3_notes.md`](statistical_mechanics_lecture_3_notes.md)
+    --- notes on the entropy of a probability distribution, the laws of
+    thermodynamics, counting arrangements, Stirling's approximation, and
+    Lagrange multipliers. These are based on a caption-based transcript
+    obtained from a third-party page and have not been checked against
+    the video line by line.
 
 ## Formatting
 
