@@ -35,7 +35,7 @@ The **multiplicity** \(\Omega\) of a macrostate is the number of microstates com
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
 \[
-P(\text{macrostate}) \propto \Omega.
+$$ P(\text{macrostate}) \propto \Omega. $$
 \]
 
 This is the basic counting idea behind statistical explanations of macroscopic behaviour.
