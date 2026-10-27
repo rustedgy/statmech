@@ -40,7 +40,7 @@ $
 \boxed{T \equiv \left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}.
 $
 
-In words, **temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative has units of entropy per energy, so its reciprocal has units of temperature. Once temperature is defined, it is often convenient to introduce the dimensionless-in-entropy convention for inverse temperature,
+In words, **temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative has units of entropy per energy, so its reciprocal has units of temperature. Once temperature is defined, it is often convenient to introduce the inverse temperature,
 
 $
 \beta \equiv \frac{1}{k_B T}
