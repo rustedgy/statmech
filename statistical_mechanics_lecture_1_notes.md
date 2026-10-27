@@ -30,7 +30,7 @@ A **macrostate** is specified by macroscopic quantities or constraints, such as 
 Many different microstates can correspond to the same macrostate.
 
 ### Multiplicity
-The **multiplicity** \(\Omega\) of a macrostate is the number of microstates compatible with it.
+The **multiplicity** \($\Omega$\) of a macrostate is the number of microstates compatible with it.
 
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
