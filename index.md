@@ -2,26 +2,16 @@
 title: Statistical Mechanics Lecture Notes
 ---
 
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
-  }
-};
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 # Statistical Mechanics Lecture Notes
 
 This site is a lightweight, book-like landing page for the lecture notes in this repository.
 
 ## Start here
 
-- [Lecture Notes Overview](./overview/)
-- [Lecture 1 Notes](./lecture-1/)
-- [Lecture 2 Notes](./lecture-2/)
-- [Lecture 2 Transcript Notes](./lecture-2-transcript/)
+- [Lecture Notes Overview](reader.html?file=leonard_susskind/README.md)
+- [Lecture 1 Notes](reader.html?file=leonard_susskind/statistical_mechanics_lecture_1_notes.md)
+- [Lecture 2 Notes](reader.html?file=leonard_susskind/statistical_mechanics_lecture_2_notes.md)
+- [Lecture 2 Transcript Notes](reader.html?file=leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md)
 
 ## About the notes
 
@@ -29,10 +19,10 @@ These notes are study materials for the Leonard Susskind statistical mechanics l
 
 ## Contents
 
-1. [Overview](./overview/)
-2. [Lecture 1](./lecture-1/)
-3. [Lecture 2](./lecture-2/)
-4. [Lecture 2 Transcript Notes](./lecture-2-transcript/)
+1. [Overview](reader.html?file=leonard_susskind/README.md)
+2. [Lecture 1](reader.html?file=leonard_susskind/statistical_mechanics_lecture_1_notes.md)
+3. [Lecture 2](reader.html?file=leonard_susskind/statistical_mechanics_lecture_2_notes.md)
+4. [Lecture 2 Transcript Notes](reader.html?file=leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md)
 
 ## Source repository
 
