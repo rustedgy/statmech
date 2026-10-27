@@ -2,8 +2,8 @@
 ## Lecture notes
 
 **Course:** Stanford University — Statistical Mechanics  
-**Video:** https://www.youtube.com/watch?v=MCRHXHskWnE  
-**Playlist:** https://www.youtube.com/playlist?list=PLpGHT1n4-mAsJ123W3fjPzvlDHOvIhHA0
+**Video:** [https://www.youtube.com/watch?v=MCRHXHskWnE](https://www.youtube.com/watch?v=MCRHXHskWnE)  
+**Playlist:** [https://www.youtube.com/playlist?list=PLpGHT1n4-mAsJ123W3fjPzvlDHOvIhHA0](https://www.youtube.com/playlist?list=PLpGHT1n4-mAsJ123W3fjPzvlDHOvIhHA0)
 
 > **Important scope note:** I could not retrieve the full video or its transcript, so these are provisional, topic-based notes for study—not a verified summary of the lecturer's exact sequence, examples, or statements. Check them against the video before treating them as a faithful lecture record.
 
