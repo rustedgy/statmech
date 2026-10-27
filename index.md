@@ -2,8 +2,6 @@
 title: Statistical Mechanics Lecture Notes
 ---
 
-<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 # Statistical Mechanics Lecture Notes
 
 This site is a lightweight, book-like landing page for the lecture notes in this repository.
