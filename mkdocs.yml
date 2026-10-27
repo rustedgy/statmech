@@ -22,6 +22,7 @@ nav:
       - Maxwell–Boltzmann statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
       - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
       - Fermi–Dirac statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
+      - Equipartition of energy: miscellaneous_topics/equipartition_of_energy.md
 
 theme:
   name: material
