@@ -6,27 +6,21 @@ This folder contains study notes prepared to accompany lectures from John Preski
 
 ## Sources and credit
 
-The notes are based on the following YouTube lectures:
-[Physics 12c Statistical Mechanics (YouTube playlist)](https://www.youtube.com/playlist?list=PL0ojjrEqIyPzgJUUW76koGcSCy6OGtDRI)
+The notes are based on the following YouTube lectures: [Physics 12c Statistical Mechanics (YouTube playlist)](https://www.youtube.com/playlist?list=PL0ojjrEqIyPzgJUUW76koGcSCy6OGtDRI)
 
 **Credit for note preparation:** Claude (Anthropic) has been used to generate these notes. Where a lecture transcript was not available, the notes say which other source they were based on. The notes may contain omissions or errors; compare them with the original lecture when accuracy matters.
 
 ## Contents
 
--   [`statistical_mechanics_lecture_1_notes.md`](statistical_mechanics_lecture_1_notes.md)
-    --- counting states: microstates and macrostates, equal a priori
-    probability, coin flips and a spin system, Stirling's approximation,
-    and the Gaussian form of the distribution. Based on typed notes of
-    the 2010 offering of the course, not on a transcript of the video.
+* [`statistical_mechanics_lecture_1_notes.md`](statistical_mechanics_lecture_1_notes.md) --- counting states: microstates and macrostates, equal a priori probability, coin flips and a spin system, Stirling's approximation, and the Gaussian form of the distribution. Based on typed notes of the 2010 offering of the course, not on a transcript of the video.
 
 ## Formatting
 
-Mathematical expressions in these Markdown files follow GitBook's syntax: `$$...$$` within a line of text for inline mathematics, and `$$` on its own line before and after the formula for display mathematics. Single-dollar `$...$` is not used, because GitBook does not render it.
+Mathematical expressions in these Markdown files use dollar-sign delimiters (`$...$` for inline mathematics and `$$...$$` for display mathematics) for compatibility with common GitHub Markdown/MathJax workflows.
 
 ## Suggested use
 
--   Read the relevant lecture while consulting the notes.
--   Check equations and interpretations against the original lecture.
--   Treat the review questions as prompts for self-testing.
--   Open an issue or submit a correction if you find an error or unclear
-    explanation.
+* Read the relevant lecture while consulting the notes.
+* Check equations and interpretations against the original lecture.
+* Treat the review questions as prompts for self-testing.
+* Open an issue or submit a correction if you find an error or unclear explanation.
