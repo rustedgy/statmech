@@ -21,7 +21,7 @@ The notes are based on the following YouTube lectures:
 
 ## Formatting
 
-Mathematical expressions in these Markdown files use dollar-sign delimiters (`$...$` for inline mathematics and `$$...$$` for display mathematics) for compatibility with common GitHub Markdown/MathJax workflows.
+Mathematical expressions in these Markdown files follow GitBook's syntax: `$$...$$` within a line of text for inline mathematics, and `$$` on its own line before and after the formula for display mathematics. Single-dollar `$...$` is not used, because GitBook does not render it.
 
 ## Suggested use
 

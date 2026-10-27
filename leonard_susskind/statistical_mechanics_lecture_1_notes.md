@@ -30,7 +30,7 @@ A **macrostate** is specified by macroscopic quantities or constraints, such as 
 Many different microstates can correspond to the same macrostate.
 
 ### Multiplicity
-The **multiplicity** \(\Omega\) of a macrostate is the number of microstates compatible with it.
+The **multiplicity** $$\Omega$$ of a macrostate is the number of microstates compatible with it.
 
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
@@ -40,12 +40,12 @@ This is the basic counting idea behind statistical explanations of macroscopic b
 
 ## 3. A simple counting example: coins
 
-Imagine tossing \(N\) fair coins.
+Imagine tossing $$N$$ fair coins.
 
 - A microstate is one particular sequence of heads and tails.
-- A macrostate can be described by the total number \(n\) of heads.
-- There are \(2^N\) possible sequences in total.
-- The number of sequences with exactly \(n\) heads is
+- A macrostate can be described by the total number $$n$$ of heads.
+- There are $$2^N$$ possible sequences in total.
+- The number of sequences with exactly $$n$$ heads is
 
 $$\Omega(n)=\binom{N}{n}=\frac{N!}{n!(N-n)!}.$$
 
@@ -53,7 +53,7 @@ For a fair-coin model, all individual sequences are equally likely. Therefore,
 
 $$P(n\text{ heads})=\frac{\binom{N}{n}}{2^N}.$$
 
-For large \(N\), counts near \(N/2\) have far more possible sequences than counts near 0 or \(N\). Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
+For large $$N$$, counts near $$N/2$$ have far more possible sequences than counts near 0 or $$N$$. Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
 
 **Physical lesson:** a common macroscopic outcome need not be enforced by a special force or rule. It may arise because vastly more microstates correspond to it.
 
@@ -77,11 +77,11 @@ $$S = k_{\mathrm B}\ln \Omega,$$
 
 where:
 
-- \(S\) is the Boltzmann entropy of the macrostate;
-- \(k_{\mathrm B}\) is Boltzmann's constant;
-- \(\Omega\) is the number of compatible microstates.
+- $$S$$ is the Boltzmann entropy of the macrostate;
+- $$k_{\mathrm B}$$ is Boltzmann's constant;
+- $$\Omega$$ is the number of compatible microstates.
 
-The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If \(\Omega_{AB}=\Omega_A\Omega_B\), then
+The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If $$\Omega_{AB}=\Omega_A\Omega_B$$, then
 
 $$S_{AB}=k_{\mathrm B}\ln(\Omega_A\Omega_B)
       =S_A+S_B.$$
@@ -130,11 +130,11 @@ The approach does not require tracking every particle individually. Instead, it 
 
 | Concept | Equation | Meaning |
 |---|---|---|
-| Total coin sequences | \(2^N\) | Number of sequences for \(N\) independent binary outcomes |
-| Multiplicity for \(n\) heads | \(\displaystyle \Omega(n)=\binom{N}{n}\) | Number of sequences with exactly \(n\) heads |
-| Probability of \(n\) heads | \(\displaystyle P(n)=\binom{N}{n}/2^N\) | Probability for fair, independent coins |
-| Boltzmann entropy | \(\displaystyle S=k_{\mathrm B}\ln\Omega\) | Entropy associated with multiplicity |
-| Additivity for independent subsystems | \(S_{AB}=S_A+S_B\) | Follows when \(\Omega_{AB}=\Omega_A\Omega_B\) |
+| Total coin sequences | $$2^N$$ | Number of sequences for $$N$$ independent binary outcomes |
+| Multiplicity for $$n$$ heads | $$\displaystyle \Omega(n)=\binom{N}{n}$$ | Number of sequences with exactly $$n$$ heads |
+| Probability of $$n$$ heads | $$\displaystyle P(n)=\binom{N}{n}/2^N$$ | Probability for fair, independent coins |
+| Boltzmann entropy | $$\displaystyle S=k_{\mathrm B}\ln\Omega$$ | Entropy associated with multiplicity |
+| Additivity for independent subsystems | $$S_{AB}=S_A+S_B$$ | Follows when $$\Omega_{AB}=\Omega_A\Omega_B$$ |
 
 ## 10. Common misunderstandings
 
@@ -148,8 +148,8 @@ The approach does not require tracking every particle individually. Instead, it 
 
 1. What is the difference between a microstate and a macrostate?
 2. Why can a macrostate be more probable than another even when individual microstates are equally probable?
-3. For \(N\) fair coins, why is the number of heads near \(N/2\) typical for large \(N\)?
-4. What does the multiplicity \(\Omega\) count?
+3. For $$N$$ fair coins, why is the number of heads near $$N/2$$ typical for large $$N$$?
+4. What does the multiplicity $$\Omega$$ count?
 5. Why is entropy defined using a logarithm of multiplicity?
 6. How can entropy increase explain the typical direction of macroscopic processes?
 7. Why does equilibrium not require microscopic stillness?
@@ -157,4 +157,4 @@ The approach does not require tracking every particle individually. Instead, it 
 
 ## 12. One-paragraph recap
 
-Statistical mechanics explains macroscopic behaviour by considering the many microscopic states compatible with a system's observable constraints. A macrostate's multiplicity counts those compatible microstates; macrostates with much greater multiplicity are typically far more probable. Boltzmann entropy, \(S=k_{\mathrm B}\ln\Omega\), converts this counting into a thermodynamic quantity and makes entropy additive for independent subsystems. The overwhelming dominance of high-multiplicity macrostates provides a statistical explanation for equilibrium and for the observed direction of many macroscopic processes.
+Statistical mechanics explains macroscopic behaviour by considering the many microscopic states compatible with a system's observable constraints. A macrostate's multiplicity counts those compatible microstates; macrostates with much greater multiplicity are typically far more probable. Boltzmann entropy, $$S=k_{\mathrm B}\ln\Omega$$, converts this counting into a thermodynamic quantity and makes entropy additive for independent subsystems. The overwhelming dominance of high-multiplicity macrostates provides a statistical explanation for equilibrium and for the observed direction of many macroscopic processes.

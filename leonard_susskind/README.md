@@ -32,14 +32,14 @@ The notes are based on the following original YouTube lectures:
     the video line by line.
 -   [`statistical_mechanics_lecture_4_notes.md`](statistical_mechanics_lecture_4_notes.md)
     --- notes on the Boltzmann distribution from entropy maximization,
-    the partition function, the identification of $\beta$ with inverse
+    the partition function, the identification of $$\beta$$ with inverse
     temperature, and the ideal gas (with and without gravity). These are
     based on a caption-based transcript obtained from a third-party page
     and have not been checked against the video line by line.
 
 ## Formatting
 
-Mathematical expressions in these Markdown files use dollar-sign delimiters (`$...$` for inline mathematics and `$$...$$` for display mathematics) for compatibility with common GitHub Markdown/MathJax workflows.
+Mathematical expressions in these Markdown files follow GitBook's syntax: `$$...$$` within a line of text for inline mathematics, and `$$` on its own line before and after the formula for display mathematics. Single-dollar `$...$` is not used, because GitBook does not render it.
 
 ## Suggested use
 
