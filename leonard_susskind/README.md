@@ -16,13 +16,13 @@ The notes are based on the original [Statistical Mechanics by Leonard Susskind a
 - [Lecture 2 — topic-based notes](statistical_mechanics_lecture_2_notes.md) — a topic-organized overview of the second lecture.
 - [Lecture 2 — transcript-based notes](statistical_mechanics_lecture_2_transcript_based_notes.md) — a separate version based on the supplied transcript, with more transcript-specific coverage of temperature, energy units, Boltzmann's constant, equilibrium distributions, and heat transfer.
 
-  **Which Lecture 2 version should I read?** Start with the topic-based notes for a concise conceptual overview. Use the transcript-based version when you want the more detailed account grounded in the supplied transcript. They are alternative treatments of the same lecture, not two consecutive lectures.
+**Choosing a Lecture 2 version:** Start with the topic-based notes for a concise conceptual overview. Use the transcript-based version for the more detailed account grounded in the supplied transcript. These are alternative treatments of the same lecture, not two consecutive lectures.
 - [Lecture 3 notes](statistical_mechanics_lecture_3_notes.md) — entropy of a probability distribution, thermodynamic laws, counting arrangements, Stirling's approximation, and Lagrange multipliers. Based on a caption-based transcript from a third-party page and not checked against the video line by line.
 - [Lecture 4 notes](statistical_mechanics_lecture_4_notes.md) — the Boltzmann distribution, partition function, inverse temperature, and the ideal gas. Based on a caption-based transcript from a third-party page and not checked against the video line by line.
 
 ## Mathematics rendering
 
-The published site uses MkDocs Material with MathJax. For new or edited notes, use `\\(...\\)` for inline mathematics and `$$...$$` on separate lines for display mathematics. Some existing notes use `$$...$$` inline; those expressions should be checked when editing because the publishing stage normalizes same-line inline expressions in the temporary copy only.
+The published site uses MkDocs Material with MathJax. For new or edited notes, use `\(...\)` for inline mathematics and `$$...$$` on separate lines for display mathematics. Some existing notes use `$$...$$` inline; those expressions should be checked when editing because the publishing stage normalizes same-line inline expressions in the temporary copy only.
 
 ## Suggested use
 
