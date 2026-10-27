@@ -1,10 +1,24 @@
 # Statistical Mechanics — Lecture Notes
 
-Study notes for statistical mechanics lecture series, one folder per series.
+Study notes for statistical mechanics lecture series, with one directory per lecture collection.
 
-The notes are published as a book with GitBook, synced from this repository. The Markdown files in each lecture folder are the only source of the content; there is no separate copy elsewhere.
+**Read the published notes:** https://rustedgy.github.io/statmech/
 
-- Each lecture folder has its own `README.md` with its sources, credits and caveats.
-- `gitbook-docs.yaml` defines how the folders map onto the published book.
+## How it works
 
-Corrections are welcome: open an issue or submit a pull request.
+- The Markdown files in each book directory are the source of truth.
+- [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) builds the reading site.
+- GitHub Actions builds and publishes the site to GitHub Pages whenever changes are pushed to `main`.
+- The build stages copies of the book directories in the Actions runner; it does not rewrite or generate files in the source directories.
+- No local Python, MkDocs, or theme installation is required to contribute.
+
+## Books
+
+- [John Preskill lecture notes](john_preskill/README.md)
+- [Leonard Susskind lecture notes](leonard_susskind/README.md)
+
+Each book README documents its sources, credits, contents, and known caveats. The existing Jekyll-related files are retained and are not used by the MkDocs publishing workflow.
+
+## Contributing
+
+Corrections and improvements are welcome. Open an issue or submit a pull request with changes to the Markdown source files. The GitHub Actions workflow builds the site for pull requests so build problems can be caught before merging.
