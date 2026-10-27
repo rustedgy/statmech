@@ -9,6 +9,7 @@ IGNORED_DIRS = {
     ".git", ".github", ".venv", "node_modules", "site",
     ".mkdocs-docs", "__pycache__",
 }
+INLINE_DOLLAR_MATH = re.compile(r"(?<!\$)\$\$(.+?)\$\$(?!\$)")
 
 
 def display_name(name: str) -> str:
@@ -21,6 +22,31 @@ def make_readmes_directory_indexes(folder: Path) -> None:
         index = readme.with_name("index.md")
         if not index.exists():
             readme.rename(index)
+
+
+def normalize_inline_math(folder: Path) -> None:
+    """Convert same-line inline $$...$$ to \\(...\\) in staged copies only.
+
+    Standalone $$...$$ lines are left alone as display math. Fenced code blocks
+    are also preserved. This avoids changing the Markdown source files.
+    """
+    for markdown in sorted(folder.rglob("*.md")):
+        original = markdown.read_text(encoding="utf-8")
+        output = []
+        in_fence = False
+        for line in original.splitlines(keepends=True):
+            stripped = line.strip()
+            if stripped.startswith(chr(96) * 3) or stripped.startswith("~~~"):
+                in_fence = not in_fence
+                output.append(line)
+                continue
+            if in_fence or re.fullmatch(r"\$\$.+?\$\$", stripped):
+                output.append(line)
+                continue
+            output.append(INLINE_DOLLAR_MATH.sub(lambda match: r"\\(" + match.group(1) + r"\\)", line))
+        updated = "".join(output)
+        if updated != original:
+            markdown.write_text(updated, encoding="utf-8")
 
 
 def main() -> None:
@@ -45,6 +71,7 @@ def main() -> None:
             ),
         )
         make_readmes_directory_indexes(destination)
+        normalize_inline_math(destination)
         books.append(source.name)
 
     if not books:
@@ -55,13 +82,34 @@ def main() -> None:
     lines = [
         "# Statistical Mechanics — Lecture Notes",
         "",
-        "Books and lecture-note collections in this repository:",
+        "A searchable reading site for statistical mechanics lecture notes. "
+        "Choose a collection below, then use the navigation to move between lectures.",
+        "",
+        "The Markdown files in this repository are the source of truth. The published "
+        "site is built automatically by GitHub Actions; no local setup is needed.",
+        "",
+        "## Lecture collections",
         "",
     ]
     for book in books:
         lines.append(f"- [{display_name(book)}]({book}/)")
-    lines.append("")
-    (DOCS / "index.md").write_text("\n".join(lines), encoding="utf-8")
+    lines.extend([
+        "",
+        "## Reading and notation",
+        "",
+        "These are study notes, not a substitute for the original lectures. Each "
+        "collection overview describes its sources and known limitations.",
+        "",
+        "Math is rendered with MathJax. Display equations use standalone $$ delimiters; "
+        "same-line inline $$...$$ expressions are normalized to \\(...\\) in the "
+        "temporary publishing copy only.",
+        "",
+        "## Source repository",
+        "",
+        "[Browse the Markdown source on GitHub](https://github.com/rustedgy/statmech).",
+        "",
+    ])
+    (DOCS / "index.md").write_text("\\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":
