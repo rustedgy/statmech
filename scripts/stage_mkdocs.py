@@ -1,4 +1,4 @@
-"""Stage each top-level book directory for MkDocs without changing source files."""
+"""Stage book directories for MkDocs without modifying source files."""
 from pathlib import Path
 import re
 import shutil
@@ -15,6 +15,14 @@ def display_name(name: str) -> str:
     return re.sub(r"[_-]+", " ", name).strip().title()
 
 
+def make_readmes_directory_indexes(folder: Path) -> None:
+    """MkDocs uses index.md for directory landing pages; source READMEs stay untouched."""
+    for readme in sorted(folder.rglob("README.md")):
+        index = readme.with_name("index.md")
+        if not index.exists():
+            readme.rename(index)
+
+
 def main() -> None:
     # This directory is generated only in the GitHub Actions runner.
     if DOCS.exists():
@@ -28,13 +36,21 @@ def main() -> None:
         # A top-level directory is a book when it has its own README.md.
         if not (source / "README.md").is_file():
             continue
-        shutil.copytree(source, DOCS / source.name, ignore=shutil.ignore_patterns(
-            ".git", ".DS_Store", "__pycache__", ".venv", "node_modules"
-        ))
+        destination = DOCS / source.name
+        shutil.copytree(
+            source,
+            destination,
+            ignore=shutil.ignore_patterns(
+                ".git", ".DS_Store", "__pycache__", ".venv", "node_modules"
+            ),
+        )
+        make_readmes_directory_indexes(destination)
         books.append(source.name)
 
     if not books:
-        raise SystemExit("No book directories found (expected a top-level directory with README.md).")
+        raise SystemExit(
+            "No book directories found (expected a top-level directory with README.md)."
+        )
 
     lines = [
         "# Statistical Mechanics — Lecture Notes",
