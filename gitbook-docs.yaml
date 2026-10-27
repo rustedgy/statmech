@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: Statistical Mechanics Lecture Notes
+  structure:
+    - type: space
+      key: space-leonard-susskind
+      title: Leonard Susskind
+      path: leonard-susskind
+      default: true
+      content:
+        directory: ./leonard_susskind
