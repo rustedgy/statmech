@@ -3,14 +3,30 @@ site_description: Books and lecture notes maintained in Markdown
 site_url: https://rustedgy.github.io/statmech/
 docs_dir: .mkdocs-docs
 site_dir: /tmp/statmech-site
+
+nav:
+  - Home: index.md
+  - John Preskill:
+      - Overview: john_preskill/index.md
+      - Lecture 1: john_preskill/statistical_mechanics_lecture_1_notes.md
+  - Leonard Susskind:
+      - Overview: leonard_susskind/index.md
+      - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
+      - Lecture 2: leonard_susskind/statistical_mechanics_lecture_2_notes.md
+      - Lecture 2 (transcript-based): leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
+      - Lecture 3: leonard_susskind/statistical_mechanics_lecture_3_notes.md
+      - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
+
 theme:
   name: material
   features:
     - navigation.sections
     - navigation.indexes
     - content.code.copy
+
 plugins:
   - search
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -19,5 +35,6 @@ markdown_extensions:
       permalink: true
   - pymdownx.arithmatex:
       generic: true
+
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
