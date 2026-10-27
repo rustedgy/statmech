@@ -30,13 +30,11 @@ A **macrostate** is specified by macroscopic quantities or constraints, such as 
 Many different microstates can correspond to the same macrostate.
 
 ### Multiplicity
-The **multiplicity** \($\Omega$\) of a macrostate is the number of microstates compatible with it.
+The **multiplicity** \(\Omega\) of a macrostate is the number of microstates compatible with it.
 
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
-\[
-$$ P(\text{macrostate}) \propto \Omega. $$
-\]
+$$P(\text{macrostate}) \propto \Omega.$$
 
 This is the basic counting idea behind statistical explanations of macroscopic behaviour.
 
@@ -49,15 +47,11 @@ Imagine tossing \(N\) fair coins.
 - There are \(2^N\) possible sequences in total.
 - The number of sequences with exactly \(n\) heads is
 
-\[
-\Omega(n)=\binom{N}{n}=\frac{N!}{n!(N-n)!}.
-\]
+$$\Omega(n)=\binom{N}{n}=\frac{N!}{n!(N-n)!}.$$
 
 For a fair-coin model, all individual sequences are equally likely. Therefore,
 
-\[
-P(n\text{ heads})=\frac{\binom{N}{n}}{2^N}.
-\]
+$$P(n\text{ heads})=\frac{\binom{N}{n}}{2^N}.$$
 
 For large \(N\), counts near \(N/2\) have far more possible sequences than counts near 0 or \(N\). Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
 
@@ -79,9 +73,7 @@ This helps explain why macroscopic laws can be extremely reliable while the unde
 
 A central quantity in statistical mechanics is entropy. In the Boltzmann description,
 
-\[
-S = k_{\mathrm B}\ln \Omega,
-\]
+$$S = k_{\mathrm B}\ln \Omega,$$
 
 where:
 
@@ -91,10 +83,8 @@ where:
 
 The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If \(\Omega_{AB}=\Omega_A\Omega_B\), then
 
-\[
-S_{AB}=k_{\mathrm B}\ln(\Omega_A\Omega_B)
-      =S_A+S_B.
-\]
+$$S_{AB}=k_{\mathrm B}\ln(\Omega_A\Omega_B)
+      =S_A+S_B.$$
 
 Entropy is therefore closely related to the number of microscopic arrangements consistent with the macroscopic information available.
 
