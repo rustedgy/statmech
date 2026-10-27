@@ -1,40 +1,36 @@
 # Statistical Mechanics — Lecture 1
-
 ## Lecture notes
 
-**Lecturer:** Leonard Susskind\
-**Course:** Stanford University — Statistical Mechanics\
+**Lecturer:** Leonard Susskind  
+**Course:** Stanford University — Statistical Mechanics  
 **Video:** https://www.youtube.com/watch?v=D1RzvXDXyqA
 
 > **Scope note:** These are topic-based study notes for the identified first lecture, not a transcript-verified, timestamp-by-timestamp summary. The video page could not be retrieved in full to check every example and emphasis. Use the linked lecture as the authority for the exact sequence of discussion.
 
-***
+---
 
 ## 1. The central question of statistical mechanics
 
 Statistical mechanics connects the microscopic description of matter—its constituent particles and their possible states—with macroscopic observations such as temperature, pressure, and entropy.
 
-* **Microscopic description:** specifies the state of individual particles, including their positions and momenta in classical mechanics.
-* **Macroscopic description:** uses a small number of measurable variables, such as pressure, volume, and temperature.
-* **Key idea:** a macroscopic system can have an enormous number of possible microscopic configurations. Statistical reasoning explains why some macroscopic outcomes are overwhelmingly more likely than others.
+- **Microscopic description:** specifies the state of individual particles, including their positions and momenta in classical mechanics.
+- **Macroscopic description:** uses a small number of measurable variables, such as pressure, volume, and temperature.
+- **Key idea:** a macroscopic system can have an enormous number of possible microscopic configurations. Statistical reasoning explains why some macroscopic outcomes are overwhelmingly more likely than others.
 
 ## 2. Microstates and macrostates
 
 ### Microstate
-
 A **microstate** is a sufficiently detailed specification of the system at the microscopic level.
 
 For a classical gas, this could mean giving the position and momentum of every particle.
 
 ### Macrostate
-
 A **macrostate** is specified by macroscopic quantities or constraints, such as the total energy, volume, particle number, or the number of particles in each region.
 
 Many different microstates can correspond to the same macrostate.
 
 ### Multiplicity
-
-The **multiplicity** \(\Omega\) of a macrostate is the number of microstates compatible with it.
+The **multiplicity** $$\Omega$$ of a macrostate is the number of microstates compatible with it.
 
 A macrostate with larger multiplicity can be realised in more microscopic ways. When the relevant microstates are equally probable, a macrostate's probability is proportional to its multiplicity:
 
@@ -44,12 +40,12 @@ This is the basic counting idea behind statistical explanations of macroscopic b
 
 ## 3. A simple counting example: coins
 
-Imagine tossing \(N\) fair coins.
+Imagine tossing $$N$$ fair coins.
 
-* A microstate is one particular sequence of heads and tails.
-* A macrostate can be described by the total number \(n\) of heads.
-* There are \(2^N\) possible sequences in total.
-* The number of sequences with exactly \(n\) heads is
+- A microstate is one particular sequence of heads and tails.
+- A macrostate can be described by the total number $$n$$ of heads.
+- There are $$2^N$$ possible sequences in total.
+- The number of sequences with exactly $$n$$ heads is
 
 $$\Omega(n)=\binom{N}{n}=\frac{N!}{n!(N-n)!}.$$
 
@@ -57,7 +53,7 @@ For a fair-coin model, all individual sequences are equally likely. Therefore,
 
 $$P(n\text{ heads})=\frac{\binom{N}{n}}{2^N}.$$
 
-For large \(N\), counts near \(N/2\) have far more possible sequences than counts near 0 or \(N\). Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
+For large $$N$$, counts near $$N/2$$ have far more possible sequences than counts near 0 or $$N$$. Thus, a roughly equal number of heads and tails is overwhelmingly more likely than an extreme outcome.
 
 **Physical lesson:** a common macroscopic outcome need not be enforced by a special force or rule. It may arise because vastly more microstates correspond to it.
 
@@ -65,9 +61,9 @@ For large \(N\), counts near \(N/2\) have far more possible sequences than count
 
 Statistical mechanics often predicts what is **typical**, rather than what is logically inevitable.
 
-* A low-multiplicity macrostate is compatible with relatively few microstates.
-* A high-multiplicity macrostate is compatible with many microstates.
-* If microscopic states are sampled without a strong bias, high-multiplicity macrostates dominate the observed outcomes.
+- A low-multiplicity macrostate is compatible with relatively few microstates.
+- A high-multiplicity macrostate is compatible with many microstates.
+- If microscopic states are sampled without a strong bias, high-multiplicity macrostates dominate the observed outcomes.
 
 For a large system, the difference in multiplicity can be so enormous that departures from the typical macrostate become practically unobservable, even though they may not be mathematically impossible.
 
@@ -81,14 +77,14 @@ $$S = k_{\mathrm B}\ln \Omega,$$
 
 where:
 
-* \(S\) is the Boltzmann entropy of the macrostate;
-* \(k_{\mathrm B}\) is Boltzmann's constant;
-* \(\Omega\) is the number of compatible microstates.
+- $$S$$ is the Boltzmann entropy of the macrostate;
+- $$k_{\mathrm B}$$ is Boltzmann's constant;
+- $$\Omega$$ is the number of compatible microstates.
 
-The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If \(\Omega_{AB}=\Omega_A\Omega_B\), then
+The logarithm is useful because multiplicities of independent subsystems multiply, while their entropies add. If $$\Omega_{AB}=\Omega_A\Omega_B$$, then
 
-$$$
-=S_A+S_B.$$
+$$S_{AB}=k_{\mathrm B}\ln(\Omega_A\Omega_B)
+      =S_A+S_B.$$
 
 Entropy is therefore closely related to the number of microscopic arrangements consistent with the macroscopic information available.
 
@@ -134,11 +130,11 @@ The approach does not require tracking every particle individually. Instead, it 
 
 | Concept | Equation | Meaning |
 |---|---|---|
-| Total coin sequences | \(2^N\) | Number of sequences for \(N\) independent binary outcomes |
-| Multiplicity for \(n\) heads | \(\displaystyle \Omega(n)=\binom{N}{n}\) | Number of sequences with exactly \(n\) heads |
-| Probability of \(n\) heads | \(\displaystyle P(n)=\binom{N}{n}/2^N\) | Probability for fair, independent coins |
-| Boltzmann entropy | \(\displaystyle S=k_{\mathrm B}\ln\Omega\) | Entropy associated with multiplicity |
-| Additivity for independent subsystems | \(S_{AB}=S_A+S_B\) | Follows when \(\Omega_{AB}=\Omega_A\Omega_B\) |
+| Total coin sequences | $$2^N$$ | Number of sequences for $$N$$ independent binary outcomes |
+| Multiplicity for $$n$$ heads | $$\displaystyle \Omega(n)=\binom{N}{n}$$ | Number of sequences with exactly $$n$$ heads |
+| Probability of $$n$$ heads | $$\displaystyle P(n)=\binom{N}{n}/2^N$$ | Probability for fair, independent coins |
+| Boltzmann entropy | $$\displaystyle S=k_{\mathrm B}\ln\Omega$$ | Entropy associated with multiplicity |
+| Additivity for independent subsystems | $$S_{AB}=S_A+S_B$$ | Follows when $$\Omega_{AB}=\Omega_A\Omega_B$$ |
 
 ## 10. Common misunderstandings
 
@@ -152,8 +148,8 @@ The approach does not require tracking every particle individually. Instead, it 
 
 1. What is the difference between a microstate and a macrostate?
 2. Why can a macrostate be more probable than another even when individual microstates are equally probable?
-3. For \(N\) fair coins, why is the number of heads near \(N/2\) typical for large \(N\)?
-4. What does the multiplicity \(\Omega\) count?
+3. For $$N$$ fair coins, why is the number of heads near $$N/2$$ typical for large $$N$$?
+4. What does the multiplicity $$\Omega$$ count?
 5. Why is entropy defined using a logarithm of multiplicity?
 6. How can entropy increase explain the typical direction of macroscopic processes?
 7. Why does equilibrium not require microscopic stillness?
@@ -161,5 +157,4 @@ The approach does not require tracking every particle individually. Instead, it 
 
 ## 12. One-paragraph recap
 
-Statistical mechanics explains macroscopic behaviour by considering the many microscopic states compatible with a system's observable constraints. A macrostate's multiplicity counts those compatible microstates; macrostates with much greater multiplicity are typically far more probable. Boltzmann entropy, \(S=k_{\mathrm B}\ln\Omega\), converts this counting into a thermodynamic quantity and makes entropy additive for independent subsystems. The overwhelming dominance of high-multiplicity macrostates provides a statistical explanation for equilibrium and for the observed direction of many macroscopic processes.
-$$$
+Statistical mechanics explains macroscopic behaviour by considering the many microscopic states compatible with a system's observable constraints. A macrostate's multiplicity counts those compatible microstates; macrostates with much greater multiplicity are typically far more probable. Boltzmann entropy, $$S=k_{\mathrm B}\ln\Omega$$, converts this counting into a thermodynamic quantity and makes entropy additive for independent subsystems. The overwhelming dominance of high-multiplicity macrostates provides a statistical explanation for equilibrium and for the observed direction of many macroscopic processes.
