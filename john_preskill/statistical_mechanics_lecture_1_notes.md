@@ -3,7 +3,7 @@
 
 **Lecturer:** John Preskill  
 **Course:** Caltech — Physics 12c, Statistical Mechanics  
-**Video:** https://www.youtube.com/watch?v=s7chipjxBFk (lecture recorded 29 March 2011)  
+**Video:** [https://www.youtube.com/watch?v=s7chipjxBFk](https://www.youtube.com/watch?v=s7chipjxBFk) (lecture recorded 29 March 2011)  
 **Basis:** The video could not be accessed and no transcript was available. These notes are based on a typed set of student notes (by Sam Elder) from the 2010 offering of the same course, hosted on Preskill's course page, which covers the corresponding first lecture, "Counting states". They also use the title and description of the video. The 2011 lecture may differ in order and examples, and the student notes are reported to contain typographical errors. The equations below were re-derived and checked.
 
 ---
