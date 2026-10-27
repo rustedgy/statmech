@@ -36,16 +36,16 @@ Temperature depends not on the absolute size of entropy, but on **how entropy ch
 
 For a system whose entropy can be expressed as \(S(E)\), define the temperature directly by
 
-$
+$$
 \boxed{T \equiv \left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}.
-$
+$$
 
 In words, **temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative has units of entropy per energy, so its reciprocal has units of temperature. Once temperature is defined, it is often convenient to introduce the inverse temperature,
 
-$
+$$
 \beta \equiv \frac{1}{k_B T}
 = \frac{1}{k_B}\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}.
-$
+$$
 
 The derivative is taken while holding the other relevant constraints fixed. For a discrete system, it can be understood as an appropriate finite difference, or as a smooth approximation for a sufficiently large system.
 
@@ -62,10 +62,10 @@ For ordinary positive-temperature systems, a steeper entropy-versus-energy curve
 
 Using \(S=k_B\ln\Omega\), the direct temperature definition becomes
 
-$
+$$
 T = \left[k_B\frac{\partial\ln\Omega}{\partial E}\right]^{-1}
 = \frac{\Omega}{k_B\,\partial\Omega/\partial E},
-$
+$$
 
 where the derivative is understood with the same macroscopic constraints held fixed. Thus temperature is the reciprocal of the fractional growth of multiplicity per unit energy. A system may have an enormous number of states and still have a high or low temperature depending on how that number changes when energy is added.
 
@@ -204,11 +204,11 @@ If using the canonical ensemble, calculate the partition function and use \(\bet
 
 Temperature emerges from the statistical structure of microscopic states. Entropy measures the logarithm of the number of possibilities; temperature is the reciprocal of the entropy slope with energy:
 
-$
+$$
 \boxed{T=\left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}
 \qquad
 \boxed{\beta=\frac{1}{k_B T}}.
-$
+$$
 
 This direct definition makes the sign of temperature explicit: positive entropy slope gives positive temperature, negative slope gives negative temperature, and zero slope corresponds to a divergence of temperature. In systems with bounded energy, negative-temperature states can occur on the decreasing-entropy side of the entropy maximum and are hotter than positive-temperature states. The inverse-temperature variable \(\beta\) remains especially useful in the canonical distribution because it appears directly in the Boltzmann factor. When two systems exchange energy, their most probable equilibrium split maximizes combined entropy; the condition is equality of entropy slopes, and hence equality of their temperatures.
 
