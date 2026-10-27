@@ -1,6 +1,9 @@
 ---
 title: Overview
+permalink: /overview/
 ---
+
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 # Statistical Mechanics — Overview
 
@@ -23,9 +26,9 @@ A system can have many possible microscopic arrangements, but only some of those
 
 The notes in this repository are organized as short lecture-based study guides.
 
-- [Lecture 1](./lecture-1.html) introduces microstates, macrostates, entropy, probability, and the idea of typical behavior.
-- [Lecture 2](./lecture-2.html) introduces the statistical reasoning behind multiplicity, entropy, and equilibrium.
-- [Lecture 2 Transcript Notes](./lecture-2-transcript.html) gives a version based on the transcript and emphasizes temperature, entropy, and the heat-flow argument.
+- [Lecture 1](../lecture-1/) introduces microstates, macrostates, entropy, probability, and the idea of typical behavior.
+- [Lecture 2](../lecture-2/) introduces the statistical reasoning behind multiplicity, entropy, and equilibrium.
+- [Lecture 2 Transcript Notes](../lecture-2-transcript/) gives a version based on the transcript and emphasizes temperature, entropy, and the heat-flow argument.
 
 ## Suggested sequence
 

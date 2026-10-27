@@ -1,6 +1,9 @@
 ---
 title: Lecture 2 Notes
+permalink: /lecture-2/
 ---
+
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 # Statistical Mechanics — Lecture 2
 
@@ -51,3 +54,5 @@ Equilibrium is associated with the macrostate or range of macrostates that domin
 The original note file is here:
 
 - [Lecture 2 markdown source](https://github.com/rustedgy/statmech/blob/main/leonard_susskind/statistical_mechanics_lecture_2_notes.md)
+
+[Back to overview](./overview/)

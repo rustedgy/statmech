@@ -1,6 +1,9 @@
 ---
 title: Lecture 2 Transcript Notes
+permalink: /lecture-2-transcript/
 ---
+
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 # Statistical Mechanics — Lecture 2 Transcript-Based Notes
 
@@ -74,3 +77,5 @@ The lecture recasts temperature as a statistical quantity derived from the struc
 The original transcript-based note is here:
 
 - [Lecture 2 transcript-based markdown source](https://github.com/rustedgy/statmech/blob/main/leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md)
+
+[Back to overview](./overview/)

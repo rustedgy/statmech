@@ -1,6 +1,9 @@
 ---
 title: Lecture 1 Notes
+permalink: /lecture-1/
 ---
+
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 # Statistical Mechanics — Lecture 1
 
@@ -56,3 +59,5 @@ A system in equilibrium is one whose macroscopic properties are stable under the
 The original note file is here:
 
 - [Lecture 1 markdown source](https://github.com/rustedgy/statmech/blob/main/leonard_susskind/statistical_mechanics_lecture_1_notes.md)
+
+[Back to overview](./overview/)
