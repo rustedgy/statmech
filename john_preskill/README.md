@@ -13,20 +13,19 @@ The notes are based on the following YouTube lectures:
 
 ## Contents
 
--   [`statistical_mechanics_lecture_1_notes.md`](statistical_mechanics_lecture_1_notes.md)
+-   [Lecture 1 notes](statistical_mechanics_lecture_1_notes.md)
     --- counting states: microstates and macrostates, equal a priori
     probability, coin flips and a spin system, Stirling's approximation,
     and the Gaussian form of the distribution. Based on typed notes of
     the 2010 offering of the course, not on a transcript of the video.
 
-## Formatting
+## Mathematics rendering
 
-Mathematical expressions in these Markdown files follow GitBook's syntax: `$$...$$` within a line of text for inline mathematics, and `$$` on its own line before and after the formula for display mathematics. Single-dollar `$...$` is not used, because GitBook does not render it.
+The published site uses MkDocs Material with MathJax. For new or edited notes, use `\\(...\\)` for inline mathematics and `$$...$$` on separate lines for display mathematics. Some existing notes use `$$...$$` inline; those expressions should be checked when editing because the same delimiters are also used for display equations. This setup does not require changing the original Markdown merely to publish the site.
 
 ## Suggested use
 
 -   Read the relevant lecture while consulting the notes.
 -   Check equations and interpretations against the original lecture.
 -   Treat the review questions as prompts for self-testing.
--   Open an issue or submit a correction if you find an error or unclear
-    explanation.
+-   Open an issue or submit a correction if you find an error or unclear explanation.
