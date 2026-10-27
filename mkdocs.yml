@@ -19,8 +19,8 @@ nav:
   - Miscellaneous Topics:
       - Overview: miscellaneous_topics/index.md
       - The concept of temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
-      - Bose–Einstein statistics — derivation: miscellaneous_topics/bose_einstein_statistics_derivation.md
-      - Fermi–Dirac statistics — derivation: miscellaneous_topics/fermi_dirac_statistics_derivation.md
+      - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
+      - Fermi–Dirac statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
 
 theme:
   name: material
