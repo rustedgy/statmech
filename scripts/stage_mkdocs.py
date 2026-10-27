@@ -25,7 +25,9 @@ def lecture_number(path: Path):
 
 def lecture_label(path: Path) -> str:
     number = lecture_number(path)
-    variant = " — transcript-based" if TRANSCRIPT_MARKER in path.stem else ""
+    variant = " — transcript-based" if TRANSCRIPT_MARKER in path.stem else (
+        " — topic-based" if number == 2 and "leonard_susskind" in path.as_posix() else ""
+    )
     return f"Lecture {number}{variant}"
 
 
