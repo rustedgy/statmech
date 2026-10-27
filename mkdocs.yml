@@ -1,0 +1,23 @@
+site_name: Statistical Mechanics — Lecture Notes
+site_description: Books and lecture notes maintained in Markdown
+site_url: https://rustedgy.github.io/statmech/
+docs_dir: .mkdocs-docs
+site_dir: /tmp/statmech-site
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - content.code.copy
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
