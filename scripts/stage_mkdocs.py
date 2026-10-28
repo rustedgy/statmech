@@ -9,12 +9,12 @@ IGNORED_DIRS = {
     ".git", ".github", ".venv", "node_modules", "site",
     ".mkdocs-docs", "__pycache__",
 }
-INLINE_DOLLAR_MATH = re.compile(r"(?<!\$)\$\$(.+?)\$\$(?!\$)")
 LECTURE_FILE = re.compile(r".*_lecture_(\d+).*_notes\.md$", re.IGNORECASE)
 TRANSCRIPT_MARKER = "transcript_based"
 
 # Keep the generated homepage's topic list in the same order as mkdocs.yml.
 MISC_TOPIC_ORDER = (
+    "notation_and_symbols.md",
     "temperature_from_statistical_mechanics.md",
     "partition_function_thermodynamics_generator.md",
     "grand_canonical_ensemble_chemical_potential.md",
@@ -57,31 +57,6 @@ def make_readmes_directory_indexes(folder: Path) -> None:
         index = readme.with_name("index.md")
         if not index.exists():
             readme.rename(index)
-
-
-def normalize_inline_math(folder: Path) -> None:
-    """Convert same-line inline $$...$$ to \\(...\\) in staged copies only.
-
-    Standalone $$...$$ lines are left alone as display math. Fenced code blocks
-    are also preserved. This avoids changing the Markdown source files.
-    """
-    for markdown in sorted(folder.rglob("*.md")):
-        original = markdown.read_text(encoding="utf-8")
-        output = []
-        in_fence = False
-        for line in original.splitlines(keepends=True):
-            stripped = line.strip()
-            if stripped.startswith(chr(96) * 3) or stripped.startswith("~~~"):
-                in_fence = not in_fence
-                output.append(line)
-                continue
-            if in_fence or re.fullmatch(r"\$\$.+?\$\$", stripped):
-                output.append(line)
-                continue
-            output.append(INLINE_DOLLAR_MATH.sub(lambda match: r"\\(" + match.group(1) + r"\\)", line))
-        updated = "".join(output)
-        if updated != original:
-            markdown.write_text(updated, encoding="utf-8")
 
 
 def add_lecture_navigation(folder: Path) -> None:
@@ -169,7 +144,6 @@ def main() -> None:
             ),
         )
         make_readmes_directory_indexes(destination)
-        normalize_inline_math(destination)
         add_lecture_navigation(destination)
         books.append(source.name)
 

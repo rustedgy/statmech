@@ -18,6 +18,7 @@ nav:
       - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
   - Miscellaneous Topics:
       - Overview: miscellaneous_topics/index.md
+      - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
       - Temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
       - Partition Function as a Generator of Thermodynamics: miscellaneous_topics/partition_function_thermodynamics_generator.md
       - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md

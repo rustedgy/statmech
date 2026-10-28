@@ -16,7 +16,7 @@ The notes are associated with the [Physics 12c Statistical Mechanics YouTube pla
 
 ## Mathematics rendering
 
-The published site uses MkDocs Material with MathJax. For new or edited notes, use `\(...\)` for inline mathematics and `$$...$$` on separate lines for display mathematics. Existing same-line `$$...$$` expressions are normalized in the temporary publishing copy only; the original Markdown remains unchanged.
+The published site uses MkDocs Material with MathJax. For new or edited notes, use `$...$` for inline mathematics and `$$...$$` on separate lines for display mathematics. Existing same-line `$$...$$` expressions are normalized in the temporary publishing copy only; the original Markdown remains unchanged.
 
 ## Suggested use
 
