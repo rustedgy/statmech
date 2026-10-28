@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="960" height="540" fill="white"/>
+<text x="480" y="34" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#222">Maxwell–Boltzmann speed distributions</text>
+<text x="480" y="58" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#444">N₂ and He at 300 K and 600 K (schematic normalized curves)</text>
+<line x1="90" y1="445" x2="900" y2="445" stroke="#333" stroke-width="2"/><line x1="90" y1="445" x2="90" y2="85" stroke="#333" stroke-width="2"/>
+<text x="495" y="500" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Speed v (m/s)</text><text x="26" y="270" transform="rotate(-90 26 270)" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#222">Probability density f(v)</text>
+<g font-family="sans-serif" font-size="12" fill="#444"><text x="90" y="465" text-anchor="middle">0</text><text x="280" y="465" text-anchor="middle">500</text><text x="470" y="465" text-anchor="middle">1000</text><text x="660" y="465" text-anchor="middle">1500</text><text x="850" y="465" text-anchor="middle">2000</text></g>
+<path d="M90 445 C130 300 180 135 230 135 C290 135 340 300 390 445" fill="none" stroke="#2563eb" stroke-width="3"/>
+<path d="M90 445 C130 360 180 225 240 225 C310 225 370 345 430 445" fill="none" stroke="#60a5fa" stroke-width="3" stroke-dasharray="8 5"/>
+<path d="M90 445 C180 340 300 235 430 235 C560 235 650 340 740 445" fill="none" stroke="#dc2626" stroke-width="3"/>
+<path d="M90 445 C180 385 320 310 470 310 C620 310 740 385 850 445" fill="none" stroke="#f87171" stroke-width="3" stroke-dasharray="8 5"/>
+<g font-family="sans-serif" font-size="14" fill="#222"><line x1="610" y1="95" x2="650" y2="95" stroke="#2563eb" stroke-width="3"/><text x="660" y="100">N₂, 300 K</text><line x1="610" y1="120" x2="650" y2="120" stroke="#60a5fa" stroke-width="3" stroke-dasharray="8 5"/><text x="660" y="125">N₂, 600 K</text><line x1="610" y1="145" x2="650" y2="145" stroke="#dc2626" stroke-width="3"/><text x="660" y="150">He, 300 K</text><line x1="610" y1="170" x2="650" y2="170" stroke="#f87171" stroke-width="3" stroke-dasharray="8 5"/><text x="660" y="175">He, 600 K</text></g>
+<text x="480" y="525" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">Illustrative curves only; the exact density follows f(v) = 4π(m/2πkBT)^(3/2) v² exp[−mv²/(2kBT)].</text>
+</svg>
