@@ -199,22 +199,43 @@ This form makes the physical parameters transparent. A larger heat capacity mean
 
 Statistical mechanics determines equilibrium distributions and constrains the allowed transition rates. A microscopic interaction model is needed to calculate $G$ or $\tau_R$ quantitatively.
 
-## 5. A microscopic picture: energy carried by particles
+## 5. Timescale separation and an exactly solvable model
 
-A simple kinetic picture helps interpret the proportionality to a temperature difference. Imagine energy being exchanged across a contact by particles or molecular excitations. In thermal equilibrium, the mean energy carried by an individual carrier depends on temperature. For example, a classical ideal-gas molecule has mean translational kinetic energy $3k_BT/2$.
-
-If the rates of carriers arriving from the two sides are approximately equal and do not change much over a small temperature interval, the net energy flux is proportional to the difference in their mean carried energies. In this simplified situation,
+A single temperature for the whole body is justified when internal equilibration is much faster than energy exchange with the surroundings. Let $\\tau_{\\mathrm{int}}$ be a characteristic time for internal temperature gradients to relax, and let $\\tau_{\\mathrm{bath}}$ be the time over which the body exchanges an appreciable fraction of its thermal energy with the environment. The lumped-temperature approximation requires
 
 $$
-J_{\mathrm{net}}\propto
-\left(\frac{3}{2}k_BT\right)
--\left(\frac{3}{2}k_BT_{\mathrm{bath}}\right)
-\propto T-T_{\mathrm{bath}}.
+\\tau_{\\mathrm{int}}\\ll \\tau_{\\mathrm{bath}}.
 $$
 
-This illustrates how a linear heat current can arise from microscopic energy statistics. It is an illustrative model, not a universal derivation for every material or cooling mechanism: actual transport depends on the carrier spectrum, collision rates, geometry, and the nature of the interface.
+If this separation fails, different parts of the body can have different temperatures and multiple thermal modes contribute. Even when internal equilibration is fast, a single exponential is not automatic: it also requires one slow mode to dominate or a dynamical model with one relevant relaxation time.
 
-More generally, near equilibrium, a small temperature difference is a small thermodynamic driving force. If the microscopic current responds smoothly to that force, its leading term is linear; higher-order corrections become important farther from equilibrium.
+### An exact two-level example
+
+Consider $N$ independent two-level units, each with ground-state energy $0$ and excited-state energy $\\epsilon$. Each unit exchanges energy with a bath at fixed temperature $T_{\\mathrm{bath}}$. Let $p(t)$ be the probability that one unit is excited. Suppose the bath induces upward and downward transitions with constant rates $w_+$ and $w_-$, respectively. The rate equation is
+
+$$
+\\frac{dp}{dt}=w_+(1-p)-w_-p=-(w_++w_-)(p-p_{\\mathrm{eq}}),
+$$
+
+where $p_{\\mathrm{eq}}=w_+/(w_++w_-)$. Detailed balance requires
+
+$$
+\\frac{w_+}{w_-}=e^{-\\epsilon/(k_BT_{\\mathrm{bath}})},
+$$
+
+so $p_{\\mathrm{eq}}=[1+e^{\\epsilon/(k_BT_{\\mathrm{bath}})}]^{-1}$, the canonical excited-state probability. The mean energy is $U(t)=N\\epsilon p(t)$, and therefore
+
+$$
+\\boxed{\\frac{dU}{dt}=-\\frac{U-U_{\\mathrm{bath}}}{\\tau}},
+\\qquad
+\\tau=\\frac{1}{w_++w_-},
+$$
+
+with $U_{\\mathrm{bath}}=N\\epsilon p_{\\mathrm{eq}}$. This exponential is exact for this Markov model, not merely a near-equilibrium approximation. The rate depends on the transition rates; detailed balance fixes their ratio but not their overall scale. More complicated systems generally have several relaxation modes.
+
+### Why a linear heat current is plausible
+
+Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G.
 
 ## 6. Entropy production and the sign of the heat current
 
