@@ -286,23 +286,42 @@ The simple exponential law is a useful approximation when:
 It may fail or need modification when:
 
 - the temperature difference is large, so the current is nonlinear in $T-T_{\mathrm{bath}}$;
-- radiation dominates, for which the net radiative power is often proportional to $T^4-T_{\mathrm{bath}}^4$, not directly to $T-T_{\mathrm{bath}}$;
+- internal temperature gradients are important, so the body cannot be treated as a single uniform-temperature lump. For a solid with thermal conductivity $k$, surface heat-transfer coefficient $h$, and characteristic length $L_c=V/A$, a common criterion is the Biot number $\mathrm{Bi}=hL_c/k\ll1$ (often taken as $\mathrm{Bi}<0.1$). This means internal conduction is fast compared with heat transfer at the surface;
+- radiation dominates, for which the net radiative power is proportional to $T^4-T_{\mathrm{bath}}^4$, not directly to $T-T_{\mathrm{bath}}$. Near $T_{\mathrm{bath}}$, writing $T=T_{\mathrm{bath}}+\Delta T$ gives
+
+  $
+  T^4-T_{\mathrm{bath}}^4\simeq4T_{\mathrm{bath}}^3\Delta T,
+  $
+
+  so for a grey body with emissivity $\varepsilon$, area $A$, and heat capacity $C$, the radiative relaxation rate is
+
+  $
+  \boxed{\gamma_{\mathrm{rad}}=\frac{4\varepsilon\sigma A T_{\mathrm{bath}}^3}{C}},
+  $
+
+  where $\sigma$ is the Stefan--Boltzmann constant. This gives exponential relaxation only after linearizing close to the bath temperature;
 - the body's interior is not in local equilibrium and different regions have different temperatures;
 - several slow modes contribute, producing a sum of exponentials;
 - the environment itself warms or cools appreciably;
 - the microscopic dynamics have memory or are far from equilibrium.
 
-For example, if $C$ or $G$ depends strongly on temperature, the energy-balance equation is instead
+For example, consider $250\,\mathrm{mL}$ of coffee, approximated as $0.25\,\mathrm{kg}$ of water. Its heat capacity is about $C=mc_p\simeq1.05\times10^3\,\mathrm{J/K}$. If convection, conduction through the cup, radiation, and other losses together give an illustrative effective conductance $G_{\mathrm{eff}}\simeq1\,\mathrm{W/K}$ near room temperature, then
 
-$$
+$
+\tau\simeq\frac{C}{G_{\mathrm{eff}}}\simeq1.05\times10^3\,\mathrm{s}\approx17\,\mathrm{min}.
+$
+
+This is an order-of-magnitude illustration, not a universal coffee-cooling time: the effective conductance depends strongly on cup geometry, lid, airflow, evaporation, and temperature. If $C$ or the conductance depends strongly on temperature, the energy-balance equation is instead
+
+$
 C(T)\frac{dT}{dt}=-\dot Q(T,T_{\mathrm{bath}}),
-$$
+$
 
 which need not have an exponential solution.
 
 ## 8. Summary
 
-From a statistical-mechanical viewpoint, Newton's law of cooling is a **near-equilibrium relaxation law**. The reservoir fixes the equilibrium distribution; detailed balance makes that distribution stationary; perturbations relax through decaying modes. If one mode dominates, the mean-energy deviation decays exponentially. With approximately constant heat capacity, this gives
+From a statistical-mechanical viewpoint, the strongest general conclusions are the **equilibrium fixed point**, the preferred direction of net energy transfer, and the linear leading response near equilibrium. Detailed balance makes the bath's equilibrium distribution stationary, but it does not determine the relaxation rate. Exponential cooling follows when a single relaxation mode dominates; the two-level model above demonstrates one exact case. With approximately constant heat capacity, this gives
 
 $$
 \boxed{\frac{dT}{dt}
@@ -325,7 +344,10 @@ Equivalently, a linear-response heat current $J=G(T-T_{\mathrm{bath}})$ combined
 3. Why does a general master equation produce a sum of decaying modes rather than necessarily one exponential?
 4. Derive Newton's cooling equation from $J=G(T-T_{\mathrm{bath}})$ and $dU/dt=-J$.
 5. Explain why a larger heat capacity slows cooling if the conductance stays fixed.
-6. Give two physical situations in which Newton's simple exponential law is not expected to hold.
+6. Why must internal equilibration be faster than bath exchange for the lumped-body model to apply, and how does the Biot number express this condition?
+7. Derive the exact relaxation time of the two-level model and explain why detailed balance does not fix its numerical value.
+8. Linearize $T^4-T_{\mathrm{bath}}^4$ near the bath temperature and obtain the radiative relaxation rate.
+9. Give two physical situations in which Newton's simple exponential law is not expected to hold.
 
 ---
 
