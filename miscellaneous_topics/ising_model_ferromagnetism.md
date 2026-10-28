@@ -1,4 +1,4 @@
-# From Independent Spins to the Ising Model
+# Ising Model and Ferromagnetism
 
 ## 1. Physical question
 

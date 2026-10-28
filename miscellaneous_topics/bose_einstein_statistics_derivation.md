@@ -1,4 +1,4 @@
-# Bose–Einstein Statistics: A Statistical-Mechanical Derivation
+# Bose–Einstein Statistics
 
 This chapter derives the Bose–Einstein occupation law by counting many-particle microstates and finding the most probable occupation distribution. The argument uses statistical mechanics—state counting, constraints, and entropy maximization—not a postulated distribution law.
 

@@ -1,4 +1,4 @@
-# The Partition Function as a Generator of Thermodynamics
+# Partition Function as a Generator of Thermodynamics
 
 ## 1. The central idea
 

@@ -1,4 +1,4 @@
-# The Debye Model of a Solid
+# Debye Model of a Solid
 
 ## 1. The physical question
 

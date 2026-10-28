@@ -18,22 +18,21 @@ nav:
       - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
   - Miscellaneous Topics:
       - Overview: miscellaneous_topics/index.md
-      - The concept of temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
-      - The Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
-      - The Partition Function as a Generator of Thermodynamics: miscellaneous_topics/partition_function_thermodynamics_generator.md
-      - The Two-Level System and the Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
-      - Maxwell–Boltzmann statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
-      - Maxwell–Boltzmann speed distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
-      - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
-      - Blackbody radiation and Planck's law: miscellaneous_topics/blackbody_radiation_planck_law.md
-      - Fermi–Dirac statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
-      - Equipartition of energy: miscellaneous_topics/equipartition_of_energy.md
-      - Newton's law of cooling from statistical mechanics: miscellaneous_topics/newtons_law_of_cooling_statmech.md
-      - Paramagnetism from the canonical ensemble: miscellaneous_topics/paramagnetism_canonical_ensemble.md
-      - The Ising model and ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
-      - Einstein model of a solid: miscellaneous_topics/einstein_model_of_a_solid.md
-      - The Debye model of a solid: miscellaneous_topics/debye_model_of_a_solid.md
-
+      - Temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
+      - Partition Function as a Generator of Thermodynamics: miscellaneous_topics/partition_function_thermodynamics_generator.md
+      - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
+      - Two-Level System and Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
+      - Maxwell–Boltzmann Statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
+      - Maxwell–Boltzmann Speed Distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
+      - Bose–Einstein Statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
+      - Fermi–Dirac Statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
+      - Blackbody Radiation and Planck's Law: miscellaneous_topics/blackbody_radiation_planck_law.md
+      - Equipartition of Energy: miscellaneous_topics/equipartition_of_energy.md
+      - Paramagnetism: miscellaneous_topics/paramagnetism_canonical_ensemble.md
+      - Ising Model and Ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
+      - Einstein Model of a Solid: miscellaneous_topics/einstein_model_of_a_solid.md
+      - Debye Model of a Solid: miscellaneous_topics/debye_model_of_a_solid.md
+      - Newton's Law of Cooling: miscellaneous_topics/newtons_law_of_cooling_statmech.md
 theme:
   name: material
   features:
