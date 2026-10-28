@@ -13,6 +13,26 @@ INLINE_DOLLAR_MATH = re.compile(r"(?<!\$)\$\$(.+?)\$\$(?!\$)")
 LECTURE_FILE = re.compile(r".*_lecture_(\d+).*_notes\.md$", re.IGNORECASE)
 TRANSCRIPT_MARKER = "transcript_based"
 
+# Keep the generated homepage's topic list in the same order as mkdocs.yml.
+MISC_TOPIC_ORDER = (
+    "temperature_from_statistical_mechanics.md",
+    "partition_function_thermodynamics_generator.md",
+    "grand_canonical_ensemble_chemical_potential.md",
+    "two_level_system_schottky_anomaly.md",
+    "maxwell_boltzmann_statistics.md",
+    "maxwell_boltzmann_speed_distribution.md",
+    "bose_einstein_statistics_derivation.md",
+    "fermi_dirac_statistics_derivation.md",
+    "blackbody_radiation_planck_law.md",
+    "equipartition_of_energy.md",
+    "paramagnetism_canonical_ensemble.md",
+    "ising_model_ferromagnetism.md",
+    "einstein_model_of_a_solid.md",
+    "debye_model_of_a_solid.md",
+    "newtons_law_of_cooling_statmech.md",
+)
+MISC_TOPIC_ORDER_INDEX = {name: index for index, name in enumerate(MISC_TOPIC_ORDER)}
+
 
 def display_name(name: str) -> str:
     return re.sub(r"[_-]+", " ", name).strip().title()
@@ -181,7 +201,10 @@ def main() -> None:
             lines.append(f"- [Collection overview]({book}/)")
             topic_pages = sorted(
                 (path for path in staged_book.glob("*.md") if path.name != "index.md"),
-                key=lambda path: path.name.casefold(),
+                key=lambda path: (
+                    MISC_TOPIC_ORDER_INDEX.get(path.name, len(MISC_TOPIC_ORDER)),
+                    path.name.casefold(),
+                ),
             )
             for path in topic_pages:
                 title = next(

@@ -1,4 +1,4 @@
-# Fermi–Dirac Statistics: A Statistical-Mechanical Derivation
+# Fermi–Dirac Statistics
 
 This chapter derives the Fermi–Dirac occupation law by counting allowed many-particle microstates and maximizing entropy under fixed energy and particle number. The exclusion principle enters through the allowed occupancy of one-particle states; the distribution then follows from statistical mechanics.
 

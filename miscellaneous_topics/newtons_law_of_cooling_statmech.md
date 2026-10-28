@@ -1,4 +1,4 @@
-# Newton's Law of Cooling from Statistical Mechanics
+# Newton's Law of Cooling
 
 Newton's law of cooling states that, under suitable conditions, the temperature of a body approaches the temperature of its surroundings exponentially:
 

@@ -1,4 +1,4 @@
-# The Two-Level System and the Schottky Anomaly
+# Two-Level System and Schottky Anomaly
 
 ## 1. Why study a two-level system?
 

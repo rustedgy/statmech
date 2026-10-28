@@ -1,4 +1,4 @@
-# Paramagnetism from the Canonical Ensemble
+# Paramagnetism
 
 ## 1. Aim and physical model
 

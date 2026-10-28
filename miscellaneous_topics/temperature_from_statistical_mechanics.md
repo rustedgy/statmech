@@ -1,4 +1,4 @@
-# Temperature from the Viewpoint of Statistical Mechanics
+# Temperature
 
 Temperature is often introduced as a thermometer reading or as a measure of how hot something feels. Statistical mechanics gives a deeper definition: **temperature describes how entropy changes when energy is added to a system**. Entropy, in turn, is determined by the microscopic states compatible with the system's macroscopic constraints. Temperature is therefore not an extra microscopic ingredient; it emerges from counting states and assigning probabilities.
 

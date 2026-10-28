@@ -1,4 +1,4 @@
-# Einstein Model of a Solid: Heat Capacity from the Canonical Ensemble
+# Einstein Model of a Solid
 
 ## 1. Physical model and assumptions
 

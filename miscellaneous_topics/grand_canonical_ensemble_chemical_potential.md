@@ -1,4 +1,4 @@
-# The Grand Canonical Ensemble and Chemical Potential
+# Grand Canonical Ensemble and Chemical Potential
 
 ## 1. The physical question
 

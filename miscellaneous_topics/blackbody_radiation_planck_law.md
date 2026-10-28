@@ -1,4 +1,4 @@
-# Blackbody Radiation from Quantum Statistics
+# Blackbody Radiation and Planck's Law
 
 ## 1. Physical question
 
