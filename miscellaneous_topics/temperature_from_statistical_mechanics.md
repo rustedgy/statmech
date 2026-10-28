@@ -187,10 +187,10 @@ $$
 \boxed{\frac{1}{T}=\frac{k_B}{\epsilon}\ln\left(\frac{1-x}{x}\right)}.
 $$
 
-<figure markdown>
-  ![Entropy of a two-level system versus excited fraction. The entropy peaks at half excitation; its slope is positive below the peak and negative above it.](temperature_entropy_curve.svg)
-  <figcaption>For the two-level model, $S/(Nk_B)=-x\ln x-(1-x)\ln(1-x)$. The slope is positive for $x<1/2$, zero at the entropy maximum, and negative for $x>1/2$.</figcaption>
-</figure>
+![Entropy of a two-level system versus excited fraction. The entropy peaks at half excitation; its slope is positive below the peak and negative above it.](temperature_entropy_curve.svg)
+
+*For this model, $S/(Nk_B)=-x\ln x-(1-x)\ln(1-x)$. The slope is positive for $x<1/2$, zero at the entropy maximum, and negative for $x>1/2$.*
+
 
 The sign change has a direct canonical check. In the canonical ensemble, the probability ratio for an excited unit and a ground-state unit is
 
