@@ -4,7 +4,7 @@
 
 A gas at equilibrium has a well-defined temperature, but its molecules do not all move at the same speed. Why is there a distribution of speeds, and how does temperature determine its shape?
 
-This chapter derives the distribution of molecular speeds for a dilute, classical ideal gas in thermal equilibrium. It complements [Maxwell–Boltzmann Statistics](maxwell_boltzmann_statistics.md), which describes occupations of energy states. The canonical Boltzmann factor applies to a single molecule's microstate, giving a velocity-space Gaussian for its kinetic energy $E=mv^2/2$.
+This chapter derives the distribution of molecular speeds for a dilute, classical ideal gas in thermal equilibrium. It complements [Maxwell–Boltzmann Statistics](maxwell_boltzmann_statistics.md), which describes occupations of energy states. The canonical Boltzmann factor applies to a single molecule's microstate, giving a velocity-space Gaussian for its kinetic energy $E=mv^2/2$; see the [canonical partition-function discussion](partition_function_thermodynamics_generator.md) for the reservoir-based origin of this weight.
 
 ## 2. Microscopic model
 
