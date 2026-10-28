@@ -2,6 +2,10 @@
 
 This section contains original supplementary chapters on concepts in statistical mechanics. These are independent study resources, not transcripts of any particular lecture series.
 
+## Reference
+
+- [Notation and Symbols](notation_and_symbols.md) — a glossary of common symbols, ensemble conventions, and sign choices used across the supplementary chapters.
+
 ## Chapters
 
 - [Temperature](temperature_from_statistical_mechanics.md) — define temperature through entropy, energy exchange, and equilibrium; connect the microcanonical and canonical descriptions.
