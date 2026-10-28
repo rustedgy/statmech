@@ -104,8 +104,7 @@ $$
 Linearizing the master equation around equilibrium gives a linear system for the perturbations. Its solutions can be expressed as sums of decaying modes, schematically,
 
 $$
-\delta P_i(t)=\sum_\alpha c_\alpha v_i^{(\alpha)}
-e^{-t/\tau_\alpha},
+\delta P_i(t)=\sum_\alpha c_\alpha v_i^{(\alpha)}e^{-t/\tau_\alpha},
 $$
 
 where the relaxation times $\tau_\alpha$ depend on the transition rates and on the coupling to the reservoir. The equilibrium mode does not decay; the other modes decay when the dynamics are relaxing and ergodic over the relevant states.
