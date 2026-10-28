@@ -14,10 +14,10 @@ For a closed system, equilibrium between accessible states is governed by energy
 
 For a reservoir at temperature $T$ and chemical potential $\mu$, the probability of a system microstate with energy $E_{N,r}$, particle number $N$, and state label $r$ is proportional to
 
-$
+$$
 \exp\!\left[-\beta(E_{N,r}-\mu N)\right],
 \qquad \beta=\frac{1}{k_B T}.
-$
+$$
 
 The combination $E-\mu N$ plays the role of an effective energy for this ensemble. A state is favored by low energy, but the chemical-potential term also accounts for the exchange of particles with the reservoir.
 
@@ -25,13 +25,13 @@ The combination $E-\mu N$ plays the role of an effective energy for this ensembl
 
 Let $Z_N(T,V)$ be the canonical partition function for exactly $N$ particles:
 
-$
+$$
 Z_N(T,V)=\sum_r e^{-\beta E_{N,r}}.
-$
+$$
 
 In the grand canonical ensemble, states with different particle numbers are all accessible. Summing their statistical weights gives
 
-$
+$$
 \begin{aligned}
 \Xi(T,V,\mu)
 &=\sum_{N=0}^{\infty}\sum_r
@@ -39,47 +39,47 @@ e^{-\beta(E_{N,r}-\mu N)}\\
 &=\sum_{N=0}^{\infty}e^{\beta\mu N}
 \sum_r e^{-\beta E_{N,r}}.
 \end{aligned}
-$
+$$
 
 Therefore,
 
-$
+$$
 \boxed{
 \Xi(T,V,\mu)=\sum_{N=0}^{\infty}
 e^{\beta\mu N}Z_N(T,V)
 }
-$
+$$
 
 Define the **fugacity**
 
-$
+$$
 \boxed{z=e^{\beta\mu}}.
-$
+$$
 
 Then the same expression is often written as
 
-$
+$$
 \Xi(T,V,z)=\sum_{N=0}^{\infty}z^N Z_N(T,V).
-$
+$$
 
 The grand partition function is a normalization factor: it ensures that the probabilities of all microstates sum to one.
 
 The probability of a particular microstate $(N,r)$ is
 
-$
+$$
 \boxed{
 P_{N,r}=\frac{e^{-\beta(E_{N,r}-\mu N)}}{\Xi}
 }
-$
+$$
 
 and the probability of finding exactly $N$ particles is
 
-$
+$$
 \boxed{
 P(N)=\frac{e^{\beta\mu N}Z_N}{\Xi}
 =\frac{z^N Z_N}{\Xi}.
 }
-$
+$$
 
 ## 4. Thermodynamic information from $\Xi$
 
@@ -89,34 +89,34 @@ The logarithm of the grand partition function generates useful equilibrium avera
 
 Differentiate with respect to chemical potential at fixed $T$ and $V$:
 
-$
+$$
 \boxed{
 \langle N\rangle
 =\frac{1}{\beta}
 \left(\frac{\partial\ln\Xi}{\partial\mu}\right)_{T,V}
 =k_BT\left(\frac{\partial\ln\Xi}{\partial\mu}\right)_{T,V}
 }
-$
+$$
 
 Equivalently, using fugacity,
 
-$
+$$
 \boxed{
 \langle N\rangle
 =z\left(\frac{\partial\ln\Xi}{\partial z}\right)_{T,V}.
 }
-$
+$$
 
 ### Average energy
 
 At fixed fugacity $z$, differentiating with respect to $\beta$ gives
 
-$
+$$
 \boxed{
 \langle E\rangle
 =-\left(\frac{\partial\ln\Xi}{\partial\beta}\right)_{z,V}.
 }
-$
+$$
 
 The condition that $z$ is held fixed matters: it keeps the particle-number weight $z^N$ constant during this derivative.
 
@@ -124,27 +124,27 @@ The condition that $z$ is held fixed matters: it keeps the particle-number weigh
 
 The thermodynamic potential naturally associated with this ensemble is the **grand potential**:
 
-$
+$$
 \boxed{\Omega_G=-k_BT\ln\Xi.}
-$
+$$
 
 For a system whose thermodynamic variables are $T,V,\mu$,
 
-$
+$$
 \Omega_G=U-TS-\mu\langle N\rangle.
-$
+$$
 
 For a homogeneous bulk system in the thermodynamic limit, the grand potential is related to pressure by
 
-$
+$$
 \boxed{\Omega_G=-pV.}
-$
+$$
 
 Thus,
 
-$
+$$
 pV=k_BT\ln\Xi.
-$
+$$
 
 This gives a direct route from the grand partition function to the equation of state.
 
@@ -152,20 +152,20 @@ This gives a direct route from the grand partition function to the equation of s
 
 Unlike the canonical ensemble, the grand canonical ensemble allows $N$ to fluctuate. Its variance is
 
-$
+$$
 \operatorname{Var}(N)
 =\langle N^2\rangle-\langle N\rangle^2.
-$
+$$
 
 Differentiating the mean particle number with respect to chemical potential gives
 
-$
+$$
 \boxed{
 \operatorname{Var}(N)
 =k_BT\left(\frac{\partial\langle N\rangle}
 {\partial\mu}\right)_{T,V}.
 }
-$
+$$
 
 The response of the mean particle number to a change in chemical potential is therefore tied directly to the size of particle-number fluctuations. A system that responds strongly to changes in $\mu$ generally exhibits larger fluctuations in $N$.
 
@@ -173,18 +173,18 @@ The response of the mean particle number to a change in chemical potential is th
 
 For a classical ideal gas of indistinguishable particles, the canonical partition function is
 
-$
+$$
 Z_N(T,V)=\frac{1}{N!}
 \left(\frac{V}{\lambda_T^3}\right)^N,
 \qquad
 \lambda_T=\frac{h}{\sqrt{2\pi m k_BT}},
-$
+$$
 
 where $\lambda_T$ is the thermal de Broglie wavelength.
 
 Substitute this into the grand partition function:
 
-$
+$$
 \begin{aligned}
 \Xi
 &=\sum_{N=0}^{\infty}
@@ -192,40 +192,40 @@ $
 \left(\frac{zV}{\lambda_T^3}\right)^N\\
 &=\exp\!\left(\frac{zV}{\lambda_T^3}\right).
 \end{aligned}
-$
+$$
 
 Hence,
 
-$
+$$
 \ln\Xi=\frac{zV}{\lambda_T^3}.
-$
+$$
 
 Using the derivative formula for the mean particle number,
 
-$
+$$
 \boxed{
 \langle N\rangle=\frac{zV}{\lambda_T^3}.
 }
-$
+$$
 
 Using the pressure relation,
 
-$
+$$
 pV=k_BT\ln\Xi
 =\frac{zVk_BT}{\lambda_T^3}.
-$
+$$
 
 Since $\langle N\rangle=zV/\lambda_T^3$, we recover the ideal-gas equation of state:
 
-$
+$$
 \boxed{pV=\langle N\rangle k_BT.}
-$
+$$
 
 In this classical ideal-gas example, the probability distribution of $N$ is Poissonian, so
 
-$
+$$
 \boxed{\operatorname{Var}(N)=\langle N\rangle.}
-$
+$$
 
 This result is a useful illustration of how the grand canonical ensemble describes both the average thermodynamics and fluctuations in particle number.
 
@@ -233,35 +233,35 @@ This result is a useful illustration of how the grand canonical ensemble describ
 
 Consider one site that can either be empty, with energy zero and particle number zero, or occupied by one particle of energy $\epsilon$. The two statistical weights are $1$ and $e^{-\beta(\epsilon-\mu)}$. Therefore,
 
-$
+$$
 \boxed{
 \Xi_1=1+e^{-\beta(\epsilon-\mu)}.
 }
-$
+$$
 
 The mean occupation of the site is
 
-$
+$$
 \boxed{
 \langle n\rangle
 =\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
 }
-$
+$$
 
 For $M$ independent equivalent sites, the grand partition function factorizes:
 
-$
+$$
 \Xi_M=\left[1+e^{-\beta(\epsilon-\mu)}\right]^M,
-$
+$$
 
 and the mean number of occupied sites is
 
-$
+$$
 \boxed{
 \langle N\rangle
 =\frac{M}{e^{\beta(\epsilon-\mu)}+1}.
 }
-$
+$$
 
 This has the same mathematical form as the Fermi–Dirac occupation factor. The example illustrates how the chemical potential controls the likelihood that a state is occupied. The model assumes at most one particle per site and does not, by itself, describe interactions between sites.
 
