@@ -106,7 +106,7 @@ The exponent $r$, rather than a universal factor of two, determines the average 
 - **Quartic term** $H_x=ax^4$: $p=4$, so $\langle H_x\rangle=k_B T/4$.
 - **Sixth-power term** $H_x=ax^6$: $p=6$, so $\langle H_x\rangle=k_B T/6$.
 
-More generally, if a contribution $H_j$ is homogeneous of degree $p$ in $d$ independent coordinates, Euler's theorem gives $\sum_{a=1}^{d}x_a\,\partial H_j/\partial x_a=pH_j$. Applying the identity to each coordinate and summing gives
+More generally, if a contribution $H_j$ is homogeneous of degree $r$ in $d$ independent coordinates, Euler's theorem gives $\sum_{a=1}^{d}x_a\,\partial H_j/\partial x_a=rH_j$. Applying the identity to each coordinate and summing gives
 
 $$
 \boxed{\langle H_j\rangle=\frac{d}{p}k_B T,}
@@ -191,14 +191,14 @@ $$
 \boxed{\left\langle x\frac{\partial H}{\partial x}\right\rangle=k_B T.}
 $$
 
-For a homogeneous contribution of degree $r$ in $d$ independent variables, this becomes $\langle H_j\rangle=d k_B T/p$. Thus the factor $1/2$ is a special consequence of quadratic energy, not the most general result.
+For a homogeneous contribution of degree $r$ in $d$ independent variables, this becomes $\langle H_j\rangle=d k_B T/r$. Thus the factor $1/2$ is a special consequence of quadratic energy, not the most general result.
 
 ## Review questions
 
 1. What assumptions are needed to derive the general equipartition identity by integration by parts?
 2. Why does a quartic potential contribute $k_B T/4$, rather than $k_B T/2$, for one coordinate?
 3. Derive the mean energy and heat capacity of the classical quartic oscillator.
-4. How does the result change for a homogeneous energy contribution of degree $p$ in $d$ independent variables?
+4. How does the result change for a homogeneous energy contribution of degree $r$ in $d$ independent variables?
 5. Give two reasons why the classical equipartition theorem may fail in a real physical system.
 
 ---
