@@ -12,16 +12,16 @@ The Debye model improves the description by treating vibrations as collective no
 
 Consider a three-dimensional solid containing (N) atoms. In the harmonic approximation, the vibrational modes are independent quantum oscillators. Each mode of angular frequency $\omega$ has energies
 
-$
+$$
 E_n=\hbar\omega\left(n+\frac12\right),\qquad n=0,1,2,\ldots
-$
+$$
 
 The zero-point contribution does not depend on temperature, so it does not contribute to the heat capacity. The thermal energy of one mode is therefore
 
-$
+$$
 \bar E(\omega)=\frac{\hbar\omega}{e^{\beta\hbar\omega}-1},
 \qquad \beta=\frac{1}{k_BT}.
-$
+$$
 
 The Debye approximation makes two central assumptions:
 
@@ -34,44 +34,44 @@ Real crystals have multiple branches, anisotropy, and deviations from linear dis
 
 For a single acoustic branch in a large three-dimensional volume $V$, the number of wave vectors with magnitude less than $k$ is approximately
 
-$
+$$
 \mathcal N(k)=\frac{V}{(2\pi)^3}\frac{4\pi k^3}{3}
 =\frac{Vk^3}{6\pi^2}.
-$
+$$
 
 If we use an effective sound speed $v_s$ and count the three acoustic polarizations together, the number of modes with angular frequency below $\omega$ is
 
-$
+$$
 \mathcal N(\omega)=\frac{V\omega^3}{2\pi^2v_s^3}.
-$
+$$
 
 Differentiating gives the Debye density of states,
 
-$
+$$
 g(\omega)=\frac{d\mathcal N}{d\omega}
 =\frac{3V\omega^2}{2\pi^2v_s^3},
 \qquad 0\leq\omega\leq\omega_D.
-$
+$$
 
 Here the effective sound speed represents an average over longitudinal and transverse sound speeds. More generally, the prefactor can be written using a polarization-averaged speed.
 
 The cutoff is fixed by requiring $3N$ modes in total:
 
-$
+$$
 \int_0^{\omega_D}g(\omega)\,d\omega=3N.
-$
+$$
 
 With the effective-speed form above, this gives
 
-$
+$$
 \omega_D^3=\frac{6\pi^2N}{V}v_s^3.
-$
+$$
 
 The associated Debye temperature is defined by
 
-$
+$$
 \Theta_D=\frac{\hbar\omega_D}{k_B}.
-$
+$$
 
 It is a material-dependent energy scale expressed as a temperature. It marks the crossover between the low-temperature regime, where only low-frequency modes are excited, and the high-temperature regime, where nearly all modes are thermally populated.
 
@@ -79,27 +79,27 @@ It is a material-dependent energy scale expressed as a temperature. It marks the
 
 Summing the thermal energy over all modes gives
 
-$
+$$
 U(T)=\int_0^{\omega_D}g(\omega)
 \frac{\hbar\omega}{e^{\beta\hbar\omega}-1}\,d\omega.
-$
+$$
 
 Substitute $x=\hbar\omega/(k_BT)$. Since $\omega_D\hbar/(k_BT)=\Theta_D/T$, the internal energy becomes
 
-$
+$$
 U(T)=9Nk_BT\left(\frac{T}{\Theta_D}\right)^3
 \int_0^{\Theta_D/T}\frac{x^3}{e^x-1}\,dx.
-$
+$$
 
 This expression describes the thermal vibrational energy in the Debye approximation; the temperature-independent zero-point energy has been omitted.
 
 At constant volume, the heat capacity is $C_V=(\partial U/\partial T)_V$. Differentiating the integral expression yields
 
-$
+$$
 C_V=9Nk_B\left(\frac{T}{\Theta_D}\right)^3
 \int_0^{\Theta_D/T}
 \frac{x^4e^x}{(e^x-1)^2}\,dx.
-$
+$$
 
 This is the Debye heat-capacity formula. In general, the integral is evaluated numerically. Its limiting forms show the main physics.
 
@@ -107,18 +107,18 @@ This is the Debye heat-capacity formula. In general, the integral is evaluated n
 
 When $T\ll\Theta_D$, the upper integration limit $\Theta_D/T$ is large. The integral can be extended to infinity with exponentially small error:
 
-$
+$$
 \int_0^{\infty}\frac{x^4e^x}{(e^x-1)^2}\,dx
 =\frac{4\pi^4}{15}.
-$
+$$
 
 Consequently,
 
-$
+$$
 \boxed{C_V\simeq\frac{12\pi^4}{5}Nk_B
 \left(\frac{T}{\Theta_D}\right)^3},
 \qquad T\ll\Theta_D.
-$
+$$
 
 Thus the Debye model predicts $C_V\propto T^3$. The physical reason is that only long-wavelength, low-frequency acoustic modes can be appreciably excited at low temperatures. In three dimensions, their density of states scales as $g(\omega)\propto\omega^2$, which leads to the cubic temperature dependence.
 
@@ -128,18 +128,18 @@ This result applies to the phonon contribution in an insulating crystal over the
 
 When $T\gg\Theta_D$, the thermally relevant values of $x=\hbar\omega/(k_BT)$ are small. For a single oscillator,
 
-$
+$$
 \frac{\hbar\omega}{e^{\beta\hbar\omega}-1}
 \simeq k_BT.
-$
+$$
 
 There are $3N$ vibrational modes, so
 
-$
+$$
 U\simeq 3Nk_BT,
 \qquad
 \boxed{C_V\longrightarrow 3Nk_B}.
-$
+$$
 
 This is the Dulong–Petit law, also obtained from classical equipartition: each of the $3N$ harmonic modes contributes $k_B$ to the heat capacity. The approach to this limit is gradual, and the quantum formula is needed when temperature is not large compared with $\Theta_D$.
 
