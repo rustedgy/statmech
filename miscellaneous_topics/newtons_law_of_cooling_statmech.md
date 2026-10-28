@@ -320,15 +320,15 @@ It may fail or need modification when:
 
 For example, consider $250\,\mathrm{mL}$ of coffee, approximated as $0.25\,\mathrm{kg}$ of water. Its heat capacity is about $C=mc_p\simeq1.05\times10^3\,\mathrm{J/K}$. If convection, conduction through the cup, radiation, and other losses together give an illustrative effective conductance $G_{\mathrm{eff}}\simeq1\,\mathrm{W/K}$ near room temperature, then
 
-$
+$$
 \tau\simeq\frac{C}{G_{\mathrm{eff}}}\simeq1.05\times10^3\,\mathrm{s}\approx17\,\mathrm{min}.
-$
+$$
 
 This is an order-of-magnitude illustration, not a universal coffee-cooling time: the effective conductance depends strongly on cup geometry, lid, airflow, evaporation, and temperature. If $C$ or the conductance depends strongly on temperature, the energy-balance equation is instead
 
-$
+$$
 C(T)\frac{dT}{dt}=-\dot Q(T,T_{\mathrm{bath}}),
-$
+$$
 
 which need not have an exponential solution.
 
