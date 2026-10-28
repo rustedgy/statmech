@@ -119,20 +119,55 @@ $$
 
 This is the Bose–Einstein distribution. The minus one in the denominator follows directly from the bosonic state count.
 
-## 5. What the multipliers mean
+## 5. Exact single-state derivation from the grand partition function
 
-The multiplier for energy is related to temperature because equilibrium maximizes entropy at fixed energy; in the microcanonical definition, $\partial S/\partial E=1/T$. The particle-number constraint introduces a second multiplier, the chemical potential, with
+The Stirling derivation above is useful for large energy groups, but it is not needed for a single state. For one bosonic state of energy $\epsilon$, every occupation $n=0,1,2,\ldots$ is allowed. Its grand partition function is
+
+$
+\Xi_\epsilon=\sum_{n=0}^{\infty}e^{-n\beta(\epsilon-\mu)}
+=\frac{1}{1-e^{-\beta(\epsilon-\mu)}}.
+$
+
+Writing $q=e^{-\beta(\epsilon-\mu)}$, its mean occupation is
+
+$
+\bar n=q\frac{\partial}{\partial q}\ln\Xi_\epsilon
+=\frac{q}{1-q}
+=\frac{1}{e^{\beta(\epsilon-\mu)}-1}.
+$
+
+This exact single-state route requires only convergence of the geometric series, or $\mu<\epsilon$ for the state. It needs neither Stirling's approximation nor large degeneracy and is valid for $g=1$.
+
+## 6. What the multipliers mean
+
+The multiplier for energy is related to temperature because equilibrium maximizes entropy at fixed energy; in the microcanonical definition, $(\partial S/\partial U)_{V,N}=1/T$. The particle-number constraint introduces a second multiplier, the chemical potential, with
 
 $$
 \left(\frac{\partial S}{\partial N}\right)_{E,V}
 =-\frac{\mu}{T}.
 $$
 
-Together these give the exponent $(\epsilon_i-\mu)/(k_BT)$. The distribution is not assumed in the derivation: it is the occupation profile that maximizes the number of compatible microstates under the macroscopic constraints.
+Together these give the exponent $(\epsilon_i-\mu)/(k_BT)$. The identifications $\beta=1/(k_BT)$ and $(\partial S/\partial N)_{U,V}=-\mu/T$ are derived in the [temperature](temperature_from_statistical_mechanics.md) and [grand canonical ensemble](grand_canonical_ensemble_chemical_potential.md) chapters and used here by reference. The distribution is not assumed in the derivation: it is the occupation profile that maximizes the number of compatible microstates under the macroscopic constraints.
 
 For bosons, the denominator must remain positive for a finite positive occupation, so in the usual equilibrium setting $\mu$ cannot exceed the lowest allowed single-particle energy. If the lowest-energy state becomes macroscopically occupied, the continuum approximation for excited states must be supplemented by treating that ground-state population separately; this is the statistical-mechanical setting for Bose–Einstein condensation.
 
-## 6. Classical limit
+## 7. Comparing MB, BE, and FD statistics
+
+| Statistics | Allowed occupation of one state | Mean occupation |
+|---|---|---|
+| Maxwell–Boltzmann (MB) | Classical dilute limit; small occupation per state | $e^{-\beta(\epsilon-\mu)}$ |
+| Bose–Einstein (BE) | $n=0,1,2,\ldots$ | $\displaystyle\frac{1}{e^{\beta(\epsilon-\mu)}-1}$ |
+| Fermi–Dirac (FD) | $n=0$ or $1$ | $\displaystyle\frac{1}{e^{\beta(\epsilon-\mu)}+1}$ |
+
+The different denominators encode different state-counting rules. Both quantum distributions reduce to MB statistics when occupation per state is much less than one. See [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md) for the exclusion-based derivation.
+
+## 8. Physical examples: condensation and photons
+
+Bose–Einstein condensation occurs when a macroscopic number of bosons occupy the lowest-energy state. It is observed in ultracold dilute atomic gases, including trapped rubidium-87. Superfluid helium-4 is another important bosonic system, although interactions in the liquid mean the ideal-gas condensation model is not quantitatively exact for it.
+
+Photons are bosons, but their number is not conserved in thermal equilibrium: radiation can exchange photons with matter. Their equilibrium chemical potential is therefore $\mu=0$, which is why Planck's blackbody spectrum follows from Bose–Einstein occupation with zero chemical potential. See [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md).
+
+## 9. Classical limit
 
 When the typical occupation of each individual state is small, $e^{(\epsilon-\mu)/(k_BT)}\gg1$, the minus one is negligible:
 
@@ -165,7 +200,7 @@ per one-particle state, with an additional factor of $g_i$ when reporting the to
 2. Where does the minus one in the Bose–Einstein denominator enter the derivation?
 3. Why are both energy and particle number constraints required?
 4. What condition leads to the classical Maxwell–Boltzmann limit?
-5. Why must the ground state sometimes be treated separately near Bose–Einstein condensation?
+5. Why must the ground state sometimes be treated separately near Bose–Einstein condensation?\n6. Derive the Bose–Einstein mean occupation from the grand partition function of one state without using Stirling's approximation.\n7. How do the MB, BE, and FD occupation rules differ?\n8. Why is the equilibrium chemical potential of photons zero?
 
 ---
 
