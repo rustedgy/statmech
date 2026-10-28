@@ -181,8 +181,8 @@ def main() -> None:
     lines = [
         "# Statistical Mechanics — Lecture Notes",
         "",
-        "A searchable reading site for statistical mechanics lecture notes. "
-        "Choose a collection below, or jump directly to a lecture.",
+        "A searchable reading site for statistical mechanics lecture notes and supplementary topics. "
+        "Choose a collection below, or jump directly to a lecture or topic.",
         "",
         "The Markdown files in this repository are the source of truth. The published "
         "site is built automatically by GitHub Actions; no local setup is needed.",
