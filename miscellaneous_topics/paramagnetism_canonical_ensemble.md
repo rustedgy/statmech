@@ -24,7 +24,7 @@ The partition function of one moment is therefore
 \[
 z=\sum_r e^{-\beta\epsilon_r}
 =e^{\beta\mu B}+e^{-\beta\mu B}
-=2\cosh\(\beta\mu B\).
+=2\cosh(\beta\mu B).
 \]
 
 It is convenient to define the dimensionless field
@@ -49,11 +49,11 @@ F=-k_B T\ln Z_N
 
 The total magnetic moment along the field, or magnetization in the sense of total moment, is obtained by differentiating the free energy with respect to the field:
 \[
-M=-\left\(\frac{\partial F}{\partial B}\right\)_{T,N}.
+M=-\left(\frac{\partial F}{\partial B}\right)_{T,N}.
 \]
 Since \(\partial x/\partial B=\beta\mu\), this gives
 \[
-\boxed{M=N\mu\tanh\left\(\frac{\mu B}{k_B T}\right\).}
+\boxed{M=N\mu\tanh\left(\frac{\mu B}{k_B T}\right).}
 \]
 
 If magnetization is defined per unit volume, write \(m=M/V\), where \(V\) is the sample volume. The equation above is the response of the ideal, noninteracting two-state paramagnet.
@@ -68,7 +68,7 @@ p_-=\frac{e^{-x}}{2\cosh x}.
 \]
 Thus the mean moment of one site is
 \[
-\langle\mu_z\rangle=\mu\(p_+-p_-\)=\mu\tanh x,
+\langle\mu_z\rangle=\mu(p_+-p_-)=\mu\tanh x,
 \]
 and multiplying by \(N\) reproduces \(M\).
 
@@ -81,7 +81,7 @@ M\simeq N\mu\frac{\mu B}{k_B T}
 \]
 The response is linear in field in this limit. Define the susceptibility with respect to \(B\) as
 \[
-\chi_B=\left\(\frac{\partial M}{\partial B}\right\)_{T,B\to0}.
+\chi_B=\left(\frac{\partial M}{\partial B}\right)_{T,B\to0}.
 \]
 Then
 \[
@@ -91,7 +91,7 @@ For a fixed number of independent moments, this is Curie's law: the weak-field s
 
 Conventions for magnetic susceptibility vary between total moment, moment per unit volume, and SI susceptibility defined relative to \(H\). The expression above uses total moment \(M\) and field \(B\); converting to a volume susceptibility or to an \(H\)-based convention introduces the corresponding volume and electromagnetic-unit factors.
 
-The physical reason for the \(1/T\) dependence is visible in (x=\mu B/\(k_BT\)). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
+The physical reason for the \(1/T\) dependence is visible in \\(x=\\frac{\\mu B}{k_B T}\\). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
 
 ## 5. Strong-field and high-temperature limits
 
@@ -125,9 +125,9 @@ This derivative is taken at fixed field. If the field itself changes while the s
 
 The heat capacity at fixed field is
 \[
-C_B=\left\(\frac{\partial U}{\partial T}\right\)_{B,N}.
+C_B=\left(\frac{\partial U}{\partial T}\right)_{B,N}.
 \]
-With \(U=-N\mu B\tanh x\) and (x=\mu B/\(k_BT\)), we have
+With \(U=-N\mu B\tanh x\) and \\(x=\\frac{\\mu B}{k_B T}\\), we have
 \[
 \frac{\partial x}{\partial T}=-\frac{x}{T}.
 \]
@@ -156,7 +156,7 @@ The competition is between energy and entropy. Alignment lowers the magnetic ene
 
 The result
 \[
-M=N\mu\tanh\left\(\frac{\mu B}{k_BT}\right\)
+M=N\mu\tanh\left(\frac{\mu B}{k_BT}\right)
 \]
 is exact for the stated independent two-state model, but it is not a universal equation for all magnetic materials. Important limitations are:
 
@@ -171,12 +171,12 @@ The derivation is useful precisely because its assumptions are explicit: the par
 
 Starting from the canonical partition function of \(N\) independent two-state magnetic moments, we obtained
 \[
-Z_N=[2\cosh\(\beta\mu B\)]^N,
+Z_N=[2\cosh(\beta\mu B)]^N,
 \]
 \[
-M=N\mu\tanh\left\(\frac{\mu B}{k_BT}\right\),
+M=N\mu\tanh\left(\frac{\mu B}{k_BT}\right),
 \qquad
-\chi_B=\frac{N\mu^2}{k_BT}\quad\(B\to0\),
+\chi_B=\frac{N\mu^2}{k_BT}\quad(B\to0),
 \]
 \[
 U=-MB,\qquad
