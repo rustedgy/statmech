@@ -19,3 +19,20 @@ This section contains original supplementary chapters on concepts in statistical
 - [Einstein Model of a Solid](einstein_model_of_a_solid.md) — derive vibrational thermodynamics and quantum heat capacity; identify the low-temperature limitation.
 - [Debye Model of a Solid](debye_model_of_a_solid.md) — derive the phonon density of states and heat capacity, including the low-temperature cubic law.
 - [Newton's Law of Cooling](newtons_law_of_cooling_statmech.md) — derive exponential cooling from near-equilibrium energy relaxation, detailed balance, and linear response.
+
+## Sources and limitations
+
+These chapters are original study notes and are not transcripts of a particular textbook or lecture. Their derivations are intended to make assumptions and intermediate steps explicit, but they are not a substitute for checking a result against a standard reference or the conventions used in a particular course.
+
+Useful references for cross-checking include:
+
+- R. K. Pathria and Paul D. Beale, *Statistical Mechanics*, 3rd edition — ensembles, partition functions, and quantum statistics.
+- F. Reif, *Fundamentals of Statistical and Thermal Physics* — entropy, equilibrium, statistical ensembles, and thermodynamic relations.
+- C. Kittel and H. Kroemer, *Thermal Physics*, 2nd edition — ensembles, paramagnetism, and quantum statistics.
+- K. Huang, *Statistical Mechanics*, 2nd edition — statistical distributions and interacting systems.
+- C. Kittel, *Introduction to Solid State Physics* — lattice vibrations and the Einstein and Debye models.
+- N. W. Ashcroft and N. D. Mermin, *Solid State Physics* — phonons and low-temperature heat capacity.
+
+Model limitations matter: the Ising mean-field treatment is an approximation; the Einstein and Debye models idealize the vibrational spectrum; the classical equipartition theorem does not capture quantum freeze-out; and Newton's law of cooling assumes a suitable near-equilibrium regime with an approximately constant effective heat-transfer coefficient. Results may also depend on dimensionality, boundary conditions, whether energy is measured with or without zero-point contributions, and the definitions of intensive variables. Where a chapter adopts a simplified model, read its assumptions before applying its formula to a real material or experiment.
+
+The references above are suggested verification sources, not a claim that every equation in these notes has been independently checked against every edition. Corrections and source-specific caveats are welcome through issues or pull requests.
