@@ -40,12 +40,16 @@ $$
 \boxed{T \equiv \left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}.
 $$
 
-In words, **temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative has units of entropy per energy, so its reciprocal has units of temperature. Once temperature is defined, it is often convenient to introduce the inverse temperature,
+In words, **conventional thermodynamic temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative itself can also be used as a useful variable. To distinguish it from conventional temperature, call it the entropy-slope variable
 
-$$
-\beta \equiv \frac{1}{k_B T}
-= \frac{1}{k_B}\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}.
-$$
+$
+\tau \equiv \left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}=\frac{1}{T},
+\qquad \beta=\frac{\tau}{k_B}.
+$
+
+The variable \(\tau\) has units of inverse temperature, so it should not be confused with the temperature measured by a thermometer. Its main advantage is mathematical: at an entropy maximum, conventional temperature diverges from \(+\infty\) to \(-\infty\), whereas \(\tau\) passes smoothly through zero and changes sign. Thus \(\tau>0\) corresponds to conventional positive temperature, \(\tau=0\) to the infinite-temperature limit, and \(\tau<0\) to conventional negative temperature. This makes the two branches easier to discuss without an infinite value at the joining point.
+
+The same variable is also natural in calculations: equilibrium requires equal entropy slopes (equal \(\tau\)) for systems that can exchange energy, and the canonical distribution can be written as \(p_i\propto e^{-\tau E_i/k_B}\). The trade-off is interpretive: on the positive branch, larger \(\tau\) means lower conventional temperature. Calling \(\tau\) a new “temperature” without clarifying its inverse-temperature units can therefore be confusing.
 
 The derivative is taken while holding the other relevant constraints fixed. For a discrete system, it can be understood as an appropriate finite difference, or as a smooth approximation for a sufficiently large system.
 
