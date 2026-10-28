@@ -20,15 +20,13 @@ In the classical regime, the occupation of any particular single-particle state 
 
 ## 2. Count the compatible arrangements
 
-For a specified set of occupation numbers $\{n_i\}$, first imagine assigning $N$ distinguishable particle labels to the available single-particle states. The number of assignments that produce the occupations $\{n_i\}$ is proportional to
+For identical classical particles, the Gibbs correction removes the unphysical overcounting of permutations. Up to factors independent of the occupations, use
 
 $$
-W(\{n_i\})=\frac{N!}{\prod_i n_i!}\prod_i g_i^{n_i}.
+W_{\mathrm{MB}}(\{n_i\})=\frac{1}{\prod_i n_i!}\prod_i g_i^{n_i}.
 $$
 
-The factor $N!/\prod_i n_i!$ counts how the particle labels are partitioned among the energy classes. Each of the $n_i$ particles assigned to class $i$ has $g_i$ choices of state, giving the factor $g_i^{n_i}$.
-
-For identical classical particles, the common overall factor associated with relabelling particles does not affect the most probable occupation numbers. Thus this counting expression is sufficient for finding the equilibrium distribution.
+Equivalently, the distinguishable-label count $N!\prod_i g_i^{n_i}/\prod_i n_i!$ is divided by the common factor $N!$. This does not change the most probable occupations at fixed $N$, but it does change the entropy by $k_B\ln N!$. Omitting the Gibbs correction makes the entropy non-extensive in the thermodynamic limit and leads to the Gibbs paradox.
 
 The equilibrium macrostate is the one compatible with the largest number of microscopic arrangements, equivalently the one with the greatest Boltzmann entropy,
 
@@ -150,9 +148,9 @@ At higher temperature, $\beta=1/(k_BT)$ is smaller, so the exponential penalty f
 
 The continuum occupation derivation assumes many states and many particles in each energy class, $g_i\gg n_i\gg1$, so Stirling's approximation is accurate for occupation factorials while the occupation per individual state remains small. The classical dilute-gas criterion is
 
-$
+$$
 \boxed{n\lambda_T^3\ll1},\qquad \lambda_T=\frac{h}{\sqrt{2\pi m k_BT}},
-$
+$$
 
 where $n=N/V$ and $\lambda_T$ is the thermal de Broglie wavelength. In this regime quantum occupancy corrections are negligible. It can be obtained as the low-occupation limit of both Bose–Einstein and Fermi–Dirac distributions, but the counting-and-entropy argument above derives it directly in the classical regime.
 
@@ -188,15 +186,15 @@ As temperature increases, this ratio approaches one and higher levels become rel
 
 For closely spaced energy levels, replace the sum by an integral. If $g(\epsilon)$ is the density of one-particle states per unit energy, then
 
-$
+$$
 dN(\epsilon)\propto g(\epsilon)e^{-\beta\epsilon}\,d\epsilon.
-$
+$$
 
 For a free particle in three dimensions, the number of momentum states inside a sphere of radius $p$ is proportional to $p^3$. Since $\epsilon=p^2/(2m)$, the density of states therefore scales as
 
-$
+$$
 \boxed{g(\epsilon)\propto\sqrt{\epsilon}}.
-$
+$$
 
 The energy distribution consequently has the form $P(\epsilon)\propto\sqrt{\epsilon}e^{-\beta\epsilon}$. This square-root factor is the continuum analogue of degeneracy and is the same state-counting geometry behind the $v^2$ factor in the [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md).
 
