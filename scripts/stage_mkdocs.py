@@ -178,7 +178,21 @@ def main() -> None:
         if links:
             lines.extend(links)
         else:
-            lines.append(f"[Open the collection overview]({book}/)")
+            lines.append(f"- [Collection overview]({book}/)")
+            topic_pages = sorted(
+                (path for path in staged_book.glob("*.md") if path.name != "index.md"),
+                key=lambda path: path.name.casefold(),
+            )
+            for path in topic_pages:
+                title = next(
+                    (
+                        line.lstrip("#").strip()
+                        for line in path.read_text(encoding="utf-8").splitlines()
+                        if line.startswith("# ")
+                    ),
+                    display_name(path.stem),
+                )
+                lines.append(f"- [{title}]({book}/{path.name})")
         lines.append("")
 
     lines.extend([
