@@ -191,7 +191,7 @@ $$
 \boxed{\left\langle x\frac{\partial H}{\partial x}\right\rangle=k_B T.}
 $$
 
-For a homogeneous contribution of degree $p$ in $d$ independent variables, this becomes $\langle H_j\rangle=d k_B T/p$. Thus the factor $1/2$ is a special consequence of quadratic energy, not the most general result.
+For a homogeneous contribution of degree $r$ in $d$ independent variables, this becomes $\langle H_j\rangle=d k_B T/p$. Thus the factor $1/2$ is a special consequence of quadratic energy, not the most general result.
 
 ## Review questions
 
