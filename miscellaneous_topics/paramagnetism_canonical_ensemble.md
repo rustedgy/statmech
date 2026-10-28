@@ -91,7 +91,7 @@ For a fixed number of independent moments, this is Curie's law: the weak-field s
 
 Conventions for magnetic susceptibility vary between total moment, moment per unit volume, and SI susceptibility defined relative to \(H\). The expression above uses total moment \(M\) and field \(B\); converting to a volume susceptibility or to an \(H\)-based convention introduces the corresponding volume and electromagnetic-unit factors.
 
-The physical reason for the \(1/T\) dependence is visible in \(x=\\frac{\\mu B}{k_B T}\). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
+The physical reason for the \(1/T\) dependence is visible in \(x=\frac{\mu B}{k_B T}\). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
 
 ## 5. Strong-field and high-temperature limits
 
@@ -127,7 +127,7 @@ The heat capacity at fixed field is
 \[
 C_B=\left(\frac{\partial U}{\partial T}\right)_{B,N}.
 \]
-With \(U=-N\mu B\tanh x\) and \(x=\\frac{\\mu B}{k_B T}\), we have
+With \(U=-N\mu B\tanh x\) and \(x=\frac{\mu B}{k_B T}\), we have
 \[
 \frac{\partial x}{\partial T}=-\frac{x}{T}.
 \]
