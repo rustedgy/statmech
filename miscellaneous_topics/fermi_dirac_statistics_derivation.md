@@ -4,7 +4,7 @@ This chapter derives the Fermi–Dirac occupation law by counting allowed many-p
 
 ## 1. States, occupations, and constraints
 
-Consider identical, non-interacting fermions in equilibrium. Let energy level \(\epsilon_i\) have degeneracy \(g_i\), meaning there are \(g_i\) distinct one-particle states at that energy. Let \(n_i\) denote the number of fermions occupying the level.
+Consider identical, non-interacting fermions in equilibrium. Let energy level $\epsilon_i$ have degeneracy $g_i$, meaning there are $g_i$ distinct one-particle states at that energy. Let $n_i$ denote the number of fermions occupying the level.
 
 The Pauli exclusion principle permits at most one fermion in each one-particle state. Therefore,
 
@@ -22,7 +22,7 @@ we seek the occupation distribution corresponding to the most numerous allowed m
 
 ## 2. Count the allowed arrangements
 
-For a level with degeneracy \(g_i\), choosing \(n_i\) occupied states from the \(g_i\) available states determines the arrangement. The number of choices is
+For a level with degeneracy $g_i$, choosing $n_i$ occupied states from the $g_i$ available states determines the arrangement. The number of choices is
 
 $$
 W_i=\binom{g_i}{n_i}
@@ -39,7 +39,7 @@ This combinatorial factor is where the exclusion constraint enters the calculati
 
 ## 3. Entropy from multiplicity
 
-Using Boltzmann's relation \(S=k_B\ln W\) and Stirling's approximation for large factorial arguments,
+Using Boltzmann's relation $S=k_B\ln W$ and Stirling's approximation for large factorial arguments,
 
 $$
 \begin{aligned}
@@ -56,24 +56,24 @@ S\approx k_B\sum_i\big[g_i\ln g_i-n_i\ln n_i
 -(g_i-n_i)\ln(g_i-n_i)\big].
 $$
 
-For fixed \(g_i\), differentiating with respect to \(n_i\) gives
+For fixed $g_i$, differentiating with respect to $n_i$ gives
 
 $$
 \frac{1}{k_B}\frac{\partial S}{\partial n_i}
 =\ln\left(\frac{g_i-n_i}{n_i}\right).
 $$
 
-The factor \(g_i-n_i\) counts the unoccupied one-particle states. Its appearance is the statistical signature of exclusion.
+The factor $g_i-n_i$ counts the unoccupied one-particle states. Its appearance is the statistical signature of exclusion.
 
 ## 4. Maximize entropy at fixed energy and particle number
 
-The equilibrium occupation maximizes entropy subject to the two macroscopic constraints. Introduce Lagrange multipliers \(\alpha\) and \(\beta\):
+The equilibrium occupation maximizes entropy subject to the two macroscopic constraints. Introduce Lagrange multipliers $\alpha$ and $\beta$:
 
 $$
 \Phi=S-k_B\alpha\sum_i n_i-k_B\beta\sum_i n_i\epsilon_i.
 $$
 
-Stationarity with respect to every \(n_i\) requires
+Stationarity with respect to every $n_i$ requires
 
 $$
 \frac{1}{k_B}\frac{\partial S}{\partial n_i}
@@ -105,7 +105,7 @@ $$
 n_i=\frac{g_i}{e^{\alpha+\beta\epsilon_i}+1}.
 $$
 
-At equilibrium, \(\beta=1/(k_BT)\) and \(\alpha=-\mu/(k_BT)\), where \(T\) is temperature and \(\mu\) is chemical potential. Therefore,
+At equilibrium, $\beta=1/(k_BT)$ and $\alpha=-\mu/(k_BT)$, where $T$ is temperature and $\mu$ is chemical potential. Therefore,
 
 $$
 \boxed{n_i=\frac{g_i}{e^{(\epsilon_i-\mu)/(k_BT)}+1}}.
@@ -127,7 +127,7 @@ $$
 0\leq\bar n(\epsilon)\leq1.
 $$
 
-At \(\epsilon=\mu\), the occupation is one half. For positive temperature, states far below the chemical potential are likely to be occupied, while states far above it are unlikely to be occupied.
+At $\epsilon=\mu$, the occupation is one half. For positive temperature, states far below the chemical potential are likely to be occupied, while states far above it are unlikely to be occupied.
 
 In the zero-temperature limit for a system with a conventional ground-state filling, the distribution approaches a step:
 
@@ -139,7 +139,7 @@ $$
 \end{cases}
 $$
 
-At zero temperature, \(\mu\) approaches the Fermi energy for the usual ground state. The value exactly at the step depends on how the limiting case is represented and does not change bulk counting.
+At zero temperature, $\mu$ approaches the Fermi energy for the usual ground state. The value exactly at the step depends on how the limiting case is represented and does not change bulk counting.
 
 ## 6. Consequences of Fermi–Dirac statistics
 
@@ -147,17 +147,17 @@ The distribution is more than a formula for average occupation. It predicts how 
 
 ### 6.1 A filled Fermi sea at zero temperature
 
-At \(T=0\), the Fermi–Dirac distribution becomes a step function: every available one-particle state below the Fermi energy \(E_F\) is occupied, and every state above it is empty, apart from possible details of degeneracy exactly at the boundary. The filled states are often called the **Fermi sea**. This sharp boundary is a consequence of exclusion: electrons cannot gain a small amount of energy by moving into a nearby state if that state is already occupied.
+At $T=0$, the Fermi–Dirac distribution becomes a step function: every available one-particle state below the Fermi energy $E_F$ is occupied, and every state above it is empty, apart from possible details of degeneracy exactly at the boundary. The filled states are often called the **Fermi sea**. This sharp boundary is a consequence of exclusion: electrons cannot gain a small amount of energy by moving into a nearby state if that state is already occupied.
 
 ### 6.2 Finite temperature smears the Fermi edge
 
-At \(T>0\), the step becomes a smooth crossover. Some electrons near the Fermi energy are thermally excited into states above the chemical potential, leaving holes in states below it. The main changes occur over an energy range of order \(k_BT\); states many \(k_BT\) below or above \(\mu\) remain nearly full or nearly empty, respectively.
+At $T>0$, the step becomes a smooth crossover. Some electrons near the Fermi energy are thermally excited into states above the chemical potential, leaving holes in states below it. The main changes occur over an energy range of order $k_BT$; states many $k_BT$ below or above $\mu$ remain nearly full or nearly empty, respectively.
 
-A more precise measure comes from the peak in \(-\partial f/\partial E\), which describes how strongly occupation changes with energy. The full width at half maximum of this peak is approximately \(3.53,k_BT\). Thus the width of the thermally active energy window grows linearly with temperature.
+A more precise measure comes from the peak in $-\partial f/\partial E$, which describes how strongly occupation changes with energy. The full width at half maximum of this peak is approximately $3.53,k_BT$. Thus the width of the thermally active energy window grows linearly with temperature.
 
 ### 6.3 The chemical potential is the half-occupation energy
 
-For any positive temperature, setting \(E=\mu\) in the distribution gives
+For any positive temperature, setting $E=\mu$ in the distribution gives
 
 $$
 f(\mu,T)=\frac{1}{e^0+1}=\frac12.
@@ -167,13 +167,13 @@ The chemical potential is therefore the energy at which a one-particle state has
 
 ### 6.4 Electron–hole symmetry around the chemical potential
 
-Writing the distribution as \(f(E)=[e^{(E-\mu)/(k_BT)}+1]^{-1}\), direct substitution shows
+Writing the distribution as $f(E)=[e^{(E-\mu)/(k_BT)}+1]^{-1}$, direct substitution shows
 
 $$
 f(\mu-\Delta)+f(\mu+\Delta)=1.
 $$
 
-A state \(\Delta\) below \(\mu\) is occupied with exactly the same probability that a state \(\Delta\) above \(\mu\) is empty. This is a symmetry of the **occupation function**. It does not by itself imply equal total numbers of electrons and holes, because that also depends on how many states are available at each energy (the density of states).
+A state $\Delta$ below $\mu$ is occupied with exactly the same probability that a state $\Delta$ above $\mu$ is empty. This is a symmetry of the **occupation function**. It does not by itself imply equal total numbers of electrons and holes, because that also depends on how many states are available at each energy (the density of states).
 
 ### 6.5 The occupation changes most steeply at the chemical potential
 
@@ -183,7 +183,7 @@ $$
 \frac{df}{dE}=-\frac{1}{k_BT}f(1-f).
 $$
 
-The magnitude of this slope is largest when \(f=1/2\), namely at \(E=\mu\):
+The magnitude of this slope is largest when $f=1/2$, namely at $E=\mu$:
 
 $$
 \left.\frac{df}{dE}\right|_{E=\mu}
@@ -200,17 +200,17 @@ $$
 \operatorname{Var}(n)=\langle n^2\rangle-\langle n\rangle^2=f(1-f).
 $$
 
-This is largest at \(f=1/2\), where it equals \(1/4\). States far below \(\mu\) are almost certainly occupied, and states far above it are almost certainly empty, so their occupation fluctuations are small. The largest fluctuations occur near the Fermi edge.
+This is largest at $f=1/2$, where it equals $1/4$. States far below $\mu$ are almost certainly occupied, and states far above it are almost certainly empty, so their occupation fluctuations are small. The largest fluctuations occur near the Fermi edge.
 
 ### 6.7 The chemical potential shifts with temperature
 
-For a system whose total particle number is fixed, \(\mu\) generally has to change as temperature smears the occupation distribution. The particle number is determined by
+For a system whose total particle number is fixed, $\mu$ generally has to change as temperature smears the occupation distribution. The particle number is determined by
 
 $$
 N=\int g(E)f(E,\mu,T)\,dE,
 $$
 
-where \(g(E)\) is the density of one-particle states. The direction and size of the shift depend on the shape of \(g(E)\), not just on the Fermi–Dirac function.
+where $g(E)$ is the density of one-particle states. The direction and size of the shift depend on the shape of $g(E)$, not just on the Fermi–Dirac function.
 
 For a smooth density of states in the low-temperature, degenerate regime, the Sommerfeld expansion gives the leading estimate
 
@@ -219,17 +219,17 @@ $$
 \frac{g'(E_F)}{g(E_F)}.
 $$
 
-Here \(E_F=\mu(0)\). If the density of states rises with energy at \(E_F\), this correction is negative; if it falls, the correction is positive. This approximation assumes the density of states is sufficiently smooth near the Fermi energy and is not valid at arbitrary high temperatures.
+Here $E_F=\mu(0)$. If the density of states rises with energy at $E_F$, this correction is negative; if it falls, the correction is positive. This approximation assumes the density of states is sufficiently smooth near the Fermi energy and is not valid at arbitrary high temperatures.
 
 ### 6.8 Only a small fraction of electrons contribute to low-temperature heat capacity
 
-In a metal with \(k_BT\ll E_F\), most electrons lie far below the Fermi energy and cannot be thermally promoted because nearby states are occupied. Only electrons within an energy window of order \(k_BT\) of the Fermi surface can be rearranged thermally. Consequently, the electronic heat capacity of a simple degenerate Fermi gas is proportional to temperature at low temperatures, rather than having the classical temperature-independent value expected for a gas with all particles thermally active.
+In a metal with $k_BT\ll E_F$, most electrons lie far below the Fermi energy and cannot be thermally promoted because nearby states are occupied. Only electrons within an energy window of order $k_BT$ of the Fermi surface can be rearranged thermally. Consequently, the electronic heat capacity of a simple degenerate Fermi gas is proportional to temperature at low temperatures, rather than having the classical temperature-independent value expected for a gas with all particles thermally active.
 
 These results explain why the Fermi surface—the boundary between mostly occupied and mostly empty states—plays such a central role in the low-temperature properties of metals.
 
 ## 7. Classical limit
 
-When \(e^{(\epsilon-\mu)/(k_BT)}\gg1\), the plus one is negligible, giving
+When $e^{(\epsilon-\mu)/(k_BT)}\gg1$, the plus one is negligible, giving
 
 $$
 \bar n(\epsilon)\approx e^{-(\epsilon-\mu)/(k_BT)}.
@@ -242,7 +242,7 @@ This is the Maxwell–Boltzmann limit. It applies when the occupation per one-pa
 The derivations for bosons and fermions have the same statistical structure:
 
 - Count microstates compatible with a proposed set of level occupations.
-- Take \(S=k_B\ln W\).
+- Take $S=k_B\ln W$.
 - Maximize entropy while enforcing fixed total energy and particle number.
 - Interpret the Lagrange multipliers as inverse temperature and chemical potential.
 
@@ -269,7 +269,7 @@ These signs are not arbitrary algebraic choices. They encode the different ways 
 
 ## Summary
 
-Fermi–Dirac statistics follows from the finite occupancy of fermionic one-particle states. For a level with degeneracy \(g_i\), there are \(\binom{g_i}{n_i}\) ways to choose its occupied states. Maximizing the entropy derived from this multiplicity, subject to fixed energy and particle number, gives
+Fermi–Dirac statistics follows from the finite occupancy of fermionic one-particle states. For a level with degeneracy $g_i$, there are $\binom{g_i}{n_i}$ ways to choose its occupied states. Maximizing the entropy derived from this multiplicity, subject to fixed energy and particle number, gives
 
 $$
 \boxed{\bar n_i=\frac{1}{e^{(\epsilon_i-\mu)/(k_BT)}+1}}
@@ -282,9 +282,9 @@ The distribution also explains the zero-temperature Fermi sea, thermal smearing 
 ## Review questions
 
 1. How does the Pauli exclusion principle change the multiplicity for a level?
-2. Why does the entropy derivative contain \(g_i-n_i\)?
+2. Why does the entropy derivative contain $g_i-n_i$?
 3. Derive the Fermi–Dirac denominator by maximizing entropy with two constraints.
-4. Why is the occupation one half at \(\epsilon=\mu\)?
+4. Why is the occupation one half at $\epsilon=\mu$?
 5. Why does the occupation change most rapidly near the chemical potential?
 6. What is meant by thermal smearing, and why are only states near the Fermi energy strongly affected at low temperature?
 7. Why does the temperature dependence of the chemical potential depend on the density of states?
