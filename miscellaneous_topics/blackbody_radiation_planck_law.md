@@ -31,13 +31,19 @@ This is the Bose–Einstein occupation factor for photons.
 
 ## 3. Count the modes
 
-For a large three-dimensional cavity, counting wave vectors in reciprocal space gives a density of electromagnetic modes per unit volume per unit frequency,
-
-$$
-g(\nu)=\frac{8\pi\nu^2}{c^3}.
-$$
-
-The factor includes the two independent polarizations of electromagnetic waves. Thus $g(\nu)\,d\nu$ is the number of modes per unit volume with frequencies between $\nu$ and $\nu+d\nu$, in the large-cavity limit.
+For a large cavity, count standing-wave modes in a cube of volume $V=L^3$. The allowed wave-vector components are approximately $k_x=n_x\pi/L$, $k_y=n_y\pi/L$, and $k_z=n_z\pi/L$, with positive integers. Each mode is a lattice point in the positive octant of $k$-space. For one polarization, the number of modes in a thin shell is the octant shell volume divided by the volume per lattice point:
+$
+d\mathcal N_{\text{one pol.}}\simeq \frac18(4\pi k^2\,dk)\frac{V}{\pi^3}=\frac{Vk^2}{2\pi^2}\,dk.
+$
+Electromagnetic waves have two independent transverse polarizations, so
+$
+d\mathcal N=\frac{Vk^2}{\pi^2}\,dk.
+$
+Using $k=2\pi\nu/c$ and $dk=(2\pi/c)d\nu$, then dividing by $V$, gives
+$
+\boxed{g(\nu)=\frac1V\frac{d\mathcal N}{d\nu}=\frac{8\pi\nu^2}{c^3}.}
+$
+Thus $g(\nu)\,d\nu$ counts both polarizations in the frequency interval $[\nu,\nu+d\nu]$. Finite-cavity boundary corrections are negligible in the large-volume limit.
 
 Each mode has mean thermal energy $h\nu\bar n_\nu$. Multiplying the number of modes by the mean energy per mode yields the spectral energy density:
 
