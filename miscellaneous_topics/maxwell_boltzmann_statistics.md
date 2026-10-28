@@ -12,9 +12,9 @@ Consider $N$ identical classical particles in contact with a system whose access
 
 The constraints are
 
-$
+$$
 \sum_i n_i=N,\qquad \sum_i n_i\epsilon_i=E.
-$
+$$
 
 In the classical regime, the occupation of any particular single-particle state is typically small, so quantum restrictions on state occupancy do not control the distribution.
 
@@ -22,9 +22,9 @@ In the classical regime, the occupation of any particular single-particle state 
 
 For a specified set of occupation numbers $\{n_i\}$, first imagine assigning $N$ distinguishable particle labels to the available single-particle states. The number of assignments that produce the occupations $\{n_i\}$ is proportional to
 
-$
+$$
 W(\{n_i\})=\frac{N!}{\prod_i n_i!}\prod_i g_i^{n_i}.
-$
+$$
 
 The factor $N!/\prod_i n_i!$ counts how the particle labels are partitioned among the energy classes. Each of the $n_i$ particles assigned to class $i$ has $g_i$ choices of state, giving the factor $g_i^{n_i}$.
 
@@ -32,74 +32,74 @@ For identical classical particles, the common overall factor associated with rel
 
 The equilibrium macrostate is the one compatible with the largest number of microscopic arrangements, equivalently the one with the greatest Boltzmann entropy,
 
-$
+$$
 S=k_B\ln W.
-$
+$$
 
 ## 3. Write the entropy
 
 Taking the logarithm gives
 
-$
+$$
 \ln W=\ln N!+\sum_i n_i\ln g_i-\sum_i\ln(n_i!).
-$
+$$
 
 For large occupation numbers, Stirling's approximation is useful:
 
-$
+$$
 \ln n!\simeq n\ln n-n.
-$
+$$
 
 Since $N$ is fixed, $\ln N!$ is constant during the maximization. Therefore, apart from constants independent of the $\{n_i\}$,
 
-$
+$$
 \frac{S}{k_B}\simeq
 \sum_i\left[n_i\ln g_i-n_i\ln n_i+n_i\right]+\text{constant}.
-$
+$$
 
 ## 4. Maximize entropy with fixed particle number and energy
 
 We maximize $S$ while keeping both $N$ and $E$ fixed. Introduce Lagrange multipliers $\alpha$ and $\beta$ and define
 
-$
+$$
 \Phi=\frac{S}{k_B}
 -\alpha\left(\sum_i n_i-N\right)
 -\beta\left(\sum_i n_i\epsilon_i-E\right).
-$
+$$
 
 At the maximum, the derivative with respect to each $n_i$ vanishes. Using the entropy expression above,
 
-$
+$$
 \frac{\partial\Phi}{\partial n_i}
 =\ln g_i-\ln n_i-\alpha-\beta\epsilon_i=0.
-$
+$$
 
 Rearranging,
 
-$
+$$
 \ln\left(\frac{n_i}{g_i}\right)
 =-\alpha-\beta\epsilon_i,
-$
+$$
 
 so
 
-$
+$$
 \boxed{n_i=g_i e^{-\alpha}e^{-\beta\epsilon_i}}.
-$
+$$
 
 The number of particles in an energy class is therefore proportional to its degeneracy and decreases exponentially with energy.
 
 The multiplier $\beta$ is identified thermodynamically as
 
-$
+$$
 \beta=\frac{1}{k_BT},
-$
+$$
 
 while $\alpha$ is related to the chemical potential by $\alpha=-\mu/(k_BT)$. Thus the mean occupation of class $i$ can also be written as
 
-$
+$$
 \boxed{n_i=g_i\exp\left[-\frac{\epsilon_i-\mu}{k_BT}\right]}.
-$
+$$
 
 This is the Maxwell–Boltzmann occupation law.
 
@@ -107,35 +107,35 @@ This is the Maxwell–Boltzmann occupation law.
 
 Define the single-particle partition sum
 
-$
+$$
 Z_1=\sum_i g_i e^{-\beta\epsilon_i}.
-$
+$$
 
 Summing the occupation law over all energy classes and requiring $\sum_i n_i=N$ gives
 
-$
+$$
 N=e^{-\alpha}\sum_i g_i e^{-\beta\epsilon_i}
 =e^{-\alpha}Z_1.
-$
+$$
 
 Hence $e^{-\alpha}=N/Z_1$, and
 
-$
+$$
 \boxed{n_i=N\frac{g_i e^{-\beta\epsilon_i}}{Z_1}}.
-$
+$$
 
 The probability that a particle selected from the ensemble belongs to energy class $i$ is consequently
 
-$
+$$
 \boxed{P_i=\frac{n_i}{N}
 =\frac{g_i e^{-\beta\epsilon_i}}{Z_1}}.
-$
+$$
 
 If individual states are indexed separately rather than grouped into energy classes, the probability of a particular single-particle state $a$ with energy $\epsilon_a$ is
 
-$
+$$
 p_a=\frac{e^{-\beta\epsilon_a}}{Z_1}.
-$
+$$
 
 Degeneracy appears in the class probability because a class with more states offers more ways for a particle to occupy that energy.
 
@@ -154,27 +154,27 @@ The MB law is appropriate when the gas is sufficiently dilute and quantum occupa
 
 Suppose non-degenerate levels have energies $\epsilon_n=n\Delta$, where $n=0,1,2,\ldots$ and $\Delta>0$. Then $g_n=1$ and
 
-$
+$$
 P_n=\frac{e^{-\beta n\Delta}}{\sum_{m=0}^{\infty}e^{-\beta m\Delta}}.
-$
+$$
 
 For $\beta>0$, the geometric series gives
 
-$
+$$
 Z_1=\frac{1}{1-e^{-\beta\Delta}},
-$
+$$
 
 so
 
-$
+$$
 \boxed{P_n=(1-e^{-\beta\Delta})e^{-\beta n\Delta}}.
-$
+$$
 
 The ratio of probabilities for successive levels is constant:
 
-$
+$$
 \frac{P_{n+1}}{P_n}=e^{-\beta\Delta}.
-$
+$$
 
 As temperature increases, this ratio approaches one and higher levels become relatively more populated.
 
@@ -190,9 +190,9 @@ The statistical-mechanical derivation follows a short chain:
 
 The result is
 
-$
+$$
 \boxed{P_i=\frac{g_i e^{-\epsilon_i/(k_BT)}}{\sum_j g_j e^{-\epsilon_j/(k_BT)}}},
-$
+$$
 
 the Maxwell–Boltzmann distribution over energy classes.
 
