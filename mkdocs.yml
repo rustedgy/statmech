@@ -20,11 +20,14 @@ nav:
       - Overview: miscellaneous_topics/index.md
       - The concept of temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
       - Maxwell–Boltzmann statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
+      - Maxwell–Boltzmann speed distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
       - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
+      - Blackbody radiation and Planck's law: miscellaneous_topics/blackbody_radiation_planck_law.md
       - Fermi–Dirac statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
       - Equipartition of energy: miscellaneous_topics/equipartition_of_energy.md
       - Newton's law of cooling from statistical mechanics: miscellaneous_topics/newtons_law_of_cooling_statmech.md
       - Paramagnetism from the canonical ensemble: miscellaneous_topics/paramagnetism_canonical_ensemble.md
+      - The Ising model and ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
       - Einstein model of a solid: miscellaneous_topics/einstein_model_of_a_solid.md
 
 theme:
