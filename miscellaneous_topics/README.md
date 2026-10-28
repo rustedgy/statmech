@@ -10,3 +10,4 @@ This section contains original supplementary chapters on concepts in statistical
 - [Fermi–Dirac statistics](fermi_dirac_statistics_derivation.md) — derive the occupation distribution from fermionic state counting and entropy maximization.
 - [Equipartition of energy](equipartition_of_energy.md) — the classical quadratic theorem and the general power-law result for non-quadratic energy terms.
 - [Newton's law of cooling from statistical mechanics](newtons_law_of_cooling_statmech.md) — derive exponential cooling as near-equilibrium energy relaxation, using detailed balance, a master equation, and linear response.
+- [Paramagnetism from the canonical ensemble](paramagnetism_canonical_ensemble.md) — derive magnetization, Curie's law, internal energy, and heat capacity for independent magnetic moments.
