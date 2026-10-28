@@ -1,4 +1,4 @@
-# Newton's Law of Cooling
+# Newton's Law of Cooling: Equilibrium, Direction, and Linear Response
 
 Newton's law of cooling states that, under suitable conditions, the temperature of a body approaches the temperature of its surroundings exponentially:
 
@@ -6,9 +6,9 @@ $$
 \boxed{\frac{dT}{dt}=-\gamma\,(T-T_{\mathrm{bath}})}
 $$
 
-Here $T$ is the body's temperature, $T_{\mathrm{bath}}$ is the temperature of a large environment that remains effectively constant, and $\gamma>0$ is a relaxation rate. The law is often introduced as an empirical rule. Statistical mechanics explains why this form is natural near equilibrium: microscopic energy exchanges obey equilibrium probability constraints, and weakly coupled systems typically relax through decaying modes. When one relaxation mode dominates and the heat capacity is nearly constant, the temperature difference decays exponentially.
+Here $T$ is the body's temperature, $T_{\mathrm{bath}}$ is the temperature of a large environment that remains effectively constant, and $\gamma>0$ is a relaxation rate. Statistical mechanics does **not** determine this rate from equilibrium probabilities alone. It identifies the equilibrium fixed point, explains the statistically preferred direction of net energy transfer, and shows why a smooth response is linear to leading order near equilibrium. Exponential cooling additionally requires one relaxation mode to dominate, or a suitable one-mode dynamical model to apply.
 
-This chapter develops that explanation using ensembles, transition rates, linear response, and energy balance. It also clarifies which parts follow from statistical mechanics and which assumptions are needed for Newton's simple law.
+This chapter separates these equilibrium and near-equilibrium conclusions from the dynamical assumptions needed for a quantitative cooling law. An exactly solvable two-level model illustrates when exponential energy relaxation holds, while lumped-body and radiation examples show how to estimate a rate in practice.
 
 ## 1. The system and its thermal environment
 
