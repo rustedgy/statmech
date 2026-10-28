@@ -5,6 +5,7 @@ This section contains original supplementary chapters on concepts in statistical
 ## Chapters
 
 - [The concept of temperature](temperature_from_statistical_mechanics.md) — entropy, energy exchange, the canonical distribution, and negative temperatures.
+- [The Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
 - [Maxwell–Boltzmann statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md) — derive the molecular speed distribution and its characteristic speeds from the canonical velocity distribution.
 - [Bose–Einstein statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution from bosonic state counting and entropy maximization.
