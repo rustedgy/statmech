@@ -23,7 +23,7 @@ If a macrostate has many more compatible microstates than its alternatives, it w
 
 ## 2. Counting and probability
 
-Suppose all microstates in a set are equally likely. If a macrostate $$A$$ contains $$\Omega_A$$ microstates out of $$\Omega_{\mathrm{total}}$$, then
+Suppose all microstates in a set are equally likely. If a macrostate $A$ contains $\Omega_A$ microstates out of $\Omega_{\mathrm{total}}$, then
 
 $$
 P(A)=\frac{\Omega_A}{\Omega_{\mathrm{total}}}.
@@ -33,9 +33,9 @@ This equation illustrates how probabilities for macroscopic outcomes can arise f
 
 The equal-probability assumption matters. If microstates have different probabilities, one must sum their probabilities rather than simply count them.
 
-## 3. A model example: $$N$$ binary variables
+## 3. A model example: $N$ binary variables
 
-Consider $$N$$ independent variables, each of which can take one of two equally likely values. There are
+Consider $N$ independent variables, each of which can take one of two equally likely values. There are
 
 $$
 \Omega_{\mathrm{total}}=2^N
@@ -43,7 +43,7 @@ $$
 
 possible configurations.
 
-If the macrostate is specified by exactly $$n$$ variables having the first value, its multiplicity is
+If the macrostate is specified by exactly $n$ variables having the first value, its multiplicity is
 
 $$
 \Omega(n)=\binom{N}{n}
@@ -56,7 +56,7 @@ $$
 P(n)=\frac{1}{2^N}\binom{N}{n}.
 $$
 
-The binomial coefficient is largest near $$n=N/2$$. For large $$N$$, configurations with approximately equal numbers of the two values dominate the probability distribution. Extreme configurations are possible but much less likely.
+The binomial coefficient is largest near $n=N/2$. For large $N$, configurations with approximately equal numbers of the two values dominate the probability distribution. Extreme configurations are possible but much less likely.
 
 This is a simple model of a general statistical-mechanical principle: typical macroscopic behaviour is often determined by the overwhelming number of microscopic configurations that produce it.
 
@@ -80,7 +80,7 @@ $$
 S=k_{\mathrm B}\ln\Omega,
 $$
 
-where $$k_{\mathrm B}$$ is Boltzmann's constant and $$\Omega$$ is the number of compatible microstates.
+where $k_{\mathrm B}$ is Boltzmann's constant and $\Omega$ is the number of compatible microstates.
 
 The logarithm makes entropy additive for independent subsystems. If
 
@@ -140,11 +140,11 @@ These checks prevent a counting argument from being applied outside its assumpti
 
 | Idea | Equation | Interpretation |
 |---|---|---|
-| Probability from counting | $$\displaystyle P(A)=\Omega_A/\Omega_{\mathrm{total}}$$ | Valid when the relevant microstates are equally likely |
-| Total binary configurations | $$\displaystyle 2^N$$ | Number of configurations of $$N$$ independent binary variables |
-| Multiplicity at fixed count | $$\displaystyle \Omega(n)=\binom{N}{n}$$ | Number of configurations with exactly $$n$$ variables in one state |
-| Boltzmann entropy | $$\displaystyle S=k_{\mathrm B}\ln\Omega$$ | Entropy associated with multiplicity |
-| Entropy additivity | $$\displaystyle S_{AB}=S_A+S_B$$ | For independent subsystems whose multiplicities multiply |
+| Probability from counting | $\displaystyle P(A)=\Omega_A/\Omega_{\mathrm{total}}$ | Valid when the relevant microstates are equally likely |
+| Total binary configurations | $\displaystyle 2^N$ | Number of configurations of $N$ independent binary variables |
+| Multiplicity at fixed count | $\displaystyle \Omega(n)=\binom{N}{n}$ | Number of configurations with exactly $n$ variables in one state |
+| Boltzmann entropy | $\displaystyle S=k_{\mathrm B}\ln\Omega$ | Entropy associated with multiplicity |
+| Entropy additivity | $\displaystyle S_{AB}=S_A+S_B$ | For independent subsystems whose multiplicities multiply |
 
 ## 10. Common misunderstandings
 
@@ -167,7 +167,7 @@ These checks prevent a counting argument from being applied outside its assumpti
 
 ## 12. Short recap
 
-Statistical mechanics connects microscopic configurations to macroscopic behaviour by counting or weighting the microscopic states compatible with macroscopic constraints. When microstates are equally likely, multiplicity determines macrostate probability; for large systems, the multiplicity distribution often makes a narrow range of macroscopic outcomes overwhelmingly typical. Boltzmann's entropy, $$S=k_{\mathrm B}\ln\Omega$$, expresses this counting in a form compatible with additive thermodynamic entropy. These ideas provide a statistical framework for understanding equilibrium and the usual direction of macroscopic processes.
+Statistical mechanics connects microscopic configurations to macroscopic behaviour by counting or weighting the microscopic states compatible with macroscopic constraints. When microstates are equally likely, multiplicity determines macrostate probability; for large systems, the multiplicity distribution often makes a narrow range of macroscopic outcomes overwhelmingly typical. Boltzmann's entropy, $S=k_{\mathrm B}\ln\Omega$, expresses this counting in a form compatible with additive thermodynamic entropy. These ideas provide a statistical framework for understanding equilibrium and the usual direction of macroscopic processes.
 
 ---
 
