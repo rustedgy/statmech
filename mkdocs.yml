@@ -25,6 +25,7 @@ nav:
       - Equipartition of energy: miscellaneous_topics/equipartition_of_energy.md
       - Newton's law of cooling from statistical mechanics: miscellaneous_topics/newtons_law_of_cooling_statmech.md
       - Paramagnetism from the canonical ensemble: miscellaneous_topics/paramagnetism_canonical_ensemble.md
+      - Einstein model of a solid: miscellaneous_topics/einstein_model_of_a_solid.md
 
 theme:
   name: material
