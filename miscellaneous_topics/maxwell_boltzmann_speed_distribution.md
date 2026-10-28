@@ -131,7 +131,7 @@ $
 
 Thus $P(E)\propto\sqrt E e^{-E/(k_BT)}$: the square-root factor is the three-dimensional density of states and the exponential is the single-molecule Boltzmann weight.
 
-![Maxwell–Boltzmann speed distributions for nitrogen and helium at two temperatures](../assets/maxwell_boltzmann_speed_distributions.svg)
+![Maxwell–Boltzmann speed distributions for nitrogen and helium at two temperatures](assets/maxwell_boltzmann_speed_distributions.svg)
 
 The high-speed tail matters even when only a small fraction of molecules occupy it. Reactions can be dominated by molecules energetic enough to cross an activation barrier, while light molecules in the tail are more likely to escape a planet's atmosphere. A modest temperature increase can substantially change reaction and atmospheric escape rates.
 
