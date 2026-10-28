@@ -1,6 +1,6 @@
 # Equipartition of Energy
 
-The equipartition theorem connects temperature to the average energy stored in the microscopic degrees of freedom of a classical system. Its familiar form says that each independent quadratic term in the Hamiltonian contributes an average energy of $k_B T/2$. The more general result applies even when the energy is **not quadratic**: a term that is homogeneous of degree $p$ in one independent continuous variable contributes $k_B T/p$, under the assumptions described below.
+The equipartition theorem connects temperature to the average energy stored in the microscopic degrees of freedom of a classical system. Its familiar form says that each independent quadratic term in the Hamiltonian contributes an average energy of $k_B T/2$. The more general result applies even when the energy is **not quadratic**: a term that is homogeneous of degree $r$ in one independent continuous variable contributes $k_B T/r, under the assumptions described below.
 
 ## 1. The familiar quadratic result
 
@@ -15,17 +15,17 @@ where $H$ is the Hamiltonian and $Z$ is the classical partition function.
 
 A standard quadratic contribution to the energy has the form
 
-$
+$$
 H_x=\frac{a x^2}{2}, \qquad a>0.
-$
+$$
 
 For this one variable, the average energy follows directly from the Gaussian integral:
 
-$
+$$
 \langle H_x\rangle=\frac{\int_{-\infty}^{\infty}(a x^2/2)e^{-\beta a x^2/2}\,dx}{\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx}
 =-\frac{1}{\beta}\frac{\partial}{\partial\beta}\ln\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx
 =\frac{1}{2\beta}=\frac12 k_BT.
-$
+$$
 
 The factor $1/2$ comes from the quadratic power: the Gaussian normalization scales as $\beta^{-1/2}$, so differentiating its logarithm gives $1/(2\beta)$. Equipartition therefore gives
 
@@ -147,10 +147,10 @@ Compare this with the ordinary harmonic oscillator, whose kinetic and quadratic 
 
 Suppose a classical Hamiltonian is a sum of independent contributions, each homogeneous in its own set of variables:
 
-$
+$$
 H=\sum_j H_j,\qquad H_j(\lambda x_1,\ldots,\lambda x_{d_j})
 =\lambda^{r_j}H_j(x_1,\ldots,x_{d_j}).
-$
+$$
 
 Here $d_j$ is the number of independent continuous variables in that homogeneous group and $r_j$ is its degree. The individual result $\langle H_j\rangle=d_j k_BT/r_j$ is already established in Section 3. Summing those contributions gives
 
@@ -168,7 +168,10 @@ Equipartition is a classical equilibrium result, not a universal rule for every 
 2. **A canonical equilibrium distribution:** The system is described by a Boltzmann weight at a well-defined temperature.
 3. **Convergent integrals and suitable boundaries:** The integration-by-parts boundary term must vanish. A non-confining power law or a restricted domain may require a more careful treatment.
 4. **Constraints:** Constraints can reduce the number of independent degrees of freedom or couple them. Count only independent variables and verify that the relevant boundary and constraint terms are handled correctly.
-5. **Energy dependence:** The simple formula $\langle H_j\rangle=d_j k_B T/p_j$ requires a homogeneous contribution of degree $p_j$ in the stated variables. For a general nonseparable Hamiltonian, the robust statement is $\langle x\,\partial H/\partial x\rangle=k_B T$, not necessarily an average energy for each term.
+5. **Energy dependence:** The simple formula $\langle H_j\rangle=d_j k_B T/r_j$ requires a homogeneous contribution of degree $r_j$ in the stated variables. For a general nonseparable Hamiltonian, the robust statement is $\langle x\,\partial H/\partial x\rangle=k_B T$, not necessarily an average energy for each term.
+6. **Quantum freeze-out:** The rotational and vibrational modes of $\mathrm{H}_2$ do not contribute their full classical heat capacity when $k_BT$ is small compared with their quantum level spacings. These degrees of freedom are thermally frozen out, so classical equipartition overpredicts the heat capacity.
+7. **Ultraviolet catastrophe:** Applying classical equipartition to every electromagnetic cavity mode assigns energy $k_BT$ per mode and predicts an unbounded high-frequency energy density. Planck's quantum result resolves this failure; see [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md).
+8. **Einstein solid:** A quantum harmonic oscillator does not keep the classical mean energy $k_BT$ at temperatures below its level spacing. This produces the low-temperature heat-capacity decrease in the [Einstein model of a solid](einstein_model_of_a_solid.md), a direct example of equipartition's quantum limitation.
 
 ## 7. Summary
 
@@ -178,9 +181,9 @@ $$
 \boxed{\text{one quadratic term}\ \longrightarrow\ \frac12 k_B T}
 $$
 
-$
+$$
 \boxed{H_x=a|x|^r\ \longrightarrow\ \langle H_x\rangle=\frac{1}{r}k_B T}
-$
+$$
 
 The underlying identity is
 
