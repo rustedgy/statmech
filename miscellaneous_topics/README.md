@@ -18,3 +18,4 @@ This section contains original supplementary chapters on concepts in statistical
 - [Paramagnetism from the canonical ensemble](paramagnetism_canonical_ensemble.md) — derive magnetization, Curie's law, internal energy, and heat capacity for independent magnetic moments.
 - [The Ising model and ferromagnetism](ising_model_ferromagnetism.md) — extend independent spins to interacting spins, mean-field theory, and spontaneous magnetic order.
 - [Einstein model of a solid](einstein_model_of_a_solid.md) — derive the vibrational partition function, internal energy, and quantum heat capacity; recover the Dulong–Petit law and identify the low-temperature limitation.
+- [The Debye model of a solid](debye_model_of_a_solid.md) — derive the phonon density of states and heat capacity, including the low-temperature cubic law and high-temperature Dulong–Petit limit.

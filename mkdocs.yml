@@ -32,6 +32,7 @@ nav:
       - Paramagnetism from the canonical ensemble: miscellaneous_topics/paramagnetism_canonical_ensemble.md
       - The Ising model and ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
       - Einstein model of a solid: miscellaneous_topics/einstein_model_of_a_solid.md
+      - The Debye model of a solid: miscellaneous_topics/debye_model_of_a_solid.md
 
 theme:
   name: material
