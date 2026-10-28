@@ -6,13 +6,13 @@ A paramagnet contains microscopic magnetic moments that tend to align with an ap
 
 We will derive the magnetization, magnetic susceptibility, internal energy, and heat capacity from the canonical partition function. The model is deliberately simple: it shows how familiar magnetic behaviour follows from statistical mechanics without requiring a phenomenological equation of state.
 
-Consider \(N\) independent, identical, localized moments in a uniform magnetic field \(B\). Each moment has magnitude \(mu\) and can point either parallel or antiparallel to the field. We neglect interactions between moments and assume that the field is externally fixed.
+Consider \(N\) independent, identical, localized moments in a uniform magnetic field \(B\). Each moment has magnitude \(\mu\) and can point either parallel or antiparallel to the field. We neglect interactions between moments and assume that the field is externally fixed.
 
 For one moment, the two possible energies are
 \[
 \epsilon_{+}=-\mu B, \qquad \epsilon_{-}=+\mu B.
 \]
-The label \(+\) denotes alignment with the field. We use \(B\) for the magnetic field and \(mu\) for the moment magnitude; in SI units, the magnetic moment has units of joules per tesla.
+The label \(+\) denotes alignment with the field. We use \(B\) for the magnetic field and \(\mu\) for the moment magnitude; in SI units, the magnetic moment has units of joules per tesla.
 
 ## 2. Single-moment partition function
 
@@ -49,14 +49,14 @@ F=-k_B T\ln Z_N
 
 The total magnetic moment along the field, or magnetization in the sense of total moment, is obtained by differentiating the free energy with respect to the field:
 \[
-M=-\left(\frac{\partial F}{\partial B}\right)_{T,N}.
+M=-\left\(\frac{\partial F}{\partial B}\right\)_{T,N}.
 \]
 Since \(\partial x/\partial B=\beta\mu\), this gives
 \[
-\boxed{M=N\mu\tanh\left(\frac{\mu B}{k_B T}\right).}
+\boxed{M=N\mu\tanh\left\(\frac{\mu B}{k_B T}\right\).}
 \]
 
-If magnetization is defined per unit volume, write (m=M/V), where \(V\) is the sample volume. The equation above is the response of the ideal, noninteracting two-state paramagnet.
+If magnetization is defined per unit volume, write \(m=M/V\), where \(V\) is the sample volume. The equation above is the response of the ideal, noninteracting two-state paramagnet.
 
 The same result follows directly from probabilities. The probability that one moment is aligned is
 \[
@@ -68,7 +68,7 @@ p_-=\frac{e^{-x}}{2\cosh x}.
 \]
 Thus the mean moment of one site is
 \[
-\langle\mu_z\rangle=\mu(p_+-p_-)=\mu\tanh x,
+\langle\mu_z\rangle=\mu\(p_+-p_-\)=\mu\tanh x,
 \]
 and multiplying by \(N\) reproduces \(M\).
 
@@ -81,7 +81,7 @@ M\simeq N\mu\frac{\mu B}{k_B T}
 \]
 The response is linear in field in this limit. Define the susceptibility with respect to \(B\) as
 \[
-\chi_B=\left(\frac{\partial M}{\partial B}\right)_{T,B\to0}.
+\chi_B=\left\(\frac{\partial M}{\partial B}\right\)_{T,B\to0}.
 \]
 Then
 \[
@@ -125,7 +125,7 @@ This derivative is taken at fixed field. If the field itself changes while the s
 
 The heat capacity at fixed field is
 \[
-C_B=\left(\frac{\partial U}{\partial T}\right)_{B,N}.
+C_B=\left\(\frac{\partial U}{\partial T}\right\)_{B,N}.
 \]
 With \(U=-N\mu B\tanh x\) and (x=\mu B/\(k_BT\)), we have
 \[
@@ -156,7 +156,7 @@ The competition is between energy and entropy. Alignment lowers the magnetic ene
 
 The result
 \[
-M=N\mu\tanh\left(\frac{\mu B}{k_BT}\right)
+M=N\mu\tanh\left\(\frac{\mu B}{k_BT}\right\)
 \]
 is exact for the stated independent two-state model, but it is not a universal equation for all magnetic materials. Important limitations are:
 
@@ -174,7 +174,7 @@ Starting from the canonical partition function of \(N\) independent two-state ma
 Z_N=[2\cosh\(\beta\mu B\)]^N,
 \]
 \[
-M=N\mu\tanh\left(\frac{\mu B}{k_BT}\right),
+M=N\mu\tanh\left\(\frac{\mu B}{k_BT}\right\),
 \qquad
 \chi_B=\frac{N\mu^2}{k_BT}\quad\(B\to0\),
 \]
