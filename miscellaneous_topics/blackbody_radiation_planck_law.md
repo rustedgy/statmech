@@ -120,7 +120,21 @@ $
 $
 This Wien peak constant applies to a spectrum plotted per unit frequency. A spectrum per unit wavelength has a different peak because changing variables introduces a Jacobian.
 
-## 6. Why quantization matters
+## 6. Blackbodies in practice
+
+A small hole in the wall of a large, isothermal cavity is an excellent blackbody. Radiation entering the hole undergoes many reflections and is very unlikely to return through the tiny opening, so the cavity absorbs nearly all incident radiation. Radiation emerging from the hole has the equilibrium spectrum set by the cavity temperature, largely independent of the wall material.
+
+Photons have chemical potential $\mu=0$ because photon number is not conserved: the cavity walls can absorb and emit photons as the radiation equilibrates. Temperature is fixed at equilibrium, but a separately conserved photon number is not. See [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) for the general occupation law.
+
+The Sun's photosphere is approximately a blackbody at about $5800\,\mathrm K$, so a Planck spectrum is a useful first model of its continuum radiation, although absorption lines and atmospheric details cause deviations. The cosmic microwave background is a much colder example, with a spectrum extremely close to a blackbody at $2.725\,\mathrm K$.
+
+## 7. Planck spectrum versus Rayleigh–Jeans
+
+The dimensionless Planck spectrum is proportional to $x^3/(e^x-1)$, while the Rayleigh–Jeans approximation is proportional to $x^2$, where $x=h\nu/(k_BT)$. They agree at small $x$; the classical curve grows without bound relative to Planck's spectrum at high frequency.
+
+![Planck and Rayleigh–Jeans dimensionless spectra](assets/planck_vs_rayleigh_jeans.svg)
+
+## 8. Why quantization matters
 
 The result comes from two ingredients: the number of available electromagnetic modes and the mean quantum occupation of each mode. Mode counting alone does not determine the spectrum; the Bose–Einstein factor supplies the high-frequency suppression that classical equipartition lacks.
 
@@ -128,13 +142,15 @@ The formula $u(\nu,T)$ is a spectral density per unit frequency. A spectrum expr
 
 ## Summary
 
-Quantized electromagnetic modes have mean photon occupation $1/(e^{h\nu/(k_BT)}-1)$. Multiplying this by the mode density and photon energy gives Planck's law. Its low-frequency limit reproduces classical radiation, while its high-frequency exponential cutoff resolves the ultraviolet catastrophe. Integrating the spectrum yields the $T^4$ law for total radiation energy density.
+Quantized electromagnetic modes have mean photon occupation $1/(e^{h\nu/(k_BT)}-1)$. Standing-wave counting in an octant of $k$-space, with two polarizations, gives $g(\nu)=8\pi\nu^2/c^3$. Multiplying the mode density by photon energy and mean occupation gives Planck's law. Its low-frequency limit reproduces classical radiation, while its high-frequency exponential cutoff resolves the ultraviolet catastrophe. Integration gives $u=aT^4$, and the outward flux gives $F=\sigma T^4$.
 
 ## Review questions
 
 1. Why is the photon chemical potential zero in thermal equilibrium?
 2. Derive the mean occupation of a single electromagnetic mode.
-3. Where does the factor $8\pi\nu^2/c^3$ enter the derivation?
+3. Derive $g(\nu)=8\pi\nu^2/c^3$ by counting standing-wave modes in an octant of $k$-space and including both polarizations.
 4. Recover the Rayleigh–Jeans law from Planck's formula.
 5. Why does the classical ultraviolet catastrophe disappear?
 6. Why must a spectrum per unit wavelength include a Jacobian when converting from frequency?
+7. Why does isotropic radiation have outward flux $cu/4$ through a small aperture?
+8. Why is a small hole in a cavity a good blackbody, and why is the photon chemical potential zero?
