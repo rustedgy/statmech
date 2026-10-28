@@ -1,6 +1,6 @@
 # Temperature
 
-Temperature is often introduced as a thermometer reading or as a measure of how hot something feels. Statistical mechanics gives a deeper definition: **temperature describes how entropy changes when energy is added to a system**. Entropy, in turn, is determined by the microscopic states compatible with the system's macroscopic constraints. Temperature is therefore not an extra microscopic ingredient; it emerges from counting states and assigning probabilities.
+Temperature is often introduced as a thermometer reading or as a measure of how hot something feels. Statistical mechanics gives a deeper definition: **temperature describes how entropy changes when energy is added to a system**. Entropy is determined by the microscopic states compatible with the system's macroscopic constraints, so temperature emerges from the way those possibilities change with energy.
 
 This original supplementary chapter develops that idea using microstates, entropy, energy exchange, and the canonical ensemble. It is not a transcript of any particular lecture.
 
@@ -10,7 +10,7 @@ A **microstate** specifies a system's microscopic configuration at the level of 
 
 Let $\Omega(E)$ be the number of accessible microstates in a narrow energy range around $E$, with the other macroscopic constraints held fixed. This is the **multiplicity** of the macrostate. For a classical system, a suitably measured phase-space volume plays the analogous role.
 
-For an isolated system whose accessible microstates are treated equally, a macrostate with greater multiplicity is more probable: there are more microscopic arrangements that realize it. This observation motivates the statistical definition of entropy.
+For an isolated system whose accessible microstates are treated equally, a macrostate with greater multiplicity is more probable: more microscopic arrangements realize it. This observation motivates the statistical definition of entropy.
 
 ## 2. Entropy counts microscopic possibilities
 
@@ -34,48 +34,48 @@ Temperature depends not on the absolute size of entropy, but on **how entropy ch
 
 ## 3. The statistical definition of temperature
 
-For a system whose entropy can be expressed as $S(E)$, define the temperature directly by
+For a system whose entropy can be expressed as $S(E)$, define temperature by
 
 $$
-\boxed{T \equiv \left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}.
+\boxed{\frac{1}{T} \equiv \left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}}.
 $$
 
-In words, **conventional thermodynamic temperature is the reciprocal of the slope of the entropy-versus-energy curve**. The derivative itself can also be used as a useful variable. To distinguish it from conventional temperature, call it the entropy-slope variable
+Equivalently, $T$ is the reciprocal of the entropy-versus-energy slope. The derivative is taken while holding the other relevant constraints fixed. For a discrete system, it can be understood as an appropriate finite difference, or as a smooth approximation for a sufficiently large system.
+
+Using $S=k_B\ln\Omega$, this becomes
 
 $$
-\tau \equiv \left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}=\frac{1}{T},
-\qquad \beta=\frac{\tau}{k_B}.
+\frac{1}{T}=k_B\frac{\partial\ln\Omega}{\partial E},
+\qquad
+T=\left[k_B\frac{\partial\ln\Omega}{\partial E}\right]^{-1}.
 $$
 
-The variable $\tau$ has units of inverse temperature, so it should not be confused with the temperature measured by a thermometer. Its main advantage is mathematical: at an entropy maximum, conventional temperature diverges from $+\infty$ to $-\infty$, whereas $\tau$ passes smoothly through zero and changes sign. Thus $\tau>0$ corresponds to conventional positive temperature, $\tau=0$ to the infinite-temperature limit, and $\tau<0$ to conventional negative temperature. This makes the two branches easier to discuss without an infinite value at the joining point.
+Temperature is therefore determined by the fractional growth of multiplicity per unit energy, not by the total number of states alone.
 
-The same variable is also natural in calculations: equilibrium requires equal entropy slopes (equal $\tau$) for systems that can exchange energy, and the canonical distribution can be written as $p_i\propto e^{-\tau E_i/k_B}$. The trade-off is interpretive: on the positive branch, larger $\tau$ means lower conventional temperature. Calling $\tau$ a new “temperature” without clarifying its inverse-temperature units can therefore be confusing.
+For ordinary positive-temperature systems, entropy increases with energy. A steeper entropy curve means a lower temperature, because less additional energy is needed to produce a given entropy change. A shallower slope means a higher temperature. In a system whose energy is bounded above, entropy can instead reach a maximum and then decrease. At the maximum the slope is zero, corresponding to the infinite-temperature limit; on the decreasing side the temperature defined by this entropy derivative is negative. Such negative-temperature states are possible only under restrictive conditions, including an appropriate upper energy bound.
 
-The derivative is taken while holding the other relevant constraints fixed. For a discrete system, it can be understood as an appropriate finite difference, or as a smooth approximation for a sufficiently large system.
+### A familiar example: the ideal gas
 
-This relation is the central result:
-
-- If adding energy makes many additional microscopic states accessible, entropy rises with energy and the temperature is positive.
-- A large positive entropy slope corresponds to a small positive temperature; a small positive slope corresponds to a large positive temperature.
-- If entropy is locally maximal as a function of energy, its slope is zero and the temperature diverges: approaching the maximum from the positive-slope side gives $T\to +\infty$, while approaching from the negative-slope side gives $T\to -\infty$.
-- If entropy decreases as energy increases, the slope is negative and the temperature is negative.
-
-Writing the definition directly in terms of $T$ makes the sign clear: the sign of temperature is the sign of the entropy slope's reciprocal, so it is the same as the sign of the slope itself.
-
-For ordinary positive-temperature systems, a steeper entropy-versus-energy curve means a lower temperature, while a shallower curve means a higher temperature. Temperature is not simply the total energy, nor is it proportional to the number of states. It is related to the **logarithmic rate at which the number of states grows with energy**.
-
-Using $S=k_B\ln\Omega$, the direct temperature definition becomes
+For a classical monatomic ideal gas, the accessible phase-space volume scales with energy as $\Omega(E)\propto E^{3N/2}$, with volume and particle number held fixed. Thus
 
 $$
-T = \left[k_B\frac{\partial\ln\Omega}{\partial E}\right]^{-1}
-= \frac{\Omega}{k_B\,\partial\Omega/\partial E},
+S(E)=k_B\ln\Omega(E)
+=\text{constant}+\frac{3N}{2}k_B\ln E.
 $$
 
-where the derivative is understood with the same macroscopic constraints held fixed. Thus temperature is the reciprocal of the fractional growth of multiplicity per unit energy. A system may have an enormous number of states and still have a high or low temperature depending on how that number changes when energy is added.
+Differentiating gives
+
+$$
+\frac{1}{T}=\frac{3Nk_B}{2E}
+\qquad\Longrightarrow\qquad
+E=\frac{3}{2}Nk_BT.
+$$
+
+This is the familiar ideal-gas relation between thermal energy and absolute temperature. It illustrates why temperature is not simply the total energy: the energy is extensive, increasing with particle number, while temperature measures the entropy slope and is an intensive equilibrium variable.
 
 ## 4. Why systems in thermal equilibrium have equal temperatures
 
-Consider two weakly coupled systems $A$ and $B$ that can exchange energy, while their total energy remains fixed:
+Consider two weakly coupled systems $A$ and $B$ that can exchange energy while their total energy remains fixed:
 
 $$
 E_A+E_B=E_{\mathrm{tot}}.
@@ -85,24 +85,24 @@ If their multiplicities approximately multiply, the multiplicity for a particula
 
 $$
 \Omega_{\mathrm{tot}}(E_A)
-= \Omega_A(E_A)\,\Omega_B(E_{\mathrm{tot}}-E_A).
+=\Omega_A(E_A)\,\Omega_B(E_{\mathrm{tot}}-E_A).
 $$
 
-The most probable energy split maximizes the combined entropy,
+Because entropy is the logarithm of multiplicity, the total entropy is
 
 $$
 S_{\mathrm{tot}}=S_A(E_A)+S_B(E_B).
 $$
 
-At an interior maximum, changing the energy split slightly cannot increase the total entropy. Differentiating with respect to $E_A$, while keeping $E_{\mathrm{tot}}$ fixed, gives
+The most probable energy split maximizes this total entropy. Differentiating with respect to $E_A$ at fixed total energy gives the stationary-point condition
 
 $$
 \frac{\partial S_{\mathrm{tot}}}{\partial E_A}
-= \frac{\partial S_A}{\partial E_A}
-- \frac{\partial S_B}{\partial E_B}=0.
+=\frac{\partial S_A}{\partial E_A}
+-\frac{\partial S_B}{\partial E_B}=0.
 $$
 
-Therefore,
+Hence,
 
 $$
 \left(\frac{\partial S_A}{\partial E_A}\right)
@@ -112,31 +112,43 @@ $$
 
 provided both systems have well-defined temperatures under the same convention.
 
-**Equal temperature is the condition that makes total entropy stationary under a small exchange of energy.** Temperature is the quantity that becomes equal when systems reach thermal equilibrium. It follows from state counting and the most-probable energy split rather than being assumed at the outset.
+**Why does the most probable split dominate?** For large systems, the multiplicity is exponentially large in system size, and the probability of an energy split is proportional to $\exp(S_{\mathrm{tot}}/k_B)$. Near a stable entropy maximum, even a modest entropy deficit strongly suppresses a split relative to the peak. The distribution becomes sharply concentrated around the maximizing split; in ordinary macroscopic systems, relative energy fluctuations typically shrink as the system size grows. The peak therefore describes the overwhelmingly likely equilibrium energy sharing, not just an arbitrary stationary point. For a small system, fluctuations can be substantial, and the peak need not describe every instantaneous energy split.
 
-For stable equilibrium, the stationary point must also be a maximum of total entropy. Equality of temperatures is the first-derivative condition; stability depends on the curvature as well.
+The first-derivative condition gives equal temperatures; stability additionally requires that the stationary point be a maximum of total entropy.
+
+### Which way does heat flow?
+
+Suppose a small amount of energy $\delta Q>0$ leaves system $A$ and enters system $B$. To first order, the total entropy change is
+
+$$
+\delta S_{\mathrm{tot}}
+= -\frac{\delta Q}{T_A}+\frac{\delta Q}{T_B}
+=\delta Q\left(\frac{1}{T_B}-\frac{1}{T_A}\right).
+$$
+
+Spontaneous energy transfer proceeds in the direction that increases total entropy. For ordinary positive temperatures, this means net heat flows from the hotter system to the colder one, until their temperatures equalize. More generally, the entropy-slope expression determines the direction even when bounded-energy systems with negative temperatures are considered. This entropy-maximization argument is the central idea in Leonard Susskind's discussion of maximizing entropy in [Lecture 3 notes](../leonard_susskind/statistical_mechanics_lecture_3_notes.md); those notes are a separate, transcript-based study resource, not the source text for this chapter.
 
 ## 5. Temperature in the canonical distribution
 
 Now consider a small system in contact with a much larger reservoir. If the small system occupies microstate $i$ with energy $E_i$, the probability of that microstate is proportional to the number of reservoir states compatible with the remaining total energy:
 
 $$
-p_i \propto \Omega_R(E_{\mathrm{tot}}-E_i).
+p_i\propto\Omega_R(E_{\mathrm{tot}}-E_i).
 $$
 
 Since $S_R=k_B\ln\Omega_R$, expanding the reservoir entropy for a small change in its energy gives
 
 $$
 \ln\Omega_R(E_{\mathrm{tot}}-E_i)
-\approx \text{constant}
+\approx\text{constant}
 -\frac{E_i}{k_B}\left(\frac{\partial S_R}{\partial E_R}\right).
 $$
 
 Using $\partial S_R/\partial E_R=1/T$, the probability becomes
 
 $$
-p_i \propto e^{-\beta E_i},
-\qquad \beta=\frac{1}{k_B T}.
+p_i\propto e^{-\beta E_i},
+\qquad \beta=\frac{1}{k_BT}.
 $$
 
 After normalization, this is the canonical distribution:
@@ -146,16 +158,15 @@ p_i=\frac{e^{-\beta E_i}}{Z},
 \qquad Z=\sum_i e^{-\beta E_i}.
 $$
 
-The quantity $Z$ is the **partition function**. In this ensemble, temperature controls how strongly high-energy states are suppressed relative to low-energy states:
+The quantity $Z$ is the **partition function**. Temperature controls how strongly high-energy states are suppressed relative to low-energy states:
 
 - At lower positive temperatures, probability is more concentrated on low-energy states.
 - At higher positive temperatures, the distribution over energies is more spread out.
-- The relative probabilities of two states depend on their energy difference:
-  $p_i/p_j=e^{-\beta(E_i-E_j)}$.
+- The relative probabilities of two states depend on their energy difference: $p_i/p_j=e^{-\beta(E_i-E_j)}$.
 
-This is the same concept in a different form. In the microcanonical viewpoint, temperature is the slope of entropy with energy. In the canonical viewpoint, that same slope sets the exponential weighting of microstates.
+Thus the microcanonical definition through the entropy slope and the canonical Boltzmann weighting express the same temperature.
 
-## 6. Example: a system of two-level units
+## 6. Example: two-level units, negative temperature, and experiment
 
 Imagine $N$ independent units, each with energy either $0$ or $\epsilon$. If exactly $n$ units are excited, then $E=n\epsilon$, and the multiplicity is
 
@@ -166,19 +177,41 @@ $$
 For large $N$, Stirling's approximation gives
 
 $$
-S \approx -Nk_B\left[x\ln x+(1-x)\ln(1-x)\right],
+S\approx-Nk_B\left[x\ln x+(1-x)\ln(1-x)\right],
 \qquad x=\frac{n}{N}=\frac{E}{N\epsilon}.
 $$
 
 Differentiating with respect to energy yields
 
 $$
-\frac{1}{T}=\frac{k_B}{\epsilon}\ln\left(\frac{1-x}{x}\right).
+\boxed{\frac{1}{T}=\frac{k_B}{\epsilon}\ln\left(\frac{1-x}{x}\right)}.
 $$
 
-If fewer than half the units are excited, $x<1/2$, the derivative is positive and the temperature is positive. At half excitation, $x=1/2$, entropy is maximal and inverse temperature is zero. If more than half are excited, $x>1/2$, the derivative is negative: increasing the energy now reduces the number of compatible configurations, so the entropy-defined temperature is negative.
+<figure markdown>
+  ![Entropy of a two-level system versus excited fraction. The entropy peaks at half excitation; its slope is positive below the peak and negative above it.](temperature_entropy_curve.svg)
+  <figcaption>For the two-level model, $S/(Nk_B)=-x\ln x-(1-x)\ln(1-x)$. The slope is positive for $x<1/2$, zero at the entropy maximum, and negative for $x>1/2$.</figcaption>
+</figure>
 
-Negative temperatures require a system with an upper bound on its energy (or other conditions that allow entropy to decrease as energy rises). They are **not colder than absolute zero**. Where both positive- and negative-temperature states are possible, negative-temperature states favor higher energies and are hotter than every positive-temperature state in the thermodynamic ordering. As the energy rises through the entropy maximum, the entropy slope changes from positive to negative: temperature runs from large positive values, through the infinite-temperature limit, to large negative values. The reciprocal variable $\beta=1/(k_BT)$ crosses zero smoothly, which is mathematically convenient, but can obscure the direct physical point that the negative-temperature branch lies beyond the infinite-temperature limit. Most familiar systems, whose energies are not bounded above, cannot reach negative absolute temperatures in equilibrium.
+The sign change has a direct canonical check. In the canonical ensemble, the probability ratio for an excited unit and a ground-state unit is
+
+$$
+\frac{p_{\mathrm{exc}}}{p_{\mathrm{ground}}}
+=e^{-\beta\epsilon}.
+$$
+
+Since the excited fraction is $x=p_{\mathrm{exc}}/(p_{\mathrm{exc}}+p_{\mathrm{ground}})$, it follows that
+
+$$
+\frac{x}{1-x}=e^{-\beta\epsilon}
+\quad\Longrightarrow\quad
+\beta=\frac{1}{\epsilon}\ln\left(\frac{1-x}{x}\right).
+$$
+
+Using $\beta=1/(k_BT)$ reproduces exactly the entropy-derivative result above. For $x<1/2$, ground states are more populated and $T>0$. At $x=1/2$, the populations are equal, the entropy is maximal, and $\beta=0$ (the infinite-temperature limit). For $x>1/2$, the excited states are more populated and $T<0$.
+
+Negative temperatures are not colder than absolute zero. For systems that support them, they lie beyond the infinite-temperature limit in the thermodynamic ordering: energy tends to flow from a negative-temperature system to a positive-temperature system when they are brought into weak thermal contact. The crucial restriction is that the relevant degrees of freedom have a bounded energy spectrum and can reach the inverted population distribution.
+
+This is not only a mathematical possibility. In their 1951 paper, [E. M. Purcell and R. V. Pound reported a nuclear spin system at negative temperature](https://doi.org/10.1103/PhysRev.81.279). Their experiment used nuclear spins in a lithium fluoride crystal; a rapid manipulation of the magnetic field produced an inverted spin polarization, which was detected through nuclear magnetic resonance. The spin system later relaxed back toward ordinary thermal equilibrium. This is a classic experimental realization of negative spin temperature, not a claim that the entire crystal lattice was at a negative temperature.
 
 ## 7. What temperature is—and is not
 
@@ -206,24 +239,26 @@ If using the canonical ensemble, calculate the partition function and use $\beta
 
 ## Summary
 
-Temperature emerges from the statistical structure of microscopic states. Entropy measures the logarithm of the number of possibilities; temperature is the reciprocal of the entropy slope with energy:
+Temperature is the reciprocal of the entropy slope with energy,
 
 $$
-\boxed{T=\left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}}
+\boxed{T=\left[\left(\frac{\partial S}{\partial E}\right)_{V,N,\ldots}\right]^{-1}},
 \qquad
-\boxed{\beta=\frac{1}{k_B T}}.
+\boxed{\beta=\frac{1}{k_BT}}.
 $$
 
-This direct definition makes the sign of temperature explicit: positive entropy slope gives positive temperature, negative slope gives negative temperature, and zero slope corresponds to a divergence of temperature. In systems with bounded energy, negative-temperature states can occur on the decreasing-entropy side of the entropy maximum and are hotter than positive-temperature states. The inverse-temperature variable $\beta$ remains especially useful in the canonical distribution because it appears directly in the Boltzmann factor. When two systems exchange energy, their most probable equilibrium split maximizes combined entropy; the condition is equality of entropy slopes, and hence equality of their temperatures.
+For ordinary systems such as an ideal gas, this definition gives familiar positive temperatures and relations such as $E=\frac{3}{2}Nk_BT$. Equilibrium energy sharing is governed by the maximum of total entropy, which is sharply peaked for large systems; the condition for its maximum is equality of temperatures. In systems with bounded energy, the entropy can decrease at high excitation, allowing negative-temperature states. The two-level model illustrates this sign change, and its entropy-slope formula agrees with the canonical Boltzmann factor.
 
 ## Review questions
 
 1. Why is multiplicity relevant to the probability of a macrostate in an isolated system?
 2. Why is temperature related to the derivative of entropy rather than to entropy itself?
 3. Derive $T_A=T_B$ by maximizing the combined entropy of two systems at fixed total energy.
-4. How does $\beta$ appear in the canonical probability distribution?
-5. Why does the temperature of the two-level model become infinite at half excitation and negative above half excitation?
-6. What assumptions should be checked before assigning one temperature to a small or non-equilibrium system?
+4. Explain why the most probable energy split dominates for large systems, and derive the direction of spontaneous heat flow.
+5. How does $\beta$ appear in the canonical probability distribution?
+6. Show that the two-level entropy derivative agrees with the canonical Boltzmann factor.
+7. Why does the temperature of the two-level model become infinite at half excitation and negative above half excitation?
+8. What did the Purcell–Pound experiment demonstrate, and why is a bounded energy spectrum important?
 
 ---
 
