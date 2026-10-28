@@ -8,10 +8,10 @@ The model assumes that all oscillators have the same angular frequency $\omega$,
 
 For one quantum harmonic oscillator, the allowed energies are
 
-$
+$$
 \varepsilon_n=\hbar\omega\left(n+\frac12\right),
 \qquad n=0,1,2,\ldots,
-$
+$$
 
 where $\hbar$ is the reduced Planck constant. The term $\hbar\omega/2$ is the zero-point energy.
 
@@ -21,37 +21,37 @@ We will use the canonical ensemble to derive the partition function, internal en
 
 Let
 
-$
+$$
 \beta=\frac{1}{k_B T}.
-$
+$$
 
 The canonical partition function for one oscillator is the sum of Boltzmann weights over all its energy levels:
 
-$
+$$
 z=\sum_{n=0}^{\infty}e^{-\beta\varepsilon_n}
 =\sum_{n=0}^{\infty}e^{-\beta\hbar\omega(n+1/2)}.
-$
+$$
 
 Factor out the zero-point contribution:
 
-$
+$$
 z=e^{-\beta\hbar\omega/2}
 \sum_{n=0}^{\infty}\left(e^{-\beta\hbar\omega}\right)^n.
-$
+$$
 
 The remaining sum is a geometric series, $\sum_{n=0}^{\infty}r^n=1/(1-r)$ for $|r|<1$. Thus
 
-$
+$$
 z=\frac{e^{-\beta\hbar\omega/2}}
 {1-e^{-\beta\hbar\omega}}
 =\frac{1}{2\sinh(\beta\hbar\omega/2)}.
-$
+$$
 
 It is often convenient to define the dimensionless variable
 
-$
+$$
 x=\beta\hbar\omega=\frac{\hbar\omega}{k_B T}.
-$
+$$
 
 Then $z=e^{-x/2}/(1-e^{-x})$.
 
@@ -59,16 +59,16 @@ Then $z=e^{-x/2}/(1-e^{-x})$.
 
 Under the Einstein model, the $3N$ oscillators are independent and identical. Their partition functions therefore multiply:
 
-$
+$$
 Z=z^{3N}.
-$
+$$
 
 Taking the logarithm,
 
-$
+$$
 \ln Z=3N\ln z
 =3N\left[-\frac{x}{2}-\ln(1-e^{-x})\right].
-$
+$$
 
 This factorization is the key simplification: once the one-oscillator partition function is known, the thermodynamics of the whole solid follows.
 
@@ -76,26 +76,26 @@ This factorization is the key simplification: once the one-oscillator partition 
 
 In the canonical ensemble, the mean internal energy is
 
-$
+$$
 U=-\left(\frac{\partial\ln Z}{\partial\beta}\right)_{N,V}.
-$
+$$
 
 Using $x=\beta\hbar\omega$, with $\omega$ fixed in this model, gives
 
-$
+$$
 U=3N\hbar\omega
 \left[\frac12+\frac{1}{e^x-1}\right].
-$
+$$
 
 Equivalently,
 
-$
+$$
 \boxed{
 U=3N\hbar\omega\left[
 \frac12+\frac{1}{e^{\hbar\omega/(k_B T)}-1}
 \right].
 }
-$
+$$
 
 There are two contributions:
 
@@ -108,35 +108,35 @@ The zero-point term is independent of temperature, so it does not contribute to 
 
 The constant-volume heat capacity is
 
-$
+$$
 C_V=\left(\frac{\partial U}{\partial T}\right)_V.
-$
+$$
 
 Differentiating the internal energy yields
 
-$
+$$
 \boxed{
 C_V=3Nk_B\,x^2\frac{e^x}{(e^x-1)^2},
 \qquad x=\frac{\hbar\omega}{k_B T}.
 }
-$
+$$
 
 Define the **Einstein temperature**
 
-$
+$$
 \theta_E=\frac{\hbar\omega}{k_B}.
-$
+$$
 
 It sets the temperature scale associated with the oscillator level spacing. In terms of $\theta_E$,
 
-$
+$$
 \boxed{
 C_V=3Nk_B
 \left(\frac{\theta_E}{T}\right)^2
 \frac{e^{\theta_E/T}}
 {\left(e^{\theta_E/T}-1\right)^2}.
 }
-$
+$$
 
 For one mole of a solid, $Nk_B$ is replaced by the gas constant $R$, so the formula becomes $C_{V,m}=3R(\theta_E/T)^2e^{\theta_E/T}/(e^{\theta_E/T}-1)^2$.
 
@@ -144,22 +144,22 @@ For one mole of a solid, $Nk_B$ is replaced by the gas constant $R$, so the form
 
 At high temperature, $T\gg\theta_E$, so $x\ll1$. Expanding the exponential,
 
-$
+$$
 e^x-1\simeq x.
-$
+$$
 
 The heat capacity then approaches
 
-$
+$$
 C_V\simeq 3Nk_B\,x^2\frac{1}{x^2}
 =\boxed{3Nk_B}.
-$
+$$
 
 For one mole,
 
-$
+$$
 \boxed{C_{V,m}\longrightarrow 3R.}
-$
+$$
 
 This is the Dulong–Petit law. In this limit, the spacing between adjacent quantum levels is small compared with $k_BT$, so many levels are thermally populated and the classical result is recovered.
 
@@ -167,18 +167,18 @@ This is the Dulong–Petit law. In this limit, the spacing between adjacent quan
 
 At low temperature, $T\ll\theta_E$, so $x\gg1$. Since $e^x-1\simeq e^x$,
 
-$
+$$
 \frac{e^x}{(e^x-1)^2}\simeq e^{-x}.
-$
+$$
 
 Therefore
 
-$
+$$
 \boxed{
 C_V\simeq 3Nk_B
 \left(\frac{\theta_E}{T}\right)^2e^{-\theta_E/T}.
 }
-$
+$$
 
 The heat capacity tends to zero exponentially. When thermal energy is much smaller than the vibrational level spacing, the oscillators rarely occupy excited states; increasing the temperature slightly produces little additional vibrational energy.
 
@@ -196,32 +196,32 @@ The **Debye model** improves on this by treating vibrations as a spectrum of mod
 
 For $3N$ independent oscillators with frequency $\omega$, the canonical partition function is
 
-$
+$$
 z=\frac{e^{-\beta\hbar\omega/2}}{1-e^{-\beta\hbar\omega}},
 \qquad Z=z^{3N}.
-$
+$$
 
 From it, the internal energy and heat capacity are
 
-$
+$$
 U=3N\hbar\omega\left[
 \frac12+\frac{1}{e^{\hbar\omega/(k_B T)}-1}
 \right],
-$
+$$
 
-$
+$$
 C_V=3Nk_B
 \left(\frac{\theta_E}{T}\right)^2
 \frac{e^{\theta_E/T}}{(e^{\theta_E/T}-1)^2}.
-$
+$$
 
 The limiting behaviour is
 
-$
+$$
 C_V\to 3Nk_B\quad (T\gg\theta_E),
 \qquad
 C_V\to0\quad (T\ll\theta_E).
-$
+$$
 
 Thus, the temperature dependence of a solid's heat capacity emerges from the quantized vibrational energy levels.
 
