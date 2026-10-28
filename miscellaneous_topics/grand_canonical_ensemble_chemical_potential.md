@@ -12,6 +12,22 @@ Its central object is the **grand partition function**. It packages the statisti
 
 For a closed system, equilibrium between accessible states is governed by energy and entropy. When particles can also move between a system and a reservoir, the reservoir's entropy changes when it supplies or accepts particles. The thermodynamic quantity controlling this exchange is the chemical potential.
 
+Define chemical potential in the entropy representation by
+
+$$
+\boxed{\mu=-T\left(\frac{\partial S}{\partial N}\right)_{U,V}}.
+$$
+
+Equivalently, $dU=T\,dS-p\,dV+\mu\,dN$. Thus $\mu$ is the reversible energy cost of adding a particle at fixed entropy and volume, and the free-energy cost at fixed temperature and volume. When two regions can exchange particles, net flow is from higher chemical potential to lower chemical potential until equilibrium.
+
+The statistical weight follows from a reservoir expansion, as in the canonical derivation. If the subsystem has energy $E$ and particle number $N$, the reservoir has $E_R=E_{R,0}-E$ and $N_R=N_{R,0}-N$. To first order,
+
+$$
+S_R(E_R,N_R)\simeq S_{R,0}-\frac{E}{T}+\frac{\mu N}{T},
+$$
+
+because $(\partial S_R/\partial E_R)_{N_R,V_R}=1/T$ and $(\partial S_R/\partial N_R)_{E_R,V_R}=-\mu/T$. The reservoir's number of accessible states is proportional to $e^{S_R/k_B}$, so the subsystem probability is proportional to $e^{-\beta(E-\mu N)}$, where $\beta=1/(k_BT)$.
+
 For a reservoir at temperature $T$ and chemical potential $\mu$, the probability of a system microstate with energy $E_{N,r}$, particle number $N$, and state label $r$ is proportional to
 
 $$
@@ -229,6 +245,26 @@ $$
 
 This result is a useful illustration of how the grand canonical ensemble describes both the average thermodynamics and fluctuations in particle number.
 
+For a dilute classical ideal gas, $z=n\lambda_T^3$, so
+
+$$
+\boxed{\mu=k_BT\ln(n\lambda_T^3)}.
+$$
+
+Here $n=\langle N\rangle/V$ and $\lambda_T=h/\sqrt{2\pi m k_BT}$. The dilute-gas criterion $n\lambda_T^3\ll1$ makes the logarithm negative. The chemical potential includes the entropic effect of adding a particle, not just its bare energy.
+
+The $1/N!$ in the ideal-gas canonical partition function corrects for overcounting permutations of identical particles. Without it, the entropy contains a spurious $k_B\ln N!$ term and is not extensive in the thermodynamic limit (the Gibbs paradox).
+
+For the classical ideal gas, $P(N)$ is Poissonian and $\operatorname{Var}(N)=\langle N\rangle$. Its relative root-mean-square fluctuation is therefore
+
+$$
+\frac{\sqrt{\operatorname{Var}(N)}}{\langle N\rangle}=\frac{1}{\sqrt{\langle N\rangle}}.
+$$
+
+Relative fluctuations become negligible for large systems, explaining why ensembles often agree on bulk observables in the thermodynamic limit, except near critical points or other regimes with anomalously large fluctuations.
+
+A surface with $M$ independent sites, each empty or occupied, is the basic Langmuir adsorption model. The site-occupancy expression below yields the Langmuir isotherm when adsorbate chemical potential is related to gas pressure; interactions between adsorbed particles require a richer model.
+
 ## 7. An independent site that can be empty or occupied
 
 Consider one site that can either be empty, with energy zero and particle number zero, or occupied by one particle of energy $\epsilon$. The two statistical weights are $1$ and $e^{-\beta(\epsilon-\mu)}$. Therefore,
@@ -264,6 +300,8 @@ $$
 $$
 
 This has the same mathematical form as the Fermi–Dirac occupation factor. The example illustrates how the chemical potential controls the likelihood that a state is occupied. The model assumes at most one particle per site and does not, by itself, describe interactions between sites.
+
+The single-state grand-partition method also leads directly to the Bose–Einstein and Fermi–Dirac occupation laws: sum the allowed particle-number weights for each state, then calculate its mean occupation. See [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) and [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md).
 
 ## 8. Comparing ensembles
 
