@@ -6,17 +6,17 @@ Statistical mechanics connects microscopic states to macroscopic thermodynamic p
 
 For a system with microstate energies $E_r$, at temperature $T$, define
 
-$
+$$
 \beta=\frac{1}{k_BT},
 \qquad
 Z(T,V,N)=\sum_r e^{-\beta E_r}.
-$
+$$
 
 The sum includes every accessible microstate, including degeneracies. The probability of microstate $r$ is
 
-$
+$$
 P_r=\frac{e^{-\beta E_r}}{Z}.
-$
+$$
 
 The partition function is therefore both a normalization constant for probabilities and a compact generator of equilibrium thermodynamics.
 
@@ -24,34 +24,34 @@ The partition function is therefore both a normalization constant for probabilit
 
 The average internal energy is the probability-weighted mean of the microstate energies:
 
-$
+$$
 U=\langle E\rangle
 =\sum_r E_r P_r
 =\frac{1}{Z}\sum_r E_r e^{-\beta E_r}.
-$
+$$
 
 Differentiate $Z$ with respect to $\beta$, holding the energy levels and other fixed external parameters constant:
 
-$
+$$
 \frac{\partial Z}{\partial\beta}
 =-\sum_r E_r e^{-\beta E_r}.
-$
+$$
 
 Divide by $Z$ to obtain
 
-$
+$$
 \frac{\partial\ln Z}{\partial\beta}
 =\frac{1}{Z}\frac{\partial Z}{\partial\beta}
 =-\langle E\rangle.
-$
+$$
 
 Thus,
 
-$
+$$
 \boxed{
 U=-\left(\frac{\partial\ln Z}{\partial\beta}\right)_{V,N}
 }
-$
+$$
 
 This is often the fastest way to find the internal energy once $Z$ has been calculated.
 
@@ -59,38 +59,38 @@ This is often the fastest way to find the internal energy once $Z$ has been calc
 
 The Helmholtz free energy is
 
-$
+$$
 F=U-TS.
-$
+$$
 
 For the canonical ensemble, it is related to the partition function by
 
-$
+$$
 \boxed{F=-k_BT\ln Z.}
-$
+$$
 
 This relation can be obtained from the canonical probabilities and the statistical definition of entropy. Rearranging $F=U-TS$ gives
 
-$
+$$
 S=\frac{U-F}{T}.
-$
+$$
 
 Substitute the expressions for $U$ and $F$:
 
-$
+$$
 \boxed{
 S=k_B\left(\ln Z+\beta U\right)
 }
-$
+$$
 
 or, equivalently,
 
-$
+$$
 \boxed{
 S=k_B\left(\ln Z-\beta
 \frac{\partial\ln Z}{\partial\beta}\right).
 }
-$
+$$
 
 So a single function, $Z$, gives the internal energy, Helmholtz free energy, and entropy.
 
@@ -98,26 +98,26 @@ So a single function, $Z$, gives the internal energy, Helmholtz free energy, and
 
 If the energy levels depend on volume, the thermodynamic pressure follows from the Helmholtz free energy:
 
-$
+$$
 p=-\left(\frac{\partial F}{\partial V}\right)_{T,N}.
-$
+$$
 
 Since $F=-k_BT\ln Z$,
 
-$
+$$
 \boxed{
 p=k_BT\left(\frac{\partial\ln Z}{\partial V}\right)_{T,N}.
 }
-$
+$$
 
 The same idea applies to a generalized external parameter $\lambda$. If the Hamiltonian depends on $\lambda$, the conjugate generalized force is
 
-$
+$$
 \boxed{
 X=-\left(\frac{\partial F}{\partial\lambda}\right)_T
 =k_BT\left(\frac{\partial\ln Z}{\partial\lambda}\right)_T.
 }
-$
+$$
 
 For example, a magnetic field is conjugate to magnetization (with the sign and units determined by the chosen magnetic Hamiltonian). This gives a general route from a microscopic model to a macroscopic response.
 
@@ -125,32 +125,32 @@ For example, a magnetic field is conjugate to magnetization (with the sign and u
 
 At fixed volume and particle number, the heat capacity is
 
-$
+$$
 C_V=\left(\frac{\partial U}{\partial T}\right)_{V,N}.
-$
+$$
 
 Because $\beta=1/(k_BT)$, the chain rule gives
 
-$
+$$
 C_V=-k_B\beta^2\frac{\partial U}{\partial\beta}.
-$
+$$
 
 Differentiate the canonical mean energy. The result is the energy variance:
 
-$
+$$
 \frac{\partial U}{\partial\beta}
 =-\left(\langle E^2\rangle-\langle E\rangle^2\right).
-$
+$$
 
 Therefore,
 
-$
+$$
 \boxed{
 C_V=\frac{\langle E^2\rangle-\langle E\rangle^2}
 {k_BT^2}
 =\frac{\operatorname{Var}(E)}{k_BT^2}.
 }
-$
+$$
 
 This is an important physical connection: **heat capacity measures equilibrium energy fluctuations**. A system with larger energy fluctuations has a larger heat capacity, under the conditions of this canonical relation.
 
@@ -158,44 +158,44 @@ This is an important physical connection: **heat capacity measures equilibrium e
 
 For a monatomic classical ideal gas of $N$ indistinguishable particles,
 
-$
+$$
 Z_N(T,V)=\frac{1}{N!}
 \left(\frac{V}{\lambda_T^3}\right)^N,
 \qquad
 \lambda_T=\frac{h}{\sqrt{2\pi m k_BT}}.
-$
+$$
 
 Taking the logarithm gives
 
-$
+$$
 \ln Z_N
 =-\ln N!+N\ln V-3N\ln\lambda_T.
-$
+$$
 
 Since $\lambda_T\propto T^{-1/2}$, the temperature-dependent part of $\ln Z_N$ is $(3N/2)\ln T$, up to constants independent of temperature. Differentiating with respect to $\beta$ gives
 
-$
+$$
 \boxed{U=\frac{3}{2}Nk_BT.}
-$
+$$
 
 The heat capacity follows immediately:
 
-$
+$$
 \boxed{C_V=\frac{3}{2}Nk_B.}
-$
+$$
 
 Differentiating with respect to volume gives
 
-$
+$$
 p=k_BT\left(\frac{\partial\ln Z_N}{\partial V}\right)_{T,N}
 =\frac{Nk_BT}{V},
-$
+$$
 
 so
 
-$
+$$
 \boxed{pV=Nk_BT.}
-$
+$$
 
 The partition function has reproduced the ideal-gas equation of state, internal energy, and heat capacity without separately calculating each observable from the microstate probabilities.
 
@@ -203,22 +203,22 @@ The partition function has reproduced the ideal-gas equation of state, internal 
 
 Consider a particle with two non-degenerate energy levels, $0$ and $\Delta$. Its partition function is
 
-$
+$$
 Z=1+e^{-\beta\Delta}.
-$
+$$
 
 The general formula $U=-\partial_\beta\ln Z$ gives
 
-$
+$$
 U=\frac{\Delta}{e^{\beta\Delta}+1}.
-$
+$$
 
 Differentiating with respect to temperature yields
 
-$
+$$
 C_V=k_B(\beta\Delta)^2
 \frac{e^{\beta\Delta}}{(1+e^{\beta\Delta})^2}.
-$
+$$
 
 The heat capacity is small at very low temperatures because the excited level is rarely occupied, and small at very high temperatures because the two levels approach equal occupation and the mean energy changes only weakly with temperature. It therefore has a peak at an intermediate temperature, called the **Schottky anomaly**. The next chapter develops this example in detail.
 
