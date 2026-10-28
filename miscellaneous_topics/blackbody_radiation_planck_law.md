@@ -109,7 +109,16 @@ $$
 a=\frac{8\pi^5k_B^4}{15h^3c^3}.}
 $$
 
-The fourth-power dependence is the basis of the Stefan–Boltzmann law for thermal radiation. The spectrum's peak also shifts to higher frequency as temperature rises; differentiating Planck's spectrum gives Wien's displacement law $\nu_{\max}\propto T$ for the peak when plotted per unit frequency.
+The energy density is not itself the emitted power per unit area. For isotropic radiation, angular averaging over the outgoing hemisphere gives the flux $F=cu_{\mathrm{tot}}/4$. Therefore
+$
+F=\frac{c}{4}aT^4=\sigma T^4,\qquad
+\boxed{\sigma=\frac{ca}{4}=\frac{2\pi^5k_B^4}{15h^3c^2}=5.670\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}.}
+$
+This is the Stefan–Boltzmann law. The frequency spectrum peaks where $x=h\nu/(k_BT)$ solves $3(1-e^{-x})=x$, with positive solution $x\simeq2.82144$. Thus
+$
+\boxed{h\nu_{\max}=2.821\,k_BT.}
+$
+This Wien peak constant applies to a spectrum plotted per unit frequency. A spectrum per unit wavelength has a different peak because changing variables introduces a Jacobian.
 
 ## 6. Why quantization matters
 
