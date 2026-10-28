@@ -6,6 +6,8 @@ This section contains original supplementary chapters on concepts in statistical
 
 - [The concept of temperature](temperature_from_statistical_mechanics.md) — entropy, energy exchange, the canonical distribution, and negative temperatures.
 - [The Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
+- [The Partition Function as a Generator of Thermodynamics](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the canonical partition function.
+- [The Two-Level System and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive the occupation probabilities, internal energy, and characteristic heat-capacity peak of a two-level system.
 - [Maxwell–Boltzmann statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md) — derive the molecular speed distribution and its characteristic speeds from the canonical velocity distribution.
 - [Bose–Einstein statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution from bosonic state counting and entropy maximization.
