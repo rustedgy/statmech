@@ -6,17 +6,17 @@ A paramagnet contains microscopic magnetic moments that tend to align with an ap
 
 We will derive the magnetization, magnetic susceptibility, internal energy, and heat capacity from the canonical partition function. The model is deliberately simple: it shows how familiar magnetic behaviour follows from statistical mechanics without requiring a phenomenological equation of state.
 
-Consider (N) independent, identical, localized moments in a uniform magnetic field (B). Each moment has magnitude (mu) and can point either parallel or antiparallel to the field. We neglect interactions between moments and assume that the field is externally fixed.
+Consider \(N\) independent, identical, localized moments in a uniform magnetic field \(B\). Each moment has magnitude \(\mu\) and can point either parallel or antiparallel to the field. We neglect interactions between moments and assume that the field is externally fixed.
 
 For one moment, the two possible energies are
 \[
 \epsilon_{+}=-\mu B, \qquad \epsilon_{-}=+\mu B.
 \]
-The label (+) denotes alignment with the field. We use (B) for the magnetic field and (mu) for the moment magnitude; in SI units, the magnetic moment has units of joules per tesla.
+The label \(+\) denotes alignment with the field. We use \(B\) for the magnetic field and \(\mu\) for the moment magnitude; in SI units, the magnetic moment has units of joules per tesla.
 
 ## 2. Single-moment partition function
 
-In the canonical ensemble, a state of energy (E_r) has Boltzmann weight (e^{-\beta E_r}), where
+In the canonical ensemble, a state of energy \(E_r\) has Boltzmann weight \(e^{-\beta E_r}\), where
 \[
 \beta=\frac{1}{k_B T}.
 \]
@@ -31,9 +31,9 @@ It is convenient to define the dimensionless field
 \[
 x=\beta\mu B=\frac{\mu B}{k_B T}.
 \]
-Then (z=2\cosh x).
+Then \(z=2\cosh x\).
 
-Because the moments are independent, the partition function for (N) distinguishable, localized moments factorizes:
+Because the moments are independent, the partition function for \(N\) distinguishable, localized moments factorizes:
 \[
 Z_N=z^N=[2\cosh x]^N.
 \]
@@ -51,12 +51,12 @@ The total magnetic moment along the field, or magnetization in the sense of tota
 \[
 M=-\left(\frac{\partial F}{\partial B}\right)_{T,N}.
 \]
-Since (\partial x/\partial B=\beta\mu), this gives
+Since \(\partial x/\partial B=\beta\mu\), this gives
 \[
 \boxed{M=N\mu\tanh\left(\frac{\mu B}{k_B T}\right).}
 \]
 
-If magnetization is defined per unit volume, write (m=M/V), where (V) is the sample volume. The equation above is the response of the ideal, noninteracting two-state paramagnet.
+If magnetization is defined per unit volume, write \(m=M/V\), where \(V\) is the sample volume. The equation above is the response of the ideal, noninteracting two-state paramagnet.
 
 The same result follows directly from probabilities. The probability that one moment is aligned is
 \[
@@ -70,16 +70,16 @@ Thus the mean moment of one site is
 \[
 \langle\mu_z\rangle=\mu(p_+-p_-)=\mu\tanh x,
 \]
-and multiplying by (N) reproduces (M).
+and multiplying by \(N\) reproduces \(M\).
 
 ## 4. Weak-field limit: Curie's law
 
-When (x\ll1), the expansion (\tanh x\simeq x) gives
+When \(x\ll1\), the expansion \(\tanh x\simeq x\) gives
 \[
 M\simeq N\mu\frac{\mu B}{k_B T}
 =\frac{N\mu^2}{k_B T}B.
 \]
-The response is linear in field in this limit. Define the susceptibility with respect to (B) as
+The response is linear in field in this limit. Define the susceptibility with respect to \(B\) as
 \[
 \chi_B=\left(\frac{\partial M}{\partial B}\right)_{T,B\to0}.
 \]
@@ -89,19 +89,19 @@ Then
 \]
 For a fixed number of independent moments, this is Curie's law: the weak-field susceptibility is inversely proportional to absolute temperature.
 
-Conventions for magnetic susceptibility vary between total moment, moment per unit volume, and SI susceptibility defined relative to (H). The expression above uses total moment (M) and field (B); converting to a volume susceptibility or to an (H)-based convention introduces the corresponding volume and electromagnetic-unit factors.
+Conventions for magnetic susceptibility vary between total moment, moment per unit volume, and SI susceptibility defined relative to \(H\). The expression above uses total moment \(M\) and field \(B\); converting to a volume susceptibility or to an \(H\)-based convention introduces the corresponding volume and electromagnetic-unit factors.
 
-The physical reason for the (1/T) dependence is visible in (x=\mu B/(k_BT)). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
+The physical reason for the \(1/T\) dependence is visible in \(x=\frac{\mu B}{k_B T}\). At higher temperature, the field energy difference is smaller relative to thermal energy, so the two orientations are more nearly equally populated.
 
 ## 5. Strong-field and high-temperature limits
 
-For (x\gg1), (\tanh x\to1), so
+For \(x\gg1\), \(\tanh x\to1\), so
 \[
 M\to N\mu.
 \]
 The moments become almost completely aligned and the magnetization approaches its saturation value. It cannot grow without bound because each moment has only the two allowed orientations in this model.
 
-At fixed field and high temperature, (x\to0), and
+At fixed field and high temperature, \(x\to0\), and
 \[
 M\simeq\frac{N\mu^2B}{k_BT}\to0.
 \]
@@ -113,7 +113,7 @@ The mean energy is related to the partition function by
 \[
 U=-\frac{\partial\ln Z_N}{\partial\beta}\bigg|_{B,N}.
 \]
-At fixed (B), differentiating (\ln Z_N=N\ln[2\cosh(\beta\mu B)]) yields
+At fixed \(B\), differentiating \(\ln Z_N=N\ln[2\cosh(\beta\mu B)]\) yields
 \[
 \boxed{U=-N\mu B\tanh x=-MB.}
 \]
@@ -127,7 +127,7 @@ The heat capacity at fixed field is
 \[
 C_B=\left(\frac{\partial U}{\partial T}\right)_{B,N}.
 \]
-With (U=-N\mu B\tanh x) and (x=\mu B/(k_BT)), we have
+With \(U=-N\mu B\tanh x\) and \(x=\frac{\mu B}{k_B T}\), we have
 \[
 \frac{\partial x}{\partial T}=-\frac{x}{T}.
 \]
@@ -135,7 +135,7 @@ Therefore
 \[
 \boxed{C_B=Nk_B x^2\operatorname{sech}^2 x.}
 \]
-This quantity is nonnegative. It tends to zero both as (T\to\infty) (where (x\to0)) and as (T\to0^+) at fixed nonzero field (where (x\to\infty)). Between these limits it has a maximum: the field-split two-level system absorbs heat most effectively when thermal energy is comparable to the level splitting. This is the two-level Schottky heat-capacity peak.
+This quantity is nonnegative. It tends to zero both as \(T\to\infty\) (where \(x\to0\)) and as \(T\to0^+\) at fixed nonzero field (where \(x\to\infty\)). Between these limits it has a maximum: the field-split two-level system absorbs heat most effectively when thermal energy is comparable to the level splitting. This is the two-level Schottky heat-capacity peak.
 
 ## 8. Entropy and the role of disorder
 
@@ -148,7 +148,7 @@ Substituting the expressions above gives
 \boxed{S=Nk_B\left[\ln(2\cosh x)-x\tanh x\right].}
 \]
 
-At zero field, (x=0), so (S=Nk_B\ln2): each independent moment has two equally probable states. At fixed nonzero field as (T\to0^+), the lower-energy orientation dominates, and the entropy tends to zero in this ideal model. As temperature rises, the excited orientation becomes more populated and the entropy increases.
+At zero field, \(x=0\), so \(S=Nk_B\ln2\): each independent moment has two equally probable states. At fixed nonzero field as \(T\to0^+\), the lower-energy orientation dominates, and the entropy tends to zero in this ideal model. As temperature rises, the excited orientation becomes more populated and the entropy increases.
 
 The competition is between energy and entropy. Alignment lowers the magnetic energy, while a disordered mixture of orientations has more statistical weight. The canonical probabilities balance these effects according to the Boltzmann factor.
 
@@ -169,7 +169,7 @@ The derivation is useful precisely because its assumptions are explicit: the par
 
 ## 10. Summary
 
-Starting from the canonical partition function of (N) independent two-state magnetic moments, we obtained
+Starting from the canonical partition function of \(N\) independent two-state magnetic moments, we obtained
 \[
 Z_N=[2\cosh(\beta\mu B)]^N,
 \]
@@ -186,9 +186,9 @@ Thus saturation, Curie's law, and the two-level heat-capacity peak all follow fr
 
 ## Review questions
 
-1. Why does the partition function factorize as (Z_N=z^N) in this model?
+1. Why does the partition function factorize as \(Z_N=z^N\) in this model?
 2. Derive the magnetization both from the free energy and from the probabilities of the two orientations.
 3. What approximation leads to Curie's law, and when does it fail?
-4. Why does the magnetization saturate at (N\mu)?
+4. Why does the magnetization saturate at \(N\mu\)?
 5. Explain why the heat capacity vanishes in both the high-temperature and low-temperature limits.
 6. Which assumption would have to be changed to describe a ferromagnetic phase transition?
