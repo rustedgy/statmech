@@ -23,7 +23,7 @@ For this one variable, the average energy follows directly from the Gaussian int
 
 $$
 \langle H_x\rangle=\frac{\int_{-\infty}^{\infty}(a x^2/2)e^{-\beta a x^2/2}\,dx}{\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx}
-=-\frac{1}{\beta}\frac{\partial}{\partial\beta}\ln\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx
+=-\frac{\partial}{\partial\beta}\ln\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx
 =\frac{1}{2\beta}=\frac12 k_BT.
 $$
 
