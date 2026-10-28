@@ -31,13 +31,19 @@ This is the Bose–Einstein occupation factor for photons.
 
 ## 3. Count the modes
 
-For a large three-dimensional cavity, counting wave vectors in reciprocal space gives a density of electromagnetic modes per unit volume per unit frequency,
-
+For a large cavity, count standing-wave modes in a cube of volume $V=L^3$. The allowed wave-vector components are approximately $k_x=n_x\pi/L$, $k_y=n_y\pi/L$, and $k_z=n_z\pi/L$, with positive integers. Each mode is a lattice point in the positive octant of $k$-space. For one polarization, the number of modes in a thin shell is the octant shell volume divided by the volume per lattice point:
 $$
-g(\nu)=\frac{8\pi\nu^2}{c^3}.
+d\mathcal N_{\text{one pol.}}\simeq \frac18(4\pi k^2\,dk)\frac{V}{\pi^3}=\frac{Vk^2}{2\pi^2}\,dk.
 $$
-
-The factor includes the two independent polarizations of electromagnetic waves. Thus $g(\nu)\,d\nu$ is the number of modes per unit volume with frequencies between $\nu$ and $\nu+d\nu$, in the large-cavity limit.
+Electromagnetic waves have two independent transverse polarizations, so
+$$
+d\mathcal N=\frac{Vk^2}{\pi^2}\,dk.
+$$
+Using $k=2\pi\nu/c$ and $dk=(2\pi/c)d\nu$, then dividing by $V$, gives
+$$
+\boxed{g(\nu)=\frac1V\frac{d\mathcal N}{d\nu}=\frac{8\pi\nu^2}{c^3}.}
+$$
+Thus $g(\nu)\,d\nu$ counts both polarizations in the frequency interval $[\nu,\nu+d\nu]$. Finite-cavity boundary corrections are negligible in the large-volume limit.
 
 Each mode has mean thermal energy $h\nu\bar n_\nu$. Multiplying the number of modes by the mean energy per mode yields the spectral energy density:
 
@@ -103,9 +109,32 @@ $$
 a=\frac{8\pi^5k_B^4}{15h^3c^3}.}
 $$
 
-The fourth-power dependence is the basis of the Stefan–Boltzmann law for thermal radiation. The spectrum's peak also shifts to higher frequency as temperature rises; differentiating Planck's spectrum gives Wien's displacement law $\nu_{\max}\propto T$ for the peak when plotted per unit frequency.
+The energy density is not itself the emitted power per unit area. For isotropic radiation, angular averaging over the outgoing hemisphere gives the flux $F=cu_{\mathrm{tot}}/4$. Therefore
+$$
+F=\frac{c}{4}aT^4=\sigma T^4,\qquad
+\boxed{\sigma=\frac{ca}{4}=\frac{2\pi^5k_B^4}{15h^3c^2}=5.670\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}.}
+$$
+This is the Stefan–Boltzmann law. The frequency spectrum peaks where $x=h\nu/(k_BT)$ solves $3(1-e^{-x})=x$, with positive solution $x\simeq2.82144$. Thus
+$$
+\boxed{h\nu_{\max}=2.821\,k_BT.}
+$$
+This Wien peak constant applies to a spectrum plotted per unit frequency. A spectrum per unit wavelength has a different peak because changing variables introduces a Jacobian.
 
-## 6. Why quantization matters
+## 6. Blackbodies in practice
+
+A small hole in the wall of a large, isothermal cavity is an excellent blackbody. Radiation entering the hole undergoes many reflections and is very unlikely to return through the tiny opening, so the cavity absorbs nearly all incident radiation. Radiation emerging from the hole has the equilibrium spectrum set by the cavity temperature, largely independent of the wall material.
+
+Photons have chemical potential $\mu=0$ because photon number is not conserved: the cavity walls can absorb and emit photons as the radiation equilibrates. Temperature is fixed at equilibrium, but a separately conserved photon number is not. See [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) for the general occupation law.
+
+The Sun's photosphere is approximately a blackbody at about $5800\,\mathrm K$, so a Planck spectrum is a useful first model of its continuum radiation, although absorption lines and atmospheric details cause deviations. The cosmic microwave background is a much colder example, with a spectrum extremely close to a blackbody at $2.725\,\mathrm K$.
+
+## 7. Planck spectrum versus Rayleigh–Jeans
+
+The dimensionless Planck spectrum is proportional to $x^3/(e^x-1)$, while the Rayleigh–Jeans approximation is proportional to $x^2$, where $x=h\nu/(k_BT)$. They agree at small $x$; the classical curve grows without bound relative to Planck's spectrum at high frequency.
+
+![Planck and Rayleigh–Jeans dimensionless spectra](assets/planck_vs_rayleigh_jeans.svg)
+
+## 8. Why quantization matters
 
 The result comes from two ingredients: the number of available electromagnetic modes and the mean quantum occupation of each mode. Mode counting alone does not determine the spectrum; the Bose–Einstein factor supplies the high-frequency suppression that classical equipartition lacks.
 
@@ -113,13 +142,15 @@ The formula $u(\nu,T)$ is a spectral density per unit frequency. A spectrum expr
 
 ## Summary
 
-Quantized electromagnetic modes have mean photon occupation $1/(e^{h\nu/(k_BT)}-1)$. Multiplying this by the mode density and photon energy gives Planck's law. Its low-frequency limit reproduces classical radiation, while its high-frequency exponential cutoff resolves the ultraviolet catastrophe. Integrating the spectrum yields the $T^4$ law for total radiation energy density.
+Quantized electromagnetic modes have mean photon occupation $1/(e^{h\nu/(k_BT)}-1)$. Standing-wave counting in an octant of $k$-space, with two polarizations, gives $g(\nu)=8\pi\nu^2/c^3$. Multiplying the mode density by photon energy and mean occupation gives Planck's law. Its low-frequency limit reproduces classical radiation, while its high-frequency exponential cutoff resolves the ultraviolet catastrophe. Integration gives $u=aT^4$, and the outward flux gives $F=\sigma T^4$.
 
 ## Review questions
 
 1. Why is the photon chemical potential zero in thermal equilibrium?
 2. Derive the mean occupation of a single electromagnetic mode.
-3. Where does the factor $8\pi\nu^2/c^3$ enter the derivation?
+3. Derive $g(\nu)=8\pi\nu^2/c^3$ by counting standing-wave modes in an octant of $k$-space and including both polarizations.
 4. Recover the Rayleigh–Jeans law from Planck's formula.
 5. Why does the classical ultraviolet catastrophe disappear?
 6. Why must a spectrum per unit wavelength include a Jacobian when converting from frequency?
+7. Why does isotropic radiation have outward flux $cu/4$ through a small aperture?
+8. Why is a small hole in a cavity a good blackbody, and why is the photon chemical potential zero?
