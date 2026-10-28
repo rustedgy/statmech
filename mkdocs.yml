@@ -23,6 +23,7 @@ nav:
       - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
       - Fermi–Dirac statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
       - Equipartition of energy: miscellaneous_topics/equipartition_of_energy.md
+      - Newton's law of cooling from statistical mechanics: miscellaneous_topics/newtons_law_of_cooling_statmech.md
 
 theme:
   name: material
