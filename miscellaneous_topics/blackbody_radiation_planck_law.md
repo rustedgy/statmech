@@ -32,17 +32,17 @@ This is the Bose–Einstein occupation factor for photons.
 ## 3. Count the modes
 
 For a large cavity, count standing-wave modes in a cube of volume $V=L^3$. The allowed wave-vector components are approximately $k_x=n_x\pi/L$, $k_y=n_y\pi/L$, and $k_z=n_z\pi/L$, with positive integers. Each mode is a lattice point in the positive octant of $k$-space. For one polarization, the number of modes in a thin shell is the octant shell volume divided by the volume per lattice point:
-$
+$$
 d\mathcal N_{\text{one pol.}}\simeq \frac18(4\pi k^2\,dk)\frac{V}{\pi^3}=\frac{Vk^2}{2\pi^2}\,dk.
-$
+$$
 Electromagnetic waves have two independent transverse polarizations, so
-$
+$$
 d\mathcal N=\frac{Vk^2}{\pi^2}\,dk.
-$
+$$
 Using $k=2\pi\nu/c$ and $dk=(2\pi/c)d\nu$, then dividing by $V$, gives
-$
+$$
 \boxed{g(\nu)=\frac1V\frac{d\mathcal N}{d\nu}=\frac{8\pi\nu^2}{c^3}.}
-$
+$$
 Thus $g(\nu)\,d\nu$ counts both polarizations in the frequency interval $[\nu,\nu+d\nu]$. Finite-cavity boundary corrections are negligible in the large-volume limit.
 
 Each mode has mean thermal energy $h\nu\bar n_\nu$. Multiplying the number of modes by the mean energy per mode yields the spectral energy density:
@@ -110,14 +110,14 @@ a=\frac{8\pi^5k_B^4}{15h^3c^3}.}
 $$
 
 The energy density is not itself the emitted power per unit area. For isotropic radiation, angular averaging over the outgoing hemisphere gives the flux $F=cu_{\mathrm{tot}}/4$. Therefore
-$
+$$
 F=\frac{c}{4}aT^4=\sigma T^4,\qquad
 \boxed{\sigma=\frac{ca}{4}=\frac{2\pi^5k_B^4}{15h^3c^2}=5.670\times10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}.}
-$
+$$
 This is the Stefan–Boltzmann law. The frequency spectrum peaks where $x=h\nu/(k_BT)$ solves $3(1-e^{-x})=x$, with positive solution $x\simeq2.82144$. Thus
-$
+$$
 \boxed{h\nu_{\max}=2.821\,k_BT.}
-$
+$$
 This Wien peak constant applies to a spectrum plotted per unit frequency. A spectrum per unit wavelength has a different peak because changing variables introduces a Jacobian.
 
 ## 6. Blackbodies in practice
