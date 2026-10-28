@@ -6,6 +6,8 @@ This section contains original supplementary chapters on concepts in statistical
 
 - [The concept of temperature](temperature_from_statistical_mechanics.md) — entropy, energy exchange, the canonical distribution, and negative temperatures.
 - [The Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
+- [The Partition Function as a Generator of Thermodynamics](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the canonical partition function.
+- [The Two-Level System and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive the occupation probabilities, internal energy, and characteristic heat-capacity peak of a two-level system.
 - [Maxwell–Boltzmann statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md) — derive the molecular speed distribution and its characteristic speeds from the canonical velocity distribution.
 - [Bose–Einstein statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution from bosonic state counting and entropy maximization.
@@ -16,3 +18,4 @@ This section contains original supplementary chapters on concepts in statistical
 - [Paramagnetism from the canonical ensemble](paramagnetism_canonical_ensemble.md) — derive magnetization, Curie's law, internal energy, and heat capacity for independent magnetic moments.
 - [The Ising model and ferromagnetism](ising_model_ferromagnetism.md) — extend independent spins to interacting spins, mean-field theory, and spontaneous magnetic order.
 - [Einstein model of a solid](einstein_model_of_a_solid.md) — derive the vibrational partition function, internal energy, and quantum heat capacity; recover the Dulong–Petit law and identify the low-temperature limitation.
+- [The Debye model of a solid](debye_model_of_a_solid.md) — derive the phonon density of states and heat capacity, including the low-temperature cubic law and high-temperature Dulong–Petit limit.
