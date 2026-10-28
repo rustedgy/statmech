@@ -200,41 +200,41 @@ Statistical mechanics determines equilibrium distributions and constrains the al
 
 ## 5. Timescale separation and an exactly solvable model
 
-A single temperature for the whole body is justified when internal equilibration is much faster than energy exchange with the surroundings. Let $\\tau_{\\mathrm{int}}$ be a characteristic time for internal temperature gradients to relax, and let $\\tau_{\\mathrm{bath}}$ be the time over which the body exchanges an appreciable fraction of its thermal energy with the environment. The lumped-temperature approximation requires
+A single temperature for the whole body is justified when internal equilibration is much faster than energy exchange with the surroundings. Let $\tau_{\mathrm{int}}$ be a characteristic time for internal temperature gradients to relax, and let $\tau_{\mathrm{bath}}$ be the time over which the body exchanges an appreciable fraction of its thermal energy with the environment. The lumped-temperature approximation requires
 
 $$
-\\tau_{\\mathrm{int}}\\ll \\tau_{\\mathrm{bath}}.
+\tau_{\mathrm{int}}\ll \tau_{\mathrm{bath}}.
 $$
 
 If this separation fails, different parts of the body can have different temperatures and multiple thermal modes contribute. Even when internal equilibration is fast, a single exponential is not automatic: it also requires one slow mode to dominate or a dynamical model with one relevant relaxation time.
 
 ### An exact two-level example
 
-Consider $N$ independent two-level units, each with ground-state energy $0$ and excited-state energy $\\epsilon$. Each unit exchanges energy with a bath at fixed temperature $T_{\\mathrm{bath}}$. Let $p(t)$ be the probability that one unit is excited. Suppose the bath induces upward and downward transitions with constant rates $w_+$ and $w_-$, respectively. The rate equation is
+Consider $N$ independent two-level units, each with ground-state energy $0$ and excited-state energy $\epsilon$. Each unit exchanges energy with a bath at fixed temperature $T_{\mathrm{bath}}$. Let $p(t)$ be the probability that one unit is excited. Suppose the bath induces upward and downward transitions with constant rates $w_+$ and $w_-$, respectively. The rate equation is
 
 $$
-\\frac{dp}{dt}=w_+(1-p)-w_-p=-(w_++w_-)(p-p_{\\mathrm{eq}}),
+\frac{dp}{dt}=w_+(1-p)-w_-p=-(w_++w_-)(p-p_{\mathrm{eq}}),
 $$
 
-where $p_{\\mathrm{eq}}=w_+/(w_++w_-)$. Detailed balance requires
+where $p_{\mathrm{eq}}=w_+/(w_++w_-)$. Detailed balance requires
 
 $$
-\\frac{w_+}{w_-}=e^{-\\epsilon/(k_BT_{\\mathrm{bath}})},
+\frac{w_+}{w_-}=e^{-\epsilon/(k_BT_{\mathrm{bath}})},
 $$
 
-so $p_{\\mathrm{eq}}=[1+e^{\\epsilon/(k_BT_{\\mathrm{bath}})}]^{-1}$, the canonical excited-state probability. The mean energy is $U(t)=N\\epsilon p(t)$, and therefore
+so $p_{\mathrm{eq}}=[1+e^{\epsilon/(k_BT_{\mathrm{bath}})}]^{-1}$, the canonical excited-state probability. The mean energy is $U(t)=N\epsilon p(t)$, and therefore
 
 $$
-\\boxed{\\frac{dU}{dt}=-\\frac{U-U_{\\mathrm{bath}}}{\\tau}},
-\\qquad
-\\tau=\\frac{1}{w_++w_-},
+\boxed{\frac{dU}{dt}=-\frac{U-U_{\mathrm{bath}}}{\tau}},
+\qquad
+\tau=\frac{1}{w_++w_-},
 $$
 
-with $U_{\\mathrm{bath}}=N\\epsilon p_{\\mathrm{eq}}$. This exponential is exact for this Markov model, not merely a near-equilibrium approximation. The rate depends on the transition rates; detailed balance fixes their ratio but not their overall scale. More complicated systems generally have several relaxation modes.
+with $U_{\mathrm{bath}}=N\epsilon p_{\mathrm{eq}}$. This exponential is exact for this Markov model, not merely a near-equilibrium approximation. The rate depends on the transition rates; detailed balance fixes their ratio but not their overall scale. More complicated systems generally have several relaxation modes.
 
 ### Why a linear heat current is plausible
 
-Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G.
+Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G.
 
 ## 6. Entropy production and the sign of the heat current
 
@@ -286,19 +286,33 @@ It may fail or need modification when:
 
 - the temperature difference is large, so the current is nonlinear in $T-T_{\mathrm{bath}}$;
 - internal temperature gradients are important, so the body cannot be treated as a single uniform-temperature lump. For a solid with thermal conductivity $k$, surface heat-transfer coefficient $h$, and characteristic length $L_c=V/A$, a common criterion is the Biot number $\mathrm{Bi}=hL_c/k\ll1$ (often taken as $\mathrm{Bi}<0.1$). This means internal conduction is fast compared with heat transfer at the surface;
-- radiation dominates, for which the net radiative power is proportional to $T^4-T_{\mathrm{bath}}^4$, not directly to $T-T_{\mathrm{bath}}$. Near $T_{\mathrm{bath}}$, writing $T=T_{\mathrm{bath}}+\Delta T$ gives
+- radiation dominates. Unlike a phenomenological cooling coefficient, the ideal-blackbody $T^4$ law has a statistical-mechanical derivation: the Planck spectrum in [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md) follows from Bose statistics for photons (with $\mu=0$) and electromagnetic mode counting. Integrating that spectrum gives
 
-  $
-  T^4-T_{\mathrm{bath}}^4\simeq4T_{\mathrm{bath}}^3\Delta T,
-  $
+  $$
+  u_{\mathrm{rad}}(T)=aT^4,
+  \qquad
+  a=\frac{8\pi^5 k_B^4}{15h^3c^3},
+  $$
 
-  so for a grey body with emissivity $\varepsilon$, area $A$, and heat capacity $C$, the radiative relaxation rate is
+  and isotropic angular averaging gives the outward flux $F=cu_{\mathrm{rad}}/4=\sigma T^4$, where $\sigma=ac/4$. For a blackbody exchanging radiation with a large blackbody environment, the net power is therefore $P_{\mathrm{net}}=\sigma A(T^4-T_{\mathrm{bath}}^4)$. A grey-body approximation introduces the additional material factor $\varepsilon$:
 
-  $
-  \boxed{\gamma_{\mathrm{rad}}=\frac{4\varepsilon\sigma A T_{\mathrm{bath}}^3}{C}},
-  $
+  $$
+  P_{\mathrm{net}}\simeq\varepsilon\sigma A(T^4-T_{\mathrm{bath}}^4).
+  $$
 
-  where $\sigma$ is the Stefan--Boltzmann constant. This gives exponential relaxation only after linearizing close to the bath temperature;
+  Near $T_{\mathrm{bath}}$, write $T=T_{\mathrm{bath}}+\Delta T$ and linearize:
+
+  $$
+  T^4-T_{\mathrm{bath}}^4\simeq4T_{\mathrm{bath}}^3\Delta T.
+  $$
+
+  Energy balance, $C\,dT/dt=-P_{\mathrm{net}}$, then gives
+
+  $$
+  \boxed{\gamma_{\mathrm{rad}}=\frac{4\varepsilon\sigma A T_{\mathrm{bath}}^3}{C}}.
+  $$
+
+  Thus the $T^4$ dependence is derived from photon statistics and mode counting; the emissivity factor and the applicability of a single-temperature cooling model are additional physical assumptions.
 - the body's interior is not in local equilibrium and different regions have different temperatures;
 - several slow modes contribute, producing a sum of exponentials;
 - the environment itself warms or cools appreciably;
