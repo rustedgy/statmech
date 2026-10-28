@@ -81,20 +81,20 @@ $$
 
 Set $a=m/(2k_BT)$. Then
 
-$
+$$
 \begin{aligned}
 \langle v\rangle
 &=4\pi\left(\frac{m}{2\pi k_BT}\right)^{3/2}
 \int_0^\infty v^3e^{-av^2}\,dv,\\
 \int_0^\infty v^3e^{-av^2}\,dv&=\frac{1}{2a^2}.
 \end{aligned}
-$
+$$
 
 Therefore
 
-$
+$$
 \boxed{\langle v\rangle=\sqrt{\frac{8k_BT}{\pi m}}.}
-$
+$$
 
 ### Root-mean-square speed
 
@@ -106,10 +106,10 @@ $$
 
 These are not interchangeable quantities. Their ratios are universal:
 
-$
+$$
 v_{\mathrm{mp}}:\langle v\rangle:v_{\mathrm{rms}}
 =1:\sqrt{4/\pi}:\sqrt{3/2}\simeq1:1.128:1.225.
-$
+$$
 
 At $T=300\,\mathrm K$, approximate characteristic speeds are:
 
@@ -124,10 +124,10 @@ The mode depends on the variable whose density is plotted. Maximizing $f(v)$ giv
 
 Transform from speed to kinetic energy $E=mv^2/2$, using $dv/dE=1/(mv)$:
 
-$
+$$
 P(E)=f(v)\left|\frac{dv}{dE}\right|
 =\frac{2}{\sqrt{\pi}}\frac{\sqrt E}{(k_BT)^{3/2}}e^{-E/(k_BT)},\qquad E\geq0.
-$
+$$
 
 Thus $P(E)\propto\sqrt E e^{-E/(k_BT)}$: the square-root factor is the three-dimensional density of states and the exponential is the single-molecule Boltzmann weight.
 
@@ -154,6 +154,6 @@ The canonical Boltzmann factor gives a Gaussian distribution for each velocity c
 1. Why is each velocity component Gaussian in the canonical ensemble?
 2. Why does the speed distribution contain a factor $v^2$?
 3. Derive the most probable speed by maximizing $f(v)$.
-4. Use equipartition to derive the root-mean-square speed.
+4. Use the component variance $k_BT/m$ to derive the root-mean-square speed.
 5. How would the speed distribution change if the molecular mass doubled at fixed temperature?
 6. Explain why the most probable, mean, and root-mean-square speeds are different.\n7. Why can the most probable speed differ from the speed associated with the most probable kinetic energy?
