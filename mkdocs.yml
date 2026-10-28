@@ -19,6 +19,7 @@ nav:
   - Miscellaneous Topics:
       - Overview: miscellaneous_topics/index.md
       - The concept of temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
+      - The Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
       - Maxwell–Boltzmann statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
       - Maxwell–Boltzmann speed distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
       - Bose–Einstein statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
