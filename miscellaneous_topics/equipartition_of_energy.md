@@ -15,11 +15,19 @@ where $H$ is the Hamiltonian and $Z$ is the classical partition function.
 
 A standard quadratic contribution to the energy has the form
 
-$$
+$
 H_x=\frac{a x^2}{2}, \qquad a>0.
-$$
+$
 
-Equipartition gives
+For this one variable, the average energy follows directly from the Gaussian integral:
+
+$
+\langle H_x\rangle=\frac{\int_{-\infty}^{\infty}(a x^2/2)e^{-\beta a x^2/2}\,dx}{\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx}
+=-\frac{1}{\beta}\frac{\partial}{\partial\beta}\ln\int_{-\infty}^{\infty}e^{-\beta a x^2/2}\,dx
+=\frac{1}{2\beta}=\frac12 k_BT.
+$
+
+The factor $1/2$ comes from the quadratic power: the Gaussian normalization scales as $\beta^{-1/2}$, so differentiating its logarithm gives $1/(2\beta)$. Equipartition therefore gives
 
 $$
 \boxed{\langle H_x\rangle=\frac{1}{2}k_B T}.
@@ -34,11 +42,11 @@ $$
 =\frac{1}{2}k_B T.
 $$
 
-Thus the mean translational kinetic energy in three dimensions is $3k_B T/2$. A harmonic potential $\tfrac12 kx^2$ contributes another $k_B T/2$ for its one quadratic coordinate. The counting is by independent quadratic terms, not simply by the number of particles.
+Thus the mean translational kinetic energy in three dimensions is $3k_B T/2$. A harmonic potential $\tfrac12 kx^2$ contributes another $k_B T/2$ for its one quadratic coordinate. The counting is by independent quadratic terms, not simply by the number of particles. In particular, the momentum-component result does not depend on the form of the potential: provided the Hamiltonian has the usual quadratic kinetic term $p_x^2/(2m)$ and the canonical boundary conditions hold, the identity in Section 2 gives $\langle p_x(\partial H/\partial p_x)\rangle=k_BT$, hence $\langle p_x^2/(2m)\rangle=k_BT/2$ even when the potential is anharmonic.
 
 ## 2. The general equipartition identity
 
-The canonical distribution lets us derive a more general result. Let $x$ be one continuous phase-space variable, and suppose the partition integral converges and the probability density vanishes sufficiently rapidly at the integration boundaries. The key idea is to integrate the derivative of `x exp(-βH)` over the full phase space. By the fundamental theorem of calculus, the integral of this derivative reduces to a boundary term; it vanishes when `x exp(-βH)` goes to zero at the endpoints of the `x`-integration. The remaining phase-space variables are integrated over as well. Therefore, integrating this total derivative gives
+The canonical distribution lets us derive a more general result. Let $x$ be one continuous phase-space variable, and suppose the partition integral converges and the probability density vanishes sufficiently rapidly at the integration boundaries. The key idea is to integrate the derivative of $x e^{-\beta H}$ over the full phase space. By the fundamental theorem of calculus, the integral of this derivative reduces to a boundary term; it vanishes when `x exp(-βH)` goes to zero at the endpoints of the `x`-integration. The remaining phase-space variables are integrated over as well. Therefore, integrating this total derivative gives
 
 $$
 0=\int \frac{\partial}{\partial x}
@@ -71,19 +79,19 @@ This is the general classical equipartition identity. It does not require the Ha
 Suppose the Hamiltonian depends on one variable through a confining power-law term
 
 $$
-H_x=a|x|^p,\qquad a>0,\quad p>0.
+H_x=a|x|^r,\qquad a>0,\quad r>0.
 $$
 
 Away from $x=0$,
 
 $$
-x\frac{\partial H_x}{\partial x}=p\,a|x|^p=pH_x.
+x\frac{\partial H_x}{\partial x}=r\,a|x|^r=rH_x.
 $$
 
 If this is the only $x$-dependent contribution to $H$, the general identity gives
 
 $$
-p\langle H_x\rangle=k_B T,
+r\langle H_x\rangle=k_B T,
 $$
 
 or
@@ -92,7 +100,7 @@ $$
 \boxed{\langle H_x\rangle=\frac{1}{p}k_B T.}
 $$
 
-The exponent $p$, rather than a universal factor of two, determines the average energy for this one-variable term.
+The exponent $r$, rather than a universal factor of two, determines the average energy for this one-variable term. The factor $1/r$ also has a physical interpretation: a steeper confining potential rises rapidly with displacement, so the particle explores a smaller range of $x$ and has a lower mean potential energy. The partition integral scales as $T^{1/r}$, and differentiating its logarithm gives $\langle H_x\rangle=k_BT/r$.
 
 - **Quadratic term** $H_x=ax^2$: $p=2$, so $\langle H_x\rangle=k_B T/2$.
 - **Quartic term** $H_x=ax^4$: $p=4$, so $\langle H_x\rangle=k_B T/4$.
@@ -139,21 +147,15 @@ Compare this with the ordinary harmonic oscillator, whose kinetic and quadratic 
 
 Suppose a classical Hamiltonian is a sum of independent contributions, each homogeneous in its own set of variables:
 
-$$
+$
 H=\sum_j H_j,\qquad H_j(\lambda x_1,\ldots,\lambda x_{d_j})
-=\lambda^{p_j}H_j(x_1,\ldots,x_{d_j}).
-$$
+=\lambda^{r_j}H_j(x_1,\ldots,x_{d_j}).
+$
 
-Under the canonical assumptions above, each contribution satisfies
-
-$$
-\boxed{\langle H_j\rangle=\frac{d_j}{p_j}k_B T.}
-$$
-
-Here $d_j$ is the number of independent continuous variables in that homogeneous group and $p_j$ is its degree. The familiar theorem follows by setting every $p_j=2$. Summing the contributions gives
+Here $d_j$ is the number of independent continuous variables in that homogeneous group and $r_j$ is its degree. The individual result $\langle H_j\rangle=d_j k_BT/r_j$ is already established in Section 3. Summing those contributions gives
 
 $$
-\boxed{\langle H\rangle=k_B T\sum_j\frac{d_j}{p_j}.}
+\boxed{\langle H\rangle=k_B T\sum_j\frac{d_j}{r_j}.}
 $$
 
 This formula is useful when the energy contains several different powers. It also shows why one should not assign $k_B T/2$ to every variable automatically: the power-law degree matters.
@@ -176,9 +178,9 @@ $$
 \boxed{\text{one quadratic term}\ \longrightarrow\ \frac12 k_B T}
 $$
 
-$$
-\boxed{H_x=a|x|^p\ \longrightarrow\ \langle H_x\rangle=\frac{1}{p}k_B T}
-$$
+$
+\boxed{H_x=a|x|^r\ \longrightarrow\ \langle H_x\rangle=\frac{1}{r}k_B T}
+$
 
 The underlying identity is
 
