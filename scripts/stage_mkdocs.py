@@ -165,14 +165,14 @@ def main() -> None:
         "",
     ]
     for book in books:
-        lines.append(f"### [{display_name(book)}]({book}/)")
+        lines.append(f"### [{display_name(book)}]({book}/index.md)")
         lines.append("")
         staged_book = DOCS / book
         links = lecture_links_for_book(staged_book, staged_book)
         if links:
             lines.extend(links)
         else:
-            lines.append(f"- [Collection overview]({book}/)")
+            lines.append(f"- [Collection overview]({book}/index.md)")
             topic_pages = sorted(
                 (path for path in staged_book.glob("*.md") if path.name != "index.md"),
                 key=lambda path: (
