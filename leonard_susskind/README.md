@@ -23,7 +23,7 @@ The notes are based on the original [Statistical Mechanics by Leonard Susskind a
 
 ## Mathematics rendering
 
-The published site uses MkDocs Material with MathJax. For new or edited notes, use `\(...\)` for inline mathematics and `$$...$$` on separate lines for display mathematics. Some existing notes use `$$...$$` inline; those expressions should be checked when editing because the publishing stage normalizes same-line inline expressions in the temporary copy only.
+The published site uses MkDocs Material with MathJax. For new or edited notes, use `$...$` for inline mathematics and `$$...$$` on separate lines for display mathematics. Some existing notes use `$$...$$` inline; those expressions should be checked when editing because the publishing stage normalizes same-line inline expressions in the temporary copy only.
 
 ## Suggested use
 
