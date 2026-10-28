@@ -9,7 +9,6 @@ IGNORED_DIRS = {
     ".git", ".github", ".venv", "node_modules", "site",
     ".mkdocs-docs", "__pycache__",
 }
-INLINE_DOLLAR_MATH = re.compile(r"(?<!\$)\$\$(.+?)\$\$(?!\$)")
 LECTURE_FILE = re.compile(r".*_lecture_(\d+).*_notes\.md$", re.IGNORECASE)
 TRANSCRIPT_MARKER = "transcript_based"
 
