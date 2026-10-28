@@ -4,7 +4,7 @@ The equipartition theorem connects temperature to the average energy stored in t
 
 ## 1. The familiar quadratic result
 
-For a classical system in thermal equilibrium at temperature $T$, the canonical ensemble assigns each microstate a probability proportional to its Boltzmann weight, `exp(-βH)`. Here `q` denotes the generalized coordinates and `p` their conjugate momenta, so `H(q,p)` is the energy of a phase-space point. The parameter `β = 1/(k_B T)` measures energy in units of the thermal scale `k_B T`: higher-energy states are suppressed more strongly at lower temperatures. The partition function `Z` normalizes the distribution so that the probabilities integrate to one. Thus, the canonical probability density in phase space is
+For a classical system in thermal equilibrium at temperature $T$, the canonical ensemble assigns each microstate a probability proportional to its Boltzmann weight, $e^{-\beta H}$. Here $q$ denotes generalized coordinates and $p$ their conjugate momenta, so $H(q,p)$ is the energy of a phase-space point. The parameter $\beta=1/(k_BT)$ measures energy in units of the thermal scale $k_BT$: higher-energy states are suppressed more strongly at lower temperatures. The partition function $Z$ normalizes the distribution so that the probabilities integrate to one. Thus, the canonical probability density in phase space is
 
 $$
 \rho(q,p)=\frac{1}{Z}e^{-\beta H(q,p)},
@@ -46,7 +46,7 @@ Thus the mean translational kinetic energy in three dimensions is $3k_B T/2$. A 
 
 ## 2. The general equipartition identity
 
-The canonical distribution lets us derive a more general result. Let $x$ be one continuous phase-space variable, and suppose the partition integral converges and the probability density vanishes sufficiently rapidly at the integration boundaries. The key idea is to integrate the derivative of $x e^{-\beta H}$ over the full phase space. By the fundamental theorem of calculus, the integral of this derivative reduces to a boundary term; it vanishes when `x exp(-βH)` goes to zero at the endpoints of the `x`-integration. The remaining phase-space variables are integrated over as well. Therefore, integrating this total derivative gives
+The canonical distribution lets us derive a more general result. Let $x$ be one continuous phase-space variable, and suppose the partition integral converges and the probability density vanishes sufficiently rapidly at the integration boundaries. The key idea is to integrate the derivative of $x e^{-\beta H}$ over the full phase space. By the fundamental theorem of calculus, the integral of this derivative reduces to a boundary term; it vanishes when $x e^{-\beta H}$ goes to zero at the endpoints of the $x$-integration. The remaining phase-space variables are integrated over as well. Therefore, integrating this total derivative gives
 
 $$
 0=\int \frac{\partial}{\partial x}
