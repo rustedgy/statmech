@@ -148,7 +148,13 @@ The distribution reflects two competing effects:
 
 At higher temperature, $\beta=1/(k_BT)$ is smaller, so the exponential penalty for high energies is weaker. The distribution spreads more broadly across energy levels.
 
-The MB law is appropriate when the gas is sufficiently dilute and quantum occupation effects are negligible. It can be obtained as the low-occupation limit of both Bose–Einstein and Fermi–Dirac distributions, but the counting-and-entropy argument above derives it directly in the classical regime.
+The continuum occupation derivation assumes many states and many particles in each energy class, $g_i\gg n_i\gg1$, so Stirling's approximation is accurate for occupation factorials while the occupation per individual state remains small. The classical dilute-gas criterion is
+
+$
+\boxed{n\lambda_T^3\ll1},\qquad \lambda_T=\frac{h}{\sqrt{2\pi m k_BT}},
+$
+
+where $n=N/V$ and $\lambda_T$ is the thermal de Broglie wavelength. In this regime quantum occupancy corrections are negligible. It can be obtained as the low-occupation limit of both Bose–Einstein and Fermi–Dirac distributions, but the counting-and-entropy argument above derives it directly in the classical regime.
 
 ## 7. Example: equally spaced energy levels
 
@@ -178,7 +184,27 @@ $$
 
 As temperature increases, this ratio approaches one and higher levels become relatively more populated.
 
-## 8. Summary
+## 8. Continuum energies and density of states
+
+For closely spaced energy levels, replace the sum by an integral. If $g(\epsilon)$ is the density of one-particle states per unit energy, then
+
+$
+dN(\epsilon)\propto g(\epsilon)e^{-\beta\epsilon}\,d\epsilon.
+$
+
+For a free particle in three dimensions, the number of momentum states inside a sphere of radius $p$ is proportional to $p^3$. Since $\epsilon=p^2/(2m)$, the density of states therefore scales as
+
+$
+\boxed{g(\epsilon)\propto\sqrt{\epsilon}}.
+$
+
+The energy distribution consequently has the form $P(\epsilon)\propto\sqrt{\epsilon}e^{-\beta\epsilon}$. This square-root factor is the continuum analogue of degeneracy and is the same state-counting geometry behind the $v^2$ factor in the [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md).
+
+## 9. Example: equally spaced levels and the oscillator
+
+The equally spaced non-degenerate spectrum above is the level structure of a single quantum harmonic oscillator, up to an energy offset. It is better viewed as an oscillator example than as a generic many-particle gas spectrum; see the later oscillator and solid-model chapters.
+
+## 10. Summary
 
 The statistical-mechanical derivation follows a short chain:
 
@@ -202,4 +228,4 @@ the Maxwell–Boltzmann distribution over energy classes.
 2. Why is entropy maximized subject to both particle-number and energy constraints?
 3. Where does Stirling's approximation enter the derivation?
 4. How does the distribution change as temperature increases?
-5. Under what physical conditions is the Maxwell–Boltzmann description appropriate?
+5. Under what physical conditions is the Maxwell–Boltzmann description appropriate?\n6. Why is the Gibbs factor $1/N!$ needed for an extensive ideal-gas entropy?\n7. Why does the three-dimensional free-particle density of states scale as $\sqrt{\epsilon}$?
