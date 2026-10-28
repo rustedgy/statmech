@@ -123,18 +123,18 @@ This is the Bose–Einstein distribution. The minus one in the denominator follo
 
 The Stirling derivation above is useful for large energy groups, but it is not needed for a single state. For one bosonic state of energy $\epsilon$, every occupation $n=0,1,2,\ldots$ is allowed. Its grand partition function is
 
-$
+$$
 \Xi_\epsilon=\sum_{n=0}^{\infty}e^{-n\beta(\epsilon-\mu)}
 =\frac{1}{1-e^{-\beta(\epsilon-\mu)}}.
-$
+$$
 
 Writing $q=e^{-\beta(\epsilon-\mu)}$, its mean occupation is
 
-$
+$$
 \bar n=q\frac{\partial}{\partial q}\ln\Xi_\epsilon
 =\frac{q}{1-q}
 =\frac{1}{e^{\beta(\epsilon-\mu)}-1}.
-$
+$$
 
 This exact single-state route requires only convergence of the geometric series, or $\mu<\epsilon$ for the state. It needs neither Stirling's approximation nor large degeneracy and is valid for $g=1$.
 
