@@ -59,7 +59,7 @@ For ordinary positive-temperature systems, entropy increases with energy. A stee
 For a classical monatomic ideal gas, the cumulative accessible phase-space volume scales as $\Phi(E)\propto E^{3N/2}$, with volume and particle number held fixed. If $\Omega(E)$ instead denotes the number of states in a narrow shell of width $\Delta E$, then $\Omega(E)\propto E^{3N/2-1}\Delta E$ (up to constants). The difference is one power of $E$; for large $N$ the distinction is often negligible at leading extensive order, but the definitions should not be mixed. Thus
 
 $$
-S(E)=k_B\ln\Omega(E)
+S(E)=k_B\ln\Phi(E)
 =\text{constant}+\frac{3N}{2}k_B\ln E.
 $$
 
