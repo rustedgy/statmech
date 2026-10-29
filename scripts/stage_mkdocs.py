@@ -13,25 +13,39 @@ LECTURE_FILE = re.compile(r".*_lecture_(\d+).*_notes\.md$", re.IGNORECASE)
 TRANSCRIPT_MARKER = "transcript_based"
 
 # Keep the generated homepage's topic list in the same order as mkdocs.yml.
-MISC_TOPIC_ORDER = (
-    "notation_and_symbols.md",
-    "temperature_from_statistical_mechanics.md",
-    "partition_function_thermodynamics_generator.md",
-    "grand_canonical_ensemble_chemical_potential.md",
-    "two_level_system_schottky_anomaly.md",
-    "maxwell_boltzmann_statistics.md",
-    "maxwell_boltzmann_speed_distribution.md",
-    "bose_einstein_statistics_derivation.md",
-    "fermi_dirac_statistics_derivation.md",
-    "blackbody_radiation_planck_law.md",
-    "equipartition_of_energy.md",
-    "paramagnetism_canonical_ensemble.md",
-    "ising_model_ferromagnetism.md",
-    "einstein_model_of_a_solid.md",
-    "debye_model_of_a_solid.md",
-    "newtons_law_of_cooling_statmech.md",
-)
+MISC_TOPIC_PARTS = {
+    "Part I — Foundations and Ensembles": (
+        "notation_and_symbols.md",
+        "indicator_functions_statmech.md",
+        "temperature_from_statistical_mechanics.md",
+        "partition_function_thermodynamics_generator.md",
+        "grand_canonical_ensemble_chemical_potential.md",
+        "two_level_system_schottky_anomaly.md",
+    ),
+    "Part II — Classical and Quantum Statistics": (
+        "equipartition_of_energy.md",
+        "maxwell_boltzmann_statistics.md",
+        "maxwell_boltzmann_speed_distribution.md",
+        "bose_einstein_statistics_derivation.md",
+        "fermi_dirac_statistics_derivation.md",
+    ),
+    "Part III — Applications to Matter and Radiation": (
+        "blackbody_radiation_planck_law.md",
+        "paramagnetism_canonical_ensemble.md",
+        "ising_model_ferromagnetism.md",
+        "einstein_model_of_a_solid.md",
+        "debye_model_of_a_solid.md",
+    ),
+    "Part IV — Stochastic Processes and Relaxation": (
+        "markov_processes_statmech.md",
+        "newtons_law_of_cooling_statmech.md",
+    ),
+}
+MISC_TOPIC_ORDER = tuple(name for part in MISC_TOPIC_PARTS.values() for name in part)
 MISC_TOPIC_ORDER_INDEX = {name: index for index, name in enumerate(MISC_TOPIC_ORDER)}
+MISC_PART_BY_FILE = {
+    name: part for part, names in MISC_TOPIC_PARTS.items() for name in names
+}
 
 
 def display_name(name: str) -> str:
@@ -153,15 +167,15 @@ def main() -> None:
         )
 
     lines = [
-        "# Statistical Mechanics — Lecture Notes",
+        "# Statistical Mechanics: Principles and Applications",
         "",
-        "A searchable reading site for statistical mechanics lecture notes and supplementary topics. "
-        "Choose a collection below, or jump directly to a lecture or topic.",
+        "A developing, unnumbered book on statistical mechanics, alongside organized lecture-note collections. "
+        "The book is grouped into thematic parts; chapter numbers are intentionally omitted while its contents grow.",
         "",
         "The Markdown files in this repository are the source of truth. The published "
         "site is built automatically by GitHub Actions; no local setup is needed.",
         "",
-        "## Lecture collections",
+        "## Book and lecture collections",
         "",
     ]
     for book in books:
@@ -172,24 +186,41 @@ def main() -> None:
         if links:
             lines.extend(links)
         else:
-            lines.append(f"- [Collection overview]({book}/index.md)")
-            topic_pages = sorted(
-                (path for path in staged_book.glob("*.md") if path.name != "index.md"),
-                key=lambda path: (
-                    MISC_TOPIC_ORDER_INDEX.get(path.name, len(MISC_TOPIC_ORDER)),
-                    path.name.casefold(),
-                ),
-            )
-            for path in topic_pages:
-                title = next(
-                    (
-                        line.lstrip("#").strip()
-                        for line in path.read_text(encoding="utf-8").splitlines()
-                        if line.startswith("# ")
-                    ),
-                    display_name(path.stem),
+            if book == "miscellaneous_topics":
+                lines.append(f"- [Book overview]({book}/index.md)")
+                lines.append("")
+                for part, filenames in MISC_TOPIC_PARTS.items():
+                    lines.append(f"#### {part}")
+                    lines.append("")
+                    available = [name for name in filenames if (staged_book / name).is_file()]
+                    for filename in available:
+                        path = staged_book / filename
+                        title = next(
+                            (
+                                line.lstrip("#").strip()
+                                for line in path.read_text(encoding="utf-8").splitlines()
+                                if line.startswith("# ")
+                            ),
+                            display_name(path.stem),
+                        )
+                        lines.append(f"- [{title}]({book}/{path.name})")
+                    lines.append("")
+            else:
+                lines.append(f"- [Collection overview]({book}/index.md)")
+                topic_pages = sorted(
+                    (path for path in staged_book.glob("*.md") if path.name != "index.md"),
+                    key=lambda path: path.name.casefold(),
                 )
-                lines.append(f"- [{title}]({book}/{path.name})")
+                for path in topic_pages:
+                    title = next(
+                        (
+                            line.lstrip("#").strip()
+                            for line in path.read_text(encoding="utf-8").splitlines()
+                            if line.startswith("# ")
+                        ),
+                        display_name(path.stem),
+                    )
+                    lines.append(f"- [{title}]({book}/{path.name})")
         lines.append("")
 
     lines.extend([
@@ -206,7 +237,7 @@ def main() -> None:
         "collection overview describes its sources and known limitations.",
         "",
         "Math is rendered with MathJax. Use single-dollar delimiters ($...$) for inline "
-        "math and standalone double-dollar delimiters ($) for display equations.",
+        "math and standalone double-dollar delimiters ($...$) for display equations.",
         "",
         "## Source repository",
         "",
