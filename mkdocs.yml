@@ -1,5 +1,5 @@
-site_name: Statistical Mechanics: Principles and Applications
-site_description: A developing, unnumbered book on statistical mechanics, alongside lecture notes
+site_name: "Statistical Mechanics: Principles and Applications"
+site_description: "A developing, unnumbered book on statistical mechanics, alongside lecture notes"
 site_url: https://rustedgy.github.io/statmech/
 docs_dir: .mkdocs-docs
 site_dir: /tmp/statmech-site
