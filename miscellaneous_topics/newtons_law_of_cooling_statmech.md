@@ -1,4 +1,4 @@
-# Newton's Law of Cooling
+# Newton's Law of Cooling: Equilibrium, Direction, and Linear Response
 
 Newton's law of cooling states that, under suitable conditions, the temperature of a body approaches the temperature of its surroundings exponentially:
 
@@ -6,9 +6,9 @@ $$
 \boxed{\frac{dT}{dt}=-\gamma\,(T-T_{\mathrm{bath}})}
 $$
 
-Here $T$ is the body's temperature, $T_{\mathrm{bath}}$ is the temperature of a large environment that remains effectively constant, and $\gamma>0$ is a relaxation rate. The law is often introduced as an empirical rule. Statistical mechanics explains why this form is natural near equilibrium: microscopic energy exchanges obey equilibrium probability constraints, and weakly coupled systems typically relax through decaying modes. When one relaxation mode dominates and the heat capacity is nearly constant, the temperature difference decays exponentially.
+Here $T$ is the body's temperature, $T_{\mathrm{bath}}$ is the temperature of a large environment that remains effectively constant, and $\gamma>0$ is a relaxation rate. Statistical mechanics does **not** determine this rate from equilibrium probabilities alone. It identifies the equilibrium fixed point, explains the statistically preferred direction of net energy transfer, and shows why a smooth response is linear to leading order near equilibrium. Exponential cooling additionally requires one relaxation mode to dominate, or a suitable one-mode dynamical model to apply.
 
-This chapter develops that explanation using ensembles, transition rates, linear response, and energy balance. It also clarifies which parts follow from statistical mechanics and which assumptions are needed for Newton's simple law.
+This chapter separates these equilibrium and near-equilibrium conclusions from the dynamical assumptions needed for a quantitative cooling law. An exactly solvable two-level model illustrates when exponential energy relaxation holds, while lumped-body and radiation examples show how to estimate a rate in practice.
 
 ## 1. The system and its thermal environment
 
@@ -104,8 +104,7 @@ $$
 Linearizing the master equation around equilibrium gives a linear system for the perturbations. Its solutions can be expressed as sums of decaying modes, schematically,
 
 $$
-\delta P_i(t)=\sum_\alpha c_\alpha v_i^{(\alpha)}
-e^{-t/\tau_\alpha},
+\delta P_i(t)=\sum_\alpha c_\alpha v_i^{(\alpha)}e^{-t/\tau_\alpha},
 $$
 
 where the relaxation times $\tau_\alpha$ depend on the transition rates and on the coupling to the reservoir. The equilibrium mode does not decay; the other modes decay when the dynamics are relaxing and ergodic over the relevant states.
@@ -199,22 +198,43 @@ This form makes the physical parameters transparent. A larger heat capacity mean
 
 Statistical mechanics determines equilibrium distributions and constrains the allowed transition rates. A microscopic interaction model is needed to calculate $G$ or $\tau_R$ quantitatively.
 
-## 5. A microscopic picture: energy carried by particles
+## 5. Timescale separation and an exactly solvable model
 
-A simple kinetic picture helps interpret the proportionality to a temperature difference. Imagine energy being exchanged across a contact by particles or molecular excitations. In thermal equilibrium, the mean energy carried by an individual carrier depends on temperature. For example, a classical ideal-gas molecule has mean translational kinetic energy $3k_BT/2$.
-
-If the rates of carriers arriving from the two sides are approximately equal and do not change much over a small temperature interval, the net energy flux is proportional to the difference in their mean carried energies. In this simplified situation,
+A single temperature for the whole body is justified when internal equilibration is much faster than energy exchange with the surroundings. Let $\tau_{\mathrm{int}}$ be a characteristic time for internal temperature gradients to relax, and let $\tau_{\mathrm{bath}}$ be the time over which the body exchanges an appreciable fraction of its thermal energy with the environment. The lumped-temperature approximation requires
 
 $$
-J_{\mathrm{net}}\propto
-\left(\frac{3}{2}k_BT\right)
--\left(\frac{3}{2}k_BT_{\mathrm{bath}}\right)
-\propto T-T_{\mathrm{bath}}.
+\tau_{\mathrm{int}}\ll \tau_{\mathrm{bath}}.
 $$
 
-This illustrates how a linear heat current can arise from microscopic energy statistics. It is an illustrative model, not a universal derivation for every material or cooling mechanism: actual transport depends on the carrier spectrum, collision rates, geometry, and the nature of the interface.
+If this separation fails, different parts of the body can have different temperatures and multiple thermal modes contribute. Even when internal equilibration is fast, a single exponential is not automatic: it also requires one slow mode to dominate or a dynamical model with one relevant relaxation time.
 
-More generally, near equilibrium, a small temperature difference is a small thermodynamic driving force. If the microscopic current responds smoothly to that force, its leading term is linear; higher-order corrections become important farther from equilibrium.
+### An exact two-level example
+
+Consider $N$ independent two-level units, each with ground-state energy $0$ and excited-state energy $\epsilon$. Each unit exchanges energy with a bath at fixed temperature $T_{\mathrm{bath}}$. Let $p(t)$ be the probability that one unit is excited. Suppose the bath induces upward and downward transitions with constant rates $w_+$ and $w_-$, respectively. The rate equation is
+
+$$
+\frac{dp}{dt}=w_+(1-p)-w_-p=-(w_++w_-)(p-p_{\mathrm{eq}}),
+$$
+
+where $p_{\mathrm{eq}}=w_+/(w_++w_-)$. Detailed balance requires
+
+$$
+\frac{w_+}{w_-}=e^{-\epsilon/(k_BT_{\mathrm{bath}})},
+$$
+
+so $p_{\mathrm{eq}}=[1+e^{\epsilon/(k_BT_{\mathrm{bath}})}]^{-1}$, the canonical excited-state probability. The mean energy is $U(t)=N\epsilon p(t)$, and therefore
+
+$$
+\boxed{\frac{dU}{dt}=-\frac{U-U_{\mathrm{bath}}}{\tau}},
+\qquad
+\tau=\frac{1}{w_++w_-},
+$$
+
+with $U_{\mathrm{bath}}=N\epsilon p_{\mathrm{eq}}$. This exponential is exact for this Markov model, not merely a near-equilibrium approximation. The rate depends on the transition rates; detailed balance fixes their ratio but not their overall scale. More complicated systems generally have several relaxation modes.
+
+### Why a linear heat current is plausible
+
+Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G.
 
 ## 6. Entropy production and the sign of the heat current
 
@@ -265,13 +285,46 @@ The simple exponential law is a useful approximation when:
 It may fail or need modification when:
 
 - the temperature difference is large, so the current is nonlinear in $T-T_{\mathrm{bath}}$;
-- radiation dominates, for which the net radiative power is often proportional to $T^4-T_{\mathrm{bath}}^4$, not directly to $T-T_{\mathrm{bath}}$;
+- internal temperature gradients are important, so the body cannot be treated as a single uniform-temperature lump. For a solid with thermal conductivity $k$, surface heat-transfer coefficient $h$, and characteristic length $L_c=V/A$, a common criterion is the Biot number $\mathrm{Bi}=hL_c/k\ll1$ (often taken as $\mathrm{Bi}<0.1$). This means internal conduction is fast compared with heat transfer at the surface;
+- radiation dominates. Unlike a phenomenological cooling coefficient, the ideal-blackbody $T^4$ law has a statistical-mechanical derivation: the Planck spectrum in [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md) follows from Bose statistics for photons (with $\mu=0$) and electromagnetic mode counting. Integrating that spectrum gives
+
+  $$
+  u_{\mathrm{rad}}(T)=aT^4,
+  \qquad
+  a=\frac{8\pi^5 k_B^4}{15h^3c^3},
+  $$
+
+  and isotropic angular averaging gives the outward flux $F=cu_{\mathrm{rad}}/4=\sigma T^4$, where $\sigma=ac/4$. For a blackbody exchanging radiation with a large blackbody environment, the net power is therefore $P_{\mathrm{net}}=\sigma A(T^4-T_{\mathrm{bath}}^4)$. A grey-body approximation introduces the additional material factor $\varepsilon$:
+
+  $$
+  P_{\mathrm{net}}\simeq\varepsilon\sigma A(T^4-T_{\mathrm{bath}}^4).
+  $$
+
+  Near $T_{\mathrm{bath}}$, write $T=T_{\mathrm{bath}}+\Delta T$ and linearize:
+
+  $$
+  T^4-T_{\mathrm{bath}}^4\simeq4T_{\mathrm{bath}}^3\Delta T.
+  $$
+
+  Energy balance, $C\,dT/dt=-P_{\mathrm{net}}$, then gives
+
+  $$
+  \boxed{\gamma_{\mathrm{rad}}=\frac{4\varepsilon\sigma A T_{\mathrm{bath}}^3}{C}}.
+  $$
+
+  Thus the $T^4$ dependence is derived from photon statistics and mode counting; the emissivity factor and the applicability of a single-temperature cooling model are additional physical assumptions.
 - the body's interior is not in local equilibrium and different regions have different temperatures;
 - several slow modes contribute, producing a sum of exponentials;
 - the environment itself warms or cools appreciably;
 - the microscopic dynamics have memory or are far from equilibrium.
 
-For example, if $C$ or $G$ depends strongly on temperature, the energy-balance equation is instead
+For example, consider $250\,\mathrm{mL}$ of coffee, approximated as $0.25\,\mathrm{kg}$ of water. Its heat capacity is about $C=mc_p\simeq1.05\times10^3\,\mathrm{J/K}$. If convection, conduction through the cup, radiation, and other losses together give an illustrative effective conductance $G_{\mathrm{eff}}\simeq1\,\mathrm{W/K}$ near room temperature, then
+
+$$
+\tau\simeq\frac{C}{G_{\mathrm{eff}}}\simeq1.05\times10^3\,\mathrm{s}\approx17\,\mathrm{min}.
+$$
+
+This is an order-of-magnitude illustration, not a universal coffee-cooling time: the effective conductance depends strongly on cup geometry, lid, airflow, evaporation, and temperature. If $C$ or the conductance depends strongly on temperature, the energy-balance equation is instead
 
 $$
 C(T)\frac{dT}{dt}=-\dot Q(T,T_{\mathrm{bath}}),
@@ -281,7 +334,7 @@ which need not have an exponential solution.
 
 ## 8. Summary
 
-From a statistical-mechanical viewpoint, Newton's law of cooling is a **near-equilibrium relaxation law**. The reservoir fixes the equilibrium distribution; detailed balance makes that distribution stationary; perturbations relax through decaying modes. If one mode dominates, the mean-energy deviation decays exponentially. With approximately constant heat capacity, this gives
+From a statistical-mechanical viewpoint, the strongest general conclusions are the **equilibrium fixed point**, the preferred direction of net energy transfer, and the linear leading response near equilibrium. Detailed balance makes the bath's equilibrium distribution stationary, but it does not determine the relaxation rate. Exponential cooling follows when a single relaxation mode dominates; the two-level model above demonstrates one exact case. With approximately constant heat capacity, this gives
 
 $$
 \boxed{\frac{dT}{dt}
@@ -304,7 +357,10 @@ Equivalently, a linear-response heat current $J=G(T-T_{\mathrm{bath}})$ combined
 3. Why does a general master equation produce a sum of decaying modes rather than necessarily one exponential?
 4. Derive Newton's cooling equation from $J=G(T-T_{\mathrm{bath}})$ and $dU/dt=-J$.
 5. Explain why a larger heat capacity slows cooling if the conductance stays fixed.
-6. Give two physical situations in which Newton's simple exponential law is not expected to hold.
+6. Why must internal equilibration be faster than bath exchange for the lumped-body model to apply, and how does the Biot number express this condition?
+7. Derive the exact relaxation time of the two-level model and explain why detailed balance does not fix its numerical value.
+8. Linearize $T^4-T_{\mathrm{bath}}^4$ near the bath temperature and obtain the radiative relaxation rate.
+9. Give two physical situations in which Newton's simple exponential law is not expected to hold.
 
 ---
 
