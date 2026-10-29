@@ -12,6 +12,8 @@ This section contains original supplementary chapters on concepts in statistical
 - [Partition Function as a Generator of Thermodynamics](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the partition function.
 - [Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
 - [Two-Level System and Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive level occupations, internal energy, and the characteristic heat-capacity peak.
+- [Indicator Functions in Statistical Mechanics](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
+- [Markov Processes in Statistical Mechanics](markov_processes_statmech.md) — introduce Markov chains, transition rates, the master equation, stationary distributions, detailed balance, and thermal relaxation.
 - [Maxwell–Boltzmann Statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann Speed Distribution](maxwell_boltzmann_speed_distribution.md) — derive molecular speed distributions and characteristic speeds from the thermal velocity distribution.
 - [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution for bosons from state counting and entropy maximization.
