@@ -1,34 +1,42 @@
-# Miscellaneous Topics
+# Statistical Mechanics: Principles and Applications
 
-This section contains original supplementary chapters on concepts in statistical mechanics. These are independent study resources, not transcripts of any particular lecture series.
+This is a developing book of self-contained chapters on the concepts, methods, and applications of statistical mechanics. The organization is thematic rather than tied to a particular lecture series. Part and chapter numbers are intentionally omitted so the structure can evolve as the book grows.
 
-## Reference
+## How the book is organized
 
-- [Notation and Symbols](notation_and_symbols.md) — a glossary of common symbols, ensemble conventions, and sign choices used across the supplementary chapters.
+### Part I — Foundations and Ensembles
 
-## Chapters
-
-- [Temperature](temperature_from_statistical_mechanics.md) — define temperature through entropy, energy exchange, and equilibrium; connect the microcanonical and canonical descriptions.
-- [Partition Function as a Generator of Thermodynamics](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the partition function.
+- [Notation and Symbols](notation_and_symbols.md) — a reference for common symbols, ensemble conventions, and sign choices.
+- [Indicator Functions](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
+- [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md) — define temperature through entropy, energy exchange, and equilibrium; connect the microcanonical and canonical descriptions.
+- [Partition Function and Thermodynamic Potentials](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the partition function.
 - [Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
-- [Two-Level System and Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive level occupations, internal energy, and the characteristic heat-capacity peak.
-- [Indicator Functions in Statistical Mechanics](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
-- [Markov Processes in Statistical Mechanics](markov_processes_statmech.md) — introduce Markov chains, transition rates, the master equation, stationary distributions, detailed balance, and thermal relaxation.
+- [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive level occupations, internal energy, and the characteristic heat-capacity peak.
+
+### Part II — Classical and Quantum Statistics
+
+- [Equipartition of Energy](equipartition_of_energy.md) — derive the classical quadratic theorem and its generalization to power-law energy terms.
 - [Maxwell–Boltzmann Statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann Speed Distribution](maxwell_boltzmann_speed_distribution.md) — derive molecular speed distributions and characteristic speeds from the thermal velocity distribution.
 - [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution for bosons from state counting and entropy maximization.
 - [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md) — derive the occupation distribution for fermions from state counting and entropy maximization.
+
+### Part III — Applications to Matter and Radiation
+
 - [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md) — derive the thermal radiation spectrum from electromagnetic mode counting and Bose–Einstein occupation.
-- [Equipartition of Energy](equipartition_of_energy.md) — derive the classical quadratic theorem and its generalization to power-law energy terms.
 - [Paramagnetism](paramagnetism_canonical_ensemble.md) — derive magnetization, Curie's law, internal energy, and heat capacity for independent magnetic moments.
 - [Ising Model and Ferromagnetism](ising_model_ferromagnetism.md) — extend independent spins to interacting spins, mean-field theory, and spontaneous magnetic order.
 - [Einstein Model of a Solid](einstein_model_of_a_solid.md) — derive vibrational thermodynamics and quantum heat capacity; identify the low-temperature limitation.
 - [Debye Model of a Solid](debye_model_of_a_solid.md) — derive the phonon density of states and heat capacity, including the low-temperature cubic law.
-- [Newton's Law of Cooling](newtons_law_of_cooling_statmech.md) — derive exponential cooling from near-equilibrium energy relaxation, detailed balance, and linear response.
+
+### Part IV — Stochastic Processes and Relaxation
+
+- [Markov Processes](markov_processes_statmech.md) — introduce Markov chains, transition rates, the master equation, stationary distributions, detailed balance, and thermal relaxation.
+- [Newton's Law of Cooling](newtons_law_of_cooling_statmech.md) — connect near-equilibrium energy relaxation, detailed balance, linear response, and the cooling law.
 
 ## Sources and limitations
 
-These chapters are original study notes and are not transcripts of a particular textbook or lecture. Their derivations are intended to make assumptions and intermediate steps explicit, but they are not a substitute for checking a result against a standard reference or the conventions used in a particular course.
+These chapters are original study notes, not transcripts of a particular textbook or lecture. Their derivations aim to make assumptions and intermediate steps explicit, but they are not a substitute for checking a result against a standard reference or the conventions used in a particular course.
 
 Useful references for cross-checking include:
 
