@@ -56,10 +56,10 @@ For ordinary positive-temperature systems, entropy increases with energy. A stee
 
 ### A familiar example: the ideal gas
 
-For a classical monatomic ideal gas, the accessible phase-space volume scales with energy as $\Omega(E)\propto E^{3N/2}$, with volume and particle number held fixed. Thus
+For a classical monatomic ideal gas, the cumulative accessible phase-space volume scales as $\Phi(E)\propto E^{3N/2}$, with volume and particle number held fixed. If $\Omega(E)$ instead denotes the number of states in a narrow shell of width $\Delta E$, then $\Omega(E)\propto E^{3N/2-1}\Delta E$ (up to constants). The difference is one power of $E$; for large $N$ the distinction is often negligible at leading extensive order, but the definitions should not be mixed. Thus
 
 $$
-S(E)=k_B\ln\Omega(E)
+S(E)=k_B\ln\Phi(E)
 =\text{constant}+\frac{3N}{2}k_B\ln E.
 $$
 
@@ -136,13 +136,20 @@ $$
 p_i\propto\Omega_R(E_{\mathrm{tot}}-E_i).
 $$
 
-Since $S_R=k_B\ln\Omega_R$, expanding the reservoir entropy for a small change in its energy gives
-
+Since $S_R=k_B\ln\Omega_R$, expanding the reservoir entropy about its large equilibrium energy gives
+$$
+S_R(E_{\mathrm{tot}}-E_i)
+=S_R(E_{\mathrm{tot}})
+-E_i\left(\frac{\partial S_R}{\partial E_R}\right)
++\frac{E_i^2}{2}\left(\frac{\partial^2 S_R}{\partial E_R^2}\right)+\cdots.
+$$
+Keeping only the first-order term gives
 $$
 \ln\Omega_R(E_{\mathrm{tot}}-E_i)
 \approx\text{constant}
 -\frac{E_i}{k_B}\left(\frac{\partial S_R}{\partial E_R}\right).
 $$
+Why can the quadratic term usually be neglected? For a macroscopic reservoir, entropy is extensive, $S_R=N_Rs(E_R/N_R)$, so $\partial^2S_R/\partial E_R^2$ scales as $1/N_R$. When the small system's energy remains finite as the reservoir size grows, the quadratic correction vanishes relative to the linear term. The same large-reservoir reasoning underlies the grand-canonical expansion, where first derivatives with respect to energy and particle number produce $1/T$ and $-\mu/T$.
 
 Using $\partial S_R/\partial E_R=1/T$, the probability becomes
 

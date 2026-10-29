@@ -10,7 +10,9 @@ This page collects the notation used across the supplementary statistical-mechan
 | $S$ | Entropy | For a uniform set of $\Omega$ accessible states, $S=k_B\ln\Omega$. |
 | $T$ | Absolute temperature | Thermodynamic temperature, measured in kelvin. |
 | $k_B$ | Boltzmann constant | Converts temperature to an energy scale. |
-| $p_i$ | Probability of microstate $i$ | Probabilities obey $\sum_i p_i=1$. |
+| $p_i$ | Probability of microstate $i$ | Probabilities obey $\sum_i p_i=1$; un-subscripted $p$ commonly denotes pressure. |
+| $p$ | Pressure | For an ideal gas, $pV=Nk_BT$ (or $pV=\langle N\rangle k_BT$ in the grand canonical ensemble). |
+| $\Delta$ | Energy gap | Used for a two-level system; symbols such as $\epsilon$ may be used in other chapters. |
 | $\Omega$ | Multiplicity | Number of accessible microstates in a specified macrostate or energy range. |
 | $V$ | Volume | Held fixed in derivatives marked with a subscript $V$. |
 | $N$ | Particle or atom number | The meaning depends on the model. |
@@ -23,7 +25,7 @@ This page collects the notation used across the supplementary statistical-mechan
 | $Z$ | Canonical partition function | $Z=\sum_i e^{-\beta E_i}$ for discrete energy levels, including degeneracies if states are summed individually. |
 | $\Xi$ | Grand partition function | Commonly $\Xi=\sum_N e^{\beta\mu N}Z_N$. |
 | $\beta$ | Inverse thermal energy | $\beta=1/(k_BT)$ for conventional positive-temperature equilibrium. |
-| $\mu$ | Chemical potential | Controls particle exchange in the grand canonical ensemble. |
+| $\mu$ | Chemical potential | In grand-canonical formulas it controls particle exchange; in magnetic models the same symbol may denote magnetic moment, so follow the chapter's definition. |
 | $F$ | Helmholtz free energy | $F=-k_BT\ln Z$. |
 | $G$ | Gibbs free energy | Commonly $G=U+PV-TS$ for a simple compressible system. |
 | $\Phi_G$ or $\Omega_G$ | Grand potential | Often $-k_BT\ln\Xi$; the symbol $\Omega$ is also used for multiplicity elsewhere. |

@@ -179,13 +179,17 @@ $$
 \boxed{C_{V,\max}\approx0.439\,k_B.}
 $$
 
+![Schottky heat capacity versus temperature for non-degenerate and degenerate two-level systems](images/schottky_heat_capacity.svg)
+
+The left panel shows the peak for equal degeneracies; the right panel compares several ratios $r=g_1/g_0$. The peak shifts to lower temperature and grows taller as the excited-level degeneracy increases.
+
 This finite peak is called the **Schottky anomaly**. It occurs because the excited-state population changes most rapidly over a temperature range comparable to the energy gap.
 
 ## 6. Magnetic two-level systems
 
 A magnetic moment in an applied magnetic field provides a physical realization of the model. For a spin-$1/2$ magnetic moment with two field-dependent energies separated by $\Delta$, the partition function has the same two-term form after choosing the lower energy as the zero.
 
-The energy and heat capacity therefore follow the expressions above, with the gap determined by the field. In a simple Zeeman model, the splitting is proportional to the field magnitude, so the location of the heat-capacity peak shifts with field strength.
+The energy and heat capacity therefore follow the expressions above, with the gap determined by the field. In a simple Zeeman model, the splitting is proportional to the field magnitude, so the location of the heat-capacity peak shifts with field strength. For magnetic measurements, the relevant heat capacity is often written $C_B$ to emphasize that the field $B$ is held fixed during the temperature derivative; if the field changes, the gap and the thermodynamic path change too.
 
 The same framework also explains why a collection of independent magnetic moments can have a heat capacity distinct from the lattice contribution. In real materials, interactions, distributions of energy gaps, and coupling to other degrees of freedom may broaden or alter the ideal two-level peak.
 
@@ -206,7 +210,27 @@ P_1=\frac{g_1e^{-\beta\Delta}}
 }
 $$
 
-The mean energy is $U=\Delta P_1$. The degeneracy ratio changes the temperature at which the levels have comparable total probabilities, and hence shifts the heat-capacity peak. The simple numerical peak values above apply only to the non-degenerate case $g_0=g_1=1$.
+The mean energy is $U=\Delta P_1$. The degeneracy ratio changes the temperature at which the levels have comparable total probabilities, and hence shifts the heat-capacity peak. Writing $r=g_1/g_0$, a numerical maximization gives the following illustrative values:
+
+| $r$ | $x_* = \Delta/(k_BT_{\mathrm{peak}})$ | $C_{V,\max}/k_B$ |
+|---:|---:|---:|
+| 0.5 | 2.23 | 0.241 |
+| 1 | 2.40 | 0.439 |
+| 2 | 2.65 | 0.762 |
+| 3 | 2.84 | 1.023 |
+
+Since $T_{\mathrm{peak}}=\Delta/(k_Bx_*)$, increasing $r$ lowers the peak temperature and raises its height. The peak height is therefore not universal once degeneracies differ.
+
+The entropy change between the low- and high-temperature limits is also a useful check. At low temperature, only the $g_0$ ground states are populated, so $S(0)=k_B\ln g_0$. At high temperature, both levels are populated according to their degeneracies, giving $S(\infty)=k_B\ln(g_0+g_1)$. Thus
+$$
+\boxed{S(\infty)-S(0)=k_B\ln\left(1+\frac{g_1}{g_0}\right).}
+$$
+Because $dS=C_V\,dT/T$ in equilibrium at fixed external conditions,
+$$
+\boxed{\int_0^\infty \frac{C_V(T)}{T}\,dT
+=k_B\ln\left(1+\frac{g_1}{g_0}\right).}
+$$
+For a non-degenerate pair this is $k_B\ln 2$, the entropy recovered as the two levels become thermally accessible. This integral is a useful experimental consistency check on a Schottky heat-capacity peak.
 
 ## 8. Assumptions and limitations
 

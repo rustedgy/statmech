@@ -263,8 +263,6 @@ $$
 
 Relative fluctuations become negligible for large systems, explaining why ensembles often agree on bulk observables in the thermodynamic limit, except near critical points or other regimes with anomalously large fluctuations.
 
-A surface with $M$ independent sites, each empty or occupied, is the basic Langmuir adsorption model. The site-occupancy expression below yields the Langmuir isotherm when adsorbate chemical potential is related to gas pressure; interactions between adsorbed particles require a richer model.
-
 ## 7. An independent site that can be empty or occupied
 
 Consider one site that can either be empty, with energy zero and particle number zero, or occupied by one particle of energy $\epsilon$. The two statistical weights are $1$ and $e^{-\beta(\epsilon-\mu)}$. Therefore,
@@ -302,6 +300,33 @@ $$
 This has the same mathematical form as the Fermi–Dirac occupation factor. The example illustrates how the chemical potential controls the likelihood that a state is occupied. The model assumes at most one particle per site and does not, by itself, describe interactions between sites.
 
 The single-state grand-partition method also leads directly to the Bose–Einstein and Fermi–Dirac occupation laws: sum the allowed particle-number weights for each state, then calculate its mean occupation. See [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) and [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md).
+
+### Bosonic orbital
+
+For a bosonic orbital of energy $\epsilon$, any occupation $n=0,1,2,\ldots$ is allowed. Writing $q=e^{-\beta(\epsilon-\mu)}$, its grand-partition sum is a geometric series:
+$$
+\Xi_1=\sum_{n=0}^{\infty}q^n
+=\frac{1}{1-e^{-\beta(\epsilon-\mu)}}.
+$$
+The series converges only when $q<1$, or $\mu<\epsilon$. Differentiating the logarithm of this single-orbital partition function, or summing $nq^n$, gives
+$$
+\boxed{\langle n\rangle
+=\frac{1}{e^{\beta(\epsilon-\mu)}-1}.}
+$$
+This is the Bose–Einstein mean occupation factor. In contrast to a fermionic orbital, a bosonic orbital can hold arbitrarily many particles, subject to the convergence condition.
+
+### Langmuir adsorption isotherm
+
+Now consider $M$ independent adsorption sites that can each be empty or occupied. If the occupied site's energy is $\epsilon$, its mean occupancy is
+$$
+\theta=\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
+$$
+For a dilute classical gas above the surface, $n=p/(k_BT)$ and $z=e^{\beta\mu}=n\lambda_T^3$, so $z=p\lambda_T^3/(k_BT)$. Substitution gives
+$$
+\boxed{\theta=\frac{p}{p+p_0(T)},\qquad
+p_0(T)=\frac{k_BT}{\lambda_T^3}e^{\beta\epsilon}.}
+$$
+This is the Langmuir form: occupancy rises with gas pressure and approaches one at high pressure. The expression assumes independent sites, no lateral interactions, and equilibrium between the gas and adsorbed particles.
 
 ## 8. Comparing ensembles
 
