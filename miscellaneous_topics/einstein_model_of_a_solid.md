@@ -104,6 +104,12 @@ There are two contributions:
 
 The zero-point term is independent of temperature, so it does not contribute to the heat capacity.
 
+The factor
+\[
+\bar n(x)=\frac{1}{e^x-1}
+\]
+is the **Bose–Einstein mean occupation** for a bosonic mode with zero chemical potential. It is the same occupation factor used for photons in the blackbody-radiation discussion and derived more generally in [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) and [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md). The physical quanta here are lattice vibrations (phonons), not photons; the shared factor arises because each harmonic mode has bosonic excitation levels. Einstein's 1907 model was an early application of quantum ideas to the heat capacity of solids, with all vibrational modes approximated by one frequency.
+
 ## 5. Heat capacity at constant volume
 
 The constant-volume heat capacity is
@@ -161,7 +167,15 @@ $$
 \boxed{C_{V,m}\longrightarrow 3R.}
 $$
 
-This is the Dulong–Petit law. In this limit, the spacing between adjacent quantum levels is small compared with $k_BT$, so many levels are thermally populated and the classical result is recovered.
+This is the **Dulong–Petit law**, which is the classical equipartition result for a harmonic solid. There are $3N$ oscillators, one for each of the three displacement directions of each atom. Each harmonic oscillator has one quadratic kinetic-energy term and one quadratic potential-energy term; equipartition assigns $\tfrac12 k_BT$ to each, for a total mean energy $k_BT$ per oscillator. Hence $U\simeq(3N)k_BT$ and $C_V\simeq3Nk_B$, or $C_{V,m}\simeq3R$ for one mole. At high temperature, the spacing between adjacent quantum levels is small compared with $k_BT$, so many levels are thermally populated and the classical result is recovered.
+
+### Heat-capacity curve and the diamond example
+
+The dimensionless curve is universal in the Einstein model when heat capacity is measured in units of $R$ and temperature in units of $\theta_E$:
+
+![Einstein-model molar heat capacity as a function of reduced temperature, with the Dulong–Petit limit and a room-temperature diamond marker.](images/einstein_heat_capacity.svg)
+
+For diamond, an Einstein temperature of order $10^3\,\mathrm K$ (a representative value is about $1.3\times10^3\,\mathrm K$) is much higher than room temperature. At $T\simeq300\,\mathrm K$, this gives $T/\theta_E\simeq0.23$, where the Einstein curve is still well below $3R$. The model therefore explains qualitatively why diamond's heat capacity at room temperature is far below the Dulong–Petit limit. The precise heat capacity of diamond is better described by a spectrum of vibrational modes, as in the [Debye model](debye_model_of_a_solid.md).
 
 ## 7. Low-temperature limit: quantum freezing out of vibrations
 
@@ -190,7 +204,9 @@ The Einstein model explains why the heat capacity of a solid falls below the Dul
 
 Its main limitation is the assumption that every vibrational mode has the same frequency. Real crystals have a spectrum of vibrational frequencies, including low-frequency collective modes. The Einstein model therefore predicts an exponential low-temperature heat capacity, whereas many crystalline solids exhibit a $T^3$ law at sufficiently low temperature.
 
-The **Debye model** improves on this by treating vibrations as a spectrum of modes with a distribution of frequencies. Its low-frequency modes produce the observed $C_V\propto T^3$ behaviour for an ordinary three-dimensional insulating crystal at low temperature.
+The **[Debye model](debye_model_of_a_solid.md)** improves on this by treating vibrations as a spectrum of modes with a distribution of frequencies. Its low-frequency modes produce the observed $C_V\propto T^3$ behaviour for an ordinary three-dimensional insulating crystal at low temperature.
+
+In a metal, the total low-temperature heat capacity can also contain an **electronic contribution proportional to $T$**, in addition to the lattice contribution. This linear term comes from fermions near the Fermi energy and is discussed in [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md). It is distinct from the Einstein phonon contribution, which is exponentially suppressed at sufficiently low temperature.
 
 ## 9. Summary of the derivation
 
