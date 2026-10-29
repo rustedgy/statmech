@@ -175,9 +175,9 @@ $$
 
 The maximum heat capacity per two-level unit is approximately
 
-$
+$$
 \boxed{C_{V,\max}\approx0.439\,k_B.}
-$
+$$
 
 ![Schottky heat capacity versus temperature for non-degenerate and degenerate two-level systems](images/schottky_heat_capacity.svg)
 
@@ -222,14 +222,14 @@ The mean energy is $U=\Delta P_1$. The degeneracy ratio changes the temperature 
 Since $T_{\mathrm{peak}}=\Delta/(k_Bx_*)$, increasing $r$ lowers the peak temperature and raises its height. The peak height is therefore not universal once degeneracies differ.
 
 The entropy change between the low- and high-temperature limits is also a useful check. At low temperature, only the $g_0$ ground states are populated, so $S(0)=k_B\ln g_0$. At high temperature, both levels are populated according to their degeneracies, giving $S(\infty)=k_B\ln(g_0+g_1)$. Thus
-$
+$$
 \boxed{S(\infty)-S(0)=k_B\ln\left(1+\frac{g_1}{g_0}\right).}
-$
+$$
 Because $dS=C_V\,dT/T$ in equilibrium at fixed external conditions,
-$
+$$
 \boxed{\int_0^\infty \frac{C_V(T)}{T}\,dT
 =k_B\ln\left(1+\frac{g_1}{g_0}\right).}
-$
+$$
 For a non-degenerate pair this is $k_B\ln 2$, the entropy recovered as the two levels become thermally accessible. This integral is a useful experimental consistency check on a Schottky heat-capacity peak.
 
 ## 8. Assumptions and limitations
