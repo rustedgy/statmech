@@ -1,39 +1,46 @@
-site_name: Statistical Mechanics — Lecture Notes
-site_description: Searchable lecture notes for statistical mechanics
+site_name: "Statistical Mechanics: Principles and Applications"
+site_description: "A developing, unnumbered book on statistical mechanics, alongside lecture notes"
 site_url: https://rustedgy.github.io/statmech/
 docs_dir: .mkdocs-docs
 site_dir: /tmp/statmech-site
 
 nav:
   - Home: index.md
-  - John Preskill:
-      - Overview: john_preskill/index.md
-      - Lecture 1: john_preskill/statistical_mechanics_lecture_1_notes.md
-  - Leonard Susskind:
-      - Overview: leonard_susskind/index.md
-      - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
-      - Lecture 2 — topic-based: leonard_susskind/statistical_mechanics_lecture_2_notes.md
-      - Lecture 2 — transcript-based: leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
-      - Lecture 3: leonard_susskind/statistical_mechanics_lecture_3_notes.md
-      - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
-  - Miscellaneous Topics:
+  - "Book — Statistical Mechanics: Principles and Applications":
       - Overview: miscellaneous_topics/index.md
-      - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
-      - Temperature: miscellaneous_topics/temperature_from_statistical_mechanics.md
-      - Partition Function as a Generator of Thermodynamics: miscellaneous_topics/partition_function_thermodynamics_generator.md
-      - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
-      - Two-Level System and Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
-      - Maxwell–Boltzmann Statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
-      - Maxwell–Boltzmann Speed Distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
-      - Bose–Einstein Statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
-      - Fermi–Dirac Statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
-      - Blackbody Radiation and Planck's Law: miscellaneous_topics/blackbody_radiation_planck_law.md
-      - Equipartition of Energy: miscellaneous_topics/equipartition_of_energy.md
-      - Paramagnetism: miscellaneous_topics/paramagnetism_canonical_ensemble.md
-      - Ising Model and Ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
-      - Einstein Model of a Solid: miscellaneous_topics/einstein_model_of_a_solid.md
-      - Debye Model of a Solid: miscellaneous_topics/debye_model_of_a_solid.md
-      - Newton's Law of Cooling: miscellaneous_topics/newtons_law_of_cooling_statmech.md
+      - Part I — Foundations and Ensembles:
+          - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
+          - Indicator Functions: miscellaneous_topics/indicator_functions_statmech.md
+          - Temperature and Thermal Equilibrium: miscellaneous_topics/temperature_from_statistical_mechanics.md
+          - Partition Function and Thermodynamic Potentials: miscellaneous_topics/partition_function_thermodynamics_generator.md
+          - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
+          - Two-Level Systems and the Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
+      - Part II — Classical and Quantum Statistics:
+          - Equipartition of Energy: miscellaneous_topics/equipartition_of_energy.md
+          - Maxwell–Boltzmann Statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
+          - Maxwell–Boltzmann Speed Distribution: miscellaneous_topics/maxwell_boltzmann_speed_distribution.md
+          - Bose–Einstein Statistics: miscellaneous_topics/bose_einstein_statistics_derivation.md
+          - Fermi–Dirac Statistics: miscellaneous_topics/fermi_dirac_statistics_derivation.md
+      - Part III — Applications to Matter and Radiation:
+          - Blackbody Radiation and Planck's Law: miscellaneous_topics/blackbody_radiation_planck_law.md
+          - Paramagnetism: miscellaneous_topics/paramagnetism_canonical_ensemble.md
+          - Ising Model and Ferromagnetism: miscellaneous_topics/ising_model_ferromagnetism.md
+          - Einstein Model of a Solid: miscellaneous_topics/einstein_model_of_a_solid.md
+          - Debye Model of a Solid: miscellaneous_topics/debye_model_of_a_solid.md
+      - Part IV — Stochastic Processes and Relaxation:
+          - Markov Processes: miscellaneous_topics/markov_processes_statmech.md
+          - Newton's Law of Cooling: miscellaneous_topics/newtons_law_of_cooling_statmech.md
+  - Lecture Notes:
+      - John Preskill:
+          - Overview: john_preskill/index.md
+          - Lecture 1: john_preskill/statistical_mechanics_lecture_1_notes.md
+      - Leonard Susskind:
+          - Overview: leonard_susskind/index.md
+          - Lecture 1: leonard_susskind/statistical_mechanics_lecture_1_notes.md
+          - Lecture 2 — topic-based: leonard_susskind/statistical_mechanics_lecture_2_notes.md
+          - Lecture 2 — transcript-based: leonard_susskind/statistical_mechanics_lecture_2_transcript_based_notes.md
+          - Lecture 3: leonard_susskind/statistical_mechanics_lecture_3_notes.md
+          - Lecture 4: leonard_susskind/statistical_mechanics_lecture_4_notes.md
 theme:
   name: material
   features:
