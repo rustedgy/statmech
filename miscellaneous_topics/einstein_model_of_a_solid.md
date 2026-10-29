@@ -206,7 +206,7 @@ Its main limitation is the assumption that every vibrational mode has the same f
 
 The **[Debye model](debye_model_of_a_solid.md)** improves on this by treating vibrations as a spectrum of modes with a distribution of frequencies. Its low-frequency modes produce the observed $C_V\propto T^3$ behaviour for an ordinary three-dimensional insulating crystal at low temperature.
 
-In a metal, the total low-temperature heat capacity can also contain an **electronic contribution proportional to $T$**, in addition to the lattice contribution. This linear term comes from fermions near the Fermi energy and is discussed in [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md). It is distinct from the Einstein phonon contribution, which is exponentially suppressed at sufficiently low temperature.
+In a metal, the total low-temperature heat capacity can also contain an **electronic contribution proportional to $T$**, in addition to the lattice contribution. This linear term comes from fermions near the Fermi energy and is discussed in [Fermi–Dirac Statistics, especially the low-temperature electronic heat-capacity section](fermi_dirac_statistics_derivation.md#98-only-a-small-fraction-of-electrons-contribute-to-low-temperature-heat-capacity). It is distinct from the Einstein phonon contribution, which is exponentially suppressed at sufficiently low temperature.
 
 ## 9. Summary of the derivation
 
