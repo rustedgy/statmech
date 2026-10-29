@@ -21,12 +21,12 @@ $$
 The partition function is therefore both a normalization constant for probabilities and a compact generator of equilibrium thermodynamics.
 
 For two independent subsystems $A$ and $B$, the joint energy is $E_{ab}=E_a+E_b$. Their partition function factorizes:
-$
+$$
 Z_{AB}=\sum_{a,b}e^{-\beta(E_a+E_b)}
 =\left(\sum_a e^{-\beta E_a}\right)
 \left(\sum_b e^{-\beta E_b}\right)
 =Z_AZ_B.
-$
+$$
 Consequently, $\ln Z_{AB}=\ln Z_A+\ln Z_B$. This multiplicative rule is the reason partition functions of independent particles or independent local degrees of freedom often take a power such as $Z^N$. For identical classical particles, the additional factor $1/N!$ corrects for indistinguishability; it is not a replacement for the independence factorization.
 
 ## 2. Internal energy from the partition function
@@ -149,18 +149,18 @@ C_V=-k_B\beta^2\frac{\partial U}{\partial\beta}.
 $$
 
 Differentiate the canonical mean energy. Since
-$
+$$
 \frac{\partial\ln Z}{\partial\beta}=-\langle E\rangle,
-$
+$$
 a second derivative gives
-$
+$$
 \begin{aligned}
 \frac{\partial^2\ln Z}{\partial\beta^2}
 &= -\frac{\partial\langle E\rangle}{\partial\beta}\\
 &=\langle E^2\rangle-\langle E\rangle^2
 =\operatorname{Var}(E).
 \end{aligned}
-$
+$$
 Thus $\partial U/\partial\beta=-\operatorname{Var}(E)$. Because a variance cannot be negative, this canonical relation also shows that $C_V\geq0$ when the energy levels are independent of temperature and the derivative is taken at fixed $V,N$.
 
 Therefore,
