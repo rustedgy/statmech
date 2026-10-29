@@ -175,9 +175,13 @@ $$
 
 The maximum heat capacity per two-level unit is approximately
 
-$$
+$
 \boxed{C_{V,\max}\approx0.439\,k_B.}
-$$
+$
+
+![Schottky heat capacity versus temperature for non-degenerate and degenerate two-level systems](images/schottky_heat_capacity.svg)
+
+The left panel shows the peak for equal degeneracies; the right panel compares several ratios $r=g_1/g_0$. The peak shifts to lower temperature and grows taller as the excited-level degeneracy increases.
 
 This finite peak is called the **Schottky anomaly**. It occurs because the excited-state population changes most rapidly over a temperature range comparable to the energy gap.
 
