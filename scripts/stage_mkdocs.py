@@ -179,7 +179,8 @@ def main() -> None:
         "",
     ]
     for book in books:
-        lines.append(f"### [{display_name(book)}]({book}/index.md)")
+        book_title = "Statistical Mechanics: Principles and Applications" if book == "miscellaneous_topics" else display_name(book)
+        lines.append(f"### [{book_title}]({book}/index.md)")
         lines.append("")
         staged_book = DOCS / book
         links = lecture_links_for_book(staged_book, staged_book)
