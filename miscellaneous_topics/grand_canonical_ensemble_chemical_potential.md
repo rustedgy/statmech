@@ -304,28 +304,28 @@ The single-state grand-partition method also leads directly to the Bose–Einste
 ### Bosonic orbital
 
 For a bosonic orbital of energy $\epsilon$, any occupation $n=0,1,2,\ldots$ is allowed. Writing $q=e^{-\beta(\epsilon-\mu)}$, its grand-partition sum is a geometric series:
-$
+$$
 \Xi_1=\sum_{n=0}^{\infty}q^n
 =\frac{1}{1-e^{-\beta(\epsilon-\mu)}}.
-$
+$$
 The series converges only when $q<1$, or $\mu<\epsilon$. Differentiating the logarithm of this single-orbital partition function, or summing $nq^n$, gives
-$
+$$
 \boxed{\langle n\rangle
 =\frac{1}{e^{\beta(\epsilon-\mu)}-1}.}
-$
+$$
 This is the Bose–Einstein mean occupation factor. In contrast to a fermionic orbital, a bosonic orbital can hold arbitrarily many particles, subject to the convergence condition.
 
 ### Langmuir adsorption isotherm
 
 Now consider $M$ independent adsorption sites that can each be empty or occupied. If the occupied site's energy is $\epsilon$, its mean occupancy is
-$
+$$
 \theta=\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
-$
+$$
 For a dilute classical gas above the surface, $n=p/(k_BT)$ and $z=e^{\beta\mu}=n\lambda_T^3$, so $z=p\lambda_T^3/(k_BT)$. Substitution gives
-$
+$$
 \boxed{\theta=\frac{p}{p+p_0(T)},\qquad
 p_0(T)=\frac{k_BT}{\lambda_T^3}e^{\beta\epsilon}.}
-$
+$$
 This is the Langmuir form: occupancy rises with gas pressure and approaches one at high pressure. The expression assumes independent sites, no lateral interactions, and equilibrium between the gas and adsorbed particles.
 
 ## 8. Comparing ensembles
