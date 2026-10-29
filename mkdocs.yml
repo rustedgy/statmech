@@ -45,6 +45,7 @@ theme:
   name: material
   features:
     - navigation.sections
+    - navigation.expand
     - navigation.indexes
     - navigation.top
     - toc.follow
