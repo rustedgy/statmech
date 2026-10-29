@@ -237,8 +237,8 @@ def main() -> None:
         "These are study notes, not a substitute for the original lectures. Each "
         "collection overview describes its sources and known limitations.",
         "",
-        "Math is rendered with MathJax. Use single-dollar delimiters ($...$) for inline "
-        "math and standalone double-dollar delimiters ($...$) for display equations.",
+        "Math is rendered with MathJax. Use single-dollar delimiters (`$...$`) for inline "
+        "math and standalone double-dollar delimiters (`$$...$$`) for display equations.",
         "",
         "## Source repository",
         "",

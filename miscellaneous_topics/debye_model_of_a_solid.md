@@ -151,7 +151,7 @@ This is the Dulong–Petit law, also obtained from classical equipartition: each
 | Low-temperature heat capacity | Exponentially suppressed | $C_V\propto T^3$ |
 | High-temperature limit | $3Nk_B$ | $3Nk_B$ |
 | Main strength | Simple quantum model; useful for optical modes | Captures low-frequency acoustic modes in crystals |
-| Main limitation | Misses the acoustic spectrum and cubic low-(T$ law | Approximate continuum spectrum and cutoff; not a full crystal-dynamics calculation |
+| Main limitation | Misses the acoustic spectrum and the low-temperature $T^3$ law | Approximate continuum spectrum and cutoff; not a full crystal-dynamics calculation |
 
 The models are complementary approximations rather than mutually exclusive theories. Einstein-like oscillators can be useful for localized or optical vibrations, while Debye physics is especially important for low-frequency acoustic modes.
 

@@ -234,7 +234,7 @@ with $U_{\mathrm{bath}}=N\epsilon p_{\mathrm{eq}}$. This exponential is exact fo
 
 ### Why a linear heat current is plausible
 
-Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G.
+Near equilibrium, a small temperature difference is a small thermodynamic driving force. If the heat current is a smooth function of the two temperatures and vanishes when they are equal, its leading expansion has the form $J=G(T-T_{\mathrm{bath}})$, with $G>0$ for passive heat transfer. Higher-order terms matter farther from equilibrium. This is a linear-response statement; it is not justified by assuming that carrier arrival rates are temperature-independent. In kinetic transport, both the energy distribution of carriers and their arrival rates can vary with temperature, and both contribute to the conductance $G$.
 
 ## 6. Entropy production and the sign of the heat current
 
