@@ -20,6 +20,15 @@ $$
 
 The partition function is therefore both a normalization constant for probabilities and a compact generator of equilibrium thermodynamics.
 
+For two independent subsystems $A$ and $B$, the joint energy is $E_{ab}=E_a+E_b$. Their partition function factorizes:
+$
+Z_{AB}=\sum_{a,b}e^{-\beta(E_a+E_b)}
+=\left(\sum_a e^{-\beta E_a}\right)
+\left(\sum_b e^{-\beta E_b}\right)
+=Z_AZ_B.
+$
+Consequently, $\ln Z_{AB}=\ln Z_A+\ln Z_B$. This multiplicative rule is the reason partition functions of independent particles or independent local degrees of freedom often take a power such as $Z^N$. For identical classical particles, the additional factor $1/N!$ corrects for indistinguishability; it is not a replacement for the independence factorization.
+
 ## 2. Internal energy from the partition function
 
 The average internal energy is the probability-weighted mean of the microstate energies:
@@ -58,38 +67,42 @@ This is often the fastest way to find the internal energy once $Z$ has been calc
 ## 3. Helmholtz free energy and entropy
 
 The Helmholtz free energy is
-
 $$
 F=U-TS.
 $$
 
-For the canonical ensemble, it is related to the partition function by
-
+We can derive its connection to $Z$ from the canonical probabilities rather than assume the result. Since
 $$
-\boxed{F=-k_BT\ln Z.}
+P_r=\frac{e^{-\beta E_r}}{Z},
+$$
+taking logarithms gives
+$$
+\ln P_r=-\beta E_r-\ln Z.
+$$
+Insert this into the Gibbs entropy:
+$$
+\begin{aligned}
+S&=-k_B\sum_r P_r\ln P_r\\
+&=k_B\sum_r P_r(\beta E_r+\ln Z)\\
+&=k_B(\beta U+\ln Z),
+\end{aligned}
+$$
+where $\sum_rP_r=1$ and $U=\sum_rP_rE_r$. Then
+$$
+F=U-TS
+=U-k_BT(\beta U+\ln Z)
+=-k_BT\ln Z,
+$$
+because $k_BT\beta=1$. Hence
+$$
+\boxed{F=-k_BT\ln Z,\qquad
+S=k_B(\ln Z+\beta U).}
 $$
 
-This relation can be obtained from the canonical probabilities and the statistical definition of entropy. Rearranging $F=U-TS$ gives
-
+Using $U=-\partial_\beta\ln Z$, the entropy can equivalently be written
 $$
-S=\frac{U-F}{T}.
-$$
-
-Substitute the expressions for $U$ and $F$:
-
-$$
-\boxed{
-S=k_B\left(\ln Z+\beta U\right)
-}
-$$
-
-or, equivalently,
-
-$$
-\boxed{
-S=k_B\left(\ln Z-\beta
-\frac{\partial\ln Z}{\partial\beta}\right).
-}
+\boxed{S=k_B\left(\ln Z-\beta
+\frac{\partial\ln Z}{\partial\beta}\right).}
 $$
 
 So a single function, $Z$, gives the internal energy, Helmholtz free energy, and entropy.
@@ -135,12 +148,20 @@ $$
 C_V=-k_B\beta^2\frac{\partial U}{\partial\beta}.
 $$
 
-Differentiate the canonical mean energy. The result is the energy variance:
-
-$$
-\frac{\partial U}{\partial\beta}
-=-\left(\langle E^2\rangle-\langle E\rangle^2\right).
-$$
+Differentiate the canonical mean energy. Since
+$
+\frac{\partial\ln Z}{\partial\beta}=-\langle E\rangle,
+$
+a second derivative gives
+$
+\begin{aligned}
+\frac{\partial^2\ln Z}{\partial\beta^2}
+&= -\frac{\partial\langle E\rangle}{\partial\beta}\\
+&=\langle E^2\rangle-\langle E\rangle^2
+=\operatorname{Var}(E).
+\end{aligned}
+$
+Thus $\partial U/\partial\beta=-\operatorname{Var}(E)$. Because a variance cannot be negative, this canonical relation also shows that $C_V\geq0$ when the energy levels are independent of temperature and the derivative is taken at fixed $V,N$.
 
 Therefore,
 
