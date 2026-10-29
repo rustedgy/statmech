@@ -6,7 +6,7 @@ site_dir: /tmp/statmech-site
 
 nav:
   - Home: index.md
-  - Book — Statistical Mechanics: Principles and Applications:
+  - "Book — Statistical Mechanics: Principles and Applications":
       - Overview: miscellaneous_topics/index.md
       - Part I — Foundations and Ensembles:
           - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
