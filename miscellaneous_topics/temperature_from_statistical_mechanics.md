@@ -137,18 +137,18 @@ p_i\propto\Omega_R(E_{\mathrm{tot}}-E_i).
 $$
 
 Since $S_R=k_B\ln\Omega_R$, expanding the reservoir entropy about its large equilibrium energy gives
-$
+$$
 S_R(E_{\mathrm{tot}}-E_i)
 =S_R(E_{\mathrm{tot}})
 -E_i\left(\frac{\partial S_R}{\partial E_R}\right)
 +\frac{E_i^2}{2}\left(\frac{\partial^2 S_R}{\partial E_R^2}\right)+\cdots.
-$
+$$
 Keeping only the first-order term gives
-$
+$$
 \ln\Omega_R(E_{\mathrm{tot}}-E_i)
 \approx\text{constant}
 -\frac{E_i}{k_B}\left(\frac{\partial S_R}{\partial E_R}\right).
-$
+$$
 Why can the quadratic term usually be neglected? For a macroscopic reservoir, entropy is extensive, $S_R=N_Rs(E_R/N_R)$, so $\partial^2S_R/\partial E_R^2$ scales as $1/N_R$. When the small system's energy remains finite as the reservoir size grows, the quadratic correction vanishes relative to the linear term. The same large-reservoir reasoning underlies the grand-canonical expansion, where first derivatives with respect to energy and particle number produce $1/T$ and $-\mu/T$.
 
 Using $\partial S_R/\partial E_R=1/T$, the probability becomes
