@@ -1,6 +1,6 @@
 # Equipartition of Energy
 
-The equipartition theorem connects temperature to the average energy stored in the microscopic degrees of freedom of a classical system. Its familiar form says that each independent quadratic term in the Hamiltonian contributes an average energy of $k_B T/2$. The more general result applies even when the energy is **not quadratic**: a term that is homogeneous of degree $r$ in one independent continuous variable contributes $k_B T/r, under the assumptions described below.
+The equipartition theorem connects temperature to the average energy stored in the microscopic degrees of freedom of a classical system. Its familiar form says that each independent quadratic term in the Hamiltonian contributes an average energy of $k_B T/2$. The more general result applies even when the energy is **not quadratic**: a term that is homogeneous of degree $r$ in one independent continuous variable contributes $k_B T/r$, under the assumptions described below.
 
 ## 1. The familiar quadratic result
 
@@ -97,7 +97,7 @@ $$
 or
 
 $$
-\boxed{\langle H_x\rangle=\frac{1}{p}k_B T.}
+\boxed{\langle H_x\rangle=\frac{1}{r}k_B T.}
 $$
 
 The exponent $r$, rather than a universal factor of two, determines the average energy for this one-variable term. The factor $1/r$ also has a physical interpretation: a steeper confining potential rises rapidly with displacement, so the particle explores a smaller range of $x$ and has a lower mean potential energy. The partition integral scales as $T^{1/r}$, and differentiating its logarithm gives $\langle H_x\rangle=k_BT/r$.
