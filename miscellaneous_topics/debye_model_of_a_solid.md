@@ -10,7 +10,7 @@ The Debye model improves the description by treating vibrations as collective no
 
 ## 2. Assumptions and model
 
-Consider a three-dimensional solid containing (N) atoms. In the harmonic approximation, the vibrational modes are independent quantum oscillators. Each mode of angular frequency $\omega$ has energies
+Consider a three-dimensional solid containing $N$ atoms. In the harmonic approximation, the vibrational modes are independent quantum oscillators. Each mode of angular frequency $\omega$ has energies
 
 $$
 E_n=\hbar\omega\left(n+\frac12\right),\qquad n=0,1,2,\ldots
