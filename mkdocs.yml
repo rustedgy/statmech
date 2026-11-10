@@ -16,7 +16,7 @@ nav:
           - Partition Function and Thermodynamic Potentials: miscellaneous_topics/partition_function_thermodynamics_generator.md
           - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
           - Two-Level Systems and the Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
-      - Part I — Mathematical Tools:
+      - Supplementary Mathematical Tools:
           - Indicator Functions: miscellaneous_topics/indicator_functions_statmech.md
       - Part II — Classical and Quantum Statistics:
           - Equipartition of Energy: miscellaneous_topics/equipartition_of_energy.md
