@@ -263,90 +263,21 @@ $$
 
 Relative fluctuations become negligible for large systems, explaining why ensembles often agree on bulk observables in the thermodynamic limit, except near critical points or other regimes with anomalously large fluctuations.
 
-## 7. An independent site that can be empty or occupied
+## 7. Connection to quantum statistics
 
-Consider one site that can either be empty, with energy zero and particle number zero, or occupied by one particle of energy $\epsilon$. The two statistical weights are $1$ and $e^{-\beta(\epsilon-\mu)}$. Therefore,
+The grand canonical framework is also the natural route to quantum occupation distributions. For each single-particle state, one sums the allowed particle-number weights: zero or one particle for a fermionic state, and any non-negative occupation for a bosonic state. The resulting mean occupations are derived carefully in [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md) and [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md).
 
-$$
-\boxed{
-\Xi_1=1+e^{-\beta(\epsilon-\mu)}.
-}
-$$
+Those derivations belong with the quantum-statistics chapters, where the state-counting assumptions and the distinction between bosons and fermions can be developed without interrupting the present discussion of particle exchange and thermodynamic potentials.
 
-The mean occupation of the site is
-
-$$
-\boxed{
-\langle n\rangle
-=\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
-}
-$$
-
-For $M$ independent equivalent sites, the grand partition function factorizes:
-
-$$
-\Xi_M=\left[1+e^{-\beta(\epsilon-\mu)}\right]^M,
-$$
-
-and the mean number of occupied sites is
-
-$$
-\boxed{
-\langle N\rangle
-=\frac{M}{e^{\beta(\epsilon-\mu)}+1}.
-}
-$$
-
-This has the same mathematical form as the Fermi–Dirac occupation factor. The example illustrates how the chemical potential controls the likelihood that a state is occupied. The model assumes at most one particle per site and does not, by itself, describe interactions between sites.
-
-The single-state grand-partition method also leads directly to the Bose–Einstein and Fermi–Dirac occupation laws: sum the allowed particle-number weights for each state, then calculate its mean occupation. See [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) and [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md).
-
-### Bosonic orbital
-
-For a bosonic orbital of energy $\epsilon$, any occupation $n=0,1,2,\ldots$ is allowed. Writing $q=e^{-\beta(\epsilon-\mu)}$, its grand-partition sum is a geometric series:
-$$
-\Xi_1=\sum_{n=0}^{\infty}q^n
-=\frac{1}{1-e^{-\beta(\epsilon-\mu)}}.
-$$
-The series converges only when $q<1$, or $\mu<\epsilon$. Differentiating the logarithm of this single-orbital partition function, or summing $nq^n$, gives
-$$
-\boxed{\langle n\rangle
-=\frac{1}{e^{\beta(\epsilon-\mu)}-1}.}
-$$
-This is the Bose–Einstein mean occupation factor. In contrast to a fermionic orbital, a bosonic orbital can hold arbitrarily many particles, subject to the convergence condition.
-
-### Langmuir adsorption isotherm
-
-Now consider $M$ independent adsorption sites that can each be empty or occupied. If the occupied site's energy is $\epsilon$, its mean occupancy is
-$$
-\theta=\frac{1}{e^{\beta(\epsilon-\mu)}+1}.
-$$
-For a dilute classical gas above the surface, $n=p/(k_BT)$ and $z=e^{\beta\mu}=n\lambda_T^3$, so $z=p\lambda_T^3/(k_BT)$. Substitution gives
-$$
-\boxed{\theta=\frac{p}{p+p_0(T)},\qquad
-p_0(T)=\frac{k_BT}{\lambda_T^3}e^{\beta\epsilon}.}
-$$
-This is the Langmuir form: occupancy rises with gas pressure and approaches one at high pressure. The expression assumes independent sites, no lateral interactions, and equilibrium between the gas and adsorbed particles.
-
-## 8. Comparing ensembles
-
-| Ensemble | Fixed variables | Quantities that may fluctuate | Natural potential |
-|---|---|---|---|
-| Microcanonical | $E,V,N$ | None of these macroscopic constraints | Entropy $S$ |
-| Canonical | $T,V,N$ | Energy | Helmholtz free energy $F$ |
-| Grand canonical | $T,V,\mu$ | Energy and particle number | Grand potential $\Omega_G$ |
-
-For a sufficiently large system away from unusual critical regimes, different ensembles often give the same thermodynamic predictions for bulk observables. Their fluctuation properties and convenience for particular calculations can nevertheless differ.
-
-## 9. Assumptions and limits
+## 8. Assumptions and limits
 
 - The system is in equilibrium with a large reservoir that fixes $T$ and $\mu$.
 - The volume is fixed; particle exchange is allowed.
 - The allowed particle numbers and states must make $\Xi$ converge.
-- The ideal-gas example assumes a dilute classical gas, while the independent-site example assumes at most one particle per site.
+- The ideal-gas example assumes a dilute classical gas.
 - For small systems or near critical points, fluctuations can be important, and ensemble equivalence should not be assumed without checking the conditions.
 
-## 10. Summary
+## 9. Summary
 
 - The grand canonical ensemble describes a system that exchanges energy and particles with a reservoir.
 - The chemical potential $\mu$ controls particle exchange, and the fugacity is $z=e^{\beta\mu}$.

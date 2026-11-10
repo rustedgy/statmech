@@ -7,12 +7,16 @@ This is a developing book of self-contained chapters on the concepts, methods, a
 ### Part I — Foundations and Ensembles
 
 - [Notation and Symbols](notation_and_symbols.md) — a reference for common symbols, ensemble conventions, and sign choices.
-- [From Microstates to Statistical Ensembles](from_microstates_to_statistical_ensembles.md) — connect microstates, macrostates, multiplicity, entropy, and the microcanonical, canonical, and grand canonical ensembles.
-- [Indicator Functions](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
-- [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md) — define temperature through entropy, energy exchange, and equilibrium; connect the microcanonical and canonical descriptions.
+- [Microstates, Macrostates, and the Microcanonical Ensemble](from_microstates_to_statistical_ensembles.md) — introduce microscopic configurations, macroscopic constraints, multiplicity, equal a priori probabilities, and Boltzmann entropy.
+- [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md) — develop the entropy-slope definition of temperature, equilibrium energy sharing, finite-size entropy conventions, and negative temperatures.
+- [The Canonical Ensemble and the Boltzmann Distribution](canonical_ensemble_boltzmann_distribution.md) — derive the canonical weight from a large heat reservoir and normalize it with the partition function.
 - [Partition Function and Thermodynamic Potentials](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the partition function.
-- [Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the grand partition function and connect chemical potential, thermodynamic potentials, and particle-number fluctuations.
-- [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — derive level occupations, internal energy, and the characteristic heat-capacity peak.
+- [Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the particle-exchange weight, grand partition function, thermodynamic potentials, and particle-number fluctuations.
+- [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — apply canonical methods to level occupations, internal energy, degeneracy, and the characteristic heat-capacity peak.
+
+### Supplementary Mathematical Tools
+
+- [Indicator Functions](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
 
 ### Part II — Classical and Quantum Statistics
 
