@@ -95,15 +95,13 @@ The parameter $\beta$ is often more convenient than $T$ in calculations because 
 
 ## 5. A two-level illustration
 
-For a system with two non-degenerate levels, $E_0=0$ and $E_1=\Delta$, the canonical partition function and excited-state probability are
+For a system with two non-degenerate levels, $E_0=0$ and $E_1=\Delta$, the partition function is
 
-$$
-Z=1+e^{-\beta\Delta},
-\qquad
-P_1=\frac{1}{e^{\beta\Delta}+1}.
-$$
+$
+Z=1+e^{-\beta\Delta}.
+$
 
-This compact example illustrates the energy dependence of the Boltzmann distribution. The full calculation of the internal energy, heat capacity, degeneracy effects, and Schottky anomaly is given in [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md).
+This simple sum illustrates how the partition function normalizes the Boltzmann weights. The relative probability of the two levels follows from the general ratio derived above. The population interpretation, including negative temperature, is discussed in [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md); the internal energy, heat capacity, and Schottky anomaly are treated in [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md).
 
 ## Summary
 
