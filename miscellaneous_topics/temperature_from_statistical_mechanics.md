@@ -4,11 +4,9 @@ Temperature is often introduced as a thermometer reading or as a measure of how 
 
 This original supplementary chapter develops that idea using microstates, entropy, energy exchange, and the canonical ensemble. It is not a transcript of any particular lecture.
 
-## 1. Microstates, macrostates, and multiplicity
+## 1. State counting for an energy-dependent entropy
 
-A **microstate** specifies a system's microscopic configuration at the level of detail used by a model. A **macrostate** specifies coarser properties—such as energy, volume, or particle number—and can be realized by many microstates.
-
-There are two related but distinct ways to count states as a function of energy. They should not be denoted by the same symbol without explanation.
+To define temperature statistically, one must specify how microscopic states are counted as a function of energy. Two related but distinct counts are useful, and they should not be denoted by the same symbol without explanation.
 
 1. The **density of states** $\rho(E)$ counts states per unit energy. For a discrete spectrum, define an energy window of width $\Delta E$ and count states in that window. In a smooth approximation,
 $$
