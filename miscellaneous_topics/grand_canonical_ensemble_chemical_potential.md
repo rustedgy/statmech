@@ -274,7 +274,7 @@ Those derivations belong with the quantum-statistics chapters, where the state-c
 - The system is in equilibrium with a large reservoir that fixes $T$ and $\mu$.
 - The volume is fixed; particle exchange is allowed.
 - The allowed particle numbers and states must make $\Xi$ converge.
-- The ideal-gas example assumes a dilute classical gas, while the independent-site example assumes at most one particle per site.
+- The ideal-gas example assumes a dilute classical gas.
 - For small systems or near critical points, fluctuations can be important, and ensemble equivalence should not be assumed without checking the conditions.
 
 ## 9. Summary
