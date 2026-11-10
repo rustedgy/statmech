@@ -8,27 +8,41 @@ This original supplementary chapter develops that idea using microstates, entrop
 
 A **microstate** specifies a system's microscopic configuration at the level of detail used by a model. A **macrostate** specifies coarser properties—such as energy, volume, or particle number—and can be realized by many microstates.
 
-Let $\Omega(E)$ be the number of accessible microstates in a narrow energy range around $E$, with the other macroscopic constraints held fixed. This is the **multiplicity** of the macrostate. For a classical system, a suitably measured phase-space volume plays the analogous role.
+There are two related but distinct ways to count states as a function of energy. They should not be denoted by the same symbol without explanation.
 
-For an isolated system whose accessible microstates are treated equally, a macrostate with greater multiplicity is more probable: more microscopic arrangements realize it. This observation motivates the statistical definition of entropy.
+1. The **density of states** $\rho(E)$ counts states per unit energy. For a discrete spectrum, define an energy window of width $\Delta E$ and count states in that window. In a smooth approximation,
+   $
+   \Omega_{\Delta E}(E)\simeq \rho(E)\,\Delta E.
+   $
+   The shell multiplicity $\Omega_{\Delta E}$ is dimensionless; $\rho$ has units of inverse energy. Its value depends on the chosen shell width, although an energy-independent choice of $\Delta E$ adds only a constant to the entropy and does not change its energy derivative.
+2. The **cumulative phase-space volume** $\Phi(E)$ counts states with energy not exceeding $E$. In a classical system it is the phase-space volume inside the energy surface, divided by the phase-space cell $h^{3N}$ (and by $N!$ for identical particles, when appropriate), so that the count is dimensionless. For a smooth spectrum, $\rho(E)=d\Phi/dE$.
+
+For an isolated system with a specified narrow energy shell, the shell multiplicity is the direct count of accessible states in that shell. A macrostate with greater shell multiplicity is more probable because more microscopic arrangements realize it. The cumulative count is another useful entropy convention, but it includes all lower-energy states rather than only states near the specified energy.
 
 ## 2. Entropy counts microscopic possibilities
 
-For a macrostate with multiplicity $\Omega$, Boltzmann's entropy is
+For a specified energy shell, the **Boltzmann shell entropy** is
 
-$$
-S = k_B \ln \Omega,
-$$
+$
+S_B(E;\Delta E)=k_B\ln\Omega_{\Delta E}(E)
+\simeq k_B\ln[\rho(E)\Delta E].
+$
 
-where $k_B$ is Boltzmann's constant. The logarithm makes entropy additive for independent systems: when their multiplicities multiply, their entropies add.
+For the cumulative count, the **Gibbs volume entropy** is
 
-More generally, if microstate $i$ has probability $p_i$, the Gibbs entropy is
+$
+S_G(E)=k_B\ln\Phi(E).
+$
 
-$$
-S = -k_B \sum_i p_i \ln p_i.
-$$
+The two entropies are not identical for finite systems. They generally agree in their leading thermodynamic-limit behavior for ordinary systems with a smooth, rapidly growing density of states, but their derivatives can differ by relative corrections of order $1/N$. For a fixed energy-independent shell width, changing $\Delta E$ shifts $S_B$ by a constant and leaves its temperature unchanged; choosing a width that itself depends on energy would add an extra derivative term and must be stated.
 
-For a uniform distribution over $\Omega$ accessible states, the Gibbs expression reduces to the Boltzmann expression. Both quantify the spread of probability over microscopic possibilities.
+More generally, for a specified probability distribution over microstates, the Gibbs/Shannon entropy is
+
+$
+S=-k_B\sum_i p_i\ln p_i.
+$
+
+For a uniform distribution over the states in a shell, this reduces to $k_B\ln\Omega_{\Delta E}$. It does not automatically reduce to $k_B\ln\Phi(E)$, because the latter counts all states below the energy rather than the states in the shell.
 
 Temperature depends not on the absolute size of entropy, but on **how entropy changes with energy**.
 
@@ -42,36 +56,61 @@ $$
 
 Equivalently, $T$ is the reciprocal of the entropy-versus-energy slope. The derivative is taken while holding the other relevant constraints fixed. For a discrete system, it can be understood as an appropriate finite difference, or as a smooth approximation for a sufficiently large system.
 
-Using $S=k_B\ln\Omega$, this becomes
+With the shell convention, the Boltzmann temperature is
 
-$$
-\frac{1}{T}=k_B\frac{\partial\ln\Omega}{\partial E},
-\qquad
-T=\left[k_B\frac{\partial\ln\Omega}{\partial E}\right]^{-1}.
-$$
+$
+\frac{1}{T_B}
+=\left(\frac{\partial S_B}{\partial E}\right)_{V,N}
+=k_B\frac{\partial\ln\rho(E)}{\partial E},
+$
+
+where $\Delta E$ is held fixed. With the cumulative convention, the Gibbs temperature is
+
+$
+\frac{1}{T_G}
+=\left(\frac{\partial S_G}{\partial E}\right)_{V,N}
+=k_B\frac{\rho(E)}{\Phi(E)}.
+$
+
+These are different finite-system definitions. When the density of states rises steeply with energy, the cumulative integral is dominated by its upper endpoint and the two slopes approach one another. The appropriate convention must therefore be named whenever finite-size corrections or bounded spectra are discussed.
 
 Temperature is therefore determined by the fractional growth of multiplicity per unit energy, not by the total number of states alone.
 
-For ordinary positive-temperature systems, entropy increases with energy. A steeper entropy curve means a lower temperature, because less additional energy is needed to produce a given entropy change. A shallower slope means a higher temperature. In a system whose energy is bounded above, entropy can instead reach a maximum and then decrease. At the maximum the slope is zero, corresponding to the infinite-temperature limit; on the decreasing side the temperature defined by this entropy derivative is negative. Such negative-temperature states are possible only under restrictive conditions, including an appropriate upper energy bound.
+For ordinary positive-temperature systems, the chosen entropy increases with energy. A steeper entropy curve means a lower temperature, because less additional energy is needed to produce a given entropy change. A shallower slope means a higher temperature. For a bounded spectrum, the Boltzmann shell entropy can reach a maximum and then decrease; its derivative then defines negative Boltzmann temperatures above the entropy maximum. By contrast, the cumulative volume $\Phi(E)$ is nondecreasing by construction, so $S_G=k_B\ln\Phi$ does not acquire a negative slope and does not assign negative temperatures in this way. Thus the negative-temperature criterion is convention-dependent; the physical population inversion and the allowed energy exchanges must be specified, not inferred from the word entropy alone.
 
 ### A familiar example: the ideal gas
 
-For a classical monatomic ideal gas, the cumulative accessible phase-space volume scales as $\Phi(E)\propto E^{3N/2}$, with volume and particle number held fixed. If $\Omega(E)$ instead denotes the number of states in a narrow shell of width $\Delta E$, then $\Omega(E)\propto E^{3N/2-1}\Delta E$ (up to constants). The difference is one power of $E$; for large $N$ the distinction is often negligible at leading extensive order, but the definitions should not be mixed. Thus
+For a classical monatomic ideal gas, the cumulative phase-space volume scales as $\Phi(E)\propto E^{3N/2}$ at fixed $V,N$. Differentiating gives $\rho(E)\propto E^{3N/2-1}$, so a narrow shell of fixed width has $\Omega_{\Delta E}\propto E^{3N/2-1}\Delta E$. The two entropy conventions therefore give
 
-$$
-S(E)=k_B\ln\Phi(E)
-=\text{constant}+\frac{3N}{2}k_B\ln E.
-$$
+$
+S_G=k_B\ln\Phi
+=\text{constant}+\frac{3N}{2}k_B\ln E,
+$
 
-Differentiating gives
+and
 
-$$
-\frac{1}{T}=\frac{3Nk_B}{2E}
-\qquad\Longrightarrow\qquad
-E=\frac{3}{2}Nk_BT.
-$$
+$
+S_B=k_B\ln(\rho\Delta E)
+=\text{constant}+\left(\frac{3N}{2}-1\right)k_B\ln E.
+$
 
-This is the familiar ideal-gas relation between thermal energy and absolute temperature. It illustrates why temperature is not simply the total energy: the energy is extensive, increasing with particle number, while temperature measures the entropy slope and is an intensive equilibrium variable.
+Their temperatures are
+
+$
+\boxed{T_G=\frac{2E}{3Nk_B}},
+\qquad
+\boxed{T_B=\frac{2E}{(3N-2)k_B}}.
+$
+
+Equivalently, $E=(3/2)Nk_BT_G$ and $E=(3N/2-1)k_BT_B$. At the same energy,
+
+$
+\frac{T_B}{T_G}
+=\frac{3N/2}{3N/2-1}
+=1+O(N^{-1}).
+$
+
+The difference is a finite-$N$ correction; the familiar ideal-gas relation is recovered in the thermodynamic limit. This example is why the cumulative and shell definitions must be kept distinct even when their leading macroscopic predictions agree.
 
 ## 4. Why systems in thermal equilibrium have equal temperatures
 
@@ -143,7 +182,7 @@ S_R(E_{\mathrm{tot}}-E_i)
 -E_i\left(\frac{\partial S_R}{\partial E_R}\right)
 +\frac{E_i^2}{2}\left(\frac{\partial^2 S_R}{\partial E_R^2}\right)+\cdots.
 $$
-Keeping only the first-order term gives
+Here the reservoir entropy is the entropy associated with its accessible energy shell (or an equivalent smooth thermodynamic entropy in the large-reservoir limit). The expansion assumes the reservoir is much larger than the subsystem, its entropy is differentiable over the exchanged-energy range, and the quadratic and higher terms are negligible. For a discrete spectrum, the shell must contain enough reservoir levels for a smooth approximation to be meaningful. Keeping only the first-order term gives
 $$
 \ln\Omega_R(E_{\mathrm{tot}}-E_i)
 \approx\text{constant}
