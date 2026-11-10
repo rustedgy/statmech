@@ -89,7 +89,17 @@ $$
 p=\frac{n k_BT}{1-bn}-a n^2,
 $$
 
-and solving these two conditions gives
+The derivatives are
+
+$
+\left(\frac{\partial p}{\partial n}\right)_T
+=\frac{k_BT}{(1-bn)^2}-2an,
+\qquad
+\left(\frac{\partial^2p}{\partial n^2}\right)_T
+=\frac{2bk_BT}{(1-bn)^3}-2a.
+$
+
+Setting both to zero, the second equation gives $k_BT=a(1-bn)^3/b$. Substituting into the first gives $a(1-bn)/b=2an$, hence $bn=1/3$. Therefore,
 
 $$
 \boxed{
@@ -144,7 +154,54 @@ $$
 }
 $$
 
-The equal-area condition is equivalent to equality of the chemical potentials of the two phases. It replaces the unphysical loop by a horizontal coexistence segment in the equilibrium pressure–volume isotherm.
+### Deriving the equal-area condition from chemical-potential equality
+
+Let $f(v,T)$ be the Helmholtz free energy per particle of a homogeneous phase, with $v=V/N$. Its differential at fixed particle number is
+
+$
+df=-s\,dT-p\,dv,
+$
+
+so along an isotherm, $(\partial f/\partial v)_T=-p(v,T)$. For a one-component phase, the chemical potential is the Gibbs free energy per particle,
+
+$
+\mu=f+pv.
+$
+
+At coexistence, the two phases have the same temperature, pressure, and chemical potential. Thus
+
+$
+f(v_g,T)+p_{\rm coex}v_g
+=f(v_l,T)+p_{\rm coex}v_l.
+$
+
+Rearrange and use the isothermal free-energy difference:
+
+$
+\begin{aligned}
+f(v_g,T)-f(v_l,T)
+&=-\int_{v_l}^{v_g}p(v,T)\,dv,\\
+0&=f(v_g,T)-f(v_l,T)+p_{\rm coex}(v_g-v_l),
+\end{aligned}
+$
+
+which gives
+
+$
+\boxed{\int_{v_l}^{v_g}[p(v,T)-p_{\rm coex}]\,dv=0.}
+$
+
+The integrand has units of pressure and $dv$ has units of volume per particle, so the integral has units of energy per particle, as it must to compare free energies. The two signed areas between the isotherm and the coexistence-pressure line are equal.
+
+The same result has a geometric interpretation. The straight line
+
+$
+f_{\rm tan}(v)=\mu_{\rm coex}-p_{\rm coex}v
+$
+
+is tangent to the homogeneous Helmholtz free-energy curve at both $v_l$ and $v_g$. Its slope is $-p_{\rm coex}$ and its intercept is the common chemical potential. This **common tangent** is the convex-envelope construction: for average volumes between $v_l$ and $v_g$, a mixture of the two phases has lower free energy than a homogeneous state on the non-convex portion of the model curve.
+
+The equal-area condition therefore follows from equality of the chemical potentials, not from an independent geometric rule. It replaces the unphysical loop by a horizontal coexistence segment in the equilibrium pressure–volume isotherm.
 
 The construction is a thermodynamic prescription, not a claim that a real fluid passes through every intermediate homogeneous state on the loop. In a two-phase sample, changing the total volume can change the relative amounts of liquid and gas while the pressure remains at the coexistence value.
 
@@ -177,7 +234,7 @@ $$
 R_* = \frac{2\gamma}{\Delta p}.
 $$
 
-Droplets smaller than $R_*$ tend to shrink, while droplets larger than $R_*$ tend to grow. This explains why condensation can be delayed even when the liquid is thermodynamically favoured. Real nucleation rates also depend on fluctuations, impurities, heat transfer, and kinetic barriers; the equilibrium van der Waals equation alone does not determine the rate.
+Droplets smaller than $R_*$ tend to shrink, while droplets larger than $R_*$ tend to grow. This explains why condensation can be delayed even when the liquid is thermodynamically favoured. The formula assumes a spherical droplet, a sharp interface with radius-independent surface tension (the capillarity approximation), a bulk driving force proportional to droplet volume, and a droplet large enough for continuum thermodynamics to apply. It neglects curvature dependence of surface tension, molecular-scale structure, and detailed interfacial profiles. Real nucleation rates also depend on fluctuations, impurities, heat transfer, and kinetic barriers; the equilibrium van der Waals equation alone does not determine the rate.
 
 ## 8. Critical behaviour and limitations of mean-field theory
 
