@@ -41,33 +41,33 @@ $$
 
 Using $k=\omega/v_s$ and differentiating gives the density of modes for that branch:
 
-$
+$$
 g_s(\omega)=\frac{d\mathcal N_s}{d\omega}
 =\frac{V\omega^2}{2\pi^2v_s^3}.
-$
+$$
 
 There are one longitudinal and two transverse acoustic branches. Summing their contributions,
 
-$
+$$
 g(\omega)=\frac{V\omega^2}{2\pi^2}
 \left(\frac{1}{v_L^3}
 +\frac{1}{v_{T1}^3}+\frac{1}{v_{T2}^3}\right).
-$
+$$
 
 Define the Debye-average speed by
 
-$
+$$
 \boxed{\frac{1}{v_D^3}
 =\frac13\left(\frac{1}{v_L^3}
 +\frac{1}{v_{T1}^3}+\frac{1}{v_{T2}^3}\right).}
-$
+$$
 
 Then the total density of states takes the compact form
 
-$
+$$
 \boxed{g(\omega)=\frac{3V\omega^2}{2\pi^2v_D^3}},
 \qquad 0\leq\omega\leq\omega_D.
-$
+$$
 
 For an isotropic solid with two degenerate transverse branches, this reduces to $v_D^{-3}=(v_L^{-3}+2v_T^{-3})/3$. The inverse cubes appear because the number of wave vectors below a given frequency is proportional to $v_s^{-3}$.
 
@@ -79,9 +79,9 @@ $$
 
 Using the inverse-cube Debye speed defined above, this gives
 
-$
+$$
 \boxed{\omega_D^3=\frac{6\pi^2N}{V}v_D^3.}
-$
+$$
 
 The associated Debye temperature is defined by
 
@@ -111,15 +111,15 @@ This expression describes the thermal vibrational energy in the Debye approximat
 
 At constant volume, the heat capacity is $C_V=(\partial U/\partial T)_V$. The upper limit $y=\Theta_D/T$ depends on temperature, so differentiating requires the Leibniz rule. Write
 
-$
+$$
 I_3(y)=\int_0^y\frac{x^3}{e^x-1}\,dx,
 \qquad
 U=9Nk_B\frac{T^4}{\Theta_D^3}I_3(y).
-$
+$$
 
 Since $dy/dT=-y/T$ and $I_3'(y)=y^3/(e^y-1)$,
 
-$
+$$
 \begin{aligned}
 C_V
 &=9Nk_B\frac{T^3}{\Theta_D^3}
@@ -128,32 +128,32 @@ C_V
 \left[4\int_0^y\frac{x^3}{e^x-1}\,dx
 -\frac{y^4}{e^y-1}\right].
 \end{aligned}
-$
+$$
 
 The second term is the contribution from the moving upper limit; it must not be dropped. To rewrite the bracket, integrate by parts using
 
-$
+$$
 \frac{d}{dx}\left(\frac{x^4}{e^x-1}\right)
 =\frac{4x^3}{e^x-1}
 -\frac{x^4e^x}{(e^x-1)^2}.
-$
+$$
 
 Integrating from $0$ to $y$ (the lower boundary term vanishes) gives
 
-$
+$$
 4\int_0^y\frac{x^3}{e^x-1}\,dx
 -\frac{y^4}{e^y-1}
 =\int_0^y\frac{x^4e^x}{(e^x-1)^2}\,dx.
-$
+$$
 
 Therefore,
 
-$
+$$
 \boxed{
 C_V=9Nk_B\left(\frac{T}{\Theta_D}\right)^3
 \int_0^{\Theta_D/T}
 \frac{x^4e^x}{(e^x-1)^2}\,dx.}
-$
+$$
 
 This is the Debye heat-capacity formula. In general, the integral is evaluated numerically. Its limiting forms show the main physics.
 
