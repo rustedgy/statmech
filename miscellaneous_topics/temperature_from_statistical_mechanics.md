@@ -2,7 +2,7 @@
 
 Temperature is often introduced as a thermometer reading or as a measure of how hot something feels. Statistical mechanics gives a deeper definition: **temperature describes how entropy changes when energy is added to a system**. Entropy is determined by the microscopic states compatible with the system's macroscopic constraints, so temperature emerges from the way those possibilities change with energy.
 
-This original supplementary chapter develops that idea using microstates, entropy, energy exchange, and the canonical ensemble. It is not a transcript of any particular lecture.
+This chapter develops that idea using microstates, entropy, energy exchange, and the canonical ensemble. It is not a transcript of any particular lecture.
 
 ## 1. State counting for an energy-dependent entropy
 
