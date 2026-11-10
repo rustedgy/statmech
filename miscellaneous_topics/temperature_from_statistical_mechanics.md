@@ -11,9 +11,9 @@ A **microstate** specifies a system's microscopic configuration at the level of 
 There are two related but distinct ways to count states as a function of energy. They should not be denoted by the same symbol without explanation.
 
 1. The **density of states** $\rho(E)$ counts states per unit energy. For a discrete spectrum, define an energy window of width $\Delta E$ and count states in that window. In a smooth approximation,
-   $
+$$
    \Omega_{\Delta E}(E)\simeq \rho(E)\,\Delta E.
-   $
+$$
    The shell multiplicity $\Omega_{\Delta E}$ is dimensionless; $\rho$ has units of inverse energy. Its value depends on the chosen shell width, although an energy-independent choice of $\Delta E$ adds only a constant to the entropy and does not change its energy derivative.
 2. The **cumulative phase-space volume** $\Phi(E)$ counts states with energy not exceeding $E$. In a classical system it is the phase-space volume inside the energy surface, divided by the phase-space cell $h^{3N}$ (and by $N!$ for identical particles, when appropriate), so that the count is dimensionless. For a smooth spectrum, $\rho(E)=d\Phi/dE$.
 
@@ -23,24 +23,24 @@ For an isolated system with a specified narrow energy shell, the shell multiplic
 
 For a specified energy shell, the **Boltzmann shell entropy** is
 
-$
+$$
 S_B(E;\Delta E)=k_B\ln\Omega_{\Delta E}(E)
 \simeq k_B\ln[\rho(E)\Delta E].
-$
+$$
 
 For the cumulative count, the **Gibbs volume entropy** is
 
-$
+$$
 S_G(E)=k_B\ln\Phi(E).
-$
+$$
 
 The two entropies are not identical for finite systems. They generally agree in their leading thermodynamic-limit behavior for ordinary systems with a smooth, rapidly growing density of states, but their derivatives can differ by relative corrections of order $1/N$. For a fixed energy-independent shell width, changing $\Delta E$ shifts $S_B$ by a constant and leaves its temperature unchanged; choosing a width that itself depends on energy would add an extra derivative term and must be stated.
 
 More generally, for a specified probability distribution over microstates, the Gibbs/Shannon entropy is
 
-$
+$$
 S=-k_B\sum_i p_i\ln p_i.
-$
+$$
 
 For a uniform distribution over the states in a shell, this reduces to $k_B\ln\Omega_{\Delta E}$. It does not automatically reduce to $k_B\ln\Phi(E)$, because the latter counts all states below the energy rather than the states in the shell.
 
@@ -58,19 +58,19 @@ Equivalently, $T$ is the reciprocal of the entropy-versus-energy slope. The deri
 
 With the shell convention, the Boltzmann temperature is
 
-$
+$$
 \frac{1}{T_B}
 =\left(\frac{\partial S_B}{\partial E}\right)_{V,N}
 =k_B\frac{\partial\ln\rho(E)}{\partial E},
-$
+$$
 
 where $\Delta E$ is held fixed. With the cumulative convention, the Gibbs temperature is
 
-$
+$$
 \frac{1}{T_G}
 =\left(\frac{\partial S_G}{\partial E}\right)_{V,N}
 =k_B\frac{\rho(E)}{\Phi(E)}.
-$
+$$
 
 These are different finite-system definitions. When the density of states rises steeply with energy, the cumulative integral is dominated by its upper endpoint and the two slopes approach one another. The appropriate convention must therefore be named whenever finite-size corrections or bounded spectra are discussed.
 
@@ -82,33 +82,33 @@ For ordinary positive-temperature systems, the chosen entropy increases with ene
 
 For a classical monatomic ideal gas, the cumulative phase-space volume scales as $\Phi(E)\propto E^{3N/2}$ at fixed $V,N$. Differentiating gives $\rho(E)\propto E^{3N/2-1}$, so a narrow shell of fixed width has $\Omega_{\Delta E}\propto E^{3N/2-1}\Delta E$. The two entropy conventions therefore give
 
-$
+$$
 S_G=k_B\ln\Phi
 =\text{constant}+\frac{3N}{2}k_B\ln E,
-$
+$$
 
 and
 
-$
+$$
 S_B=k_B\ln(\rho\Delta E)
 =\text{constant}+\left(\frac{3N}{2}-1\right)k_B\ln E.
-$
+$$
 
 Their temperatures are
 
-$
+$$
 \boxed{T_G=\frac{2E}{3Nk_B}},
 \qquad
 \boxed{T_B=\frac{2E}{(3N-2)k_B}}.
-$
+$$
 
 Equivalently, $E=(3/2)Nk_BT_G$ and $E=(3N/2-1)k_BT_B$. At the same energy,
 
-$
+$$
 \frac{T_B}{T_G}
 =\frac{3N/2}{3N/2-1}
 =1+O(N^{-1}).
-$
+$$
 
 The difference is a finite-$N$ correction; the familiar ideal-gas relation is recovered in the thermodynamic limit. This example is why the cumulative and shell definitions must be kept distinct even when their leading macroscopic predictions agree.
 
