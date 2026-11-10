@@ -32,10 +32,10 @@ The equilibrium macrostate is overwhelmingly likely when its multiplicity is muc
 
 ## 3. From multiplicity to equilibrium and temperature
 
-Suppose two weakly coupled systems can exchange energy while their combined energy is fixed. If subsystem A has energy $E_A$, subsystem B has energy $E_{\\rm tot}-E_A$, and their multiplicities are $W_A(E_A)$ and (W_B$E_{\\rm tot}-E_A$), then the multiplicity of the combined macrostate is
+Suppose two weakly coupled systems can exchange energy while their combined energy is fixed. If subsystem A has energy $E_A$, subsystem B has energy $E_{\rm tot}-E_A$, and their multiplicities are $W_A(E_A)$ and $W_B(E_{\rm tot}-E_A)$, then the multiplicity of the combined macrostate is
 
 $$
-W_{\rm tot}$E_A$=W_A$E_A$W_B(E_{\rm tot}-E_A).
+W_{\rm tot}(E_A)=W_A(E_A)W_B(E_{\rm tot}-E_A).
 $$
 
 The most probable energy division maximizes this product, equivalently its logarithm. With $S_i=k_B\ln W_i$, stationarity gives
@@ -58,7 +58,7 @@ This argument illustrates the logic of equilibrium: count compatible states, for
 
 ## 4. The canonical ensemble: a system in a heat reservoir
 
-Now let a small system exchange energy with a much larger reservoir. The combined system is isolated, so if the small system is in microstate $r$ with energy $E_r$, the reservoir energy is $E_R=E_{\\rm tot}-E_r$.
+Now let a small system exchange energy with a much larger reservoir. The combined system is isolated, so if the small system is in microstate $r$ with energy $E_r$, the reservoir energy is $E_R=E_{\rm tot}-E_r$.
 
 The probability of microstate $r$ is proportional to the number of reservoir states compatible with that energy:
 
@@ -95,7 +95,7 @@ The reservoir derivation assumes weak enough coupling that the subsystem energy 
 
 ## 5. The grand canonical ensemble: energy and particles can be exchanged
 
-If the subsystem can exchange particles as well as energy, its reservoir changes both energy and particle number. For subsystem energy $E_r$ and particle number $N$, the reservoir has $E_R=E_{\\rm tot}-E_r$ and $N_R=N_{\\rm tot}-N$. A first-order expansion gives
+If the subsystem can exchange particles as well as energy, its reservoir changes both energy and particle number. For subsystem energy $E_r$ and particle number $N$, the reservoir has $E_R=E_{\rm tot}-E_r$ and $N_R=N_{\rm tot}-N$. A first-order expansion gives
 
 $$
 S_R\simeq S_{R,0}
