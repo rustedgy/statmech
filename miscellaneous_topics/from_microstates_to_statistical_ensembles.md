@@ -117,7 +117,7 @@ $$
 P_{r,N}\propto e^{-\beta(E_r-\mu N)}.
 $$
 
-The sign is important: removing $N$ particles from the reservoir changes its entropy by (+\mu N/T), which favors larger subsystem particle number when the reservoir chemical potential is larger. After normalization,
+The sign is important: removing $N$ particles from the reservoir changes its entropy by $+\mu N/T$, which favors larger subsystem particle number when the reservoir chemical potential is larger. After normalization,
 
 $$
 \boxed{P_{r,N}=\frac{e^{-\beta(E_r-\mu N)}}{\Xi}},
