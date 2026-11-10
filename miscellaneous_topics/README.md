@@ -26,6 +26,7 @@ This is a developing book of self-contained chapters on the concepts, methods, a
 - [Blackbody Radiation and Planck's Law](blackbody_radiation_planck_law.md) — derive the thermal radiation spectrum from electromagnetic mode counting and Bose–Einstein occupation.
 - [Paramagnetism](paramagnetism_canonical_ensemble.md) — derive magnetization, Curie's law, internal energy, and heat capacity for independent magnetic moments.
 - [Ising Model and Ferromagnetism](ising_model_ferromagnetism.md) — extend independent spins to interacting spins, mean-field theory, and spontaneous magnetic order.
+- [Liquid–Gas Phase Transitions and Condensation](liquid_gas_phase_transitions_condensation.md) — connect intermolecular interactions to the van der Waals equation, critical point, phase coexistence, metastability, and nucleation.
 - [Einstein Model of a Solid](einstein_model_of_a_solid.md) — derive vibrational thermodynamics and quantum heat capacity; identify the low-temperature limitation.
 - [Debye Model of a Solid](debye_model_of_a_solid.md) — derive the phonon density of states and heat capacity, including the low-temperature cubic law.
 
@@ -44,9 +45,11 @@ Useful references for cross-checking include:
 - F. Reif, *Fundamentals of Statistical and Thermal Physics* — entropy, equilibrium, statistical ensembles, and thermodynamic relations.
 - C. Kittel and H. Kroemer, *Thermal Physics*, 2nd edition — ensembles, paramagnetism, and quantum statistics.
 - K. Huang, *Statistical Mechanics*, 2nd edition — statistical distributions and interacting systems.
+- J. P. Hansen and I. R. McDonald, *Theory of Simple Liquids* — microscopic liquid-state statistical mechanics and intermolecular correlations.
+- P. G. Debenedetti, *Metastable Liquids: Concepts and Principles* — metastability and nucleation.
 - C. Kittel, *Introduction to Solid State Physics* — lattice vibrations and the Einstein and Debye models.
 - N. W. Ashcroft and N. D. Mermin, *Solid State Physics* — phonons and low-temperature heat capacity.
 
-Model limitations matter: the Ising mean-field treatment is an approximation; the Einstein and Debye models idealize the vibrational spectrum; the classical equipartition theorem does not capture quantum freeze-out; and Newton's law of cooling assumes a suitable near-equilibrium regime with an approximately constant effective heat-transfer coefficient. Results may also depend on dimensionality, boundary conditions, whether energy is measured with or without zero-point contributions, and the definitions of intensive variables. Where a chapter adopts a simplified model, read its assumptions before applying its formula to a real material or experiment.
+Model limitations matter: the Ising and van der Waals mean-field treatments are approximations; the Einstein and Debye models idealize the vibrational spectrum; the classical equipartition theorem does not capture quantum freeze-out; and Newton's law of cooling assumes a suitable near-equilibrium regime with an approximately constant effective heat-transfer coefficient. Results may also depend on dimensionality, boundary conditions, whether energy is measured with or without zero-point contributions, and the definitions of intensive variables. Where a chapter adopts a simplified model, read its assumptions before applying its formula to a real material or experiment.
 
 The references above are suggested verification sources, not a claim that every equation in these notes has been independently checked against every edition. Corrections and source-specific caveats are welcome through issues or pull requests.
