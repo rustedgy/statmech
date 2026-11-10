@@ -53,7 +53,7 @@ which fluctuates because its neighbours do. The partition function is hard to ev
 
 ### 4.2 The approximation stated precisely
 
-Write each spin as its mean plus a fluctuation,
+Let $m=\langle s_i\rangle$ be the mean spin, taken to be the same on every site, and write each spin as its mean plus a fluctuation,
 
 $$
 s_i=m+\delta s_i,\qquad \langle\delta s_i\rangle=0 .
@@ -67,13 +67,13 @@ $$
 
 Mean-field theory drops the last term, the product of the fluctuations of two neighbouring spins. Equivalently, it replaces $\langle s_is_j\rangle=m^2+\langle\delta s_i\,\delta s_j\rangle$ by $\langle s_i\rangle\langle s_j\rangle=m^2$, so it **neglects correlations between neighbouring spins**.
 
-A lattice of $N$ sites with $q$ neighbours each has $Nq/2$ nearest-neighbour bonds, and each spin belongs to $q$ bonds (boundary effects are ignored). Hence $\sum_{\langle i,j\rangle}(s_i+s_j)=q\sum_i s_i$, and the Hamiltonian becomes
+A lattice of $N$ sites with $q$ neighbours each has $Nq/2$ nearest-neighbour bonds, and each spin belongs to $q$ bonds (boundary effects are ignored). Hence $\sum_{\langle i,j\rangle}(s_i+s_j)=q\sum_i s_i$. Substituting the identity into $H$ gives the exact relation $H=H_{\mathrm{MF}}-J\sum_{\langle i,j\rangle}\delta s_i\,\delta s_j$, where
 
 $$
 H_{\mathrm{MF}}=\frac{NqJ}{2}m^2-(h+qJm)\sum_{i=1}^{N}s_i .
 $$
 
-The spins are now independent, each in the effective field $h_{\mathrm{eff}}=h+qJm$, so the partition function factorizes:
+Mean-field theory approximates $H$ by $H_{\mathrm{MF}}$. In $H_{\mathrm{MF}}$ the spins are independent, each in the effective field $h_{\mathrm{eff}}=h+qJm$, with $m$ treated as a fixed number that is determined afterwards. The partition function factorizes:
 
 $$
 Z_{\mathrm{MF}}=e^{-\beta NqJm^2/2}\,\big[2\cosh(\beta h_{\mathrm{eff}})\big]^N .
