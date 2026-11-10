@@ -7,6 +7,7 @@ This is a developing book of self-contained chapters on the concepts, methods, a
 ### Part I — Foundations and Ensembles
 
 - [Notation and Symbols](notation_and_symbols.md) — a reference for common symbols, ensemble conventions, and sign choices.
+- [From Microstates to Statistical Ensembles](from_microstates_to_statistical_ensembles.md) — connect microstates, macrostates, multiplicity, entropy, and the microcanonical, canonical, and grand canonical ensembles.
 - [Indicator Functions](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
 - [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md) — define temperature through entropy, energy exchange, and equilibrium; connect the microcanonical and canonical descriptions.
 - [Partition Function and Thermodynamic Potentials](partition_function_thermodynamics_generator.md) — derive energy, free energy, entropy, pressure, and heat capacity from the partition function.
