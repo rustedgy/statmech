@@ -200,7 +200,10 @@ per one-particle state, with an additional factor of $g_i$ when reporting the to
 2. Where does the minus one in the Bose–Einstein denominator enter the derivation?
 3. Why are both energy and particle number constraints required?
 4. What condition leads to the classical Maxwell–Boltzmann limit?
-5. Why must the ground state sometimes be treated separately near Bose–Einstein condensation?\n6. Derive the Bose–Einstein mean occupation from the grand partition function of one state without using Stirling's approximation.\n7. How do the MB, BE, and FD occupation rules differ?\n8. Why is the equilibrium chemical potential of photons zero?
+5. Why must the ground state sometimes be treated separately near Bose–Einstein condensation?
+6. Derive the Bose–Einstein mean occupation from the grand partition function of one state without using Stirling's approximation.
+7. How do the MB, BE, and FD occupation rules differ?
+8. Why is the equilibrium chemical potential of photons zero?
 
 ---
 
