@@ -29,7 +29,7 @@ W_i=\binom{n_i+g_i-1}{n_i}
 =\frac{(n_i+g_i-1)!}{n_i!(g_i-1)!}.
 $$
 
-The $-1$ in $g_i-1$ is the key counting feature: multiple bosons may occupy the same state, and exchanging identical bosons does not produce a new arrangement.
+The $-1$ in $g_i-1$ is the key counting feature: multiple bosons may occupy the same state, and exchanging identical bosons does not produce a new arrangement. This stars-and-bars expression is an **exact integer multiplicity** for a finite group of $g_i$ distinct states and $n_i$ identical bosons; no large-system approximation has yet been made.
 
 Assuming independent one-particle states, the number of many-particle microstates compatible with the complete occupation list is the product
 
@@ -56,7 +56,7 @@ $$
 \end{aligned}
 $$
 
-Here the replacement of $g_i-1$ by $g_i$ is negligible when the degeneracies and relevant factorial arguments are large. The entropy is therefore approximately
+This approximation requires the factorial arguments to be large: in particular, $n_i\gg1$ and $g_i-1\gg1$ for the terms shown, with $n_i+g_i-1\gg1$. Replacing $g_i-1$ by $g_i$ additionally requires $g_i\gg1$. These conditions describe a highly degenerate energy group with many particles; they do not hold for a single orbital with $g_i=1$. The entropy is therefore approximately
 
 $$
 S\approx k_B\sum_i\big[(n_i+g_i)\ln(n_i+g_i)
@@ -121,7 +121,7 @@ This is the Bose–Einstein distribution. The minus one in the denominator follo
 
 ## 5. Exact single-state derivation from the grand partition function
 
-The Stirling derivation above is useful for large energy groups, but it is not needed for a single state. For one bosonic state of energy $\epsilon$, every occupation $n=0,1,2,\ldots$ is allowed. Its grand partition function is
+The Stirling derivation above treats $n_i$ as a continuous variable and locates the **most-probable coarse-grained occupation** of a highly degenerate energy group. It is not an exact formula for the mean occupation of a single orbital. For one bosonic state of energy $\epsilon$, every occupation $n=0,1,2,\ldots$ is allowed. Its grand partition function is
 
 $$
 \Xi_\epsilon=\sum_{n=0}^{\infty}e^{-n\beta(\epsilon-\mu)}
@@ -136,7 +136,7 @@ $$
 =\frac{1}{e^{\beta(\epsilon-\mu)}-1}.
 $$
 
-This exact single-state route requires only convergence of the geometric series, or $\mu<\epsilon$ for the state. It needs neither Stirling's approximation nor large degeneracy and is valid for $g=1$.
+This exact single-state route requires only convergence of the geometric series, or $\mu<\epsilon$ for that orbital. It needs neither Stirling's approximation nor large degeneracy and is valid for $g=1$. The resulting quantity is the exact grand-canonical **mean occupation** of that orbital, not the location of a coarse-grained multiplicity maximum. For a group of degenerate orbitals, the exact mean total occupation is the sum of the single-orbital means; it is not obtained by treating the group as one orbital with a degeneracy factor inside the geometric series.
 
 ## 6. What the multipliers mean
 
@@ -149,7 +149,7 @@ $$
 
 Together these give the exponent $(\epsilon_i-\mu)/(k_BT)$. The identifications $\beta=1/(k_BT)$ and $(\partial S/\partial N)_{U,V}=-\mu/T$ are derived in the [temperature](temperature_from_statistical_mechanics.md) and [grand canonical ensemble](grand_canonical_ensemble_chemical_potential.md) chapters and used here by reference. The distribution is not assumed in the derivation: it is the occupation profile that maximizes the number of compatible microstates under the macroscopic constraints.
 
-For bosons, the denominator must remain positive for a finite positive occupation, so in the usual equilibrium setting $\mu$ cannot exceed the lowest allowed single-particle energy. If the lowest-energy state becomes macroscopically occupied, the continuum approximation for excited states must be supplemented by treating that ground-state population separately; this is the statistical-mechanical setting for Bose–Einstein condensation.
+For bosons, every single-orbital geometric series must converge. If $\epsilon_0$ is the lowest one-particle energy, this requires $\mu<\epsilon_0$ for a finite system with finite mean occupation; in the thermodynamic limit the chemical potential can approach $\epsilon_0$ from below, so it is common to state $\mu\leq\epsilon_0$ as the limiting bound. It cannot exceed $\epsilon_0$. When the excited states reach their maximum thermodynamic population at $\mu\to\epsilon_0^{-}$, any additional particles enter the ground state. The ground-state occupation then becomes macroscopic and must be handled separately rather than approximated by a continuum density of excited states. This is the ideal-gas setting for Bose–Einstein condensation.
 
 ## 7. Comparing MB, BE, and FD statistics
 
@@ -179,7 +179,7 @@ This is the Maxwell–Boltzmann form for the mean occupation per state. The clas
 
 ## Summary
 
-The derivation follows four steps:
+There are two complementary routes: exact stars-and-bars counting followed by a Stirling/continuous-occupation approximation for large degenerate groups, and an exact grand-partition sum for the mean occupation of one orbital. They agree in their common equilibrium regime, but they answer slightly different statistical questions.\n\nThe derivation follows four steps:
 
 1. Count bosonic arrangements: $W_i=(n_i+g_i-1)!/[n_i!(g_i-1)!]$.
 2. Form the entropy $S=k_B\ln W$ and use Stirling's approximation.
