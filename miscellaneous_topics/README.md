@@ -14,7 +14,7 @@ This is a developing book of self-contained chapters on the concepts, methods, a
 - [Grand Canonical Ensemble and Chemical Potential](grand_canonical_ensemble_chemical_potential.md) — derive the particle-exchange weight, grand partition function, thermodynamic potentials, and particle-number fluctuations.
 - [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md) — apply canonical methods to level occupations, internal energy, degeneracy, and the characteristic heat-capacity peak.
 
-### Part I — Mathematical Tools
+### Supplementary Mathematical Tools
 
 - [Indicator Functions](indicator_functions_statmech.md) — use zero-or-one functions to express events, count objects, restrict partition sums, and compute probabilities.
 
