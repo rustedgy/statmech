@@ -33,6 +33,7 @@ MISC_TOPIC_PARTS = {
         "blackbody_radiation_planck_law.md",
         "paramagnetism_canonical_ensemble.md",
         "ising_model_ferromagnetism.md",
+        "liquid_gas_phase_transitions_condensation.md",
         "einstein_model_of_a_solid.md",
         "debye_model_of_a_solid.md",
     ),
