@@ -1,4 +1,4 @@
-# Temperature
+# Temperature and Thermal Equilibrium
 
 Temperature is often introduced as a thermometer reading or as a measure of how hot something feels. Statistical mechanics gives a deeper definition: **temperature describes how entropy changes when energy is added to a system**. Entropy is determined by the microscopic states compatible with the system's macroscopic constraints, so temperature emerges from the way those possibilities change with energy.
 
@@ -167,50 +167,21 @@ $$
 
 Spontaneous energy transfer proceeds in the direction that increases total entropy. For ordinary positive temperatures, this means net heat flows from the hotter system to the colder one, until their temperatures equalize. More generally, the entropy-slope expression determines the direction even when bounded-energy systems with negative temperatures are considered. This entropy-maximization argument is the central idea in Leonard Susskind's discussion of maximizing entropy in [Lecture 3 notes](../leonard_susskind/statistical_mechanics_lecture_3_notes.md); those notes are a separate, transcript-based study resource, not the source text for this chapter.
 
-## 5. Temperature in the canonical distribution
+## 5. How temperature enters the canonical distribution
 
-Now consider a small system in contact with a much larger reservoir. If the small system occupies microstate $i$ with energy $E_i$, the probability of that microstate is proportional to the number of reservoir states compatible with the remaining total energy:
+The entropy-slope definition of temperature also determines the relative probabilities of microstates when a system is in contact with a large heat reservoir. The reservoir argument is derived in full in [The Canonical Ensemble and the Boltzmann Distribution](canonical_ensemble_boltzmann_distribution.md).
 
-$$
-p_i\propto\Omega_R(E_{\mathrm{tot}}-E_i).
-$$
-
-Since $S_R=k_B\ln\Omega_R$, expanding the reservoir entropy about its large equilibrium energy gives
-$$
-S_R(E_{\mathrm{tot}}-E_i)
-=S_R(E_{\mathrm{tot}})
--E_i\left(\frac{\partial S_R}{\partial E_R}\right)
-+\frac{E_i^2}{2}\left(\frac{\partial^2 S_R}{\partial E_R^2}\right)+\cdots.
-$$
-Here the reservoir entropy is the entropy associated with its accessible energy shell (or an equivalent smooth thermodynamic entropy in the large-reservoir limit). The expansion assumes the reservoir is much larger than the subsystem, its entropy is differentiable over the exchanged-energy range, and the quadratic and higher terms are negligible. For a discrete spectrum, the shell must contain enough reservoir levels for a smooth approximation to be meaningful. Keeping only the first-order term gives
-$$
-\ln\Omega_R(E_{\mathrm{tot}}-E_i)
-\approx\text{constant}
--\frac{E_i}{k_B}\left(\frac{\partial S_R}{\partial E_R}\right).
-$$
-Why can the quadratic term usually be neglected? For a macroscopic reservoir, entropy is extensive, $S_R=N_Rs(E_R/N_R)$, so $\partial^2S_R/\partial E_R^2$ scales as $1/N_R$. When the small system's energy remains finite as the reservoir size grows, the quadratic correction vanishes relative to the linear term. The same large-reservoir reasoning underlies the grand-canonical expansion, where first derivatives with respect to energy and particle number produce $1/T$ and $-\mu/T$.
-
-Using $\partial S_R/\partial E_R=1/T$, the probability becomes
-
-$$
-p_i\propto e^{-\beta E_i},
-\qquad \beta=\frac{1}{k_BT}.
-$$
-
-After normalization, this is the canonical distribution:
+The resulting canonical probability is
 
 $$
 p_i=\frac{e^{-\beta E_i}}{Z},
-\qquad Z=\sum_i e^{-\beta E_i}.
+\qquad
+Z=\sum_i e^{-\beta E_i},
+\qquad
+\beta=\frac{1}{k_BT}.
 $$
 
-The quantity $Z$ is the **partition function**. Temperature controls how strongly high-energy states are suppressed relative to low-energy states:
-
-- At lower positive temperatures, probability is more concentrated on low-energy states.
-- At higher positive temperatures, the distribution over energies is more spread out.
-- The relative probabilities of two states depend on their energy difference: $p_i/p_j=e^{-\beta(E_i-E_j)}$.
-
-Thus the microcanonical definition through the entropy slope and the canonical Boltzmann weighting express the same temperature.
+Thus the microcanonical entropy slope and the canonical Boltzmann weighting use the same temperature. In a bounded spectrum, a negative entropy slope corresponds to negative $\beta$ and favors higher-energy states. The two-level example below checks this connection explicitly.
 
 ## 6. Example: two-level units, negative temperature, and experiment
 
