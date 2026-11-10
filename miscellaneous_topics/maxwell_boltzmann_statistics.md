@@ -34,28 +34,57 @@ $$
 S=k_B\ln W.
 $$
 
-## 3. Write the entropy
+## 3. A small counting example
 
-Taking the logarithm gives
+Take $N=3$ particles, two energy classes, and degeneracies $g_1=2$ and $g_2=1$. Suppose $n_1=2$ and $n_2=1$.
 
-$$
-\ln W=\ln N!+\sum_i n_i\ln g_i-\sum_i\ln(n_i!).
-$$
+If the particles carry temporary labels, first choose which two labels go into class 1, then choose one of its two states for each of those particles. The labelled count is
+
+$
+W_{\rm labelled}
+=\frac{3!}{2!1!}\,2^2\,1^1=12.
+$
+
+The Gibbs-corrected classical weight used here is the labelled count divided by $N!$:
+
+$
+W_{\rm MB}=\frac{W_{\rm labelled}}{3!}
+=\frac{2^2}{2!1!}=2.
+$
+
+This corrected weight need not be an integer: it is a classical phase-space counting weight after removal of the arbitrary particle labels, not a claim that there are literally two distinguishable arrangements. The example makes clear which factor is being removed.
+
+## 4. Write the entropy
+
+For the convention adopted in Section 2,
+
+$
+W_{\rm MB}=\frac{\prod_i g_i^{n_i}}{\prod_i n_i!},
+$
+
+so its logarithm is exactly
+
+$
+\boxed{\ln W_{\rm MB}
+=\sum_i n_i\ln g_i-\sum_i\ln(n_i!).}
+$
 
 For large occupation numbers, Stirling's approximation is useful:
 
-$$
+$
 \ln n!\simeq n\ln n-n.
-$$
+$
 
-Since $N$ is fixed, $\ln N!$ is constant during the maximization. Therefore, apart from constants independent of the $\{n_i\}$,
+It gives
 
-$$
+$
 \frac{S}{k_B}\simeq
-\sum_i\left[n_i\ln g_i-n_i\ln n_i+n_i\right]+\text{constant}.
-$$
+\sum_i\left[n_i\ln g_i-n_i\ln n_i+n_i\right].
+$
 
-## 4. Maximize entropy with fixed particle number and energy
+If instead one temporarily uses the labelled count, its entropy is larger by $k_B\ln N!$. Since $N$ is fixed during occupation maximization, this term is independent of every $n_i$ and does not change the maximizing distribution. It is nevertheless not irrelevant: retaining the labelled count as the physical classical count adds the spurious $k_B\ln N!$ contribution, which spoils extensivity in the thermodynamic limit. The Gibbs correction removes precisely this label overcounting.
+
+## 5. Maximize entropy with fixed particle number and energy
 
 We maximize $S$ while keeping both $N$ and $E$ fixed. Introduce Lagrange multipliers $\alpha$ and $\beta$ and define
 
@@ -101,7 +130,7 @@ $$
 
 This is the Maxwell–Boltzmann occupation law.
 
-## 5. Normalize the distribution
+## 6. Normalize the distribution
 
 Define the single-particle partition sum
 
@@ -137,7 +166,7 @@ $$
 
 Degeneracy appears in the class probability because a class with more states offers more ways for a particle to occupy that energy.
 
-## 6. Physical interpretation
+## 7. Physical interpretation
 
 The distribution reflects two competing effects:
 
@@ -154,7 +183,7 @@ $$
 
 where $n=N/V$ and $\lambda_T$ is the thermal de Broglie wavelength. In this regime quantum occupancy corrections are negligible. It can be obtained as the low-occupation limit of both Bose–Einstein and Fermi–Dirac distributions, but the counting-and-entropy argument above derives it directly in the classical regime.
 
-## 7. Example: equally spaced energy levels
+## 8. Example: equally spaced energy levels
 
 Suppose non-degenerate levels have energies $\epsilon_n=n\Delta$, where $n=0,1,2,\ldots$ and $\Delta>0$. Then $g_n=1$ and
 
@@ -182,7 +211,7 @@ $$
 
 As temperature increases, this ratio approaches one and higher levels become relatively more populated.
 
-## 8. Continuum energies and density of states
+## 9. Continuum energies and density of states
 
 For closely spaced energy levels, replace the sum by an integral. If $g(\epsilon)$ is the density of one-particle states per unit energy, then
 
@@ -198,11 +227,11 @@ $$
 
 The energy distribution consequently has the form $P(\epsilon)\propto\sqrt{\epsilon}e^{-\beta\epsilon}$. This square-root factor is the continuum analogue of degeneracy and is the same state-counting geometry behind the $v^2$ factor in the [Maxwell–Boltzmann speed distribution](maxwell_boltzmann_speed_distribution.md).
 
-## 9. Example: equally spaced levels and the oscillator
+## 10. Example: equally spaced levels and the oscillator
 
 The equally spaced non-degenerate spectrum above is the level structure of a single quantum harmonic oscillator, up to an energy offset. It is better viewed as an oscillator example than as a generic many-particle gas spectrum; see the later oscillator and solid-model chapters.
 
-## 10. Summary
+## 11. Summary
 
 The statistical-mechanical derivation follows a short chain:
 
