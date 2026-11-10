@@ -10,10 +10,10 @@ An ensemble is a probability distribution over the possible microstates of a sys
 
 ## 2. Equal a priori probabilities and the microcanonical description
 
-For an isolated system in equilibrium, with fixed energy $E$, volume $V$, and particle number $N$, the microcanonical ensemble assigns equal probability to all accessible microstates compatible with those constraints. If there are (W$E,V,N$) such states, then
+For an isolated system in equilibrium, with fixed energy $E$, volume $V$, and particle number $N$, the microcanonical ensemble assigns equal probability to all accessible microstates compatible with those constraints. If there are $W(E,V,N)$ such states, then
 
 $$
-P_r=\frac{1}{W$E,V,N$}
+P_r=\frac{1}{W(E,V,N)}
 $$
 
 for each accessible state $r$, and zero for inaccessible states.
@@ -26,13 +26,13 @@ $$
 S=k_B\ln W.
 $$
 
-The logarithm makes entropy additive for independent systems: if the combined multiplicity factorizes as (W_{AB}=W_AW_B), then (S_{AB}=S_A+S_B). The choice of state-counting convention (energy shell or cumulative phase-space volume, for example) must be stated when finite-size effects matter; see [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md).
+The logarithm makes entropy additive for independent systems: if the combined multiplicity factorizes as $W_{AB}=W_AW_B$, then $S_{AB}=S_A+S_B$. The choice of state-counting convention (energy shell or cumulative phase-space volume, for example) must be stated when finite-size effects matter; see [Temperature and Thermal Equilibrium](temperature_from_statistical_mechanics.md).
 
 The equilibrium macrostate is overwhelmingly likely when its multiplicity is much larger than that of competing macrostates. This is a probabilistic statement: equilibrium is not necessarily the only possible microstate, but the number of microstates compatible with equilibrium macroscopic values is typically dominant for a large system.
 
 ## 3. From multiplicity to equilibrium and temperature
 
-Suppose two weakly coupled systems can exchange energy while their combined energy is fixed. If subsystem A has energy $E_A$, subsystem B has energy (E_{\\rm tot}-E_A), and their multiplicities are (W_A$E_A$) and (W_B(E_{\\rm tot}-E_A)), then the multiplicity of the combined macrostate is
+Suppose two weakly coupled systems can exchange energy while their combined energy is fixed. If subsystem A has energy $E_A$, subsystem B has energy $E_{\\rm tot}-E_A$, and their multiplicities are $W_A(E_A)$ and (W_B$E_{\\rm tot}-E_A$), then the multiplicity of the combined macrostate is
 
 $$
 W_{\rm tot}$E_A$=W_A$E_A$W_B(E_{\rm tot}-E_A).
@@ -58,7 +58,7 @@ This argument illustrates the logic of equilibrium: count compatible states, for
 
 ## 4. The canonical ensemble: a system in a heat reservoir
 
-Now let a small system exchange energy with a much larger reservoir. The combined system is isolated, so if the small system is in microstate $r$ with energy (E_r), the reservoir energy is (E_R=E_{\\rm tot}-E_r).
+Now let a small system exchange energy with a much larger reservoir. The combined system is isolated, so if the small system is in microstate $r$ with energy $E_r$, the reservoir energy is $E_R=E_{\\rm tot}-E_r$.
 
 The probability of microstate $r$ is proportional to the number of reservoir states compatible with that energy:
 
@@ -95,7 +95,7 @@ The reservoir derivation assumes weak enough coupling that the subsystem energy 
 
 ## 5. The grand canonical ensemble: energy and particles can be exchanged
 
-If the subsystem can exchange particles as well as energy, its reservoir changes both energy and particle number. For subsystem energy (E_r) and particle number $N$, the reservoir has (E_R=E_{\\rm tot}-E_r) and (N_R=N_{\\rm tot}-N). A first-order expansion gives
+If the subsystem can exchange particles as well as energy, its reservoir changes both energy and particle number. For subsystem energy $E_r$ and particle number $N$, the reservoir has $E_R=E_{\\rm tot}-E_r$ and $N_R=N_{\\rm tot}-N$. A first-order expansion gives
 
 $$
 S_R\simeq S_{R,0}
