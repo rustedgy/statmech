@@ -2,7 +2,7 @@
 
 ## 1. The physical question
 
-Why does the heat capacity of a crystalline solid fall far below the classical Dulong–Petit value at low temperature, and why does it approach a value proportional to (T^3) as (T\to 0)?
+Why does the heat capacity of a crystalline solid fall far below the classical Dulong–Petit value at low temperature, and why does it approach a value proportional to $T^3$ as $T\to0$?
 
 The Einstein model treats every atom as an independent quantum harmonic oscillator with the same frequency. It correctly predicts a strong low-temperature suppression of heat capacity, but its single-frequency spectrum gives an exponentially small heat capacity at low $T$. Experiments on many insulating crystals instead show an approximate cubic law, $C_V\propto T^3$, over a low-temperature range.
 
