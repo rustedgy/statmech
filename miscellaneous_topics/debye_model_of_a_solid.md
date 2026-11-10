@@ -28,7 +28,7 @@ The Debye approximation makes two central assumptions:
 1. At sufficiently low frequencies, the dispersion relation is approximately linear, $\omega=v_s k$, as for sound waves.
 2. The continuum spectrum is cut off at a maximum Debye frequency $\omega_D$, chosen so that the total number of vibrational modes is exactly $3N$ for a three-dimensional solid.
 
-Real crystals have multiple branches, anisotropy, and deviations from linear dispersion at large wave number. The Debye model compresses these details into an effective sound speed and a cutoff.
+Real crystals have multiple branches, anisotropy, and deviations from linear dispersion at large wave number. The Debye model retains the three acoustic branches in its mode count. For an isotropic solid, the longitudinal and two transverse branches have speeds $v_L$, $v_{T1}$, and $v_{T2}$. A single Debye speed can then be defined by the inverse-cube average derived below; it is not the arithmetic mean of the sound speeds.
 
 ## 3. Counting vibrational modes
 
@@ -61,7 +61,7 @@ $$
 \int_0^{\omega_D}g(\omega)\,d\omega=3N.
 $$
 
-With the effective-speed form above, this gives
+Using the inverse-cube Debye speed defined above, this gives
 
 $$
 \omega_D^3=\frac{6\pi^2N}{V}v_s^3.
