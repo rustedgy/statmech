@@ -8,7 +8,7 @@ A developing book of self-contained chapters on statistical mechanics, accompani
 
 The book is organized thematically into parts covering foundations and ensembles, classical and quantum statistics, applications to matter and radiation, and stochastic processes and relaxation. Chapter numbers are intentionally omitted while the contents and ordering continue to evolve.
 
-The Markdown files in `miscellaneous_topics/` are the source of truth for the book. The directory name is retained for source-path stability; the published site presents it under the book title rather than as miscellaneous material.
+The opening foundations chapter, [From Microstates to Statistical Ensembles](miscellaneous_topics/from_microstates_to_statistical_ensembles.md), connects microstates, macrostates, entropy, and the microcanonical, canonical, and grand canonical descriptions. The Markdown files in `miscellaneous_topics/` are the source of truth for the book. The directory name is retained for source-path stability; the published site presents it under the book title rather than as miscellaneous material.
 
 ## Lecture-note collections
 
