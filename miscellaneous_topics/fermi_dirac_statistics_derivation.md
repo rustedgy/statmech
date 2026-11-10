@@ -35,7 +35,7 @@ $$
 W(\{n_i\})=\prod_i\frac{g_i!}{n_i!(g_i-n_i)!}.
 $$
 
-This combinatorial factor is where the exclusion constraint enters the calculation.
+This binomial coefficient is the **exact finite-system multiplicity** for a group of $g_i$ one-particle states and $n_i$ fermions. No Stirling approximation has yet been used. This is where the exclusion constraint enters the calculation.
 
 ## 3. Entropy from multiplicity
 
@@ -49,10 +49,7 @@ g_i\ln g_i-n_i\ln n_i\\
 \end{aligned}
 $$
 
-Thus
-
-$$
-S\approx k_B\sum_i\big[g_i\ln g_i-n_i\ln n_i
+This continuous-occupation approximation requires the factorial arguments to be large: $g_i\gg1$, $n_i\gg1$, and $g_i-n_i\gg1$ for the groups that contribute. It is not reliable near completely empty or completely full groups, or for a single state with $g_i=1$. The exact binomial multiplicity remains valid there, but the differentiable entropy approximation does not.\n\nThus\n\n$\nS\approx k_B\sum_i\big[g_i\ln g_i-n_i\ln n_i
 -(g_i-n_i)\ln(g_i-n_i)\big].
 $$
 
@@ -129,7 +126,7 @@ $$
 
 At $\epsilon=\mu$, the occupation is one half. For positive temperature, states far below the chemical potential are likely to be occupied, while states far above it are unlikely to be occupied.
 
-In the zero-temperature limit for a system with a conventional ground-state filling, the distribution approaches a step:
+The entropy-maximization calculation gives a most-probable coarse-grained occupation for a highly degenerate energy group. For an individual fermionic orbital, the exact grand-canonical distribution has only two outcomes, $n=0$ and $n=1$, with probabilities proportional to $1$ and $e^{-\beta(\epsilon-\mu)}$; its exact mean is the Fermi–Dirac factor shown above. This is the direct single-state counterpart of the exact bosonic geometric-series derivation.\n\nIn the zero-temperature limit for a system with a conventional ground-state filling, the distribution approaches a step:
 
 $$
 \bar n(\epsilon)\longrightarrow
@@ -216,10 +213,12 @@ The corresponding Fermi temperature is $T_F=E_F/k_B$. For typical metals it is o
 
 For a three-dimensional free-electron gas, the low-temperature Sommerfeld expansion gives
 
-$$
+$
 \boxed{\mu(T)\simeq E_F\left[1-\frac{\pi^2}{12}
 \left(\frac{k_BT}{E_F}\right)^2\right].}
-$$
+$
+
+This expansion assumes $k_BT\ll E_F$, a smooth density of states near $E_F$, and a fixed total particle number. It is not valid near a band edge, a singularity in the density of states, or in the non-degenerate high-temperature regime. For the three-dimensional free-electron density of states $g(E)\propto\sqrt E$, the derivative ratio $g'(E_F)/g(E_F)=1/(2E_F)$ gives the coefficient $\pi^2/12$ shown above.
 
 Only electrons within an energy range of order $k_BT$ of the Fermi surface can be thermally excited. The leading electronic heat capacity is therefore
 
