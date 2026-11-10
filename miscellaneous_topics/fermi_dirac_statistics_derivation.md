@@ -213,10 +213,10 @@ The corresponding Fermi temperature is $T_F=E_F/k_B$. For typical metals it is o
 
 For a three-dimensional free-electron gas, the low-temperature Sommerfeld expansion gives
 
-$
+$$
 \boxed{\mu(T)\simeq E_F\left[1-\frac{\pi^2}{12}
 \left(\frac{k_BT}{E_F}\right)^2\right].}
-$
+$$
 
 This expansion assumes $k_BT\ll E_F$, a smooth density of states near $E_F$, and a fixed total particle number. It is not valid near a band edge, a singularity in the density of states, or in the non-degenerate high-temperature regime. For the three-dimensional free-electron density of states $g(E)\propto\sqrt E$, the derivative ratio $g'(E_F)/g(E_F)=1/(2E_F)$ gives the coefficient $\pi^2/12$ shown above.
 
