@@ -10,6 +10,7 @@ nav:
       - Overview: miscellaneous_topics/index.md
       - Part I — Foundations and Ensembles:
           - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
+          - From Microstates to Statistical Ensembles: miscellaneous_topics/from_microstates_to_statistical_ensembles.md
           - Indicator Functions: miscellaneous_topics/indicator_functions_statmech.md
           - Temperature and Thermal Equilibrium: miscellaneous_topics/temperature_from_statistical_mechanics.md
           - Partition Function and Thermodynamic Potentials: miscellaneous_topics/partition_function_thermodynamics_generator.md
