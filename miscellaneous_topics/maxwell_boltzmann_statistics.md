@@ -40,17 +40,17 @@ Take $N=3$ particles, two energy classes, and degeneracies $g_1=2$ and $g_2=1$. 
 
 If the particles carry temporary labels, first choose which two labels go into class 1, then choose one of its two states for each of those particles. The labelled count is
 
-$
+$$
 W_{\rm labelled}
 =\frac{3!}{2!1!}\,2^2\,1^1=12.
-$
+$$
 
 The Gibbs-corrected classical weight used here is the labelled count divided by $N!$:
 
-$
+$$
 W_{\rm MB}=\frac{W_{\rm labelled}}{3!}
 =\frac{2^2}{2!1!}=2.
-$
+$$
 
 This corrected weight need not be an integer: it is a classical phase-space counting weight after removal of the arbitrary particle labels, not a claim that there are literally two distinguishable arrangements. The example makes clear which factor is being removed.
 
@@ -58,29 +58,29 @@ This corrected weight need not be an integer: it is a classical phase-space coun
 
 For the convention adopted in Section 2,
 
-$
+$$
 W_{\rm MB}=\frac{\prod_i g_i^{n_i}}{\prod_i n_i!},
-$
+$$
 
 so its logarithm is exactly
 
-$
+$$
 \boxed{\ln W_{\rm MB}
 =\sum_i n_i\ln g_i-\sum_i\ln(n_i!).}
-$
+$$
 
 For large occupation numbers, Stirling's approximation is useful:
 
-$
+$$
 \ln n!\simeq n\ln n-n.
-$
+$$
 
 It gives
 
-$
+$$
 \frac{S}{k_B}\simeq
 \sum_i\left[n_i\ln g_i-n_i\ln n_i+n_i\right].
-$
+$$
 
 If instead one temporarily uses the labelled count, its entropy is larger by $k_B\ln N!$. Since $N$ is fixed during occupation maximization, this term is independent of every $n_i$ and does not change the maximizing distribution. It is nevertheless not irrelevant: retaining the labelled count as the physical classical count adds the spurious $k_B\ln N!$ contribution, which spoils extensivity in the thermodynamic limit. The Gibbs correction removes precisely this label overcounting.
 
