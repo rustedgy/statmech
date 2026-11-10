@@ -222,26 +222,13 @@ The partition function has reproduced the ideal-gas equation of state, internal 
 
 ## 7. A two-level preview
 
-Consider a particle with two non-degenerate energy levels, $0$ and $\Delta$. Its partition function is
+For a non-degenerate two-level system with energies $0$ and $\Delta$, the partition function is
 
 $$
 Z=1+e^{-\beta\Delta}.
 $$
 
-The general formula $U=-\partial_\beta\ln Z$ gives
-
-$$
-U=\frac{\Delta}{e^{\beta\Delta}+1}.
-$$
-
-Differentiating with respect to temperature yields
-
-$$
-C_V=k_B(\beta\Delta)^2
-\frac{e^{\beta\Delta}}{(1+e^{\beta\Delta})^2}.
-$$
-
-The heat capacity is small at very low temperatures because the excited level is rarely occupied, and small at very high temperatures because the two levels approach equal occupation and the mean energy changes only weakly with temperature. It therefore has a peak at an intermediate temperature, called the **Schottky anomaly**. The next chapter develops this example in detail.
+This illustrates how the partition function encodes the relative statistical weights of energy levels. The full derivation of the energy, heat capacity, limiting behavior, and Schottky peak is reserved for [Two-Level Systems and the Schottky Anomaly](two_level_system_schottky_anomaly.md), where the model is treated as an application rather than repeated here.
 
 ## 8. What the partition function does—and does not—tell us
 
