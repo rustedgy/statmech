@@ -20,6 +20,7 @@ This is a developing book of self-contained chapters on the concepts, methods, a
 - [Maxwell–Boltzmann Statistics](maxwell_boltzmann_statistics.md) — derive the classical occupation distribution from state counting and entropy maximization.
 - [Maxwell–Boltzmann Speed Distribution](maxwell_boltzmann_speed_distribution.md) — derive molecular speed distributions and characteristic speeds from the thermal velocity distribution.
 - [Bose–Einstein Statistics](bose_einstein_statistics_derivation.md) — derive the occupation distribution for bosons from state counting and entropy maximization.
+- [Bose–Einstein Condensation in the Ideal Gas](bose_einstein_condensation_ideal_gas.md) — derive the critical temperature and condensate fraction for the uniform three-dimensional ideal Bose gas.
 - [Fermi–Dirac Statistics](fermi_dirac_statistics_derivation.md) — derive the occupation distribution for fermions from state counting and entropy maximization.
 
 ### Part III — Applications to Matter and Radiation
