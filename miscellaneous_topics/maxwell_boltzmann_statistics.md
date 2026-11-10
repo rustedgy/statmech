@@ -255,4 +255,6 @@ the Maxwell–Boltzmann distribution over energy classes.
 2. Why is entropy maximized subject to both particle-number and energy constraints?
 3. Where does Stirling's approximation enter the derivation?
 4. How does the distribution change as temperature increases?
-5. Under what physical conditions is the Maxwell–Boltzmann description appropriate?\n6. Why is the Gibbs factor $1/N!$ needed for an extensive ideal-gas entropy?\n7. Why does the three-dimensional free-particle density of states scale as $\sqrt{\epsilon}$?
+5. Under what physical conditions is the Maxwell–Boltzmann description appropriate?
+6. Why is the Gibbs factor $1/N!$ needed for an extensive ideal-gas entropy?
+7. Why does the three-dimensional free-particle density of states scale as $\sqrt{\epsilon}$?
