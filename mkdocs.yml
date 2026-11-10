@@ -10,12 +10,14 @@ nav:
       - Overview: miscellaneous_topics/index.md
       - Part I — Foundations and Ensembles:
           - Notation and Symbols: miscellaneous_topics/notation_and_symbols.md
-          - From Microstates to Statistical Ensembles: miscellaneous_topics/from_microstates_to_statistical_ensembles.md
-          - Indicator Functions: miscellaneous_topics/indicator_functions_statmech.md
+          - Microstates, Macrostates, and the Microcanonical Ensemble: miscellaneous_topics/from_microstates_to_statistical_ensembles.md
           - Temperature and Thermal Equilibrium: miscellaneous_topics/temperature_from_statistical_mechanics.md
+          - The Canonical Ensemble and the Boltzmann Distribution: miscellaneous_topics/canonical_ensemble_boltzmann_distribution.md
           - Partition Function and Thermodynamic Potentials: miscellaneous_topics/partition_function_thermodynamics_generator.md
           - Grand Canonical Ensemble and Chemical Potential: miscellaneous_topics/grand_canonical_ensemble_chemical_potential.md
           - Two-Level Systems and the Schottky Anomaly: miscellaneous_topics/two_level_system_schottky_anomaly.md
+      - Part I — Mathematical Tools:
+          - Indicator Functions: miscellaneous_topics/indicator_functions_statmech.md
       - Part II — Classical and Quantum Statistics:
           - Equipartition of Energy: miscellaneous_topics/equipartition_of_energy.md
           - Maxwell–Boltzmann Statistics: miscellaneous_topics/maxwell_boltzmann_statistics.md
