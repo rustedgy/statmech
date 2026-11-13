@@ -338,7 +338,16 @@ The number of possible occupation lists grows only as a power of $N$ when $M$ is
 
 This feasibility qualification matters. The continuous fractions $p_j^*$ need not be approached by integer lists satisfying an exact total for every choice of real allowed values. Nor does a fixed total tolerance guarantee this automatically: arithmetic restrictions can leave only a restricted set of occupation lists, or even make the admitted set empty. The large-$N$ formula describes the exact discrete problem when the allowed integer lists sufficiently sample the continuous constraint surface. If they do not, the discrete maximization from the preceding chapter remains decisive.
 
-For a fixed total tolerance $\epsilon$, the average per particle differs from $U_*/N$ by at most $\epsilon/N$. The same leading concentration result therefore applies as $N$ grows, provided the target average has a well-defined limit and the admitted set is non-empty. If the tolerance itself grows in proportion to $N$, the constraint must instead be treated as an interval of allowed averages, as discussed in Section 8.
+For a fixed total tolerance $\epsilon$, write the target average at a given $N$ as $\overline U_N=U_*/N$. An admitted occupation list has an average $\mu=\sum_jp_jU_j$ satisfying $|\mu-\overline U_N|\leq\epsilon/N$. If $\lambda_N$ is the finite multiplier associated with the target average $\overline U_N$, the relative-count identity acquires the additional term $N\lambda_N(\mu-\overline U_N)$:
+
+$$
+\ln W(\boldsymbol p)-\ln W(\boldsymbol p_N^*)
+\simeq
+-ND(\boldsymbol p\Vert\boldsymbol p_N^*)
++N\lambda_N(\mu-\overline U_N).
+$$
+
+Here $\boldsymbol p_N^*$ is the continuous maximizing fraction list at average $\overline U_N$. The magnitude of the additional term is at most $|\lambda_N|\epsilon$, which is of order one when the target averages remain in the interior of the feasible range and $\lambda_N$ stays bounded. It therefore does not change the leading, order-$N$ comparison of logarithmic counts. This explains why a fixed total tolerance has the same leading large-$N$ concentration result as an exact average constraint, provided the admitted integer lists are feasible and sufficiently sample the relevant continuous fractions. If the tolerance itself grows in proportion to $N$, the constraint must instead be treated as an interval of allowed averages, as discussed in Section 8.
 
 ## 6. Average values and their fluctuations in the large-`N` description
 
@@ -567,6 +576,8 @@ $$
 $$
 
 The interval must first overlap the feasible average range from $U_{\min}=\min_jU_j$ to $U_{\max}=\max_jU_j$; otherwise the macrostate is empty. The large-$N$ maximization is then performed over all fractions whose average lies in the allowed part of this interval. If the unconstrained maximum, $p_j=1/M$, already has an average inside the interval, it is the maximum and $\lambda=0$. Otherwise the maximizing average lies at the boundary of the permitted interval nearest to the unconstrained average, and the formula from Section 3 applies with that boundary average. This follows because the maximum value of $-\sum_jp_j\ln p_j$ at a fixed average is a concave function of that average, with its largest value at the uniform fractions.
+
+There is one endpoint qualification. If the selected boundary average is exactly $U_{\min}$ or $U_{\max}$, the maximizing fractions are concentrated entirely on the corresponding extreme value. This is the limiting case $\lambda\to+\infty$ or $\lambda\to-\infty$, respectively; there is no finite multiplier at either endpoint.
 
 Thus, the exponential form in Section 3 applies to an active average-value constraint. The scale of the tolerance determines whether that constraint is active and, if so, which average value must be used.
 
