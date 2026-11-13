@@ -6,6 +6,7 @@ site_dir: /tmp/statmech-site
 
 nav:
   - Home: index.md
+  - Independent Framework — A Counting Framework for Finite Systems: miscellaneous_topics/counting_framework_finite_systems.md
   - "Book — Statistical Mechanics: Principles and Applications":
       - Overview: miscellaneous_topics/index.md
       - Part I — Foundations and Ensembles:
