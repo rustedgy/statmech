@@ -566,7 +566,7 @@ $$
 \overline U+\delta.
 $$
 
-The large-$N$ maximization must now be performed over all fractions whose average lies in this interval. If the unconstrained maximum, $p_j=1/M$, already has an average inside the interval, it is the maximum and $\lambda=0$. Otherwise the maximizing average lies at the boundary of the permitted interval nearest to the unconstrained average, and the formula from Section 3 applies with that boundary average. This follows because the maximum value of $-\sum_jp_j\ln p_j$ at a fixed average is a concave function of that average, with its largest value at the uniform fractions.
+The interval must first overlap the feasible average range from $U_{\min}=\min_jU_j$ to $U_{\max}=\max_jU_j$; otherwise the macrostate is empty. The large-$N$ maximization is then performed over all fractions whose average lies in the allowed part of this interval. If the unconstrained maximum, $p_j=1/M$, already has an average inside the interval, it is the maximum and $\lambda=0$. Otherwise the maximizing average lies at the boundary of the permitted interval nearest to the unconstrained average, and the formula from Section 3 applies with that boundary average. This follows because the maximum value of $-\sum_jp_j\ln p_j$ at a fixed average is a concave function of that average, with its largest value at the uniform fractions.
 
 Thus, the exponential form in Section 3 applies to an active average-value constraint. The scale of the tolerance determines whether that constraint is active and, if so, which average value must be used.
 
