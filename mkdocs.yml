@@ -7,6 +7,7 @@ site_dir: /tmp/statmech-site
 nav:
   - Home: index.md
   - Independent Framework — A Counting Framework for Finite Systems: miscellaneous_topics/counting_framework_finite_systems.md
+  - Large-N Counting — Stirling's Approximation and the Most Numerous Distribution: miscellaneous_topics/large_n_counting_stirling_approximation.md
   - "Book — Statistical Mechanics: Principles and Applications":
       - Overview: miscellaneous_topics/index.md
       - Part I — Foundations and Ensembles:
