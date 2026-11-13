@@ -222,7 +222,7 @@ $$
 S_U=\{0,\,0.9,\,2.1,\,3.0\}.
 $$
 
-The gaps are unequal: they are $0.9$, $1.2$, and $0.9$. Choose target total $U_*=4.0$ and tolerance $\epsilon=0.2$. We seek non-negative integers $(n_0,n_{0.9},n_{2.1},n_3)$ such that
+The gaps are unequal: they are $0.9$, $1.2$, and $0.9$. Choose target total $U_*=4.0$ and tolerance $\epsilon=0.21$. We seek non-negative integers $(n_0,n_{0.9},n_{2.1},n_3)$ such that
 
 $$
 n_0+n_{0.9}+n_{2.1}+n_3=4
@@ -231,7 +231,7 @@ $$
 and
 
 $$
-\left|0.9n_{0.9}+2.1n_{2.1}+3n_3-4.0\right|\leq0.2.
+\left|0.9n_{0.9}+2.1n_{2.1}+3n_3-4.0\right|\leq0.21.
 $$
 
 The allowed occupation lists are
