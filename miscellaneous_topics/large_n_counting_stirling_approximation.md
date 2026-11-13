@@ -323,14 +323,14 @@ $$
 
 Comparing the leading logarithmic count at $\boldsymbol p$ with its value at the continuous maximum $\boldsymbol p^*$ gives
 
-$
+$$
 \boxed{
 -N\sum_jp_j\ln p_j
 +N\sum_jp_j^*\ln p_j^*
 =
 -ND(\boldsymbol p\Vert\boldsymbol p^*).
 }
-$
+$$
 
 The quantity $D$ is non-negative and is zero only when the two fraction lists are identical. One way to establish non-negativity is to use $\ln x\leq x-1$ for positive $x$. Therefore, any fixed departure from the maximizing fractions reduces the count by an exponential factor as $N$ grows.
 
@@ -510,11 +510,11 @@ $$
 
 For $N=10^6$ and exact total $U_{\mathrm{tot}}=800000$, one nearby integer occupation list is
 
-$
+$$
 n_0=438371,\qquad
 n_1=323258,\qquad
 n_2=238371.
-$
+$$
 
 These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. The exact integer maximizer is found by comparing the multinomial counts of the feasible integer lists; the large-$N$ fractions locate it accurately.
 
