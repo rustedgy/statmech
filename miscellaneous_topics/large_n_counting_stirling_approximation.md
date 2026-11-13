@@ -321,15 +321,16 @@ $$
 D(\boldsymbol p\Vert\boldsymbol p^*).
 $$
 
-Using the leading Stirling expression for the two counts gives
+Comparing the leading logarithmic count at $\boldsymbol p$ with its value at the continuous maximum $\boldsymbol p^*$ gives
 
-$$
+$
 \boxed{
-\ln\frac{W(\boldsymbol n)}{W(\boldsymbol n^*)}
-\simeq
+-N\sum_jp_j\ln p_j
++N\sum_jp_j^*\ln p_j^*
+=
 -ND(\boldsymbol p\Vert\boldsymbol p^*).
 }
-$$
+$
 
 The quantity $D$ is non-negative and is zero only when the two fraction lists are identical. One way to establish non-negativity is to use $\ln x\leq x-1$ for positive $x$. Therefore, any fixed departure from the maximizing fractions reduces the count by an exponential factor as $N$ grows.
 
@@ -507,15 +508,15 @@ $$
 0p_0^*+1p_1^*+2p_2^*=0.8.
 $$
 
-For $N=10^6$, the most numerous occupation list is therefore expected to have counts close to
+For $N=10^6$ and exact total $U_{\mathrm{tot}}=800000$, one nearby integer occupation list is
 
-$$
-n_0\simeq438371,\qquad
-n_1\simeq323257,\qquad
-n_2\simeq238371,
-$$
+$
+n_0=438371,\qquad
+n_1=323258,\qquad
+n_2=238371.
+$
 
-with small adjustments as needed to make the counts integers and to satisfy the exact total or tolerance condition. The numerical counts are illustrative large-$N$ values; the exact integer maximizer is determined by the finite constraints.
+These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. The exact integer maximizer is found by comparing the multinomial counts of the feasible integer lists; the large-$N$ fractions locate it accurately.
 
 The example also shows that the probabilities need not be equal. The lower allowed values occur in larger fractions when the required average is below the simple arithmetic mean of the three allowed values.
 
