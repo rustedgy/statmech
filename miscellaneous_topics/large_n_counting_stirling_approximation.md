@@ -518,13 +518,7 @@ n_1=323258,\qquad
 n_2=238371.
 $$
 
-These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. In this example they are also the exact integer maximizer. To check this directly, write $t=n_2$, so that $n_1=800000-2t$ and $n_0=200000+t$. The ratio of consecutive counts is
-
-$
-\frac{W(t+1)}{W(t)}
-=
-\frac{n_1(n_1-1)}{(n_0+1)(t+1)}.
-$
+These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. In this example they are also the exact integer maximizer. To check this directly, write $t=n_2$, so that $n_1=800000-2t$ and $n_0=200000+t$. The ratio of consecutive counts is $W(t+1)/W(t)=n_1(n_1-1)/[(n_0+1)(t+1)]$.
 
 This ratio decreases as $t$ increases. It is approximately $1.0000169$ at $t=238370$ and $0.9999981$ at $t=238371$. Thus the count increases up to $t=238371$ and decreases after it, proving that the displayed list is the exact integer maximizer for this example.
 
