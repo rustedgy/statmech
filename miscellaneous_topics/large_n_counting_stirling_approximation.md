@@ -524,7 +524,7 @@ This ratio decreases as $t$ increases. It is approximately $1.0000169$ at $t=238
 
 The example also shows that the probabilities need not be equal. The lower allowed values occur in larger fractions when the required average is below the simple arithmetic mean of the three allowed values.
 
-## 8. The role of the tolerance when (N) is large
+## 8. The role of the tolerance for large $N$
 
 The preceding chapter used a tolerance on the total:
 
