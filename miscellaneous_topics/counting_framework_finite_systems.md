@@ -2,42 +2,44 @@
 
 ## Purpose and scope
 
-This chapter builds a counting argument from a small set of definitions and assumptions. It begins with individually identifiable particles, each of which carries one attribute whose value is chosen from a specified set. It then asks:
+This chapter develops a counting argument from definitions and assumptions alone. It begins with a finite collection of individually identifiable particles. Each particle carries one attribute, whose value is selected from a finite set. The central question is:
 
-**Among all assignments compatible with a fixed total value of the attribute, which pattern of particle counts is compatible with the largest number of microstates?**
+**Among all assignments whose total attribute value is equal to, or sufficiently close to, a prescribed target, which occupation-number pattern is compatible with the largest number of assignments?**
 
-The argument below uses only assignments, sets, constraints, and counting. It does not rely on any additional physical interpretation.
+The argument uses finite sets, integer occupation numbers, constraints, and direct counting. It does not require a continuous approximation or any thermodynamic interpretation.
+
+A practical point motivates the use of a tolerance. The allowed values of an attribute may be closely spaced without having equal gaps. A finite collection of such values cannot, in general, produce every possible total exactly. If the prescribed total is specified only to a finite resolution, it is natural to group together assignments whose totals lie within that resolution. The tolerance formulation makes this explicit while keeping the entire counting problem discrete.
 
 ## 1. Basic objects
 
 ### Definition 1: The system
 
-A system contains a fixed finite number $N$ of individually identifiable particles,
+The system contains a fixed finite number $N$ of individually identifiable particles,
 
 $$
 P=\{1,2,\ldots,N\}.
 $$
 
-The labels identify the particles. Thus, assigning a value to particle 1 and assigning the same value to particle 2 are different assignments, even if all the assigned values are otherwise identical.
+The labels distinguish the particles. Assigning a value to particle 1 and assigning the same value to particle 2 are different assignments.
 
 ### Definition 2: The attribute and its allowed values
 
-Each particle carries one attribute, denoted by $U$. The allowed values of this attribute form a finite set
+Each particle carries one attribute, denoted by $U$. Its allowed values form a finite set
 
 $$
 S_U=\{U_1,U_2,\ldots,U_M\},
 $$
 
-where the values are distinct. For now, $M$ is finite. The values need not be equally spaced, and they need not be integers.
+where the values are distinct. The values need not be equally spaced and need not be integers. Different particles may carry the same value.
 
-Every particle must carry exactly one value from $S_U$. Different particles may carry the same value.
+For some applications, the allowed values may be closely spaced over the range of interest. This can make a prescribed total attainable to a chosen accuracy, but closeness of the individual values by itself does not guarantee that every total is attainable. Attainability also depends on $N$, on the actual values in $S_U$, and on the chosen tolerance.
 
 ### Definition 3: An assignment
 
-An assignment specifies the value of $U$ for every particle. It can be written as an ordered list
+An assignment specifies the value of $U$ for every particle. It is an ordered list
 
 $$
-\boldsymbol{u}=(u_1,u_2,\ldots,u_N),
+\boldsymbol u=(u_1,u_2,\ldots,u_N),
 \qquad u_i\in S_U.
 $$
 
@@ -45,25 +47,27 @@ The order matters because the particles are individually identifiable.
 
 ## 2. Axioms and assumptions
 
-The counting argument rests on the following statements.
+The counting problem is defined by the following statements.
 
-**Axiom 1 — Fixed number of particles.** The number of particles is $N$ and does not change.
+**Axiom 1 — Fixed number of particles.** The number of particles is the fixed integer $N$.
 
-**Axiom 2 — One allowed value per particle.** Every particle has exactly one value of $U$, chosen from $S_U$.
+**Axiom 2 — One allowed value per particle.** Every particle carries exactly one value of $U$, chosen from $S_U$.
 
-**Axiom 3 — Repeated values are allowed.** There is no restriction on how many particles may carry the same value $U_j$.
+**Axiom 3 — Repeated values are permitted.** There is no restriction on how many particles may carry the same allowed value.
 
-**Axiom 4 — Fixed total attribute value.** The sum of the values carried by all particles is conserved:
+**Axiom 4 — A prescribed total, to a specified resolution.** A target value $U_*$ and a non-negative tolerance $\epsilon$ are specified. An assignment is admitted when
 
 $$
-U_{\mathrm{tot}}=\sum_{i=1}^{N}u_i.
+\left|\sum_{i=1}^{N}u_i-U_*\right|\leq\epsilon.
 $$
 
-**Axiom 5 — No additional restrictions.** Apart from Axioms 1–4, every assignment is admissible. In particular, the allowed assignments are not given different weights.
+The tolerance has the same units as $U$. It represents the resolution with which the total is being specified. The exact-total problem is recovered by setting $\epsilon=0$.
 
-**Counting convention.** Two assignments are counted as different if at least one labelled particle carries a different value in the two assignments.
+**Axiom 5 — No additional restrictions or weights.** Apart from Axioms 1–4, every assignment is admissible, and all admissible assignments are counted with equal weight.
 
-Axioms 1–5 define the model considered in this chapter. Additional restrictions can be introduced later, but they would define a different counting problem.
+**Counting convention.** Two assignments are different if at least one labelled particle carries a different value in them.
+
+These statements define the model. Changing the tolerance, introducing restrictions, or assigning different weights to assignments changes the counting problem.
 
 ## 3. Microstates and macrostates
 
@@ -71,83 +75,91 @@ Axioms 1–5 define the model considered in this chapter. Additional restriction
 
 A **microstate** is one complete assignment of an allowed value of $U$ to each of the $N$ particles.
 
-For example, for three particles and allowed values $S_U=\{0,1,2\}$, the assignments
+For three particles and $S_U=\{0,1,2\}$, for example,
 
 $$
 (0,1,2),\qquad (1,0,2),\qquad (2,0,1)
 $$
 
-are three different microstates. Each assigns the same collection of values, but to different labelled particles.
+are three different microstates. They contain the same values but assign them to different labelled particles.
 
 ### Definition 5: Macrostate
 
-A **macrostate** is a set of microstates selected by one or more specified constraints.
-
-The macrostate of interest here is the set of all microstates with the same fixed total value $U_{\mathrm{tot}}$:
+A **macrostate** is a set of microstates selected by specified conditions. The macrostate considered here contains all assignments whose total lies within the prescribed tolerance:
 
 $$
-\mathcal M(U_{\mathrm{tot}})
+\mathcal M(U_*,\epsilon)
 =
 \left\{
-\boldsymbol{u}\in S_U^N:
-\sum_{i=1}^{N}u_i=U_{\mathrm{tot}}
+\boldsymbol u\in S_U^N:
+\left|\sum_{i=1}^{N}u_i-U_*\right|\leq\epsilon
 \right\}.
 $$
 
-Thus, every microstate in this macrostate has the same total attribute value, although the individual particles need not carry the same values.
+The macrostate may be empty. It is non-empty if and only if at least one sum of $N$ allowed values lies in the interval
 
-The macrostate exists only if the chosen $U_{\mathrm{tot}}$ can be obtained from $N$ values drawn from $S_U$.
+$$
+[U_*-\epsilon,\,U_*+\epsilon].
+$$
 
-## 4. Distributions: grouping microstates by particle counts
+When $\epsilon=0$, the condition requires the total to equal $U_*$ exactly. For a finite allowed set, exact attainability is a genuine arithmetic constraint; an arbitrary real target need not be attainable.
+
+## 4. Distributions: grouping assignments by occupation numbers
 
 ### Definition 6: Occupation numbers
 
-For a given microstate, define $n_j$ to be the number of particles carrying the value $U_j$:
+For a microstate, let $n_j$ be the number of particles carrying the value $U_j$:
 
 $$
 n_j=\#\{i:u_i=U_j\},
 \qquad j=1,2,\ldots,M.
 $$
 
-The numbers $n_1,\ldots,n_M$ are non-negative integers. Since every particle carries exactly one allowed value,
+Each $n_j$ is a non-negative integer. Since every particle carries exactly one allowed value,
 
 $$
 \boxed{\sum_{j=1}^{M}n_j=N.}
 $$
 
-The total attribute value can be written in terms of these numbers:
+The total carried by an assignment with these occupation numbers is
 
 $$
-\boxed{\sum_{j=1}^{M}n_jU_j=U_{\mathrm{tot}}.}
+U(\boldsymbol n)=\sum_{j=1}^{M}n_jU_j.
+$$
+
+The tolerance condition becomes
+
+$$
+\boxed{
+\left|\sum_{j=1}^{M}n_jU_j-U_*\right|\leq\epsilon.
+}
 $$
 
 ### Definition 7: Distribution
 
-A **distribution** is the subset of a macrostate consisting of all microstates that have exactly the same occupation numbers $(n_1,n_2,\ldots,n_M)$.
-
-In other words, two microstates belong to the same distribution if and only if, for every allowed value $U_j$, the number of particles carrying $U_j$ is the same in both microstates.
-
-A distribution is therefore specified by its occupation-number list,
+A **distribution** is the subset of a macrostate consisting of all microstates with exactly the same occupation-number list
 
 $$
-\boldsymbol n=(n_1,n_2,\ldots,n_M),
+\boldsymbol n=(n_1,n_2,\ldots,n_M).
 $$
 
-subject to
+Thus, two microstates belong to the same distribution if and only if each allowed value occurs the same number of times in both.
+
+The allowed distributions are precisely the integer lists satisfying
 
 $$
-n_j\in\{0,1,2,\ldots\},\qquad
-\sum_j n_j=N,\qquad
-\sum_j n_jU_j=U_{\mathrm{tot}}.
+n_j\geq0,\qquad
+\sum_jn_j=N,\qquad
+\left|\sum_jn_jU_j-U_*\right|\leq\epsilon.
 $$
 
-Different distributions have different occupation-number lists. Every microstate in the macrostate belongs to exactly one distribution. Consequently, the macrostate is divided into disjoint distributions.
+Every microstate in the macrostate belongs to exactly one distribution. Different distributions are disjoint, and together they make up the macrostate.
 
-## 5. How many microstates belong to a distribution?
+## 5. Counting the microstates in one distribution
 
-Fix an allowed occupation-number list $(n_1,\ldots,n_M)$. We now count the assignments that realize it.
+Fix an allowed occupation-number list $(n_1,\ldots,n_M)$. To construct an assignment with these occupation numbers, choose which $n_1$ labelled particles carry $U_1$, then which $n_2$ of the remaining particles carry $U_2$, and continue.
 
-There are $N$ labelled particles. Choose which $n_1$ particles carry $U_1$, then which $n_2$ of the remaining particles carry $U_2$, and continue in this way. The number of choices is
+The number of assignments is
 
 $$
 \binom{N}{n_1}
@@ -155,313 +167,162 @@ $$
 \binom{N-n_1-n_2}{n_3}\cdots.
 $$
 
-After cancellation of the factorials, this becomes
+Cancelling factorials gives
 
 $$
 \boxed{
-W(\boldsymbol n)
-=
-\frac{N!}{n_1!n_2!\cdots n_M!}.
+W(\boldsymbol n)=\frac{N!}{n_1!n_2!\cdots n_M!}.
 }
 $$
 
-Here $W(\boldsymbol n)$ denotes the **number of microstates in the distribution** $\boldsymbol n$.
+Here $W(\boldsymbol n)$ is the number of microstates in the distribution $\boldsymbol n$. The expression counts assignments to labelled particles. It does not count permutations of the occupation-number list as new distributions: each $n_j$ is attached to its particular allowed value $U_j$.
 
-The formula counts assignments to labelled particles. It does not count different orderings of the occupation-number list as separate distributions: the allowed values $U_j$ are fixed labels, and each $n_j$ belongs to its corresponding $U_j$.
-
-The number of microstates in the entire macrostate is the sum over all its allowed distributions:
+The total number of microstates in the macrostate is the sum over all allowed integer lists:
 
 $$
-|\mathcal M(U_{\mathrm{tot}})|
+|\mathcal M(U_*,\epsilon)|
 =
 \sum_{\substack{n_1+\cdots+n_M=N\\
-n_1U_1+\cdots+n_MU_M=U_{\mathrm{tot}}}}
+|n_1U_1+\cdots+n_MU_M-U_*|\leq\epsilon}}
 \frac{N!}{n_1!\cdots n_M!}.
 $$
 
+This is a finite sum. There are only finitely many non-negative integer lists whose entries add to $N$.
+
 ## 6. The distribution with the largest number of microstates
 
-We seek the allowed occupation-number list that maximizes
+The most numerous distribution is found by solving the finite integer problem
 
 $$
+\boxed{
+\text{Maximize}\quad
 W(\boldsymbol n)=\frac{N!}{\prod_{j=1}^{M}n_j!}
-$$
-
-subject to the two constraints
-
-$$
-\sum_j n_j=N,
-\qquad
-\sum_j n_jU_j=U_{\mathrm{tot}},
-$$
-
-with every $n_j$ a non-negative integer.
-
-This is the exact finite-system problem. Because the occupation numbers must be integers, an exact maximizer need not have a simple closed form. There can also be more than one maximizing list.
-
-For a large system, however, the maximizing occupation numbers can be obtained to leading order by treating the fractions as continuous variables. This gives a simple and useful general form.
-
-### 6.1 Replace counts by fractions
-
-Define the fraction of particles carrying value $U_j$ as
-
-$$
-p_j=\frac{n_j}{N}.
-$$
-
-Then
-
-$$
-p_j\geq 0,
-\qquad
-\sum_jp_j=1,
-\qquad
-\sum_jp_jU_j=\overline U,
-$$
-
-where
-
-$$
-\overline U=\frac{U_{\mathrm{tot}}}{N}
-$$
-
-is the fixed average value per particle.
-
-The count becomes
-
-$$
-W=N!\prod_j\frac{1}{(Np_j)!}.
-$$
-
-### 6.2 Use the large-$N$ approximation
-
-For large integer $q$, the factorial can be approximated by
-
-$$
-\ln(q!)\simeq q\ln q-q.
-$$
-
-Applying this to $N!$ and to each $(Np_j)!$ gives
-
-$$
-\begin{aligned}
-\ln W
-&=\ln(N!)-\sum_j\ln[(Np_j)!]\\
-&\simeq N\ln N-N
--\sum_j\left[Np_j\ln(Np_j)-Np_j\right]\\
-&=-N\sum_jp_j\ln p_j.
-\end{aligned}
-$$
-
-The last equality uses $\sum_jp_j=1$.
-
-Since the logarithm increases whenever its argument increases, maximizing $W$ is equivalent to maximizing $\ln W$. In this approximation, we therefore maximize
-
-$$
--\sum_{j=1}^{M}p_j\ln p_j
-$$
-
-subject to the two constraints on the fractions.
-
-### 6.3 Apply the constraints
-
-Introduce two multipliers, $a$ and $\lambda$, and form
-
-$$
-\mathcal L
-=
--\sum_jp_j\ln p_j
--a\left(\sum_jp_j-1\right)
--\lambda\left(\sum_jp_jU_j-\overline U\right).
-$$
-
-At an interior maximum, the derivative with respect to each $p_j$ vanishes:
-
-$$
-\frac{\partial\mathcal L}{\partial p_j}
-=-(\ln p_j+1)-a-\lambda U_j=0.
-$$
-
-Rearranging,
-
-$$
-\ln p_j=-(1+a)-\lambda U_j,
-$$
-
-and hence
-
-$$
-p_j=Ae^{-\lambda U_j},
-$$
-
-where $A=e^{-(1+a)}$ is the same constant for every allowed value.
-
-The condition $\sum_jp_j=1$ fixes $A$. Define the finite sum
-
-$$
-C(\lambda)=\sum_{k=1}^{M}e^{-\lambda U_k}.
-$$
-
-Then
-
-$$
-A=\frac{1}{C(\lambda)}
-$$
-
-and the maximizing fractions take the form
-
-$$
-\boxed{
-p_j=\frac{e^{-\lambda U_j}}
-{\displaystyle\sum_{k=1}^{M}e^{-\lambda U_k}}.
 }
 $$
 
-The corresponding occupation numbers are
+subject to
 
 $$
-\boxed{
-n_j\simeq
-N\frac{e^{-\lambda U_j}}
-{\displaystyle\sum_{k=1}^{M}e^{-\lambda U_k}}.
-}
+n_j\in\{0,1,2,\ldots\},\qquad
+\sum_jn_j=N,\qquad
+\left|\sum_jn_jU_j-U_*\right|\leq\epsilon.
 $$
 
-The value of $\lambda$ is determined by the prescribed average $\overline U$:
+No replacement of the integers by continuous variables is made. One can, in principle, list all occupation-number lists satisfying the constraints, evaluate their multinomial counts, and select the largest. For large values of $N$ or $M$, more efficient discrete search methods may be useful, but the mathematical problem remains the same.
+
+There may be more than one maximizing distribution. This happens, for example, when distinct occupation-number lists have the same multinomial count. A tie is not a defect in the definition; it means that the counting assumptions do not single out one unique list.
+
+If the tolerance is so small that no allowed occupation list satisfies the constraint, the macrostate is empty and there is no maximizing distribution. If the tolerance is increased, more occupation lists may become admissible, and the maximizing list can change. Thus, the tolerance is part of the specification of the problem, not a parameter that can be chosen after the maximization.
+
+### 6.1 Worked example with unequal gaps
+
+Take four labelled particles and the allowed values
 
 $$
-\boxed{
-\overline U
-=
-\frac{\displaystyle\sum_j U_j e^{-\lambda U_j}}
-{\displaystyle\sum_j e^{-\lambda U_j}}.
-}
+S_U=\{0,\,0.9,\,2.1,\,3.0\}.
 $$
 
-This equation is the condition that fixes the one remaining parameter. It must be solved for the particular allowed values and the particular conserved total.
-
-## 7. What the result says
-
-The distribution with the largest number of compatible microstates has, for large $N$, fractions of the form
+The gaps are unequal: they are $0.9$, $1.2$, and $0.9$. Choose target total $U_*=4.0$ and tolerance $\epsilon=0.2$. We seek non-negative integers $(n_0,n_{0.9},n_{2.1},n_3)$ such that
 
 $$
-p_j\propto e^{-\lambda U_j}.
+n_0+n_{0.9}+n_{2.1}+n_3=4
 $$
 
-The proportionality constant is fixed by requiring that all fractions add to one. The parameter $\lambda$ is fixed by requiring that the average value of the attribute equal the prescribed value $U_{\mathrm{tot}}/N$.
-
-Several points are important:
-
-1. The exponential form was obtained from the counting formula and the two constraints. It was not assumed at the start.
-2. The result applies to any finite list of allowed values $U_j$; the values need not be equally spaced.
-3. The sign of $\lambda$ is not fixed in advance. It depends on the specified average and the allowed values.
-4. The formula gives the leading large-$N$ occupation fractions. For finite $N$, the exact answer is the integer occupation list (or lists) that maximize the factorial expression.
-5. The result relies on the assumption that all assignments satisfying the stated constraints are counted equally. If additional restrictions or unequal weights are introduced, the counting formula and the maximizing distribution may change.
-
-### A simple check
-
-Let the allowed values be
+and
 
 $$
-S_U=\{0,1,2\}
+\left|0.9n_{0.9}+2.1n_{2.1}+3n_3-4.0\right|\leq0.2.
 $$
 
-and suppose the prescribed average is $\overline U=1$. Taking $\lambda=0$ gives
+The allowed occupation lists are
+
+| Occupation list $(n_0,n_{0.9},n_{2.1},n_3)$ | Total | Number of assignments |
+|---|---:|---:|
+| $(1,2,1,0)$ | $3.9$ | $4!/(1!2!1!0!)=12$ |
+| $(2,1,0,1)$ | $3.9$ | $4!/(2!1!0!1!)=12$ |
+| $(2,0,2,0)$ | $4.2$ | $4!/(2!0!2!0!)=6$ |
+
+These are all the occupation lists satisfying the two constraints. The largest count is 12, attained by the first two lists. There are therefore two most numerous distributions.
+
+This example illustrates three points. First, equal spacing of the allowed values is not required. Second, a tolerance can admit totals on either side of the target. Third, the most numerous distribution is obtained by comparing the integer multinomial counts; it need not be unique.
+
+## 7. Choosing and interpreting the tolerance
+
+The tolerance should express the accuracy with which the total is specified. It must be large enough that at least one attainable total is included, but small enough that assignments with totals regarded as meaningfully different are not grouped together.
+
+For fixed $N$ and $S_U$, the set of attainable totals is finite:
 
 $$
-p_0=p_1=p_2=\frac13,
+\mathcal A_N=
+\left\{
+\sum_{j=1}^{M}n_jU_j:
+n_j\in\{0,1,2,\ldots\},\;
+\sum_jn_j=N
+\right\}.
 $$
 
-which has average value
+The macrostate is non-empty precisely when
 
 $$
-0\left(\frac13\right)
-+1\left(\frac13\right)
-+2\left(\frac13\right)=1.
+\mathcal A_N\cap[U_*-\epsilon,U_*+\epsilon]\neq\varnothing.
 $$
 
-Thus, for large $N$, the largest-count distribution has approximately equal fractions at the three allowed values. If $N$ is not divisible by three, the occupation numbers must be integers and the exact maximizing list is determined by the original factorial expression and the exact total-value constraint.
+This gives a direct way to check whether a proposed target and tolerance are compatible with the allowed values.
 
-## 8. Why the parameter is determined uniquely for an interior average
+If the allowed single-particle values are closely spaced across a range, sums formed from them may provide a fine set of attainable totals. Unequal gaps do not invalidate the construction. What matters for a particular problem, however, is the spacing of the attainable $N$-particle totals near the target, not just the spacing of neighbouring single-particle values. There is no general guarantee that a finite set of allowed values will reproduce every target exactly, or to an arbitrarily chosen tolerance.
 
-For completeness, define the average produced by a chosen $\lambda$:
-
-$$
-m(\lambda)=
-\frac{\sum_jU_je^{-\lambda U_j}}
-{\sum_je^{-\lambda U_j}}.
-$$
-
-Differentiating this expression gives
+The exact-total formulation is a special case. Setting $\epsilon=0$ restricts the allowed lists to those satisfying
 
 $$
-\frac{dm}{d\lambda}
-=
--\left[
-\frac{\sum_jU_j^2e^{-\lambda U_j}}{\sum_je^{-\lambda U_j}}
--
-\left(
-\frac{\sum_jU_je^{-\lambda U_j}}{\sum_je^{-\lambda U_j}}
-\right)^2
-\right].
+\sum_jn_jU_j=U_*.
 $$
 
-The quantity in square brackets is the weighted mean of $U^2$ minus the square of the weighted mean of $U$. It is non-negative, and it is strictly positive when at least two distinct allowed values have non-zero fractions. Therefore,
+If this equation has no non-negative integer solution with $\sum_jn_j=N$, the exact macrostate is empty. A positive tolerance can make the macrostate non-empty without changing any of the definitions of microstate, occupation number, distribution, or multinomial counting.
 
-$$
-\frac{dm}{d\lambda}<0
-$$
+## 8. More than one attribute
 
-in the non-degenerate case. The average decreases continuously as $\lambda$ increases. Consequently, for an average strictly between the smallest and largest allowed values, there is at most one finite $\lambda$ that produces it; for a finite allowed set with all values included, such a $\lambda$ exists.
-
-At the two extreme averages, all particles must carry the smallest or the largest allowed value, respectively. These limiting cases correspond to $\lambda$ tending to positive or negative infinity.
-
-## 9. Extending the description to more attributes
-
-The same definitions can accommodate additional attributes. Suppose each particle carries $K$ attributes,
-
-$$
-U^{(1)},U^{(2)},\ldots,U^{(K)},
-$$
-
-and an allowed particle-value is now a tuple
+The same construction applies when each particle carries several attributes. Suppose a particle's allowed value is a tuple
 
 $$
 \boldsymbol U_j=
-\left(U_j^{(1)},U_j^{(2)},\ldots,U_j^{(K)}\right).
+\left(U_j^{(1)},U_j^{(2)},\ldots,U_j^{(K)}\right),
 $$
 
-Suppose the sum of each attribute over all particles is fixed. The occupation numbers then obey one particle-count constraint and $K$ total-value constraints:
+chosen from a finite set of distinct allowed tuples. Let the target totals be $U_*^{(a)}$, with non-negative tolerances $\epsilon_a$ for $a=1,\ldots,K$.
+
+The occupation numbers still satisfy
 
 $$
-\sum_jn_j=N,
-\qquad
-\sum_jn_jU_j^{(a)}=U_{\mathrm{tot}}^{(a)}
-\quad (a=1,\ldots,K).
+n_j\in\{0,1,2,\ldots\},
+\qquad \sum_jn_j=N.
 $$
 
-The same counting formula $W=N!/\prod_jn_j!$ applies when the allowed tuples are the possible values for one particle and all assignments remain admissible. Repeating the constrained maximization gives
+The remaining constraints are
 
 $$
 \boxed{
-p_j=
-\frac{
-\exp\!\left[-\sum_{a=1}^{K}\lambda_aU_j^{(a)}\right]
-}{
-\displaystyle\sum_k
-\exp\!\left[-\sum_{a=1}^{K}\lambda_aU_k^{(a)}\right]
-}.
+\left|\sum_jn_jU_j^{(a)}-U_*^{(a)}\right|
+\leq\epsilon_a,
+\qquad a=1,\ldots,K.
 }
 $$
 
-Each multiplier $\lambda_a$ is determined by the prescribed average of its corresponding attribute. Thus, adding attributes adds constraints and corresponding multipliers, while the basic counting argument remains unchanged.
+The number of assignments for a given allowed occupation list remains
+
+$$
+W(\boldsymbol n)=\frac{N!}{\prod_jn_j!},
+$$
+
+because it depends only on how many labelled particles carry each allowed tuple. The most numerous distribution is again the integer occupation list that maximizes this expression subject to all the stated constraints.
+
+As in the one-attribute case, the macrostate may be empty if no integer occupation list satisfies all the tolerance conditions. Each additional attribute adds a constraint; it does not change the basic counting argument.
 
 ## Summary of the logical chain
 
-1. A microstate is a complete assignment of allowed attribute values to labelled particles.
-2. A macrostate is a set of microstates satisfying specified constraints.
-3. A distribution is the subset of a macrostate with a fixed list of occupation numbers.
-4. The number of microstates in a distribution is $N!/\prod_jn_j!$.
-5. The distribution with the largest number of microstates is found by maximizing this expression subject to the fixed particle number and fixed total attribute value.
-6. For large $N$, the maximizing fractions have the exponential form $p_j=e^{-\lambda U_j}/C(\lambda)$, with $\lambda$ fixed by the prescribed average.
-7. For finite $N$, the exact maximizing occupation numbers remain an integer-constrained counting problem.
+1. A microstate is a complete assignment of allowed attribute values to the $N$ labelled particles.
+2. A macrostate is the set of assignments whose total attribute value lies within a specified tolerance of a target. Exact equality is recovered when the tolerance is zero.
+3. A distribution is the subset of a macrostate with a fixed list of integer occupation numbers.
+4. The number of microstates in a distribution is the multinomial count $N!/\prod_jn_j!$.
+5. The most numerous distribution is found by maximizing this count over the allowed integer occupation lists.
+6. Unequal spacing of the allowed values causes no difficulty. Whether a target is attainable to a given accuracy depends on the attainable sums for the specified $N$ and allowed set.
+7. With several attributes, one adds a tolerance constraint for each total; the multinomial counting formula is unchanged.
