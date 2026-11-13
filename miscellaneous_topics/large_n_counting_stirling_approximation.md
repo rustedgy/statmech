@@ -334,7 +334,9 @@ $$
 
 The quantity $D$ is non-negative and is zero only when the two fraction lists are identical. One way to establish non-negativity is to use $\ln x\leq x-1$ for positive $x$. Therefore, any fixed departure from the maximizing fractions reduces the count by an exponential factor as $N$ grows.
 
-The number of possible occupation lists grows only as a power of $N$ when $M$ is fixed: it is at most $(N+1)^M$. This is much slower than an exponential in $N$. Consequently, for large $N$, the conditional probability is concentrated in a narrow region around the maximizing fractions. This is why the fractions $p_j^*$ describe the occupation of a typical assignment selected from the admitted set, not merely a formal maximum.
+The number of possible occupation lists grows only as a power of $N$ when $M$ is fixed: it is at most $(N+1)^M$. This is much slower than an exponential in $N$. Consequently, when feasible integer occupation lists exist whose fractions approach $\boldsymbol p^*$ as $N$ grows, the conditional probability is concentrated in a narrow region around the maximizing fractions. In that case the fractions $p_j^*$ describe the occupation of a typical assignment selected from the admitted set, not merely a formal maximum.
+
+This feasibility qualification matters. The continuous fractions $p_j^*$ need not be approached by integer lists satisfying an exact total for every choice of real allowed values. Nor does a fixed total tolerance guarantee this automatically: arithmetic restrictions can leave only a restricted set of occupation lists, or even make the admitted set empty. The large-$N$ formula describes the exact discrete problem when the allowed integer lists sufficiently sample the continuous constraint surface. If they do not, the discrete maximization from the preceding chapter remains decisive.
 
 For a fixed total tolerance $\epsilon$, the average per particle differs from $U_*/N$ by at most $\epsilon/N$. The same leading concentration result therefore applies as $N$ grows, provided the target average has a well-defined limit and the admitted set is non-empty. If the tolerance itself grows in proportion to $N$, the constraint must instead be treated as an interval of allowed averages, as discussed in Section 8.
 
@@ -516,7 +518,15 @@ n_1=323258,\qquad
 n_2=238371.
 $$
 
-These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. The exact integer maximizer is found by comparing the multinomial counts of the feasible integer lists; the large-$N$ fractions locate it accurately.
+These counts add to $10^6$ and give $n_1+2n_2=800000$. They are very close to $Np_j^*$. In this example they are also the exact integer maximizer. To check this directly, write $t=n_2$, so that $n_1=800000-2t$ and $n_0=200000+t$. The ratio of consecutive counts is
+
+$
+\frac{W(t+1)}{W(t)}
+=
+\frac{n_1(n_1-1)}{(n_0+1)(t+1)}.
+$
+
+This ratio decreases as $t$ increases. It is approximately $1.0000169$ at $t=238370$ and $0.9999981$ at $t=238371$. Thus the count increases up to $t=238371$ and decreases after it, proving that the displayed list is the exact integer maximizer for this example.
 
 The example also shows that the probabilities need not be equal. The lower allowed values occur in larger fractions when the required average is below the simple arithmetic mean of the three allowed values.
 
