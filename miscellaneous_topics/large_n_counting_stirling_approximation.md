@@ -493,7 +493,7 @@ $
 \left(\langle U^2\rangle-\langle U\rangle^2\right)\\
 &=-\langle U^3\rangle
 +\langle U^2\rangle\langle U\rangle
--2\langle U\rangle
+-2\langle U\rangle\cdot
 \frac{d\langle U\rangle}{d\lambda}\\
 &=-\langle U^3\rangle
 +3\langle U\rangle\langle U^2\rangle
