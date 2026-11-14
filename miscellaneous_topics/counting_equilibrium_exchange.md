@@ -27,11 +27,11 @@ We assume:
 
 Let
 
-$
+$$
 W_i(N_i,U_i)
 $
 
-denote the number of assignments of system \(i\) whose total attribute value is **exactly** \(U_i\). The exact finite counting results below apply when the specified totals are attainable. For brevity, with \(N_i\) fixed, we write this as \(W_i(U_i)\). If a total is not attainable, its exact count is zero and it is not an allowed allocation.
+$$
 
 The earlier finite-counting chapter also introduced a tolerance macrostate, in which assignments with totals in a window around a target are grouped together. One must take care when using such windows here: the product of two window counts does not, in general, count only pairs whose actual totals add to the prescribed combined total. With finite-width windows and exact conservation, the correct combined count is a sum over compatible pairs of actual subsystem totals. We use exact attainable totals for the exact product formulas in this chapter; a smooth or finite-resolution description must be constructed consistently with the conservation constraint.
 
@@ -70,7 +70,7 @@ over all allowed allocations.
 
 This definition has a direct probability interpretation for discrete totals. Suppose all combined assignments compatible with the fixed total are counted with equal weight. The probability of an allowed allocation is then
 
-$
+$$
 P(U_1,U_2)
 =
 \frac{W_1(U_1)W_2(U_2)}
@@ -78,7 +78,7 @@ P(U_1,U_2)
 W_1(V_1)W_2(V_2)}.
 $
 
-Consequently, the equilibrium allocation is the most probable allocation under this equal-counting convention. In a continuous approximation, probabilities are instead described by a density with respect to a specified allocation measure (for example, \(dU_1\)); the normalization is then an integral, not a sum. The measure must be stated because a density depends on the variable and measure used.
+$$
 
 For a large collection of particles, the number of assignments can be very strongly concentrated around its maximum. In that situation, the equilibrium allocation is not merely the most numerous one: allocations appreciably different from it can have much smaller probabilities. The precise conditions for such concentration depend on the counting functions and on which totals are attainable.
 
@@ -401,11 +401,11 @@ If the concavity is strict, the maximum is unique. If the logarithmic counts hav
 
 This qualification is important: equality of counting slopes by itself gives a stationary allocation, not necessarily a maximum. For example, consider smooth positive counting functions with \(\ln W_1(U)=U^2\) and \(\ln W_2(U)=U^2\), on an allowed interval containing zero. At the allocation \(U_1=U_2=0\), the two slopes are equal (both zero), but at fixed combined total zero the logarithm of the combined count after a transfer \(x\) is
 
-$
+$$
 G(x)=x^2+(-x)^2=2x^2.
 $
 
-Thus the initial allocation is a minimum, not a maximum. This simple example illustrates why a curvature or global-count comparison is essential; it is an illustration of the calculus, not a claim that these functions arise from the particular multinomial model in the earlier chapter.
+$$
 
 For a finite discrete system, the corresponding statement is that no allowed transfer increases the product \(W_1W_2\). Equality of a pair of finite slopes for one step alone is not enough to establish this for every possible transfer.
 
