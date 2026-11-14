@@ -426,7 +426,7 @@ For a finite discrete system, the corresponding statement is that no allowed tra
    $$
    \gamma_1=\gamma_2.
    $$
-5. If $\gamma_1<\gamma_2$,  a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
+5. If $\gamma_1<\gamma_2$, a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
 6. For a finite discrete system, exact equilibrium is determined by comparing the products of counts before and after every allowed transfer. Derivative equality is the smooth limiting condition.
 7. For \(m\) systems that can exchange the same conserved attribute, all counting slopes are equal at an interior maximum:
    $$
