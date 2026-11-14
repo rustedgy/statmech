@@ -88,44 +88,44 @@ The definition does not assert that no individual exchange ever occurs. It says 
 
 For two systems, the number of combined assignments at a specified allocation is
 
-$
-W_{\\mathrm{tot}}(U_1)
+$$
+W_{\mathrm{tot}}(U_1)
 =
-W_1(U_1)W_2(U_{\\mathrm{tot}}-U_1).
-$
+W_1(U_1)W_2(U_{\mathrm{tot}}-U_1).
+$$
 
 The counting-equilibrium allocation is the allowed value of $U_1$ that maximizes this product. We therefore maximize the product itself, rather than beginning by postulating a derivative-based quantity.
 
-It is convenient to take its logarithm because the logarithm is a strictly increasing function: maximizing $W_{\\mathrm{tot}}$ is equivalent to maximizing its logarithm. Thus
+It is convenient to take its logarithm because the logarithm is a strictly increasing function: maximizing $W_{\mathrm{tot}}$ is equivalent to maximizing its logarithm. Thus
 
-$
+$$
 L(U_1)
 =
-\\ln W_1(U_1)
+\ln W_1(U_1)
 +
-\\ln W_2(U_{\\mathrm{tot}}-U_1).
-$
+\ln W_2(U_{\mathrm{tot}}-U_1).
+$$
 
-At an interior maximum, with $U_{\\mathrm{tot}}$, $N_1$, and $N_2$ fixed, the first derivative must vanish:
+At an interior maximum, with $U_{\mathrm{tot}}$, $N_1$, and $N_2$ fixed, the first derivative must vanish:
 
-$
-\\frac{dL}{dU_1}
+$$
+\frac{dL}{dU_1}
 =
-\\left(\\frac{\\partial\\ln W_1}{\\partial U_1}\\right)_{N_1}
+\left(\frac{\partial\ln W_1}{\partial U_1}\right)_{N_1}
 -
-\\left(\\frac{\\partial\\ln W_2}{\\partial U_2}\\right)_{N_2}
+\left(\frac{\partial\ln W_2}{\partial U_2}\right)_{N_2}
 =0.
-$
+$$
 
-The minus sign follows from conservation, $U_2=U_{\\mathrm{tot}}-U_1$, so $dU_2/dU_1=-1$. Hence the condition for an interior stationary allocation is
+The minus sign follows from conservation, $U_2=U_{\mathrm{tot}}-U_1$, so $dU_2/dU_1=-1$. Hence the condition for an interior stationary allocation is
 
-$
-\\boxed{
-\\left(\\frac{\\partial\\ln W_1}{\\partial U_1}\\right)_{N_1}
+$$
+\boxed{
+\left(\frac{\partial\ln W_1}{\partial U_1}\right)_{N_1}
 =
-\\left(\\frac{\\partial\\ln W_2}{\\partial U_2}\\right)_{N_2}.
+\left(\frac{\partial\ln W_2}{\partial U_2}\right)_{N_2}.
 }
-$
+$$
 
 This derivation suggests that the logarithmic sensitivity of the count to the total attribute value is an important property of a system. We give this quantity a name.
 
@@ -133,57 +133,57 @@ This derivation suggests that the logarithmic sensitivity of the count to the to
 
 For a system with fixed particle number $N$, define the **counting slope**
 
-$
-\\boxed{
-\\gamma(N,U)
+$$
+\boxed{
+\gamma(N,U)
 =
-\\left(\\frac{\\partial\\ln W(N,U)}{\\partial U}\\right)_N.
+\left(\frac{\partial\ln W(N,U)}{\partial U}\right)_N.
 }
-$
+$$
 
 The derivative is taken at fixed particle number. The counting slope has units reciprocal to the units of $U$. For a small change $dU$,
 
-$
-d\\ln W=\\gamma\\,dU,
-$
+$$
+d\ln W=\gamma\,dU,
+$$
 
 so it measures the logarithmic change in the number of assignments per unit change in the total attribute value.
 
 In terms of this named quantity, the condition just derived becomes
 
-$
-\\boxed{\\gamma_1(N_1,U_1)=\\gamma_2(N_2,U_2).}
-$
+$$
+\boxed{\gamma_1(N_1,U_1)=\gamma_2(N_2,U_2).}
+$$
 
-Thus **the counting slopes of two systems are equal at an interior maximum of the number of combined assignments**. This equality is a necessary stationary-point condition. To establish that the point is a maximum, one must also check curvature or compare the allowed allocations. If each $\\ln W_i(U_i)$ is concave, their sum under the fixed-total constraint is concave, and an interior stationary point is a global maximum. Without such a condition, equality of slopes alone does not rule out a minimum or another stationary point.
+Thus **the counting slopes of two systems are equal at an interior maximum of the number of combined assignments**. This equality is a necessary stationary-point condition. To establish that the point is a maximum, one must also check curvature or compare the allowed allocations. If each $\ln W_i(U_i)$ is concave, their sum under the fixed-total constraint is concave, and an interior stationary point is a global maximum. Without such a condition, equality of slopes alone does not rule out a minimum or another stationary point.
 
 The counting slope depends on the system and its current total; it is not a fixed label attached to the system. Its sign has a direct meaning for the isolated counting function: a positive slope means that increasing $U$ locally increases $W$, while a negative slope means that increasing $U$ locally decreases $W$. A zero slope means that $W$ is locally stationary.
 
 ### The exact discrete counterpart
 
-The original counting framework is finite and discrete, so a derivative need not exist. For an allowed increment $\\Delta U>0$, define
+The original counting framework is finite and discrete, so a derivative need not exist. For an allowed increment $\Delta U>0$, define
 
-$
-\\gamma_{\\Delta U}^{+}(N,U)
+$$
+\gamma_{\Delta U}^{+}(N,U)
 =
-\\frac{1}{\\Delta U}
-\\ln\\left[
-\\frac{W(N,U+\\Delta U)}{W(N,U)}
-\\right],
-$
+\frac{1}{\Delta U}
+\ln\left[
+\frac{W(N,U+\Delta U)}{W(N,U)}
+\right],
+$$
 
 and
 
-$
-\\gamma_{\\Delta U}^{-}(N,U)
+$$
+\gamma_{\Delta U}^{-}(N,U)
 =
-\\frac{1}{\\Delta U}
-\\ln\\left[
-\\frac{W(N,U)}{W(N,U-\\Delta U)}
-\\right].
-$
+\frac{1}{\Delta U}
+\ln\left[
+\frac{W(N,U)}{W(N,U-\Delta U)}
+\right].
+$$
 
-These finite counting slopes are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite $N$. When allowed increments become small and the counting function admits a smooth interpolation, they approach the derivative $\\gamma(N,U)$.
+These finite counting slopes are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite $N$. When allowed increments become small and the counting function admits a smooth interpolation, they approach the derivative $\gamma(N,U)$.
 
 For discrete totals, the exact test is a comparison of count ratios for every allowed transfer. Equality of derivative-based counting slopes is the smooth description, not a replacement for that finite test.
 
