@@ -27,9 +27,9 @@ We assume:
 
 Let
 
-$
+$$
 W_i(N_i,U_i)
-$
+$$
 
 denote the number of assignments of system \(i\) whose total attribute value is **exactly** \(U_i\). The exact finite counting results below apply when the specified totals are attainable. For brevity, with \(N_i\) fixed, we write this as \(W_i(U_i)\). If a total is not attainable, its exact count is zero and it is not an allowed allocation.
 
@@ -70,13 +70,13 @@ over all allowed allocations.
 
 This definition has a direct probability interpretation for discrete totals. Suppose all combined assignments compatible with the fixed total are counted with equal weight. The probability of an allowed allocation is then
 
-$
+$$
 P(U_1,U_2)
 =
 \frac{W_1(U_1)W_2(U_2)}
 {\displaystyle\sum_{\text{allowed allocations }(V_1,V_2)}
 W_1(V_1)W_2(V_2)}.
-$
+$$
 
 Consequently, the equilibrium allocation is the most probable allocation under this equal-counting convention. In a continuous approximation, probabilities are instead described by a density with respect to a specified allocation measure (for example, \(dU_1\)); the normalization is then an integral, not a sum. The measure must be stated because a density depends on the variable and measure used.
 
@@ -211,11 +211,11 @@ $$
 
 There are three cases.
 
-1. **If $\\gamma_1>\\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
-2. **If $\\gamma_1<\\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
-3. **If $\\gamma_1=\\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
+1. **If $\gamma_1>\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
+2. **If $\gamma_1<\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
+3. **If $\gamma_1=\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
 
-Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\\delta\\ln W_{\\mathrm{tot}}=(\\gamma_2-\\gamma_1)\\delta U$ for a transfer from 1 to 2.
+Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\delta\ln W_{\mathrm{tot}}=(\gamma_2-\gamma_1)\delta U$ for a transfer from 1 to 2.
 
 This statement should not be confused with a law for the actual rate of transfer. To calculate a rate, one would need additional information about how exchanges occur and how often each allowed change is attempted. The counting argument determines which direction has the larger number of compatible combined assignments, not how quickly the systems approach the most numerous allocation.
 
@@ -401,9 +401,9 @@ If the concavity is strict, the maximum is unique. If the logarithmic counts hav
 
 This qualification is important: equality of counting slopes by itself gives a stationary allocation, not necessarily a maximum. For example, consider smooth positive counting functions with \(\ln W_1(U)=U^2\) and \(\ln W_2(U)=U^2\), on an allowed interval containing zero. At the allocation \(U_1=U_2=0\), the two slopes are equal (both zero), but at fixed combined total zero the logarithm of the combined count after a transfer \(x\) is
 
-$
+$$
 G(x)=x^2+(-x)^2=2x^2.
-$
+$$
 
 Thus the initial allocation is a minimum, not a maximum. This simple example illustrates why a curvature or global-count comparison is essential; it is an illustration of the calculus, not a claim that these functions arise from the particular multinomial model in the earlier chapter.
 
@@ -426,7 +426,7 @@ For a finite discrete system, the corresponding statement is that no allowed tra
    $$
    \gamma_1=\gamma_2.
    $$
-5. If \\(\\gamma_1<\\gamma_2\\), a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
+5. If $\gamma_1<\gamma_2$, a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
 6. For a finite discrete system, exact equilibrium is determined by comparing the products of counts before and after every allowed transfer. Derivative equality is the smooth limiting condition.
 7. For \(m\) systems that can exchange the same conserved attribute, all counting slopes are equal at an interior maximum:
    $$
