@@ -396,56 +396,135 @@ $$
 }
 $$
 
-The same results can be obtained by differentiating $Q(\lambda)$. Since
+The same results can be obtained by differentiating $Q(\lambda)$. The reason is that differentiating an exponential $e^{-\lambda U_j}$ brings down a factor of $-U_j$. The normalization by $Q$ then turns the resulting sums into averages with the probabilities $p_j^*$.
 
-$$
+Since
+$
 \frac{dQ}{d\lambda}
 =-\sum_jU_je^{-\lambda U_j},
-$$
-
-we have
-
-$$
+$
+and
+$
+\langle U\rangle
+=\sum_jU_jp_j^*
+=\frac{\sum_jU_je^{-\lambda U_j}}{Q},
+$
+we obtain
+$
+\frac{d}{d\lambda}\ln Q
+=\frac{1}{Q}\frac{dQ}{d\lambda}
+=-\langle U\rangle.
+$
+Thus
+$
 \boxed{
 \langle U\rangle
 =-\frac{d}{d\lambda}\ln Q(\lambda).
 }
-$$
+$
 
-Differentiating once more gives
-
-$$
+**Second derivative: the variance.** To differentiate the mean explicitly, write
+$
+A_1(\lambda)=\sum_jU_je^{-\lambda U_j},
+\qquad
+\langle U\rangle=\frac{A_1}{Q}.
+$
+Differentiating the numerator gives
+$
+A_1'=-\sum_jU_j^2e^{-\lambda U_j},
+\qquad
+Q'=-A_1.
+$
+Using the quotient rule,
+$
+\begin{aligned}
+\frac{d\langle U\rangle}{d\lambda}
+&=\frac{A_1'Q-A_1Q'}{Q^2}\\
+&=-\frac{\sum_jU_j^2e^{-\lambda U_j}}{Q}
++\left(\frac{\sum_jU_je^{-\lambda U_j}}{Q}\right)^2\\
+&=-\langle U^2\rangle+\langle U\rangle^2.
+\end{aligned}
+$
+Because the first derivative of $\ln Q$ is $-\langle U\rangle$, differentiating it once more changes the sign:
+$
 \boxed{
 \frac{d^2}{d\lambda^2}\ln Q(\lambda)
-=
-\langle U^2\rangle-\langle U\rangle^2
-=
-\sigma_U^2.
+=\langle U^2\rangle-\langle U\rangle^2
+=\sigma_U^2.
 }
-$$
-
-Consequently,
-
-$$
+$
+This is the variance, since expanding the square in its definition gives
+$
+\begin{aligned}
+\left\langle(U-\langle U\rangle)^2\right\rangle
+&=\langle U^2\rangle
+-2\langle U\rangle\langle U\rangle
++\langle U\rangle^2\\
+&=\langle U^2\rangle-\langle U\rangle^2.
+\end{aligned}
+$
+It follows in particular that
+$
 \boxed{
 \frac{d\langle U\rangle}{d\lambda}
 =-\sigma_U^2\leq0.
 }
-$$
+$
+If at least two distinct values have nonzero probabilities, the variance is positive and the inequality is strict. Thus the average value decreases continuously as $\lambda$ increases. For an average strictly between the smallest and largest allowed values, this also establishes that there is exactly one finite value of $\lambda$ that produces the required average.
 
-If at least two distinct values have nonzero probabilities, the inequality is strict. Thus the average value decreases continuously as $\lambda$ increases. For an average strictly between the smallest and largest allowed values, this also establishes that there is exactly one finite value of $\lambda$ that produces the required average.
+**Third derivative: the negative third central moment.** It is important to distinguish the *raw third moment* $\langle U^3\rangle$ from the *third central moment* $\langle(U-\langle U\rangle)^3\rangle$. The third derivative of $\ln Q$ is not the raw third moment.
 
-Higher derivatives of $\ln Q$ generate further information about the distribution of allowed values. For example, the third derivative is the third central moment:
-
-$$
+The same quotient-rule calculation used above, now applied to the second moment, gives
+$
+\frac{d\langle U^2\rangle}{d\lambda}
+=-\langle U^3\rangle
++\langle U^2\rangle\langle U\rangle.
+$
+We also already have
+$
+\frac{d\langle U\rangle}{d\lambda}
+=-\langle U^2\rangle+\langle U\rangle^2.
+$
+Differentiate the variance expression and substitute these two results:
+$
+\begin{aligned}
+\frac{d^3}{d\lambda^3}\ln Q
+&=\frac{d}{d\lambda}
+\left(\langle U^2\rangle-\langle U\rangle^2\right)\\
+&=-\langle U^3\rangle
++\langle U^2\rangle\langle U\rangle
+-2\langle U\rangle
+\frac{d\langle U\rangle}{d\lambda}\\
+&=-\langle U^3\rangle
++3\langle U\rangle\langle U^2\rangle
+-2\langle U\rangle^3.
+\end{aligned}
+$
+On the other hand, expanding the third central moment gives
+$
+\begin{aligned}
+\left\langle(U-\langle U\rangle)^3\right\rangle
+&=\langle U^3\rangle
+-3\langle U\rangle\langle U^2\rangle
++3\langle U\rangle^2\langle U\rangle
+-\langle U\rangle^3\\
+&=\langle U^3\rangle
+-3\langle U\rangle\langle U^2\rangle
++2\langle U\rangle^3.
+\end{aligned}
+$
+Comparing the last two expressions,
+$
+\boxed{
 \frac{d^3}{d\lambda^3}\ln Q(\lambda)
-=
--\left\langle
-\big(U-\langle U\rangle\big)^3
+=-\left\langle
+(U-\langle U\rangle)^3
 \right\rangle.
-$$
+}
+$
+The minus sign ultimately comes from the factor $e^{-\lambda U_j}$: each differentiation brings down one factor of $-U_j$. The third central moment measures the asymmetry of the distribution about its mean; it is distinct from the raw third moment.
 
-These derivative identities are convenient because they give averages and measures of spread without having to sum each expression from scratch.
+These derivative identities are useful because they generate averages and measures of spread and asymmetry directly from the normalizing sum, without having to evaluate each weighted sum from scratch.
 
 ### A point about fluctuations of the total
 
