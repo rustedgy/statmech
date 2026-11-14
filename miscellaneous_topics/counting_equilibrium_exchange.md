@@ -27,11 +27,13 @@ We assume:
 
 Let
 
-$$
-W_1(N_1,U_1),\qquad W_2(N_2,U_2)
-$$
+$
+W_i(N_i,U_i)
+$
 
-denote the numbers of assignments available to the two systems at their respective totals. For brevity, when the particle numbers are fixed, we write these as \(W_1(U_1)\) and \(W_2(U_2)\).
+denote the number of assignments of system \(i\) whose total attribute value is **exactly** \(U_i\). The exact finite counting results below apply when the specified totals are attainable. For brevity, with \(N_i\) fixed, we write this as \(W_i(U_i)\). If a total is not attainable, its exact count is zero and it is not an allowed allocation.
+
+The earlier finite-counting chapter also introduced a tolerance macrostate, in which assignments with totals in a window around a target are grouped together. One must take care when using such windows here: the product of two window counts does not, in general, count only pairs whose actual totals add to the prescribed combined total. With finite-width windows and exact conservation, the correct combined count is a sum over compatible pairs of actual subsystem totals. We use exact attainable totals for the exact product formulas in this chapter; a smooth or finite-resolution description must be constructed consistently with the conservation constraint.
 
 A combined assignment consists of one assignment of system 1 together with one assignment of system 2. Every choice for system 1 can be paired with every choice for system 2. Therefore, at a specified allocation \((U_1,U_2)\), the number of combined assignments is
 
@@ -66,17 +68,17 @@ $$
 
 over all allowed allocations.
 
-This definition has a direct probability interpretation. Suppose all combined assignments compatible with the fixed total are counted with equal weight. The probability of an allocation is then proportional to the number of combined assignments having that allocation:
+This definition has a direct probability interpretation for discrete totals. Suppose all combined assignments compatible with the fixed total are counted with equal weight. The probability of an allowed allocation is then
 
-$$
+$
 P(U_1,U_2)
 =
 \frac{W_1(U_1)W_2(U_2)}
 {\displaystyle\sum_{\text{allowed allocations }(V_1,V_2)}
 W_1(V_1)W_2(V_2)}.
-$$
+$
 
-Consequently, the equilibrium allocation is the most probable allocation under this equal-counting convention.
+Consequently, the equilibrium allocation is the most probable allocation under this equal-counting convention. In a continuous approximation, probabilities are instead described by a density with respect to a specified allocation measure (for example, \(dU_1\)); the normalization is then an integral, not a sum. The measure must be stated because a density depends on the variable and measure used.
 
 For a large collection of particles, the number of assignments can be very strongly concentrated around its maximum. In that situation, the equilibrium allocation is not merely the most numerous one: allocations appreciably different from it can have much smaller probabilities. The precise conditions for such concentration depend on the counting functions and on which totals are attainable.
 
@@ -84,9 +86,9 @@ The definition does not assert that no individual exchange ever occurs. It says 
 
 ## 3. The counting slope
 
-For a system of fixed particle number \(N\), let \(W(N,U)\) be its number of assignments when its total attribute value is \(U\).
+For a system of fixed particle number \(N\), let \(W(N,U)\) be its number of assignments with exact total attribute value \(U\), whenever that total is attainable. The counting slope below is defined first for a smooth interpolation of these exact counts, not as a derivative of a finite list of isolated values.
 
-When \(U\) can be treated as a continuous variable, or when \(W\) has a sufficiently smooth large-\(N\) interpolation, define the **counting slope**
+When \(U\) can be treated as a continuous variable, or when the exact counts admit a sufficiently smooth large-\(N\) interpolation, define the **counting slope**
 
 $$
 \boxed{
@@ -136,7 +138,7 @@ $$
 \right].
 $$
 
-These quantities are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite \(N\). When the allowed steps become small and the counting function varies smoothly, both approach the derivative \(\gamma(N,U)\).
+These quantities are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite \(N\). When the allowed steps become small and the interpolated counting function varies smoothly, both approach the derivative \(\gamma(N,U)\).
 
 Thus, the derivative definition is a useful smooth description, while the finite ratios give the exact comparisons for a discrete system.
 
@@ -285,7 +287,7 @@ $$
 
 where the second ratio is defined by reversing the transfer. A global maximum must, in addition, have a count at least as large as that of every other allowed allocation, not merely its immediate neighbours.
 
-When the allowed increments are small and the counting functions are smooth, the finite-slope inequalities reduce to the derivative condition \(\gamma_1=\gamma_2\). This is why equality of counting slopes is the appropriate large-system or continuous description, while the ratio test is the exact finite one.
+When the allowed increments are small and the counting functions are smooth, the finite-slope inequalities reduce to the derivative condition \(\gamma_1=\gamma_2\). This is why equality of counting slopes is the appropriate smooth description, while the ratio test is the exact finite one. If the starting framework uses nonzero tolerance windows rather than exact totals, the exact combined count must additionally enforce conservation across the actual totals inside those windows; it is not generally the simple product of the two window counts.
 
 ## 7. More than two systems
 
@@ -390,7 +392,13 @@ Hence \(G(x)\) is concave. Since its derivative vanishes at \(x=0\), the initial
 
 If the concavity is strict, the maximum is unique. If the logarithmic counts have flat portions, there may be other allocations with the same maximum count.
 
-This qualification is important: equality of counting slopes by itself gives a stationary allocation, not necessarily a maximum. If the logarithmic counts are not concave, a different allocation may have a larger combined count even though the initial slopes are equal.
+This qualification is important: equality of counting slopes by itself gives a stationary allocation, not necessarily a maximum. For example, consider smooth positive counting functions with \(\ln W_1(U)=U^2\) and \(\ln W_2(U)=U^2\), on an allowed interval containing zero. At the allocation \(U_1=U_2=0\), the two slopes are equal (both zero), but at fixed combined total zero the logarithm of the combined count after a transfer \(x\) is
+
+$
+G(x)=x^2+(-x)^2=2x^2.
+$
+
+Thus the initial allocation is a minimum, not a maximum. This simple example illustrates why a curvature or global-count comparison is essential; it is an illustration of the calculus, not a claim that these functions arise from the particular multinomial model in the earlier chapter.
 
 For a finite discrete system, the corresponding statement is that no allowed transfer increases the product \(W_1W_2\). Equality of a pair of finite slopes for one step alone is not enough to establish this for every possible transfer.
 
