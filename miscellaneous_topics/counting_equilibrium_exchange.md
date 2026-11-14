@@ -211,11 +211,11 @@ $$
 
 There are three cases.
 
-1. **If $\\gamma_1>\\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
-2. **If $\\gamma_1<\\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
-3. **If $\\gamma_1=\\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
+1. **If $\gamma_1>\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
+2. **If $\gamma_1<\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
+3. **If $\gamma_1=\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
 
-Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\\delta\\ln W_{\\mathrm{tot}}=(\\gamma_2-\\gamma_1)\\delta U$ for a transfer from 1 to 2.
+Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\delta\ln W_{\mathrm{tot}}=(\gamma_2-\gamma_1)\delta U$ for a transfer from 1 to 2.
 
 This statement should not be confused with a law for the actual rate of transfer. To calculate a rate, one would need additional information about how exchanges occur and how often each allowed change is attempted. The counting argument determines which direction has the larger number of compatible combined assignments, not how quickly the systems approach the most numerous allocation.
 
@@ -426,7 +426,7 @@ For a finite discrete system, the corresponding statement is that no allowed tra
    $$
    \gamma_1=\gamma_2.
    $$
-5. If \\(\\gamma_1<\\gamma_2\\), a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
+5. If $\gamma_1<\gamma_2$,  a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
 6. For a finite discrete system, exact equilibrium is determined by comparing the products of counts before and after every allowed transfer. Derivative equality is the smooth limiting condition.
 7. For \(m\) systems that can exchange the same conserved attribute, all counting slopes are equal at an interior maximum:
    $$
