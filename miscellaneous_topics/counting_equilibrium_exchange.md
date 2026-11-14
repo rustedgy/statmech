@@ -211,11 +211,11 @@ $$
 
 There are three cases.
 
-1. **If \(\gamma_1>\gamma_2\):** transferring \(U\) from system 1 to system 2 increases the number of combined assignments.
-2. **If \(\gamma_1<\gamma_2\):** transferring \(U\) from system 2 to system 1 increases the number of combined assignments.
-3. **If \(\gamma_1=\gamma_2\):** there is no first-order increase in the combined count for a small transfer in either direction.
+1. **If $\\gamma_1>\\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
+2. **If $\\gamma_1<\\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
+3. **If $\\gamma_1=\\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
 
-In this precise counting sense, \(U\) is favoured to move from the system with the larger counting slope to the system with the smaller counting slope. The direction of increasing combined count is therefore determined by the difference of the two slopes.
+Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\\delta\\ln W_{\\mathrm{tot}}=(\\gamma_2-\\gamma_1)\\delta U$ for a transfer from 1 to 2.
 
 This statement should not be confused with a law for the actual rate of transfer. To calculate a rate, one would need additional information about how exchanges occur and how often each allowed change is attempted. The counting argument determines which direction has the larger number of compatible combined assignments, not how quickly the systems approach the most numerous allocation.
 
@@ -288,53 +288,53 @@ When the allowed increments are small and the counting functions are smooth, the
 Consider $m$ systems. The particle number $N_i$ of each system is fixed, and system $i$ has total value $U_i$ and count $W_i(N_i,U_i)$. The systems can exchange the same attribute $U$, subject to conservation:
 
 $$
-\\sum_{i=1}^{m}U_i=U_{\\mathrm{tot}}.
+\sum_{i=1}^{m}U_i=U_{\mathrm{tot}}.
 $$
 
 An assignment of the combined collection is formed by choosing one assignment independently from each system. At a specified allocation, the number of combined assignments is therefore
 
 $$
-\\boxed{
-W_{\\mathrm{tot}}(U_1,\\ldots,U_m)
+\boxed{
+W_{\mathrm{tot}}(U_1,\ldots,U_m)
 =
-\\prod_{i=1}^{m}W_i(N_i,U_i).
+\prod_{i=1}^{m}W_i(N_i,U_i).
 }
 $$
 
 Counting equilibrium is found by maximizing this product subject to the one conservation constraint. Equivalently, maximize its logarithm,
 
 $$
-L(U_1,\\ldots,U_m)
+L(U_1,\ldots,U_m)
 =
-\\sum_{i=1}^{m}\\ln W_i(N_i,U_i),
-\\qquad
-\\sum_{i=1}^{m}U_i=U_{\\mathrm{tot}}.
+\sum_{i=1}^{m}\ln W_i(N_i,U_i),
+\qquad
+\sum_{i=1}^{m}U_i=U_{\mathrm{tot}}.
 $$
 
-Introduce a Lagrange multiplier $\\alpha$ for the fixed-total constraint. At an interior stationary point,
+Introduce a Lagrange multiplier $\alpha$ for the fixed-total constraint. At an interior stationary point,
 
 $$
-\\frac{\\partial}{\\partial U_i}
-\\left[
-\\sum_{j=1}^{m}\\ln W_j(N_j,U_j)
+\frac{\partial}{\partial U_i}
+\left[
+\sum_{j=1}^{m}\ln W_j(N_j,U_j)
 -
-\\alpha\\left(\\sum_{j=1}^{m}U_j-U_{\\mathrm{tot}}\\right)
-\\right]
+\alpha\left(\sum_{j=1}^{m}U_j-U_{\mathrm{tot}}\right)
+\right]
 =0
 $$
 
 for every $i$. Hence
 
 $$
-\\left(\\frac{\\partial\\ln W_i}{\\partial U_i}\\right)_{N_i}
-=\\alpha.
+\left(\frac{\partial\ln W_i}{\partial U_i}\right)_{N_i}
+=\alpha.
 $$
 
 Using the counting slope defined above, this gives
 
 $$
-\\boxed{
-\\gamma_1=\\gamma_2=\\cdots=\\gamma_m=\\alpha.
+\boxed{
+\gamma_1=\gamma_2=\cdots=\gamma_m=\alpha.
 }
 $$
 
