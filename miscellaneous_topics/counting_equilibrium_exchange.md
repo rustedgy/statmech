@@ -84,11 +84,54 @@ For a large collection of particles, the number of assignments can be very stron
 
 The definition does not assert that no individual exchange ever occurs. It says that the allocation is at the maximum of the combined count. A microscopic exchange may still occur in either direction if a mechanism for exchange is supplied. Counting alone identifies the absence of a preferred direction at the maximum; it does not specify the rates of individual exchanges.
 
-## 3. The counting slope
+## 3. Maximizing the combined count
 
-For a system of fixed particle number \(N\), let \(W(N,U)\) be its number of assignments with exact total attribute value \(U\), whenever that total is attainable. The counting slope below is defined first for a smooth interpolation of these exact counts, not as a derivative of a finite list of isolated values.
+For two systems, the number of combined assignments at a specified allocation is
 
-When \(U\) can be treated as a continuous variable, or when the exact counts admit a sufficiently smooth large-\(N\) interpolation, define the **counting slope**
+$$
+W_{\mathrm{tot}}(U_1)
+=
+W_1(U_1)W_2(U_{\mathrm{tot}}-U_1).
+$$
+
+The counting-equilibrium allocation is the allowed value of $U_1$ that maximizes this product. We therefore maximize the product itself, rather than beginning by postulating a derivative-based quantity.
+
+It is convenient to take its logarithm because the logarithm is a strictly increasing function: maximizing $W_{\mathrm{tot}}$ is equivalent to maximizing its logarithm. Thus
+
+$$
+L(U_1)
+=
+\ln W_1(U_1)
++
+\ln W_2(U_{\mathrm{tot}}-U_1).
+$$
+
+At an interior maximum, with $U_{\mathrm{tot}}$, $N_1$, and $N_2$ fixed, the first derivative must vanish:
+
+$$
+\frac{dL}{dU_1}
+=
+\left(\frac{\partial\ln W_1}{\partial U_1}\right)_{N_1}
+-
+\left(\frac{\partial\ln W_2}{\partial U_2}\right)_{N_2}
+=0.
+$$
+
+The minus sign follows from conservation, $U_2=U_{\mathrm{tot}}-U_1$, so $dU_2/dU_1=-1$. Hence the condition for an interior stationary allocation is
+
+$$
+\boxed{
+\left(\frac{\partial\ln W_1}{\partial U_1}\right)_{N_1}
+=
+\left(\frac{\partial\ln W_2}{\partial U_2}\right)_{N_2}.
+}
+$$
+
+This derivation suggests that the logarithmic sensitivity of the count to the total attribute value is an important property of a system. We give this quantity a name.
+
+## 4. The counting slope
+
+For a system with fixed particle number $N$, define the **counting slope**
 
 $$
 \boxed{
@@ -98,25 +141,27 @@ $$
 }
 $$
 
-The derivative is taken at fixed particle number. The logarithm is used because the count for combined systems is a product; the logarithm turns that product into a sum.
-
-The counting slope has units equal to the reciprocal of the units of \(U\). It measures the fractional, logarithmic change in the number of assignments per unit change in the total value:
+The derivative is taken at fixed particle number. The counting slope has units reciprocal to the units of $U$. For a small change $dU$,
 
 $$
-d\ln W=\gamma\,dU
+d\ln W=\gamma\,dU,
 $$
 
-for a small change \(dU\) at fixed \(N\).
+so it measures the logarithmic change in the number of assignments per unit change in the total attribute value.
 
-- If \(\gamma>0\), increasing \(U\) slightly increases the number of assignments.
-- If \(\gamma<0\), increasing \(U\) slightly decreases the number of assignments.
-- If \(\gamma=0\), the count is stationary with respect to a small change in \(U\).
+In terms of this named quantity, the condition just derived becomes
 
-The value of \(\gamma\) depends on the system and on its current total. It is not a fixed label attached to the system.
+$$
+\boxed{\gamma_1(N_1,U_1)=\gamma_2(N_2,U_2).}
+$$
 
-### A discrete definition
+Thus **the counting slopes of two systems are equal at an interior maximum of the number of combined assignments**. This equality is a necessary stationary-point condition. To establish that the point is a maximum, one must also check curvature or compare the allowed allocations. If each $\ln W_i(U_i)$ is concave, their sum under the fixed-total constraint is concave, and an interior stationary point is a global maximum. Without such a condition, equality of slopes alone does not rule out a minimum or another stationary point.
 
-The original counting framework is finite and discrete. In that setting, a derivative need not exist. If a change by an allowed amount \(\Delta U>0\) is possible, define the forward finite counting slope by
+The counting slope depends on the system and its current total; it is not a fixed label attached to the system. Its sign has a direct meaning for the isolated counting function: a positive slope means that increasing $U$ locally increases $W$, while a negative slope means that increasing $U$ locally decreases $W$. A zero slope means that $W$ is locally stationary.
+
+### The exact discrete counterpart
+
+The original counting framework is finite and discrete, so a derivative need not exist. For an allowed increment $\Delta U>0$, define
 
 $$
 \gamma_{\Delta U}^{+}(N,U)
@@ -124,10 +169,10 @@ $$
 \frac{1}{\Delta U}
 \ln\left[
 \frac{W(N,U+\Delta U)}{W(N,U)}
-\right].
+\right],
 $$
 
-This is the logarithmic increase in the count per unit increase in \(U\), over that particular step. A backward finite slope can be defined by
+and
 
 $$
 \gamma_{\Delta U}^{-}(N,U)
@@ -138,60 +183,9 @@ $$
 \right].
 $$
 
-These quantities are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite \(N\). When the allowed steps become small and the interpolated counting function varies smoothly, both approach the derivative \(\gamma(N,U)\).
+These finite counting slopes are defined only when the totals in their arguments are attainable and the corresponding counts are nonzero. They need not be equal at finite $N$. When allowed increments become small and the counting function admits a smooth interpolation, they approach the derivative $\gamma(N,U)$.
 
-Thus, the derivative definition is a useful smooth description, while the finite ratios give the exact comparisons for a discrete system.
-
-## 4. Equality of counting slopes at equilibrium
-
-We first use the smooth description. Since
-
-$$
-W_{\mathrm{tot}}(U_1)
-=
-W_1(U_1)W_2(U_{\mathrm{tot}}-U_1),
-$$
-
-take the logarithm:
-
-$$
-\ln W_{\mathrm{tot}}
-=
-\ln W_1(U_1)
-+
-\ln W_2(U_{\mathrm{tot}}-U_1).
-$$
-
-At an interior maximum, the derivative with respect to \(U_1\) must vanish. Differentiating while keeping \(U_{\mathrm{tot}}\), \(N_1\), and \(N_2\) fixed gives
-
-$$
-\frac{d\ln W_{\mathrm{tot}}}{dU_1}
-=
-\left(\frac{\partial\ln W_1}{\partial U_1}\right)_{N_1}
--
-\left(\frac{\partial\ln W_2}{\partial U_2}\right)_{N_2}
-=0.
-$$
-
-The minus sign appears because \(U_2=U_{\mathrm{tot}}-U_1\), so an increase in \(U_1\) requires an equal decrease in \(U_2\).
-
-Using the definition of the counting slope, we obtain
-
-$$
-\boxed{
-\gamma_1(N_1,U_1)=\gamma_2(N_2,U_2)
-}
-$$
-
-at an interior equilibrium allocation.
-
-This is the main result for two systems:
-
-**When two systems can exchange \(U\) while their combined total is conserved, their counting slopes are equal at an interior maximum of the number of combined assignments.**
-
-Equality of the slopes is a necessary condition for an interior maximum. To establish that the stationary point is actually a maximum, we must also examine the curvature or compare the allowed allocations. For example, if each function \(\ln W_i(U_i)\) is concave in its argument, then their sum under the fixed-total constraint is concave, and an interior stationary point is a global maximum. Without such a condition, equality of slopes alone does not rule out a minimum or another stationary point.
-
-If the maximum occurs at an endpoint of the allowed range, the derivative need not vanish and the two slopes need not be equal. The equality applies to an interior equilibrium.
+For discrete totals, the exact test is a comparison of count ratios for every allowed transfer. Equality of derivative-based counting slopes is the smooth description, not a replacement for that finite test.
 
 ## 5. Which way does \(U\) tend to move?
 
@@ -217,17 +211,17 @@ $$
 
 There are three cases.
 
-1. **If \(\gamma_1>\gamma_2\):** transferring \(U\) from system 1 to system 2 increases the number of combined assignments.
-2. **If \(\gamma_1<\gamma_2\):** transferring \(U\) from system 2 to system 1 increases the number of combined assignments.
-3. **If \(\gamma_1=\gamma_2\):** there is no first-order increase in the combined count for a small transfer in either direction.
+1. **If $\\gamma_1>\\gamma_2$:** transferring $U$ from system 1 to system 2 decreases the combined count; the reverse transfer increases it.
+2. **If $\\gamma_1<\\gamma_2$:** transferring $U$ from system 1 to system 2 increases the combined count.
+3. **If $\\gamma_1=\\gamma_2$:** there is no first-order change in the combined count for a small transfer in either direction.
 
-In this precise counting sense, \(U\) is favoured to move from the system with the larger counting slope to the system with the smaller counting slope. The direction of increasing combined count is therefore determined by the difference of the two slopes.
+Therefore, the direction that increases the combined count is **from the system with the smaller counting slope to the system with the larger counting slope**. This follows directly from $\\delta\\ln W_{\\mathrm{tot}}=(\\gamma_2-\\gamma_1)\\delta U$ for a transfer from 1 to 2.
 
 This statement should not be confused with a law for the actual rate of transfer. To calculate a rate, one would need additional information about how exchanges occur and how often each allowed change is attempted. The counting argument determines which direction has the larger number of compatible combined assignments, not how quickly the systems approach the most numerous allocation.
 
 ### What does equal flow in the two directions mean?
 
-At the maximum, there is no direction in which a small allowed transfer increases the combined count to first order. If an exchange mechanism permits moves in both directions, the equilibrium allocation has no net preference for one direction in the counting description.
+At the maximum, there is no allowed direction in which a small transfer increases the combined count to first order. In the smooth interior case this is expressed by equal counting slopes. If an exchange mechanism permits moves in both directions, the equilibrium allocation has no net preference for one direction in the counting description.
 
 Equal gross rates of transfer from 1 to 2 and from 2 to 1 are a stronger, dynamical statement. They follow only after specifying suitable transition rules. They are not implied by the static counting argument alone. We therefore use equilibrium here to mean the maximum-count allocation, with no preferred direction of transfer as diagnosed by the counting slope.
 
@@ -289,15 +283,15 @@ where the second ratio is defined by reversing the transfer. A global maximum mu
 
 When the allowed increments are small and the counting functions are smooth, the finite-slope inequalities reduce to the derivative condition \(\gamma_1=\gamma_2\). This is why equality of counting slopes is the appropriate smooth description, while the ratio test is the exact finite one. If the starting framework uses nonzero tolerance windows rather than exact totals, the exact combined count must additionally enforce conservation across the actual totals inside those windows; it is not generally the simple product of the two window counts.
 
-## 7. More than two systems
+## 7. Extension to $m$ systems
 
-Now consider \(m\) systems. The particle number \(N_i\) of each system is fixed, and system \(i\) has total value \(U_i\) and count \(W_i(N_i,U_i)\). The systems can exchange \(U\), subject to conservation of the combined total:
+Consider $m$ systems. The particle number $N_i$ of each system is fixed, and system $i$ has total value $U_i$ and count $W_i(N_i,U_i)$. The systems can exchange the same attribute $U$, subject to conservation:
 
 $$
 \sum_{i=1}^{m}U_i=U_{\mathrm{tot}}.
 $$
 
-A combined assignment is obtained by choosing one assignment independently from each system. Therefore the number of combined assignments at a specified allocation is
+An assignment of the combined collection is formed by choosing one assignment independently from each system. At a specified allocation, the number of combined assignments is therefore
 
 $$
 \boxed{
@@ -307,33 +301,46 @@ W_{\mathrm{tot}}(U_1,\ldots,U_m)
 }
 $$
 
-Taking the logarithm gives
+Counting equilibrium is found by maximizing this product subject to the one conservation constraint. Equivalently, maximize its logarithm,
 
 $$
-\ln W_{\mathrm{tot}}
+L(U_1,\ldots,U_m)
 =
-\sum_{i=1}^{m}\ln W_i(N_i,U_i).
+\sum_{i=1}^{m}\ln W_i(N_i,U_i),
+\qquad
+\sum_{i=1}^{m}U_i=U_{\mathrm{tot}}.
 $$
 
-At an interior maximum, vary \(U_i\) and \(U_j\) by equal and opposite amounts, leaving the total unchanged. The first-order change is
+Introduce a Lagrange multiplier $\alpha$ for the fixed-total constraint. At an interior stationary point,
 
 $$
-\delta\ln W_{\mathrm{tot}}
-=
-(\gamma_i-\gamma_j)\delta U_i.
+\frac{\partial}{\partial U_i}
+\left[
+\sum_{j=1}^{m}\ln W_j(N_j,U_j)
+-
+\alpha\left(\sum_{j=1}^{m}U_j-U_{\mathrm{tot}}\right)
+\right]
+=0
 $$
 
-For this change to vanish for every pair \(i,j\), all the counting slopes must be equal:
+for every $i$. Hence
+
+$$
+\left(\frac{\partial\ln W_i}{\partial U_i}\right)_{N_i}
+=\alpha.
+$$
+
+Using the counting slope defined above, this gives
 
 $$
 \boxed{
-\gamma_1=\gamma_2=\cdots=\gamma_m.
+\gamma_1=\gamma_2=\cdots=\gamma_m=\alpha.
 }
 $$
 
-Thus, for any number of systems that can exchange the same conserved attribute, the interior maximum-count allocation has a common counting slope.
+The same result follows by transferring a small amount from any one system to any other: the first-order change in the logarithm of the combined count must vanish for every such pairwise transfer. The Lagrange multiplier makes clear that there is one common value shared by all systems at an interior stationary allocation.
 
-As before, this equality is a stationary condition. Concavity of the sum of the logarithmic counts, or a direct comparison of allowed allocations, is needed to establish that the stationary allocation is a maximum. If the exact totals are discrete, the finite-transfer test must be applied to every allowed exchange.
+As in the two-system case, stationarity alone does not prove a maximum. Concavity of $L$ on the allowed constraint surface is sufficient for a global maximum; strict concavity gives uniqueness. For exact discrete totals, one must compare the combined-count product for all allowed allocations (or use the corresponding finite-transfer tests). If only certain pairwise transfers are permitted by the exchange mechanism, the allowed set of allocations must reflect those restrictions.
 
 ## 8. If two systems already have the same counting slope
 
@@ -419,7 +426,7 @@ For a finite discrete system, the corresponding statement is that no allowed tra
    $$
    \gamma_1=\gamma_2.
    $$
-5. If \(\gamma_1>\gamma_2\), a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from larger counting slope to smaller counting slope.
+5. If \\(\\gamma_1<\\gamma_2\\), a small transfer from system 1 to system 2 increases the combined count. The preferred direction is from smaller counting slope to larger counting slope.
 6. For a finite discrete system, exact equilibrium is determined by comparing the products of counts before and after every allowed transfer. Derivative equality is the smooth limiting condition.
 7. For \(m\) systems that can exchange the same conserved attribute, all counting slopes are equal at an interior maximum:
    $$
