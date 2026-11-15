@@ -60,9 +60,7 @@ $$
 It follows that
 
 $$
-p_{ij}=A\,
-e^{-\lambda f_1(a_i)}
-e^{-\lambda f_2(b_j)},
+p_{ij}=A\,e^{-\lambda f_1(a_i)}\,e^{-\lambda f_2(b_j)},
 $$
 
 where $A$ is fixed by normalization. Define the two finite sums
