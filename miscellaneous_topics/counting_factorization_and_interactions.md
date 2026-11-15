@@ -173,6 +173,93 @@ $$
 
 This equality is a consequence of symmetry, not of factorization alone. Independence and equal sharing are different statements.
 
+### Worked example: two quadratic coordinate contributions
+
+Consider the additive assigned value
+
+$$
+U(x_1,x_2)=\alpha_1x_1^2+\alpha_2x_2^2,
+$$
+
+where each coordinate can take the three values $-1,0,+1$, and take $\alpha_1,\alpha_2>0$. The allowed set is the full Cartesian product, so the additive factorization result applies. For the first coordinate,
+
+$$
+Q_1(\lambda)
+=\sum_{x_1=-1}^{1}e^{-\lambda\alpha_1x_1^2}
+=1+2e^{-\lambda\alpha_1},
+$$
+
+and similarly
+
+$$
+Q_2(\lambda)=1+2e^{-\lambda\alpha_2}.
+$$
+
+The marginal probabilities are therefore
+
+$$
+p_1(0)=\frac{1}{1+2e^{-\lambda\alpha_1}},
+\qquad
+p_1(+1)=p_1(-1)
+=\frac{e^{-\lambda\alpha_1}}{1+2e^{-\lambda\alpha_1}},
+$$
+
+with the corresponding expressions for $p_2$ obtained by replacing $\alpha_1$ with $\alpha_2$. The joint probability is the product $p(x_1,x_2)=p_1(x_1)p_2(x_2)$.
+
+The mean contribution from the first coordinate is
+
+$$
+\boxed{
+\overline U_1
+=\alpha_1\langle x_1^2\rangle
+=\frac{2\alpha_1e^{-\lambda\alpha_1}}
+{1+2e^{-\lambda\alpha_1}}.
+}
+$$
+
+Likewise,
+
+$$
+\boxed{
+\overline U_2
+=\frac{2\alpha_2e^{-\lambda\alpha_2}}
+{1+2e^{-\lambda\alpha_2}},
+\qquad
+\overline U=\overline U_1+\overline U_2.
+}
+$$
+
+The single multiplier $\lambda$ is fixed by the prescribed value of $\overline U$. Notice that the two coordinates are independent even when $\alpha_1\ne\alpha_2$; however, their mean contributions are then generally unequal. If $\alpha_1=\alpha_2$, symmetry gives $\overline U_1=\overline U_2=\overline U/2$. This example shows explicitly that factorization follows from additivity, whereas equal sharing requires symmetry.
+
+### Worked example: independent coordinates need not share the mean equally
+
+For a simpler illustration of unequal sharing, let $x_1,x_2$ each take only the values $0$ and $1$, with
+
+$$
+U(x_1,x_2)=\alpha_1x_1+\alpha_2x_2,
+\qquad \alpha_1,\alpha_2>0.
+$$
+
+The marginal probabilities of the value $1$ are
+
+$$
+p_1(1)=\frac{e^{-\lambda\alpha_1}}{1+e^{-\lambda\alpha_1}},
+\qquad
+p_2(1)=\frac{e^{-\lambda\alpha_2}}{1+e^{-\lambda\alpha_2}}.
+$$
+
+The joint distribution again factorizes, but the mean contributions are
+
+$$
+\overline U_1
+=\frac{\alpha_1}{1+e^{\lambda\alpha_1}},
+\qquad
+\overline U_2
+=\frac{\alpha_2}{1+e^{\lambda\alpha_2}}.
+$$
+
+There is no reason for these two quantities to be equal when the coefficients differ. They become equal when the two coordinate contributions are identical, as required by symmetry. Both examples use one common multiplier because there is one constraint on the total mean, not one independent constraint for each coordinate.
+
 **More than two coordinates.** If a particle carries $m$ coordinates and its assigned value is the sum of separate contributions,
 
 $$
