@@ -265,7 +265,7 @@ def main() -> None:
         "[Browse the Markdown source, report an issue, or suggest a correction on GitHub](https://github.com/rustedgy/statmech).",
         "",
     ])
-        (DOCS / "index.md").write_text("\n".join(lines), encoding="utf-8")
+    (DOCS / "index.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":
