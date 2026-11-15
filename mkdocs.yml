@@ -8,6 +8,7 @@ nav:
   - Home: index.md
   - Independent Framework — A Counting Framework for Finite Systems: miscellaneous_topics/counting_framework_finite_systems.md
   - Large-N Counting — Stirling's Approximation and the Most Numerous Distribution: miscellaneous_topics/large_n_counting_stirling_approximation.md
+  - Factorization and Interactions in Counting Distributions: miscellaneous_topics/counting_factorization_and_interactions.md
   - Counting Equilibrium — Exchange Between Systems: miscellaneous_topics/counting_equilibrium_exchange.md
   - "Book — Statistical Mechanics: Principles and Applications":
       - Overview: miscellaneous_topics/index.md
