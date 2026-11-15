@@ -16,8 +16,9 @@ TRANSCRIPT_MARKER = "transcript_based"
 MISC_TOPIC_PARTS = {
     "Part I — Foundations and Ensembles": (
         "notation_and_symbols.md",
-        "indicator_functions_statmech.md",
+        "from_microstates_to_statistical_ensembles.md",
         "temperature_from_statistical_mechanics.md",
+        "canonical_ensemble_boltzmann_distribution.md",
         "partition_function_thermodynamics_generator.md",
         "grand_canonical_ensemble_chemical_potential.md",
         "two_level_system_schottky_anomaly.md",
@@ -27,6 +28,7 @@ MISC_TOPIC_PARTS = {
         "maxwell_boltzmann_statistics.md",
         "maxwell_boltzmann_speed_distribution.md",
         "bose_einstein_statistics_derivation.md",
+        "bose_einstein_condensation_ideal_gas.md",
         "fermi_dirac_statistics_derivation.md",
     ),
     "Part III — Applications to Matter and Radiation": (
@@ -220,7 +222,7 @@ def main() -> None:
             "",
             part_descriptions[part],
             "",
-            f"[Browse {part}](miscellaneous_topics/index.md)",
+            f"[Start this Part](miscellaneous_topics/{filenames[0]})",
             "",
         ])
 
