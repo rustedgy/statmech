@@ -4,7 +4,7 @@ This chapter extends the large-$N$ counting argument to particles carrying more 
 
 The discussion uses only the counting framework: labelled particles, equally counted complete assignments, occupation numbers, and the large-$N$ Stirling approximation. No physical interpretation is required.
 
-### Additive values built from two coordinates
+## Additive values built from two coordinates
 
 The same counting maximization can be applied when the value assigned to each particle is constructed from two coordinates. This gives a useful result: under the assumptions stated below, the joint distribution at the large-$N$ maximum factorizes into two marginal distributions. Independence is a consequence of the maximization; it is not an assumption imposed at the start.
 
