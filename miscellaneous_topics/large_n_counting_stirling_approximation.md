@@ -246,18 +246,18 @@ For positive fractions this quadratic form is strictly negative for every nonzer
 
 ### Additive values built from two independent coordinates
 
-The same counting maximization can be applied when the value assigned to each particle is constructed from two coordinates. This gives a useful result: under the assumptions stated below, the joint distribution at the large-`N` maximum factorizes into two marginal distributions. Independence is a consequence of the maximization; it is not an assumption imposed at the start.
+The same counting maximization can be applied when the value assigned to each particle is constructed from two coordinates. This gives a useful result: under the assumptions stated below, the joint distribution at the large-$N$ maximum factorizes into two marginal distributions. Independence is a consequence of the maximization; it is not an assumption imposed at the start.
 
-Suppose each labelled particle carries a pair `(x_1,x_2)`, where the first coordinate can take one of the allowed values
-`a_1,\ldots,a_r`, and the second can take one of the allowed values `b_1,\ldots,b_s`. The value associated with the pair is additive:
+Suppose each labelled particle carries a pair $(x_1,x_2)$, where the first coordinate can take one of the allowed values
+$a_1,\ldots,a_r$, and the second can take one of the allowed values $b_1,\ldots,b_s$. The value associated with the pair is additive:
 
 $$
 U(a_i,b_j)=f_1(a_i)+f_2(b_j).
 $$
 
-Assume that every pair `(a_i,b_j)` is allowed, that each pair is counted as one distinct category, and that every complete assignment of pairs to the labelled particles is counted equally. We prescribe the average value per particle, `\overline U`.
+Assume that every pair $(a_i,b_j)$ is allowed, that each pair is counted as one distinct category, and that every complete assignment of pairs to the labelled particles is counted equally. We prescribe the average value per particle, $\overline U$.
 
-Let `n_{ij}` be the number of particles carrying the pair `(a_i,b_j)`. There are `rs` possible pair categories, so the occupation numbers obey
+Let $n_{ij}$ be the number of particles carrying the pair $(a_i,b_j)$. There are $rs$ possible pair categories, so the occupation numbers obey
 
 $$
 \sum_{i=1}^{r}\sum_{j=1}^{s}n_{ij}=N,
@@ -276,7 +276,7 @@ $$
 W=\frac{N!}{\displaystyle\prod_{i,j}n_{ij}!}.
 $$
 
-Introduce fractions `p_{ij}=n_{ij}/N`. Stirling's approximation reduces the leading large-`N` maximization to maximizing
+Introduce fractions $p_{ij}=n_{ij}/N$. Stirling's approximation reduces the leading large-$N$ maximization to maximizing
 
 $$
 F=-\sum_{i,j}p_{ij}\ln p_{ij}
@@ -290,7 +290,7 @@ $$
 \sum_{i,j}p_{ij}[f_1(a_i)+f_2(b_j)]=\overline U.
 $$
 
-Using multipliers `\alpha` and `\lambda`, the stationary condition is
+Using multipliers $\alpha$ and $\lambda$, the stationary condition is
 
 $$
 -(\ln p_{ij}+1)-\alpha
@@ -305,7 +305,7 @@ e^{-\lambda f_1(a_i)}
 e^{-\lambda f_2(b_j)},
 $$
 
-where `A` is fixed by normalization. Define the two finite sums
+where $A$ is fixed by normalization. Define the two finite sums
 
 $$
 Q_1(\lambda)=\sum_{i=1}^{r}e^{-\lambda f_1(a_i)},
@@ -325,7 +325,7 @@ $$
 \end{aligned}
 $$
 
-Thus `A=1/(Q_1Q_2)`, and the maximizing joint fractions are
+Thus $A=1/(Q_1Q_2)$, and the maximizing joint fractions are
 
 $$
 \boxed{
@@ -336,7 +336,7 @@ p_{ij}^*
 }
 $$
 
-The multiplier `\lambda` is common to both factors. It is determined by the single prescribed-average condition
+The multiplier $\lambda$ is common to both factors. It is determined by the single prescribed-average condition
 
 $$
 \overline U
@@ -368,7 +368,7 @@ $$
 \boxed{p_{ij}^*=p_i^{(1)}p_j^{(2)}.}
 $$
 
-In the maximizing large-`N` distribution, the two coordinates are therefore statistically independent in the precise sense that their joint fraction is the product of their marginal fractions. No independence assumption was needed in setting up the maximization. It follows from the additive form of the assigned value and the fact that every combination of coordinate values is allowed.
+In the maximizing large-$N$ distribution, the two coordinates are therefore statistically independent in the precise sense that their joint fraction is the product of their marginal fractions. No independence assumption was needed in setting up the maximization. It follows from the additive form of the assigned value and the fact that every combination of coordinate values is allowed.
 
 **How the prescribed average is apportioned.** The mean contribution from the first coordinate is
 
@@ -408,7 +408,7 @@ $$
 \boxed{\overline U=\overline U_1+\overline U_2.}
 $$
 
-The two contributions are not generally equal. Equality requires additional conditions. For example, if the two coordinate sets and their contribution functions are identical, then `Q_1=Q_2`, the two marginal distributions have the same form, and
+The two contributions are not generally equal. Equality requires additional conditions. For example, if the two coordinate sets and their contribution functions are identical, then $Q_1=Q_2$, the two marginal distributions have the same form, and
 
 $$
 \boxed{\overline U_1=\overline U_2=\frac{\overline U}{2}.}
@@ -416,7 +416,7 @@ $$
 
 This equality is a consequence of symmetry, not of factorization alone. Independence and equal sharing are different statements.
 
-**More than two coordinates.** If a particle carries `m` coordinates and its assigned value is the sum of separate contributions,
+**More than two coordinates.** If a particle carries $m$ coordinates and its assigned value is the sum of separate contributions,
 
 $$
 U(x_1,\ldots,x_m)=\sum_{k=1}^{m}f_k(x_k),
@@ -440,7 +440,7 @@ p^*(x_1,\ldots,x_m)
 }
 $$
 
-The mean contribution from coordinate `k` is
+The mean contribution from coordinate $k$ is
 
 $$
 \overline U_k
@@ -451,7 +451,7 @@ $$
 
 **Scope of the result.** The factorization depends on two structural assumptions: the allowed set of coordinate combinations is a Cartesian product (there are no forbidden pairs or other constraints coupling the coordinates), and the assigned value is a sum of functions of the separate coordinates. If either condition fails, the normalization sum need not factorize and the maximizing joint distribution need not be independent.
 
-As elsewhere in this chapter, this is a large-`N` result obtained by maximizing the Stirling approximation over continuous fractions. The exact finite-`N` occupation numbers are integers and must satisfy the exact total-value constraint. Arithmetic restrictions can prevent them from realizing the continuous maximizing fractions exactly. Moreover, conditioning a finite collection of particles on an exact total can correlate the coordinates across particles, even though the single-particle joint fractions at the large-`N` maximum factorize. The conclusion here is specifically about the factorization of that maximizing joint distribution.
+As elsewhere in this chapter, this is a large-$N$ result obtained by maximizing the Stirling approximation over continuous fractions. The exact finite-$N$ occupation numbers are integers and must satisfy the exact total-value constraint. Arithmetic restrictions can prevent them from realizing the continuous maximizing fractions exactly. Moreover, conditioning a finite collection of particles on an exact total can correlate the coordinates across particles, even though the single-particle joint fractions at the large-$N$ maximum factorize. The conclusion here is specifically about the factorization of that maximizing joint distribution.
 
 ## 4. The probability of a particle carrying a particular value
 
