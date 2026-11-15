@@ -262,7 +262,13 @@ $$
 K_{ij}=e^{-\lambda g(a_i,b_j)}.
 $$
 
-The other two factors in the unnormalized joint distribution depend separately on $i$ and $j$. Therefore the joint distribution factorizes if and only if the matrix $K$ has rank one. For nonzero $\lambda$, this is equivalent to the interaction being expressible in the additive form
+The other two factors in the unnormalized joint distribution depend separately on $i$ and $j$. Therefore the joint distribution factorizes if and only if the matrix $K$ has rank one. meaning that all its two-by-two minors vanish. Equivalently, for every choice of indices $i,i',j,j'$,
+
+$$
+K_{ij}K_{i'j'}=K_{ij'}K_{i'j}.
+$$
+
+For nonzero $\lambda$, this is equivalent to the interaction being expressible in the additive form
 
 $$
 g(a_i,b_j)=g_1(a_i)+g_2(b_j)+c,
