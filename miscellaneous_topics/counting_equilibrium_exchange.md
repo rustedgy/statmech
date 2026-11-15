@@ -94,7 +94,7 @@ W_{\mathrm{tot}}(U_1)
 W_1(U_1)W_2(U_{\mathrm{tot}}-U_1).
 $$
 
-The counting-equilibrium allocation is the allowed value of $U_1$ that maximizes this product. We therefore maximize the product itself, rather than beginning by postulating a derivative-based quantity.
+The counting-equilibrium allocation is the allowed value of $U_1$ that maximizes this product. 
 
 It is convenient to take its logarithm because the logarithm is a strictly increasing function: maximizing $W_{\mathrm{tot}}$ is equivalent to maximizing its logarithm. Thus
 
