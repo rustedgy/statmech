@@ -244,7 +244,7 @@ $$
 For positive fractions this quadratic form is strictly negative for every nonzero change in the fractions. Thus $F$ is strictly concave. The constraints are linear, so any interior stationary point is the unique maximum among the allowed fractions. If the prescribed average is at an endpoint of the allowed range, the maximum instead lies on the boundary: all particles carry the smallest or the largest allowed value.
 
 
-### Additive values built from two independent coordinates
+### Additive values built from two coordinates
 
 The same counting maximization can be applied when the value assigned to each particle is constructed from two coordinates. This gives a useful result: under the assumptions stated below, the joint distribution at the large-$N$ maximum factorizes into two marginal distributions. Independence is a consequence of the maximization; it is not an assumption imposed at the start.
 
@@ -331,8 +331,7 @@ $$
 \boxed{
 p_{ij}^*
 =
-\frac{e^{-\lambda f_1(a_i)}}{Q_1(\lambda)}
-\frac{e^{-\lambda f_2(b_j)}}{Q_2(\lambda)}.
+\frac{e^{-\lambda f_1(a_i)}}{Q_1(\lambda)}\,\frac{e^{-\lambda f_2(b_j)}}{Q_2(\lambda)}.
 }
 $$
 
