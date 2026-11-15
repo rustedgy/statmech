@@ -243,8 +243,6 @@ $$
 
 For positive fractions this quadratic form is strictly negative for every nonzero change in the fractions. Thus $F$ is strictly concave. The constraints are linear, so any interior stationary point is the unique maximum among the allowed fractions. If the prescribed average is at an endpoint of the allowed range, the maximum instead lies on the boundary: all particles carry the smallest or the largest allowed value.
 
-
-
 ## 4. The probability of a particle carrying a particular value
 
 The result $p_j^*$ has a direct probability interpretation.
