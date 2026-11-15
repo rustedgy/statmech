@@ -16,8 +16,9 @@ TRANSCRIPT_MARKER = "transcript_based"
 MISC_TOPIC_PARTS = {
     "Part I — Foundations and Ensembles": (
         "notation_and_symbols.md",
-        "indicator_functions_statmech.md",
+        "from_microstates_to_statistical_ensembles.md",
         "temperature_from_statistical_mechanics.md",
+        "canonical_ensemble_boltzmann_distribution.md",
         "partition_function_thermodynamics_generator.md",
         "grand_canonical_ensemble_chemical_potential.md",
         "two_level_system_schottky_anomaly.md",
@@ -27,6 +28,7 @@ MISC_TOPIC_PARTS = {
         "maxwell_boltzmann_statistics.md",
         "maxwell_boltzmann_speed_distribution.md",
         "bose_einstein_statistics_derivation.md",
+        "bose_einstein_condensation_ideal_gas.md",
         "fermi_dirac_statistics_derivation.md",
     ),
     "Part III — Applications to Matter and Radiation": (
@@ -167,83 +169,100 @@ def main() -> None:
             "No book directories found (expected a top-level directory with README.md)."
         )
 
+    def page_title(folder: Path, filename: str) -> str:
+        path = folder / filename
+        if not path.is_file():
+            return display_name(path.stem)
+        return next(
+            (
+                line[2:].strip()
+                for line in path.read_text(encoding="utf-8").splitlines()
+                if line.startswith("# ")
+            ),
+            display_name(path.stem),
+        )
+
+    book_dir = DOCS / "miscellaneous_topics"
+    counting_chapters = (
+        "counting_framework_finite_systems.md",
+        "large_n_counting_stirling_approximation.md",
+        "counting_factorization_and_interactions.md",
+        "counting_equilibrium_exchange.md",
+    )
+    part_descriptions = {
+        "Part I — Foundations and Ensembles":
+            "Build the language of statistical mechanics, from microscopic states and entropy to temperature, equilibrium, and the major statistical ensembles.",
+        "Part II — Classical and Quantum Statistics":
+            "Develop the classical and quantum rules governing how particles occupy available states, and explore their physical consequences.",
+        "Part III — Applications to Matter and Radiation":
+            "Apply ensemble methods and quantum statistics to radiation, magnetic systems, phase transitions, and the heat capacity of solids.",
+        "Part IV — Stochastic Processes and Relaxation":
+            "Study probabilistic time evolution, Markov processes, detailed balance, and the approach to thermal equilibrium.",
+    }
+
     lines = [
         "# Statistical Mechanics: Principles and Applications",
         "",
-        "A developing, unnumbered book on statistical mechanics, alongside organized lecture-note collections. "
-        "The book is grouped into thematic parts; chapter numbers are intentionally omitted while its contents grow.",
+        "This is a developing, unnumbered textbook for undergraduate study. It builds statistical mechanics from microscopic descriptions and counting arguments through ensembles, quantum statistics, and applications to physical systems.",
         "",
-        "The Markdown files in this repository are the source of truth. The published "
-        "site is built automatically by GitHub Actions; no local setup is needed.",
+        "The book is organized by subject rather than by a particular course. Chapters are kept unnumbered while the content and sequence continue to develop. The Markdown files in this repository are the source of truth.",
         "",
-        "## Book and lecture collections",
+        "## Start reading",
+        "",
+        "Begin with the [book overview](miscellaneous_topics/index.md), then read [Microstates, Macrostates, and the Microcanonical Ensemble](miscellaneous_topics/from_microstates_to_statistical_ensembles.md). This opening chapter establishes the basic language used throughout the book.",
+        "",
+        "## The book at a glance",
+        "",
+        "[Open the complete book contents](miscellaneous_topics/index.md). The four Parts provide the main route through the material:",
         "",
     ]
-    for book in books:
-        book_title = "Statistical Mechanics: Principles and Applications" if book == "miscellaneous_topics" else display_name(book)
-        lines.append(f"### [{book_title}]({book}/index.md)")
-        lines.append("")
-        staged_book = DOCS / book
-        links = lecture_links_for_book(staged_book, staged_book)
-        if links:
-            lines.extend(links)
-        else:
-            if book == "miscellaneous_topics":
-                lines.append(f"- [Book overview]({book}/index.md)")
-                lines.append("")
-                for part, filenames in MISC_TOPIC_PARTS.items():
-                    lines.append(f"#### {part}")
-                    lines.append("")
-                    available = [name for name in filenames if (staged_book / name).is_file()]
-                    for filename in available:
-                        path = staged_book / filename
-                        title = next(
-                            (
-                                line.lstrip("#").strip()
-                                for line in path.read_text(encoding="utf-8").splitlines()
-                                if line.startswith("# ")
-                            ),
-                            display_name(path.stem),
-                        )
-                        lines.append(f"- [{title}]({book}/{path.name})")
-                    lines.append("")
-            else:
-                lines.append(f"- [Collection overview]({book}/index.md)")
-                topic_pages = sorted(
-                    (path for path in staged_book.glob("*.md") if path.name != "index.md"),
-                    key=lambda path: path.name.casefold(),
-                )
-                for path in topic_pages:
-                    title = next(
-                        (
-                            line.lstrip("#").strip()
-                            for line in path.read_text(encoding="utf-8").splitlines()
-                            if line.startswith("# ")
-                        ),
-                        display_name(path.stem),
-                    )
-                    lines.append(f"- [{title}]({book}/{path.name})")
-        lines.append("")
+    for part, filenames in MISC_TOPIC_PARTS.items():
+        lines.extend([
+            f"### {part}",
+            "",
+            part_descriptions[part],
+            "",
+            f"[Start this Part](miscellaneous_topics/{filenames[0]})",
+            "",
+        ])
 
     lines.extend([
-        "## How to use these notes",
+        "## Supplementary mathematical tools",
         "",
-        "- Use the collection sidebar to move between topics and lectures.",
-        "- Lecture pages include previous/next links; where two versions exist, "
-        "they are linked as alternate notes rather than treated as separate lectures.",
-        "- Search the site for a concept or equation using the search control.",
+        "A small set of mathematical methods supports the main development without being tied to one particular Part.",
         "",
-        "## Reading and notation",
+        f"- [Indicator Functions]({ 'miscellaneous_topics/indicator_functions_statmech.md' }) — a practical tool for expressing conditions, counting states, and restricting sums.",
         "",
-        "These are study notes, not a substitute for the original lectures. Each "
-        "collection overview describes its sources and known limitations.",
+        "## A separate counting framework",
         "",
-        "Math is rendered with MathJax. Use single-dollar delimiters (`$...$`) for inline "
-        "math and standalone double-dollar delimiters (`$$...$$`) for display equations.",
+        "These self-contained chapters develop a counting-based framework that can be read independently or alongside the book. They focus on finite systems, large-number limits, factorization, interactions, and equilibrium by exchange.",
+        "",
+    ])
+    for filename in counting_chapters:
+        if (book_dir / filename).is_file():
+            lines.append(f"- [{page_title(book_dir, filename)}](miscellaneous_topics/{filename})")
+    lines.extend([
+        "",
+        "## Lecture-note collections",
+        "",
+        "The lecture notes are companion study resources based on specific courses. They are separate from the textbook and include source information and collection-specific caveats.",
+        "",
+        "- [John Preskill — lecture-note collection](john_preskill/index.md)",
+        "- [Leonard Susskind — lecture-note collection](leonard_susskind/index.md)",
+        "",
+        "## Using the site",
+        "",
+        "- Use the navigation sidebar for the full chapter and lecture lists.",
+        "- Use the search control to find a topic, term, or equation.",
+        "- Read lecture notes alongside the original lectures; they are study aids, not substitutes for the source material.",
+        "",
+        "## Mathematics and notation",
+        "",
+        "The site renders mathematics with MathJax. Inline expressions use single-dollar delimiters ($...$); display equations use double-dollar delimiters ($$...$$) on separate lines. Individual chapters explain their notation and assumptions where needed.",
         "",
         "## Source repository",
         "",
-        "[Browse the Markdown source on GitHub](https://github.com/rustedgy/statmech).",
+        "[Browse the Markdown source, report an issue, or suggest a correction on GitHub](https://github.com/rustedgy/statmech).",
         "",
     ])
     (DOCS / "index.md").write_text("\n".join(lines), encoding="utf-8")
