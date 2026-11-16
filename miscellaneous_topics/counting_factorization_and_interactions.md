@@ -498,13 +498,13 @@ Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
 \int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
 $$
 
-Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, this means
+Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, the value at the upper endpoint minus the value at the lower endpoint must be zero:
+
 $$
-\left[x e^{-\lambda U(x)}\right]_{a}^{b}
-=
-b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0,
+b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0.
 $$
-with endpoint values understood as limits when an endpoint is infinite. In particular, on the full real line we require
+
+When an endpoint is infinite, its contribution is understood as a limit. In particular, on the full real line we require
 $$
 \lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
 \qquad
