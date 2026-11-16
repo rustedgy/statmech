@@ -442,6 +442,172 @@ $$
 
 This example illustrates the purpose of the general identity: once the normalizing integral is known, the relation between the multiplier and the average assigned value follows by a derivative, without separately evaluating the integral containing \(f(x)\) in its numerator. It also shows explicitly how a quadratic assigned value produces a simple inverse relation between its average and \(\lambda\).
 
+### Worked example: a power-law assigned value
+
+The same method applies when the assigned value is a power of the coordinate. Let
+
+$$
+U(x)=a|x|^r,
+\qquad a>0,\quad r>0,
+$$
+
+with \(x\) ranging over the real line. The absolute value allows any positive real \(r\), while ensuring that the assigned value is nonnegative. Its normalizing integral is
+
+$$
+Q(\lambda)=\int_{-\infty}^{\infty}
+e^{-\lambda a|x|^r}\,dx,
+\qquad \lambda>0.
+$$
+
+By symmetry and the substitution \(t=\lambda a x^r\) on the positive half-line,
+
+$$
+\begin{aligned}
+Q(\lambda)
+&=2\int_0^\infty e^{-\lambda a x^r}\,dx\\
+&=\frac{2}{r}(\lambda a)^{-1/r}
+\int_0^\infty t^{1/r-1}e^{-t}\,dt\\
+&=\frac{2}{r}\,\Gamma\left(\frac1r\right)
+(\lambda a)^{-1/r}.
+\end{aligned}
+$$
+
+Here \(\Gamma\) denotes the gamma integral,
+\(\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}\,dt\) for \(s>0\).
+The dependence on \(\lambda\) is \(Q(\lambda)\propto\lambda^{-1/r}\), so
+
+$$
+\boxed{
+\overline U
+=-\frac{d}{d\lambda}\ln Q(\lambda)
+=\frac{1}{r\lambda}.
+}
+$$
+
+Thus the inverse relation between the average and the multiplier is not special to a quadratic function. The exponent \(r\) determines the coefficient. For \(r=2\), this gives \(\overline U=1/(2\lambda)\), as in the preceding example.
+
+### A general identity from integration by parts
+
+There is another relation that is useful even when \(U(x)\) is not a power law. Let
+
+$$
+Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
+\qquad
+\langle A\rangle
+=\frac{1}{Q(\lambda)}
+\int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
+$$
+
+Assume that the boundary term \(x e^{-\lambda U(x)}\) vanishes at the ends of the integration domain, and that the integrals below exist. Integrating the derivative of \(x e^{-\lambda U(x)}\) gives
+
+$$
+\begin{aligned}
+0
+&=\int_{\mathcal D}
+\frac{d}{dx}\left[x e^{-\lambda U(x)}\right]dx\\
+&=\int_{\mathcal D}
+\left[1-\lambda x\frac{dU}{dx}\right]
+e^{-\lambda U(x)}\,dx.
+\end{aligned}
+$$
+
+Divide by \(Q(\lambda)\). The result is
+
+$$
+\boxed{
+\left\langle x\frac{dU}{dx}\right\rangle
+=\frac{1}{\lambda}.
+}
+$$
+
+This identity does not require \(U\) to be quadratic or even a power law. Its assumptions about the domain and boundary term matter: for a finite interval, or for a function that does not make the boundary term vanish, an additional boundary contribution must be retained.
+
+For \(U(x)=a|x|^r\), we have \(x\,dU/dx=rU\) except at the single point \(x=0\), which does not affect the integral. The identity therefore gives \(r\overline U=1/\lambda\), reproducing the result above without evaluating the gamma integral.
+
+### Worked example: a homogeneous assigned value in several coordinates
+
+Let \(x_1,\ldots,x_n\) range independently over the real line, and let \(U(x_1,\ldots,x_n)\) be a positive homogeneous function of degree \(r>0\). Homogeneity means
+
+$$
+U(c x_1,\ldots,c x_n)=c^r U(x_1,\ldots,x_n)
+\qquad (c>0).
+$$
+
+Assume the normalizing integral
+
+$$
+Q(\lambda)=
+\int_{\mathbb R^n}
+e^{-\lambda U(x_1,\ldots,x_n)}
+\,dx_1\cdots dx_n
+$$
+
+converges, and that the boundary terms vanish when integrating by parts in each coordinate. Applying the one-coordinate identity with the other coordinates held fixed, and then integrating over them, gives
+
+$$
+\boxed{
+\left\langle
+x_i\frac{\partial U}{\partial x_i}
+\right\rangle
+=\frac{1}{\lambda},
+\qquad i=1,\ldots,n.
+}
+$$
+
+Euler's identity for a differentiable homogeneous function states that
+
+$$
+\sum_{i=1}^{n}x_i\frac{\partial U}{\partial x_i}=rU.
+$$
+
+Taking the average and using the preceding identities yields
+
+$$
+r\overline U
+=\sum_{i=1}^{n}
+\left\langle x_i\frac{\partial U}{\partial x_i}\right\rangle
+=\frac{n}{\lambda}.
+$$
+
+Consequently,
+
+$$
+\boxed{\overline U=\frac{n}{r\lambda}.}
+$$
+
+For example, consider
+
+$$
+U(x_1,x_2)=a x_1^2+b x_2^2,
+\qquad a,b>0.
+$$
+
+This function is homogeneous of degree \(2\). With two coordinates, the result gives
+
+$$
+\boxed{\overline U=\frac{1}{\lambda}.}
+$$
+
+The coordinate-by-coordinate identities also give
+
+$$
+\left\langle x_1\frac{\partial U}{\partial x_1}\right\rangle
+=2a\langle x_1^2\rangle=\frac1\lambda,
+\qquad
+\left\langle x_2\frac{\partial U}{\partial x_2}\right\rangle
+=2b\langle x_2^2\rangle=\frac1\lambda.
+$$
+
+Hence
+
+$$
+a\langle x_1^2\rangle
+=b\langle x_2^2\rangle
+=\frac{1}{2\lambda},
+$$
+
+and their sum is \(1/\lambda\). Notice that the equality of these two contributions follows here from the separate coordinate identities and the quadratic form; it does not require \(a=b\).
+
 ## When the assigned value contains an interaction
 
 Now suppose the value associated with a pair is
