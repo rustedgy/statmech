@@ -297,6 +297,344 @@ $$
 
 As elsewhere in this chapter, this is a large-$N$ result obtained by maximizing the Stirling approximation over continuous fractions. The exact finite-$N$ occupation numbers are integers and must satisfy the exact total-value constraint. Arithmetic restrictions can prevent them from realizing the continuous maximizing fractions exactly. Moreover, conditioning a finite collection of particles on an exact total can correlate the coordinates across particles, even though the single-particle joint fractions at the large-$N$ maximum factorize. The conclusion here is specifically about the factorization of that maximizing joint distribution.
 
+## How the multiplier determines the average assigned value
+
+The multiplier $\lambda$ does more than specify the relative fractions of the allowed categories. It also determines the average assigned value. This relationship can be obtained directly from the normalizing sum, and it holds for general assigned-value functions, not only quadratic ones.
+
+For one coordinate $x$, let the allowed values be $x_i$, and let the assigned value at $x_i$ be $f(x_i)$. Define
+
+$$
+Q(\lambda)=\sum_i e^{-\lambda f(x_i)}.
+$$
+
+The normalized fractions are
+
+$$
+p_i(\lambda)=\frac{e^{-\lambda f(x_i)}}{Q(\lambda)}.
+$$
+
+The average assigned value is therefore
+
+$$
+\begin{aligned}
+\overline f
+&=\sum_i p_i f(x_i)\\
+&=\frac{\sum_i f(x_i)e^{-\lambda f(x_i)}}{Q(\lambda)}.
+\end{aligned}
+$$
+
+Differentiate the normalizing sum with respect to $\lambda$:
+
+$$
+\frac{dQ}{d\lambda}
+=-\sum_i f(x_i)e^{-\lambda f(x_i)}.
+$$
+
+It follows that
+
+$$
+\overline f
+=-\frac{1}{Q}\frac{dQ}{d\lambda}
+=-\frac{d}{d\lambda}\ln Q(\lambda).
+$$
+
+Thus,
+
+$$
+\boxed{\overline f=-\frac{d}{d\lambda}\ln Q(\lambda).}
+$$
+
+This identity is valid for any set of allowed values and any assigned-value function for which the sum exists. For a continuous coordinate, replace the sum by an integral and use
+
+$$
+Q(\lambda)=\int_{\mathcal D}e^{-\lambda f(x)}\,dx,
+$$
+
+provided the integral converges and differentiation under the integral sign is permitted. The same calculation then gives
+
+$$
+\boxed{
+\overline f
+=
+\frac{\displaystyle\int_{\mathcal D}f(x)e^{-\lambda f(x)}\,dx}
+{\displaystyle\int_{\mathcal D}e^{-\lambda f(x)}\,dx}
+=
+-\frac{d}{d\lambda}\ln Q(\lambda).
+}
+$$
+
+There is a further useful consequence. Differentiating the mean once more gives
+
+$$
+\begin{aligned}
+\frac{d\overline f}{d\lambda}
+&=-\frac{d^2}{d\lambda^2}\ln Q(\lambda)\\
+&=-\left(\overline{f^2}-\overline f^{\,2}\right).
+\end{aligned}
+$$
+
+The quantity in parentheses is the variance of the assigned values. Hence
+
+$$
+\boxed{
+\frac{d\overline f}{d\lambda}
+=-\operatorname{Var}(f)\leq 0.
+}
+$$
+
+Unless all categories with nonzero fraction have the same assigned value, the variance is positive and the average decreases strictly as $\lambda$ increases. This gives a general way to understand how the multiplier selects the prescribed average: larger values of $\lambda$ give relatively less weight to categories with larger assigned values. The result does not require $f$ to be quadratic.
+
+### Worked example: relating a quadratic assigned value to the multiplier
+
+Consider a continuous coordinate $x$ taking values over the full real line, with assigned value
+
+$$
+f(x)=\frac{a x^2}{2},
+\qquad a>0.
+$$
+
+The normalizing integral is
+
+$$
+Q(\lambda)
+=\int_{-\infty}^{\infty}
+e^{-\lambda a x^2/2}\,dx.
+$$
+
+For this integral to converge, we require $\lambda>0$. Using the Gaussian integral
+
+$$
+\int_{-\infty}^{\infty}e^{-c x^2}\,dx
+=\sqrt{\frac{\pi}{c}},
+\qquad c>0,
+$$
+
+with $c=\lambda a/2$, we obtain
+
+$$
+Q(\lambda)=\sqrt{\frac{2\pi}{\lambda a}}.
+$$
+
+The average assigned value follows by differentiating the logarithm:
+
+$$
+\begin{aligned}
+\overline f
+&=-\frac{d}{d\lambda}\ln Q(\lambda)\\
+&=-\frac{d}{d\lambda}
+\left[\frac12\ln\left(\frac{2\pi}{a}\right)
+-\frac12\ln\lambda\right]\\
+&=\frac{1}{2\lambda}.
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\boxed{\overline f=\frac{1}{2\lambda}.}
+$$
+
+Since $f(x)=ax^2/2$, this also gives
+
+$$
+\boxed{\overline{x^2}=\frac{1}{a\lambda}.}
+$$
+
+This example illustrates the purpose of the general identity: once the normalizing integral is known, the relation between the multiplier and the average assigned value follows by a derivative, without separately evaluating the integral containing $f(x)$ in its numerator. It also shows explicitly how a quadratic assigned value produces a simple inverse relation between its average and $\lambda$.
+
+### Worked example: a power-law assigned value
+
+The same method applies when the assigned value is a power of the coordinate. Let
+
+$$
+U(x)=a|x|^r,
+\qquad a>0,\quad r>0,
+$$
+
+with $x$ ranging over the real line. The absolute value allows any positive real $r$, while ensuring that the assigned value is nonnegative. Its normalizing integral is
+
+$$
+Q(\lambda)=\int_{-\infty}^{\infty}
+e^{-\lambda a|x|^r}\,dx,
+\qquad \lambda>0.
+$$
+
+By symmetry and the substitution $t=\lambda a x^r$ on the positive half-line,
+
+$$
+\begin{aligned}
+Q(\lambda)
+&=2\int_0^\infty e^{-\lambda a x^r}\,dx\\
+&=\frac{2}{r}(\lambda a)^{-1/r}
+\int_0^\infty t^{1/r-1}e^{-t}\,dt\\
+&=\frac{2}{r}\,\Gamma\left(\frac1r\right)
+(\lambda a)^{-1/r}.
+\end{aligned}
+$$
+
+Here $\Gamma$ denotes the gamma integral,
+$\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}\,dt$ for $s>0$.
+The dependence on $\lambda$ is $Q(\lambda)\propto\lambda^{-1/r}$, so
+
+$$
+\boxed{
+\overline U
+=-\frac{d}{d\lambda}\ln Q(\lambda)
+=\frac{1}{r\lambda}.
+}
+$$
+
+Thus the inverse relation between the average and the multiplier is not special to a quadratic function. The exponent $r$ determines the coefficient. For $r=2$, this gives $\overline U=1/(2\lambda)$, as in the preceding example.
+
+### A general identity from integration by parts
+
+There is another relation that is useful even when $U(x)$ is not a power law. Let
+
+$$
+Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
+\qquad
+\langle A\rangle
+=\frac{1}{Q(\lambda)}
+\int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
+$$
+
+Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, this means
+$$
+\left[x e^{-\lambda U(x)}\right]_{a}^{b}
+=
+b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0,
+$$
+with endpoint values understood as limits when an endpoint is infinite. In particular, on the full real line we require
+$$
+\lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
+\qquad
+\lim_{x\to-\infty}x e^{-\lambda U(x)}=0.
+$$
+These conditions make the integral of the derivative equal to zero. Integrating the derivative of $x e^{-\lambda U(x)}$ then gives
+
+$$
+\begin{aligned}
+0
+&=\int_{\mathcal D}
+\frac{d}{dx}\left[x e^{-\lambda U(x)}\right]dx\\
+&=\int_{\mathcal D}
+\left[1-\lambda x\frac{dU}{dx}\right]
+e^{-\lambda U(x)}\,dx.
+\end{aligned}
+$$
+
+Divide by $Q(\lambda)$. The result is
+
+$$
+\boxed{
+\left\langle x\frac{dU}{dx}\right\rangle
+=\frac{1}{\lambda}.
+}
+$$
+
+This identity does not require $U$ to be quadratic or even a power law. If the endpoint term is not zero, write
+$$
+B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}.
+$$
+The same integration by parts gives
+$$
+\left\langle x\frac{dU}{dx}\right\rangle
+=\frac{1}{\lambda}-\frac{B}{\lambda Q(\lambda)}.
+$$
+Thus the simple identity above applies when $B=0$; on a finite interval this must be checked at the actual endpoints rather than assumed.
+
+For $U(x)=a|x|^r$, we have $x\,dU/dx=rU$ except at the single point $x=0$, which does not affect the integral. The identity therefore gives $r\overline U=1/\lambda$, reproducing the result above without evaluating the gamma integral.
+
+### Worked example: a homogeneous assigned value in several coordinates
+
+Let $x_1,\ldots,x_n$ range independently over the real line, and let $U(x_1,\ldots,x_n)$ be a positive homogeneous function of degree $r>0$. Homogeneity means
+
+$$
+U(c x_1,\ldots,c x_n)=c^r U(x_1,\ldots,x_n)
+\qquad (c>0).
+$$
+
+Assume the normalizing integral
+
+$$
+Q(\lambda)=
+\int_{\mathbb R^n}
+e^{-\lambda U(x_1,\ldots,x_n)}
+\,dx_1\cdots dx_n
+$$
+
+converges. In addition, for each coordinate $x_i$, with the other coordinates held fixed, require
+$$
+\lim_{x_i\to+\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
+\qquad
+\lim_{x_i\to-\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
+$$
+and require the resulting integrals to be integrable over the remaining coordinates. These are the coordinate-wise boundary conditions that make the integration-by-parts terms vanish. Applying the one-coordinate identity with the other coordinates held fixed, and then integrating over them, gives
+
+$$
+\boxed{
+\left\langle
+x_i\frac{\partial U}{\partial x_i}
+\right\rangle
+=\frac{1}{\lambda},
+\qquad i=1,\ldots,n.
+}
+$$
+
+Euler's identity for a differentiable homogeneous function states that
+
+$$
+\sum_{i=1}^{n}x_i\frac{\partial U}{\partial x_i}=rU.
+$$
+
+Taking the average and using the preceding identities yields
+
+$$
+r\overline U
+=\sum_{i=1}^{n}
+\left\langle x_i\frac{\partial U}{\partial x_i}\right\rangle
+=\frac{n}{\lambda}.
+$$
+
+Consequently,
+
+$$
+\boxed{\overline U=\frac{n}{r\lambda}.}
+$$
+
+For example, consider
+
+$$
+U(x_1,x_2)=a x_1^2+b x_2^2,
+\qquad a,b>0.
+$$
+
+This function is homogeneous of degree $2$. With two coordinates, the result gives
+
+$$
+\boxed{\overline U=\frac{1}{\lambda}.}
+$$
+
+The coordinate-by-coordinate identities also give
+
+$$
+\left\langle x_1\frac{\partial U}{\partial x_1}\right\rangle
+=2a\langle x_1^2\rangle=\frac1\lambda,
+\qquad
+\left\langle x_2\frac{\partial U}{\partial x_2}\right\rangle
+=2b\langle x_2^2\rangle=\frac1\lambda.
+$$
+
+Hence
+
+$$
+a\langle x_1^2\rangle
+=b\langle x_2^2\rangle
+=\frac{1}{2\lambda},
+$$
+
+and their sum is $1/\lambda$. Notice that the equality of these two contributions follows here from the separate coordinate identities and the quadratic form; it does not require $a=b$.
+
 ## When the assigned value contains an interaction
 
 Now suppose the value associated with a pair is
