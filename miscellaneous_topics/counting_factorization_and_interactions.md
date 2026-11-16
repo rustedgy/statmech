@@ -299,9 +299,9 @@ As elsewhere in this chapter, this is a large-$N$ result obtained by maximizing 
 
 ## How the multiplier determines the average assigned value
 
-The multiplier \(\lambda\) does more than specify the relative fractions of the allowed categories. It also determines the average assigned value. This relationship can be obtained directly from the normalizing sum, and it holds for general assigned-value functions, not only quadratic ones.
+The multiplier $\lambda$ does more than specify the relative fractions of the allowed categories. It also determines the average assigned value. This relationship can be obtained directly from the normalizing sum, and it holds for general assigned-value functions, not only quadratic ones.
 
-For one coordinate \(x\), let the allowed values be \(x_i\), and let the assigned value at \(x_i\) be \(f(x_i)\). Define
+For one coordinate $x$, let the allowed values be $x_i$, and let the assigned value at $x_i$ be $f(x_i)$. Define
 
 $$
 Q(\lambda)=\sum_i e^{-\lambda f(x_i)}.
@@ -323,7 +323,7 @@ $$
 \end{aligned}
 $$
 
-Differentiate the normalizing sum with respect to \(\lambda\):
+Differentiate the normalizing sum with respect to $\lambda$:
 
 $$
 \frac{dQ}{d\lambda}
@@ -382,11 +382,11 @@ $$
 }
 $$
 
-Unless all categories with nonzero fraction have the same assigned value, the variance is positive and the average decreases strictly as \(\lambda\) increases. This gives a general way to understand how the multiplier selects the prescribed average: larger values of \(\lambda\) give relatively less weight to categories with larger assigned values. The result does not require \(f\) to be quadratic.
+Unless all categories with nonzero fraction have the same assigned value, the variance is positive and the average decreases strictly as $\lambda$ increases. This gives a general way to understand how the multiplier selects the prescribed average: larger values of $\lambda$ give relatively less weight to categories with larger assigned values. The result does not require $f$ to be quadratic.
 
 ### Worked example: relating a quadratic assigned value to the multiplier
 
-Consider a continuous coordinate \(x\) taking values over the full real line, with assigned value
+Consider a continuous coordinate $x$ taking values over the full real line, with assigned value
 
 $$
 f(x)=\frac{a x^2}{2},
@@ -401,7 +401,7 @@ Q(\lambda)
 e^{-\lambda a x^2/2}\,dx.
 $$
 
-For this integral to converge, we require \(\lambda>0\). Using the Gaussian integral
+For this integral to converge, we require $\lambda>0$. Using the Gaussian integral
 
 $$
 \int_{-\infty}^{\infty}e^{-c x^2}\,dx
@@ -409,7 +409,7 @@ $$
 \qquad c>0,
 $$
 
-with \(c=\lambda a/2\), we obtain
+with $c=\lambda a/2$, we obtain
 
 $$
 Q(\lambda)=\sqrt{\frac{2\pi}{\lambda a}}.
@@ -434,13 +434,13 @@ $$
 \boxed{\overline f=\frac{1}{2\lambda}.}
 $$
 
-Since \(f(x)=ax^2/2\), this also gives
+Since $f(x)=ax^2/2$, this also gives
 
 $$
 \boxed{\overline{x^2}=\frac{1}{a\lambda}.}
 $$
 
-This example illustrates the purpose of the general identity: once the normalizing integral is known, the relation between the multiplier and the average assigned value follows by a derivative, without separately evaluating the integral containing \(f(x)\) in its numerator. It also shows explicitly how a quadratic assigned value produces a simple inverse relation between its average and \(\lambda\).
+This example illustrates the purpose of the general identity: once the normalizing integral is known, the relation between the multiplier and the average assigned value follows by a derivative, without separately evaluating the integral containing $f(x)$ in its numerator. It also shows explicitly how a quadratic assigned value produces a simple inverse relation between its average and $\lambda$.
 
 ### Worked example: a power-law assigned value
 
@@ -451,7 +451,7 @@ U(x)=a|x|^r,
 \qquad a>0,\quad r>0,
 $$
 
-with \(x\) ranging over the real line. The absolute value allows any positive real \(r\), while ensuring that the assigned value is nonnegative. Its normalizing integral is
+with $x$ ranging over the real line. The absolute value allows any positive real $r$, while ensuring that the assigned value is nonnegative. Its normalizing integral is
 
 $$
 Q(\lambda)=\int_{-\infty}^{\infty}
@@ -459,7 +459,7 @@ e^{-\lambda a|x|^r}\,dx,
 \qquad \lambda>0.
 $$
 
-By symmetry and the substitution \(t=\lambda a x^r\) on the positive half-line,
+By symmetry and the substitution $t=\lambda a x^r$ on the positive half-line,
 
 $$
 \begin{aligned}
@@ -472,9 +472,9 @@ Q(\lambda)
 \end{aligned}
 $$
 
-Here \(\Gamma\) denotes the gamma integral,
-\(\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}\,dt\) for \(s>0\).
-The dependence on \(\lambda\) is \(Q(\lambda)\propto\lambda^{-1/r}\), so
+Here $\Gamma$ denotes the gamma integral,
+$\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}\,dt$ for $s>0$.
+The dependence on $\lambda$ is $Q(\lambda)\propto\lambda^{-1/r}$, so
 
 $$
 \boxed{
@@ -484,11 +484,11 @@ $$
 }
 $$
 
-Thus the inverse relation between the average and the multiplier is not special to a quadratic function. The exponent \(r\) determines the coefficient. For \(r=2\), this gives \(\overline U=1/(2\lambda)\), as in the preceding example.
+Thus the inverse relation between the average and the multiplier is not special to a quadratic function. The exponent $r$ determines the coefficient. For $r=2$, this gives $\overline U=1/(2\lambda)$, as in the preceding example.
 
 ### A general identity from integration by parts
 
-There is another relation that is useful even when \(U(x)\) is not a power law. Let
+There is another relation that is useful even when $U(x)$ is not a power law. Let
 
 $$
 Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
@@ -498,7 +498,19 @@ Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
 \int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
 $$
 
-Assume that the boundary term \(x e^{-\lambda U(x)}\) vanishes at the ends of the integration domain, and that the integrals below exist. Integrating the derivative of \(x e^{-\lambda U(x)}\) gives
+Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, this means
+$
+\left[x e^{-\lambda U(x)}\right]_{a}^{b}
+=
+b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0,
+$
+with endpoint values understood as limits when an endpoint is infinite. In particular, on the full real line we require
+$
+\lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
+\qquad
+\lim_{x\to-\infty}x e^{-\lambda U(x)}=0.
+$
+These conditions make the integral of the derivative equal to zero. Integrating the derivative of $x e^{-\lambda U(x)}$ then gives
 
 $$
 \begin{aligned}
@@ -511,7 +523,7 @@ e^{-\lambda U(x)}\,dx.
 \end{aligned}
 $$
 
-Divide by \(Q(\lambda)\). The result is
+Divide by $Q(\lambda)$. The result is
 
 $$
 \boxed{
@@ -520,13 +532,22 @@ $$
 }
 $$
 
-This identity does not require \(U\) to be quadratic or even a power law. Its assumptions about the domain and boundary term matter: for a finite interval, or for a function that does not make the boundary term vanish, an additional boundary contribution must be retained.
+This identity does not require $U$ to be quadratic or even a power law. If the endpoint term is not zero, write
+$
+B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}.
+$
+The same integration by parts gives
+$
+\left\langle x\frac{dU}{dx}\right\rangle
+=\frac{1}{\lambda}-\frac{B}{\lambda Q(\lambda)}.
+$
+Thus the simple identity above applies when $B=0$; on a finite interval this must be checked at the actual endpoints rather than assumed.
 
-For \(U(x)=a|x|^r\), we have \(x\,dU/dx=rU\) except at the single point \(x=0\), which does not affect the integral. The identity therefore gives \(r\overline U=1/\lambda\), reproducing the result above without evaluating the gamma integral.
+For $U(x)=a|x|^r$, we have $x\,dU/dx=rU$ except at the single point $x=0$, which does not affect the integral. The identity therefore gives $r\overline U=1/\lambda$, reproducing the result above without evaluating the gamma integral.
 
 ### Worked example: a homogeneous assigned value in several coordinates
 
-Let \(x_1,\ldots,x_n\) range independently over the real line, and let \(U(x_1,\ldots,x_n)\) be a positive homogeneous function of degree \(r>0\). Homogeneity means
+Let $x_1,\ldots,x_n$ range independently over the real line, and let $U(x_1,\ldots,x_n)$ be a positive homogeneous function of degree $r>0$. Homogeneity means
 
 $$
 U(c x_1,\ldots,c x_n)=c^r U(x_1,\ldots,x_n)
@@ -542,7 +563,13 @@ e^{-\lambda U(x_1,\ldots,x_n)}
 \,dx_1\cdots dx_n
 $$
 
-converges, and that the boundary terms vanish when integrating by parts in each coordinate. Applying the one-coordinate identity with the other coordinates held fixed, and then integrating over them, gives
+converges. In addition, for each coordinate $x_i$, with the other coordinates held fixed, require
+$
+\lim_{x_i\to+\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
+\qquad
+\lim_{x_i\to-\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
+$
+and require the resulting integrals to be integrable over the remaining coordinates. These are the coordinate-wise boundary conditions that make the integration-by-parts terms vanish. Applying the one-coordinate identity with the other coordinates held fixed, and then integrating over them, gives
 
 $$
 \boxed{
@@ -582,7 +609,7 @@ U(x_1,x_2)=a x_1^2+b x_2^2,
 \qquad a,b>0.
 $$
 
-This function is homogeneous of degree \(2\). With two coordinates, the result gives
+This function is homogeneous of degree $2$. With two coordinates, the result gives
 
 $$
 \boxed{\overline U=\frac{1}{\lambda}.}
@@ -606,7 +633,7 @@ a\langle x_1^2\rangle
 =\frac{1}{2\lambda},
 $$
 
-and their sum is \(1/\lambda\). Notice that the equality of these two contributions follows here from the separate coordinate identities and the quadratic form; it does not require \(a=b\).
+and their sum is $1/\lambda$. Notice that the equality of these two contributions follows here from the separate coordinate identities and the quadratic form; it does not require $a=b$.
 
 ## When the assigned value contains an interaction
 
