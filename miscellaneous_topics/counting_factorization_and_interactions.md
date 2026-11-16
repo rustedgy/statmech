@@ -500,14 +500,14 @@ $$
 
 Assume that the integrals below exist and that differentiation and integration by parts are permitted. First consider a finite interval $(a,b)$; for an infinite endpoint, the expressions below are interpreted as limits. Define the boundary contribution
 
-$
+$$
 B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}
 =b e^{-\lambda U(b)}-a e^{-\lambda U(a)}.
-$
+$$
 
 Integrating the derivative of $x e^{-\lambda U(x)}$ gives this boundary contribution, not necessarily zero:
 
-$
+$$
 \begin{aligned}
 B
 &=\int_a^b
@@ -519,40 +519,40 @@ e^{-\lambda U(x)}\,dx\\
 -\lambda\int_a^b x\frac{dU}{dx}
 e^{-\lambda U(x)}\,dx.
 \end{aligned}
-$
+$$
 
 Using the definition of the average and dividing by $\lambda Q(\lambda)$, we obtain the general result
 
-$
+$$
 \boxed{
 \left\langle x\frac{dU}{dx}\right\rangle
 =\frac{1}{\lambda}
 -\frac{B}{\lambda Q(\lambda)}.
 }
-$
+$$
 
 The boundary correction disappears precisely when $B=0$. On a finite interval this requires
 
-$
+$$
 b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0;
-$
+$$
 
 it is a condition to check, not a general identity. On the full real line, a sufficient condition is that both endpoint contributions vanish separately:
 
-$
+$$
 \lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
 \qquad
 \lim_{x\to-\infty}x e^{-\lambda U(x)}=0.
-$
+$$
 
 More generally, on any interval, finite or infinite, it is enough that the upper-endpoint limit minus the lower-endpoint limit is zero; the two contributions may vanish separately or cancel one another. Under this condition, the general result reduces to
 
-$
+$$
 \boxed{
 \left\langle x\frac{dU}{dx}\right\rangle
 =\frac{1}{\lambda}.
 }
-$
+$$
 
 This identity does not require $U$ to be quadratic or even a power law, but it does require the stated integrability conditions and a vanishing net boundary contribution.
 
