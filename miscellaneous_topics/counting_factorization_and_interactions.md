@@ -498,7 +498,7 @@ Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
 \int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
 $$
 
-Assume that the integrals below exist and that differentiation and integration by parts are permitted. First consider a finite interval $(a,b)$; for an infinite endpoint, the expressions below are interpreted as limits. Define the boundary contribution
+Assume that $\lambda\ne0$, that the integrals below exist, and that differentiation and integration by parts are permitted. First consider a finite interval $(a,b)$; for an infinite endpoint, the expressions below are interpreted as limits. Define the boundary contribution
 
 $$
 B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}
