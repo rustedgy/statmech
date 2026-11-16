@@ -498,32 +498,54 @@ Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
 \int_{\mathcal D}A(x)e^{-\lambda U(x)}\,dx.
 $$
 
-Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, the value at the upper endpoint minus the value at the lower endpoint must be zero:
+Assume that $\lambda\ne0$, that the integrals below exist, and that differentiation and integration by parts are permitted. First consider a finite interval $(a,b)$; for an infinite endpoint, the expressions below are interpreted as limits. Define the boundary contribution
 
 $$
-b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0.
+B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}
+=b e^{-\lambda U(b)}-a e^{-\lambda U(a)}.
 $$
 
-When an endpoint is infinite, its contribution is understood as a limit. In particular, on the full real line we require
+Integrating the derivative of $x e^{-\lambda U(x)}$ gives this boundary contribution, not necessarily zero:
+
+$$
+\begin{aligned}
+B
+&=\int_a^b
+\frac{d}{dx}\left[x e^{-\lambda U(x)}\right]dx\\
+&=\int_a^b
+\left[1-\lambda x\frac{dU}{dx}\right]
+e^{-\lambda U(x)}\,dx\\
+&=Q(\lambda)
+-\lambda\int_a^b x\frac{dU}{dx}
+e^{-\lambda U(x)}\,dx.
+\end{aligned}
+$$
+
+Using the definition of the average and dividing by $\lambda Q(\lambda)$, we obtain the general result
+
+$$
+\boxed{
+\left\langle x\frac{dU}{dx}\right\rangle
+=\frac{1}{\lambda}
+-\frac{B}{\lambda Q(\lambda)}.
+}
+$$
+
+The boundary correction disappears precisely when $B=0$. On a finite interval this requires
+
+$$
+b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0;
+$$
+
+it is a condition to check, not a general identity. On the full real line, a sufficient condition is that both endpoint contributions vanish separately:
+
 $$
 \lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
 \qquad
 \lim_{x\to-\infty}x e^{-\lambda U(x)}=0.
 $$
-These conditions make the integral of the derivative equal to zero. Integrating the derivative of $x e^{-\lambda U(x)}$ then gives
 
-$$
-\begin{aligned}
-0
-&=\int_{\mathcal D}
-\frac{d}{dx}\left[x e^{-\lambda U(x)}\right]dx\\
-&=\int_{\mathcal D}
-\left[1-\lambda x\frac{dU}{dx}\right]
-e^{-\lambda U(x)}\,dx.
-\end{aligned}
-$$
-
-Divide by $Q(\lambda)$. The result is
+More generally, on any interval, finite or infinite, it is enough that the upper-endpoint limit minus the lower-endpoint limit is zero; the two contributions may vanish separately or cancel one another. Under this condition, the general result reduces to
 
 $$
 \boxed{
@@ -532,16 +554,7 @@ $$
 }
 $$
 
-This identity does not require $U$ to be quadratic or even a power law. If the endpoint term is not zero, write
-$$
-B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}.
-$$
-The same integration by parts gives
-$$
-\left\langle x\frac{dU}{dx}\right\rangle
-=\frac{1}{\lambda}-\frac{B}{\lambda Q(\lambda)}.
-$$
-Thus the simple identity above applies when $B=0$; on a finite interval this must be checked at the actual endpoints rather than assumed.
+This identity does not require $U$ to be quadratic or even a power law, but it does require the stated integrability conditions and a vanishing net boundary contribution.
 
 For $U(x)=a|x|^r$, we have $x\,dU/dx=rU$ except at the single point $x=0$, which does not affect the integral. The identity therefore gives $r\overline U=1/\lambda$, reproducing the result above without evaluating the gamma integral.
 
