@@ -499,17 +499,17 @@ Q(\lambda)=\int_{\mathcal D}e^{-\lambda U(x)}\,dx,
 $$
 
 Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, this means
-$
+$$
 \left[x e^{-\lambda U(x)}\right]_{a}^{b}
 =
 b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0,
-$
+$$
 with endpoint values understood as limits when an endpoint is infinite. In particular, on the full real line we require
-$
+$$
 \lim_{x\to+\infty}x e^{-\lambda U(x)}=0,
 \qquad
 \lim_{x\to-\infty}x e^{-\lambda U(x)}=0.
-$
+$$
 These conditions make the integral of the derivative equal to zero. Integrating the derivative of $x e^{-\lambda U(x)}$ then gives
 
 $$
@@ -533,14 +533,14 @@ $$
 $$
 
 This identity does not require $U$ to be quadratic or even a power law. If the endpoint term is not zero, write
-$
+$$
 B=\left[x e^{-\lambda U(x)}\right]_{a}^{b}.
-$
+$$
 The same integration by parts gives
-$
+$$
 \left\langle x\frac{dU}{dx}\right\rangle
 =\frac{1}{\lambda}-\frac{B}{\lambda Q(\lambda)}.
-$
+$$
 Thus the simple identity above applies when $B=0$; on a finite interval this must be checked at the actual endpoints rather than assumed.
 
 For $U(x)=a|x|^r$, we have $x\,dU/dx=rU$ except at the single point $x=0$, which does not affect the integral. The identity therefore gives $r\overline U=1/\lambda$, reproducing the result above without evaluating the gamma integral.
@@ -564,11 +564,11 @@ e^{-\lambda U(x_1,\ldots,x_n)}
 $$
 
 converges. In addition, for each coordinate $x_i$, with the other coordinates held fixed, require
-$
+$$
 \lim_{x_i\to+\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
 \qquad
 \lim_{x_i\to-\infty}x_i e^{-\lambda U(x_1,\ldots,x_n)}=0,
-$
+$$
 and require the resulting integrals to be integrable over the remaining coordinates. These are the coordinate-wise boundary conditions that make the integration-by-parts terms vanish. Applying the one-coordinate identity with the other coordinates held fixed, and then integrating over them, gives
 
 $$
