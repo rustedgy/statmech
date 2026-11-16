@@ -297,6 +297,151 @@ $$
 
 As elsewhere in this chapter, this is a large-$N$ result obtained by maximizing the Stirling approximation over continuous fractions. The exact finite-$N$ occupation numbers are integers and must satisfy the exact total-value constraint. Arithmetic restrictions can prevent them from realizing the continuous maximizing fractions exactly. Moreover, conditioning a finite collection of particles on an exact total can correlate the coordinates across particles, even though the single-particle joint fractions at the large-$N$ maximum factorize. The conclusion here is specifically about the factorization of that maximizing joint distribution.
 
+## How the multiplier determines the average assigned value
+
+The multiplier \(\lambda\) does more than specify the relative fractions of the allowed categories. It also determines the average assigned value. This relationship can be obtained directly from the normalizing sum, and it holds for general assigned-value functions, not only quadratic ones.
+
+For one coordinate \(x\), let the allowed values be \(x_i\), and let the assigned value at \(x_i\) be \(f(x_i)\). Define
+
+$
+Q(\lambda)=\sum_i e^{-\lambda f(x_i)}.
+$
+
+The normalized fractions are
+
+$
+p_i(\lambda)=\frac{e^{-\lambda f(x_i)}}{Q(\lambda)}.
+$
+
+The average assigned value is therefore
+
+$
+\begin{aligned}
+\overline f
+&=\sum_i p_i f(x_i)\\
+&=\frac{\sum_i f(x_i)e^{-\lambda f(x_i)}}{Q(\lambda)}.
+\end{aligned}
+$
+
+Differentiate the normalizing sum with respect to \(\lambda\):
+
+$
+\frac{dQ}{d\lambda}
+=-\sum_i f(x_i)e^{-\lambda f(x_i)}.
+$
+
+It follows that
+
+$
+\overline f
+=-\frac{1}{Q}\frac{dQ}{d\lambda}
+=-\frac{d}{d\lambda}\ln Q(\lambda).
+$
+
+Thus,
+
+$
+\boxed{\overline f=-\frac{d}{d\lambda}\ln Q(\lambda).}
+$
+
+This identity is valid for any set of allowed values and any assigned-value function for which the sum exists. For a continuous coordinate, replace the sum by an integral and use
+
+$
+Q(\lambda)=\int_{\mathcal D}e^{-\lambda f(x)}\,dx,
+$
+
+provided the integral converges and differentiation under the integral sign is permitted. The same calculation then gives
+
+$
+\boxed{
+\overline f
+=
+\frac{\displaystyle\int_{\mathcal D}f(x)e^{-\lambda f(x)}\,dx}
+{\displaystyle\int_{\mathcal D}e^{-\lambda f(x)}\,dx}
+=
+-\frac{d}{d\lambda}\ln Q(\lambda).
+}
+$
+
+There is a further useful consequence. Differentiating the mean once more gives
+
+$
+\begin{aligned}
+\frac{d\overline f}{d\lambda}
+&=-\frac{d^2}{d\lambda^2}\ln Q(\lambda)\\
+&=-\left(\overline{f^2}-\overline f^{\,2}\right).
+\end{aligned}
+$
+
+The quantity in parentheses is the variance of the assigned values. Hence
+
+$
+\boxed{
+\frac{d\overline f}{d\lambda}
+=-\operatorname{Var}(f)\leq 0.
+}
+$
+
+Unless all categories with nonzero fraction have the same assigned value, the variance is positive and the average decreases strictly as \(\lambda\) increases. This gives a general way to understand how the multiplier selects the prescribed average: larger values of \(\lambda\) give relatively less weight to categories with larger assigned values. The result does not require \(f\) to be quadratic.
+
+### Worked example: relating a quadratic assigned value to the multiplier
+
+Consider a continuous coordinate \(x\) taking values over the full real line, with assigned value
+
+$
+f(x)=\frac{a x^2}{2},
+\qquad a>0.
+$
+
+The normalizing integral is
+
+$
+Q(\lambda)
+=\int_{-\infty}^{\infty}
+e^{-\lambda a x^2/2}\,dx.
+$
+
+For this integral to converge, we require \(\lambda>0\). Using the Gaussian integral
+
+$
+\int_{-\infty}^{\infty}e^{-c x^2}\,dx
+=\sqrt{\frac{\pi}{c}},
+\qquad c>0,
+$
+
+with \(c=\lambda a/2\), we obtain
+
+$
+Q(\lambda)=\sqrt{\frac{2\pi}{\lambda a}}.
+$
+
+The average assigned value follows by differentiating the logarithm:
+
+$
+\begin{aligned}
+\overline f
+&=-\frac{d}{d\lambda}\ln Q(\lambda)\\
+&=-\frac{d}{d\lambda}
+\left[\frac12\ln\left(\frac{2\pi}{a}\right)
+-\frac12\ln\lambda\right]\\
+&=\frac{1}{2\lambda}.
+\end{aligned}
+$
+
+Therefore,
+
+$
+\boxed{\overline f=\frac{1}{2\lambda}.}
+$
+
+Since \(f(x)=ax^2/2\), this also gives
+
+$
+\boxed{\overline{x^2}=\frac{1}{a\lambda}.}
+$
+
+This example illustrates the purpose of the general identity: once the normalizing integral is known, the relation between the multiplier and the average assigned value follows by a derivative, without separately evaluating the integral containing \(f(x)\) in its numerator. It also shows explicitly how a quadratic assigned value produces a simple inverse relation between its average and \(\lambda\).
+
 ## When the assigned value contains an interaction
 
 Now suppose the value associated with a pair is
