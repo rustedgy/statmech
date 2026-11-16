@@ -170,7 +170,3 @@ These checks prevent a counting argument from being applied outside its assumpti
 Statistical mechanics connects microscopic configurations to macroscopic behaviour by counting or weighting the microscopic states compatible with macroscopic constraints. When microstates are equally likely, multiplicity determines macrostate probability; for large systems, the multiplicity distribution often makes a narrow range of macroscopic outcomes overwhelmingly typical. Boltzmann's entropy, $S=k_{\mathrm B}\ln\Omega$, expresses this counting in a form compatible with additive thermodynamic entropy. These ideas provide a statistical framework for understanding equilibrium and the usual direction of macroscopic processes.
 
 ---
-
-## How to make these notes lecture-faithful
-
-On YouTube, open the video's description and choose **Show transcript**, if available. Copy the transcript into a text file or upload it here. I can then revise these notes to match the actual lecture, preserve the order of the arguments, include the lecturer's examples, and add timestamps where useful.
