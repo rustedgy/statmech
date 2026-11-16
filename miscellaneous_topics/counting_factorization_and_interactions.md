@@ -500,9 +500,9 @@ $$
 
 Assume that the integrals below exist and that the boundary term vanishes. More explicitly, if the domain is an interval $(a,b)$, the value at the upper endpoint minus the value at the lower endpoint must be zero:
 
-$
+$$
 b e^{-\lambda U(b)}-a e^{-\lambda U(a)}=0.
-$
+$$
 
 When an endpoint is infinite, its contribution is understood as a limit. In particular, on the full real line we require
 $$
